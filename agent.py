@@ -86,6 +86,7 @@ def fetch_instrument(key: str, spec: dict[str, Any]) -> dict[str, Any]:
         "trend_label": trend,
         "bias_contribution": round(contribution, 4),
         "last_price_at": datetime.fromtimestamp(timestamps[-1], timezone.utc).isoformat(),
+        "provider_observed_at": datetime.fromtimestamp(timestamps[-1], timezone.utc).isoformat(),
     }
 
 
@@ -110,8 +111,7 @@ def rsi(values: list[float], period: int = 14) -> float:
     return 100 - 100 / (1 + avg_gain / avg_loss)
 
 
-def local_technical_rating() -> float:
-    _, closes = yahoo_chart("GC=F", "30m", "5d")
+def calculate_local_technical_rating(closes: list[float]) -> float:
     if len(closes) < 27:
         raise RuntimeError("Too few 30-minute candles for a local technical estimate")
     fast, slow = ema(closes, 9), ema(closes, 21)
@@ -125,6 +125,17 @@ def local_technical_rating() -> float:
         1.0 if last > sum(closes[-20:]) / 20 else -1.0 if last < sum(closes[-20:]) / 20 else 0.0,
     ]
     return sum(votes) / len(votes)
+
+
+def local_technical_rating_with_observation() -> tuple[float, str]:
+    timestamps, closes = yahoo_chart("GC=F", "30m", "5d")
+    rating = calculate_local_technical_rating(closes)
+    observed_at = datetime.fromtimestamp(timestamps[-1], timezone.utc).isoformat()
+    return rating, observed_at
+
+
+def local_technical_rating() -> float:
+    return local_technical_rating_with_observation()[0]
 
 
 def tradingview_technical_rating() -> float:
@@ -143,7 +154,6 @@ def tradingview_technical_rating() -> float:
 
 
 def build_snapshot() -> dict[str, Any]:
-    now = datetime.now(timezone.utc).replace(microsecond=0)
     assets = {key: fetch_instrument(key, spec) for key, spec in INSTRUMENTS.items()}
     score = sum(asset["bias_contribution"] for asset in assets.values())
     bullish_pct = round(max(0, min(100, 50 + score * 50)))
@@ -156,9 +166,10 @@ def build_snapshot() -> dict[str, Any]:
     try:
         rating = tradingview_technical_rating()
         technical_source = "TradingView"
+        technical_observed_at = None
     except (RuntimeError, KeyError, TypeError, ValueError, IndexError, AttributeError) as exc:
         print(f"TradingView 30m rating unavailable; using local estimate: {exc}", file=sys.stderr)
-        rating = local_technical_rating()
+        rating, technical_observed_at = local_technical_rating_with_observation()
         technical_source = "Local estimate"
     technical_pct = round(max(0, min(100, 50 + rating * 50)))
     fundamental_drivers = []
@@ -212,8 +223,10 @@ def build_snapshot() -> dict[str, Any]:
         verb = "weighs" if len(opposing) == 1 else "weigh"
         summary += f", while {len(opposing)} {verb} against it"
     summary += f". {strongest['name']} is the largest current influence ({strongest['impact_pct_points']:+.1f} percentage points)."
+    refreshed_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     return {
-        "generated_at": now.isoformat(),
+        "generated_at": refreshed_at,
+        "last_successful_refresh_at": refreshed_at,
         "fundamental_bias": {
             "bullish_pct": bullish_pct,
             "bearish_pct": 100 - bullish_pct,
@@ -227,6 +240,8 @@ def build_snapshot() -> dict[str, Any]:
             "bearish_pct": 100 - technical_pct,
             "source": technical_source,
             "timeframe": "30m",
+            "provider_observed_at": technical_observed_at,
+            "observation_status": "available" if technical_observed_at else "not provided by provider",
         },
         "assets": assets,
         "disclaimer": "Informational only, not investment advice. Data can be delayed or unavailable.",

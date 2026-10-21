@@ -29,6 +29,10 @@ class WebAppTests(unittest.TestCase):
         self.assertIn('id="install-app"', html)
         self.assertIn('id="fundamental-outlook"', html)
         self.assertIn('id="fundamental-drivers"', html)
+        self.assertIn("Last successful refresh", html)
+        self.assertIn('id="refresh-freshness"', html)
+        self.assertIn("Provider bar time", html)
+        self.assertIn("Provider observation time: not provided by TradingView", html)
 
     def test_tradingview_charts_only_show_dashboard_instruments(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")

@@ -41,6 +41,8 @@
     .eyebrow { color: var(--muted); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
     .updated { color: var(--muted); font-size: 13px; text-align: right; }
     .updated strong { display: block; color: var(--text); font-size: 14px; font-weight: 550; }
+    .observation-time { margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .freshness { margin-left: 6px; font-weight: 650; }
     .header-actions { display: flex; align-items: center; gap: 16px; }
     .install-button { padding: 9px 13px; color: #17170f; background: var(--gold); border: 0; border-radius: 10px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
     .install-button:hover { background: #f0d17e; }
@@ -139,7 +141,7 @@
       </div>
       <div class="header-actions">
         <button id="install-app" class="install-button" type="button">Install app</button>
-        <div class="updated"><span>Latest snapshot</span><strong id="updated">Loading market data…</strong></div>
+        <div class="updated"><span>Last successful refresh</span><strong id="updated">Loading market data…</strong><div id="refresh-freshness" class="observation-time"></div></div>
       </div>
     </header>
     <main>
@@ -165,7 +167,7 @@
             <div class="tech-meter" role="img" aria-label="Technical bullish and bearish percentage"><span id="tech-meter-fill" style="width:50%"></span></div>
             <div class="split"><span class="bull"><b id="tech-bull">—</b> bullish</span><span class="bear"><b id="tech-bear">—</b> bearish</span></div>
           </div>
-          <div id="technical-detail" class="score-label">TradingView 30m indicator rating when available; otherwise an explicitly labeled local estimate.</div>
+          <div><div id="technical-detail" class="score-label">TradingView 30m indicator rating when available; otherwise an explicitly labeled local estimate.</div><div id="technical-observation" class="observation-time">Provider observation time: not provided</div></div>
         </article>
       </section>
       <section class="panel fundamental-details" aria-labelledby="fundamental-details-title">
@@ -215,6 +217,20 @@
       const digits = asset.precision ?? (asset.symbol === "DX-Y.NYB" ? 3 : 2);
       return new Intl.NumberFormat(undefined, { minimumFractionDigits: digits, maximumFractionDigits: digits }).format(asset.price);
     }
+    function formatObservation(timestamp, timeframe, delayedAfterHours = 36, staleAfterHours = 72) {
+      if (!timestamp) return { label: "Provider observation time: not provided", status: "neutral", age: null };
+      const observed = new Date(timestamp);
+      if (Number.isNaN(observed.valueOf())) return { label: "Provider observation time: unavailable", status: "neutral", age: null };
+      const ageHours = Math.max(0, (Date.now() - observed.valueOf()) / 3600000);
+      const status = ageHours >= staleAfterHours ? "Stale" : ageHours >= delayedAfterHours ? "Delayed" : "Recent";
+      const formatted = observed.toLocaleString([], { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" });
+      const age = ageHours < 1 ? `${Math.round(ageHours * 60)}m old` : `${Math.floor(ageHours)}h old`;
+      return {
+        label: `Provider bar time (${timeframe}): ${formatted} UTC · ${age}`,
+        status,
+        age: ageHours
+      };
+    }
     function biasTone(value) {
       if (value >= 55) return ["bull", "Bullish"];
       if (value <= 45) return ["bear", "Bearish"];
@@ -230,10 +246,13 @@
         card.className = "panel asset";
         const impact = asset.bias_contribution > 0 ? "Supports gold" : asset.bias_contribution < 0 ? "Weighs on gold" : "Little directional change";
         const tone = asset.change_pct_5d > 0 ? "bull" : asset.change_pct_5d < 0 ? "bear" : "neutral";
+        const observation = formatObservation(asset.provider_observed_at || asset.last_price_at, "1d");
+        const observationClass = observation.status === "Stale" || observation.status === "Delayed" ? "bear" : observation.status === "Recent" ? "bull" : "neutral";
         card.innerHTML = `<div class="asset-top"><span class="asset-name">${asset.name}</span><span class="pill">${asset.provider}</span></div>
           <div class="asset-value">${formatPrice(asset)}</div>
           <div class="asset-foot"><span>${asset.currency} · last price</span><span class="${tone}">${signed(asset.change_pct_5d)} / 5d</span></div>
-          <div class="asset-impact">${impact} · ${asset.trend_label}</div>`;
+          <div class="asset-impact">${impact} · ${asset.trend_label}</div>
+          <div class="observation-time">${observation.label}<span class="freshness ${observationClass}"> · ${observation.status}</span></div>`;
         root.append(card);
       }
     }
@@ -361,12 +380,23 @@
         setText("tech-bear", percent(100 - technical.bullish_pct));
         setText("technical-source", technical.source === "TradingView" ? "TradingView · 30m" : "Local estimate · 30m");
         setText("technical-detail", technical.source === "TradingView" ? "TradingView's 30-minute technical rating; this is a scheduled snapshot, not a tick-by-tick signal." : "TradingView rating unavailable; locally calculated from recent 30-minute gold futures candles. Not a TradingView signal.");
+        const technicalObservation = formatObservation(technical.provider_observed_at, "30m");
+        setText("technical-observation", technicalObservation.label);
+        document.getElementById("technical-observation").className = `observation-time ${technicalObservation.status === "Stale" || technicalObservation.status === "Delayed" ? "bear" : ""}`;
+        if (technical.observation_status === "not provided by provider") {
+          setText("technical-observation", "Provider observation time: not provided by TradingView");
+        } else if (technicalObservation.status === "Stale" || technicalObservation.status === "Delayed") {
+          setText("technical-observation", `${technicalObservation.label} · ${technicalObservation.status.toLowerCase()}`);
+        }
         document.getElementById("tech-meter-fill").style.width = `${technical.bullish_pct}%`;
         renderAssets(latest.assets);
         currentHistory = history;
         drawHistory(currentHistory);
-        const updated = new Date(latest.generated_at);
+        const updated = new Date(latest.last_successful_refresh_at || latest.generated_at);
         setText("updated", Number.isNaN(updated.valueOf()) ? "Timestamp unavailable" : updated.toLocaleString([], { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC");
+        const refreshObservation = formatObservation(latest.last_successful_refresh_at || latest.generated_at, "refresh", 1.5, 3);
+        setText("refresh-freshness", refreshObservation.age === null ? "Refresh age unavailable" : `${Math.floor(refreshObservation.age)}h since refresh · ${refreshObservation.status.toLowerCase()}`);
+        document.getElementById("refresh-freshness").className = `observation-time ${refreshObservation.status === "Stale" || refreshObservation.status === "Delayed" ? "bear" : ""}`;
         setText("refresh-status", historyProblem ? "Snapshot refresh: every 30 minutes · bias history is temporarily unavailable." : "Snapshot refresh: every 30 minutes · embedded charts may update more often.");
       } catch (error) {
         setText("updated", "Data unavailable");
