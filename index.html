@@ -276,7 +276,7 @@
         setText("tech-bull", percent(technical.bullish_pct));
         setText("tech-bear", percent(100 - technical.bullish_pct));
         setText("technical-source", technical.source === "TradingView" ? "TradingView · 30m" : "Local estimate · 30m");
-        setText("technical-detail", technical.source === "TradingView" ? "TradingView's 30-minute technical rating; this is a scheduled snapshot, not a tick-by-tick signal." : "TradingView rating unavailable; locally calculated from recent 30-minute Yahoo Finance candles. Not a TradingView signal.");
+        setText("technical-detail", technical.source === "TradingView" ? "TradingView's 30-minute technical rating; this is a scheduled snapshot, not a tick-by-tick signal." : "TradingView rating unavailable; locally calculated from recent 30-minute gold futures candles. Not a TradingView signal.");
         document.getElementById("tech-meter-fill").style.width = `${technical.bullish_pct}%`;
         renderAssets(latest.assets);
         drawHistory(Array.isArray(history) ? history : []);

@@ -111,7 +111,7 @@ def rsi(values: list[float], period: int = 14) -> float:
 
 
 def local_technical_rating() -> float:
-    _, closes = yahoo_chart("XAUUSD=X", "30m", "5d")
+    _, closes = yahoo_chart("GC=F", "30m", "5d")
     if len(closes) < 27:
         raise RuntimeError("Too few 30-minute candles for a local technical estimate")
     fast, slow = ema(closes, 9), ema(closes, 21)

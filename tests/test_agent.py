@@ -58,6 +58,12 @@ class SnapshotTests(unittest.TestCase):
 
         self.assertIn("/CL=F?", request.call_args.args[0])
 
+    @patch("agent.yahoo_chart", return_value=(list(range(30)), [float(value) for value in range(30, 60)]))
+    def test_local_technical_estimate_uses_gold_futures_30m(self, chart):
+        agent.local_technical_rating()
+
+        chart.assert_called_once_with("GC=F", "30m", "5d")
+
     @patch("agent.local_technical_rating", return_value=-0.4)
     @patch("agent.tradingview_technical_rating", side_effect=RuntimeError("unavailable"))
     @patch(
