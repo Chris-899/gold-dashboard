@@ -1,11 +1,43 @@
 {
-  "generated_at": "2026-10-21T11:34:25+00:00",
+  "generated_at": "2026-10-21T11:51:07+00:00",
   "fundamental_bias": {
-    "bullish_pct": 78,
-    "bearish_pct": 22,
+    "bullish_pct": 80,
+    "bearish_pct": 20,
     "direction": "Bullish",
     "method": "Weighted five-trading-day price trend; DXY inverted (45%), WTI crude (20%), gold (35%). Each return is capped at +/-2% before weighting.",
-    "summary": "Bullish rules-based context from equally transparent trend inputs: US Dollar Index down over 5 trading days (-0.82%): a falling dollar supports gold; WTI crude oil up over 5 trading days (+4.01%): rising oil can support inflation-hedge demand; Gold futures up over 5 trading days (+1.03%): gold's own recent trend adds directional context."
+    "summary": "The fundamental backdrop leans bullish for gold (80% rules-based bullish pressure). 3 of 3 factors support gold. WTI crude oil is the largest current influence (+10.0 percentage points).",
+    "drivers": [
+      {
+        "key": "DXY",
+        "name": "US Dollar Index",
+        "weight_pct": 45,
+        "change_pct_5d": -0.847,
+        "trend_label": "down over 5 trading days",
+        "impact_pct_points": 9.5,
+        "direction": "Supports gold",
+        "explanation": "a falling dollar can support gold"
+      },
+      {
+        "key": "WTI",
+        "name": "WTI crude oil",
+        "weight_pct": 20,
+        "change_pct_5d": 3.723,
+        "trend_label": "up over 5 trading days",
+        "impact_pct_points": 10.0,
+        "direction": "Supports gold",
+        "explanation": "rising oil can support inflation-hedge demand"
+      },
+      {
+        "key": "GOLD",
+        "name": "Gold futures",
+        "weight_pct": 35,
+        "change_pct_5d": 1.139,
+        "trend_label": "up over 5 trading days",
+        "impact_pct_points": 10.0,
+        "direction": "Supports gold",
+        "explanation": "gold's own recent trend is supportive"
+      }
+    ]
   },
   "technical_bias": {
     "bullish_pct": 100,
@@ -19,10 +51,10 @@
       "symbol": "DX-Y.NYB",
       "provider": "Yahoo Finance",
       "currency": "index points",
-      "price": 101.706,
-      "change_pct_5d": -0.823,
+      "price": 101.681,
+      "change_pct_5d": -0.847,
       "trend_label": "down over 5 trading days",
-      "bias_contribution": 0.1852,
+      "bias_contribution": 0.1907,
       "last_price_at": "2026-10-21T04:00:00+00:00"
     },
     "WTI": {
@@ -30,8 +62,8 @@
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 98.9,
-      "change_pct_5d": 4.007,
+      "price": 98.63,
+      "change_pct_5d": 3.723,
       "trend_label": "up over 5 trading days",
       "bias_contribution": 0.2,
       "last_price_at": "2026-10-21T04:00:00+00:00"
@@ -41,10 +73,10 @@
       "symbol": "GC=F",
       "provider": "Yahoo Finance",
       "currency": "USD / troy oz",
-      "price": 4150.3999,
-      "change_pct_5d": 1.035,
+      "price": 4154.7002,
+      "change_pct_5d": 1.139,
       "trend_label": "up over 5 trading days",
-      "bias_contribution": 0.1811,
+      "bias_contribution": 0.1994,
       "last_price_at": "2026-10-21T04:00:00+00:00"
     }
   },
