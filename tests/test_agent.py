@@ -102,7 +102,6 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(request.call_count, len(agent.NEWS_SEARCHES))
 
     @patch("agent.fetch_headlines", return_value=unavailable_news())
-    @patch("agent.fetch_headlines", return_value=unavailable_news())
     @patch("agent.tradingview_technical_rating", return_value=0.4)
     @patch(
         "agent.fetch_instrument",

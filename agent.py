@@ -181,6 +181,7 @@ def fetch_headlines(now: datetime | None = None) -> dict[str, Any]:
         status = "available"
         summary = f"Retrieved {len(headlines)} recent headlines, but none matched the published directional keyword rules. Headline tone is unscored rather than assumed neutral."
     else:
+        status = "available"
         summary = f"Reviewed {len(headlines)} recent headlines; {len(scored)} matched the published directional keyword rules. Their overall news tilt is {direction.lower()}."
     return {
         "provider": NEWS_SOURCE,
