@@ -8,6 +8,8 @@ def sample_asset(name, contribution, change=0.5):
     return {
         "name": name,
         "change_pct_5d": change,
+        "change_pct_24h": change,
+        "short_trend_label": "up over 24 hours",
         "trend_label": "up over 5 trading days",
         "bias_contribution": contribution,
         "provider_observed_at": "2026-10-21T11:00:00+00:00",
@@ -21,14 +23,14 @@ class SnapshotTests(unittest.TestCase):
         side_effect=[
             sample_asset("US Dollar Index", 0.2),
             sample_asset("WTI crude oil", 0.1),
-            sample_asset("Gold futures", 0.2),
+            sample_asset("Gold futures", 0.0),
         ],
     )
     def test_snapshot_percentages_and_tradingview_source(self, _fetch, _rating):
         snapshot = agent.build_snapshot()
 
-        self.assertEqual(snapshot["fundamental_bias"]["bullish_pct"], 75)
-        self.assertEqual(snapshot["fundamental_bias"]["bearish_pct"], 25)
+        self.assertEqual(snapshot["fundamental_bias"]["bullish_pct"], 65)
+        self.assertEqual(snapshot["fundamental_bias"]["bearish_pct"], 35)
         self.assertEqual(snapshot["fundamental_bias"]["direction"], "Bullish")
         self.assertEqual(snapshot["technical_bias"]["bullish_pct"], 70)
         self.assertEqual(snapshot["technical_bias"]["source"], "TradingView")
@@ -40,19 +42,28 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(len(snapshot["fundamental_bias"]["drivers"]), 3)
         self.assertEqual(
             [driver["weight_pct"] for driver in snapshot["fundamental_bias"]["drivers"]],
-            [45, 20, 35],
+            [60, 40, 0],
         )
-        self.assertEqual(
-            [driver["impact_pct_points"] for driver in snapshot["fundamental_bias"]["drivers"]],
-            [10.0, 5.0, 10.0],
-        )
+        drivers = snapshot["fundamental_bias"]["drivers"]
+        self.assertEqual([driver["impact_pct_points"] for driver in drivers], [10.0, 5.0, 0.0])
+        self.assertEqual(drivers[2]["direction"], "Gold price confirmation")
+        self.assertIn("not counted as a fundamental input", snapshot["fundamental_bias"]["summary"])
 
     @patch("agent.yahoo_chart", return_value=([1, 2], [100.0, 102.0]))
     def test_rising_dollar_has_bearish_gold_contribution(self, _chart):
         result = agent.fetch_instrument("DXY", agent.INSTRUMENTS["DXY"])
 
         self.assertEqual(result["change_pct_5d"], 2.0)
+        self.assertEqual(result["change_pct_24h"], 2.0)
         self.assertLess(result["bias_contribution"], 0)
+
+    @patch("agent.yahoo_chart", return_value=([0, 3600, 86400], [100.0, 100.5, 102.0]))
+    def test_fundamental_inputs_use_30m_data_and_24h_change(self, chart):
+        result = agent.fetch_instrument("WTI", agent.INSTRUMENTS["WTI"])
+
+        chart.assert_called_once_with("CL=F", "30m", "5d")
+        self.assertEqual(result["change_pct_24h"], 2.0)
+        self.assertEqual(result["bias_contribution"], 0.4)
 
     @patch(
         "agent.request_json",
@@ -68,9 +79,10 @@ class SnapshotTests(unittest.TestCase):
         },
     )
     def test_yahoo_symbol_path_keeps_equals_unescaped(self, request):
-        agent.yahoo_chart("CL=F", "1d", "1mo")
+        agent.yahoo_chart("CL=F", "30m", "5d")
 
         self.assertIn("/CL=F?", request.call_args.args[0])
+        self.assertIn("interval=30m", request.call_args.args[0])
 
     @patch("agent.yahoo_chart", return_value=(list(range(30)), [float(value) for value in range(30, 60)]))
     def test_local_technical_estimate_uses_gold_futures_30m(self, chart):

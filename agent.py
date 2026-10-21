@@ -20,9 +20,9 @@ LATEST_PATH = DATA_DIR / "latest.json"
 HISTORY_PATH = DATA_DIR / "history.json"
 USER_AGENT = "GoldBiasDashboard/1.0 (public market dashboard)"
 INSTRUMENTS = {
-    "DXY": {"name": "US Dollar Index", "symbol": "DX-Y.NYB", "currency": "index points", "weight": 0.45, "inverse": True},
-    "WTI": {"name": "WTI crude oil", "symbol": "CL=F", "currency": "USD / barrel", "weight": 0.20, "inverse": False},
-    "GOLD": {"name": "Gold futures", "symbol": "GC=F", "currency": "USD / troy oz", "weight": 0.35, "inverse": False},
+    "DXY": {"name": "US Dollar Index", "symbol": "DX-Y.NYB", "currency": "index points", "fundamental_weight": 0.60, "inverse": True},
+    "WTI": {"name": "WTI crude oil", "symbol": "CL=F", "currency": "USD / barrel", "fundamental_weight": 0.40, "inverse": False},
+    "GOLD": {"name": "Gold futures", "symbol": "GC=F", "currency": "USD / troy oz", "fundamental_weight": 0.0, "inverse": False},
 }
 
 
@@ -62,27 +62,42 @@ def yahoo_chart(symbol: str, interval: str, period: str) -> tuple[list[int], lis
 
 
 def fetch_instrument(key: str, spec: dict[str, Any]) -> dict[str, Any]:
-    timestamps, prices = yahoo_chart(spec["symbol"], "1d", "1mo")
+    timestamps, prices = yahoo_chart(spec["symbol"], "30m", "5d")
     current = prices[-1]
-    baseline = prices[max(0, len(prices) - 6)]
-    change_pct = ((current / baseline) - 1) * 100 if baseline else 0
-    contribution_score = max(-1.0, min(1.0, change_pct / 2.0))
+    baseline_5d = prices[0]
+    cutoff_24h = timestamps[-1] - 24 * 60 * 60
+    baseline_24h_index = max(
+        (index for index, timestamp in enumerate(timestamps) if timestamp <= cutoff_24h),
+        default=0,
+    )
+    baseline_24h = prices[baseline_24h_index]
+    change_pct_5d = ((current / baseline_5d) - 1) * 100 if baseline_5d else 0
+    change_pct_24h = ((current / baseline_24h) - 1) * 100 if baseline_24h else 0
+    contribution_score = max(-1.0, min(1.0, change_pct_24h / 2.0))
     if spec["inverse"]:
         contribution_score *= -1
-    contribution = spec["weight"] * contribution_score
-    if change_pct > 0.05:
+    contribution = spec["fundamental_weight"] * contribution_score
+    if change_pct_5d > 0.05:
         trend = "up over 5 trading days"
-    elif change_pct < -0.05:
+    elif change_pct_5d < -0.05:
         trend = "down over 5 trading days"
     else:
         trend = "roughly flat over 5 trading days"
+    if change_pct_24h > 0.05:
+        short_trend = "up over 24 hours"
+    elif change_pct_24h < -0.05:
+        short_trend = "down over 24 hours"
+    else:
+        short_trend = "roughly flat over 24 hours"
     return {
         "name": spec["name"],
         "symbol": spec["symbol"],
         "provider": "Yahoo Finance",
         "currency": spec["currency"],
         "price": round(current, 5),
-        "change_pct_5d": round(change_pct, 3),
+        "change_pct_24h": round(change_pct_24h, 3),
+        "change_pct_5d": round(change_pct_5d, 3),
+        "short_trend_label": short_trend,
         "trend_label": trend,
         "bias_contribution": round(contribution, 4),
         "last_price_at": datetime.fromtimestamp(timestamps[-1], timezone.utc).isoformat(),
@@ -178,51 +193,60 @@ def build_snapshot() -> dict[str, Any]:
         contribution = asset["bias_contribution"]
         explanations = {
             "DXY": (
-                "a falling dollar can support gold"
+                "a weaker dollar can support gold"
                 if contribution > 0
-                else "a rising dollar can pressure gold"
+                else "a stronger dollar can pressure gold"
                 if contribution < 0
-                else "the dollar trend is currently neutral for this model"
+                else "the latest dollar move is neutral in this model"
             ),
             "WTI": (
-                "rising oil can support inflation-hedge demand"
+                "higher oil can add inflation-hedge support, though energy prices are only a proxy"
                 if contribution > 0
-                else "falling oil can reduce some inflation-hedge support"
+                else "lower oil can reduce some inflation-hedge support, though energy prices are only a proxy"
                 if contribution < 0
-                else "the oil trend is currently neutral for this model"
+                else "the latest oil move is neutral in this model"
             ),
             "GOLD": (
-                "gold's own recent trend is supportive"
-                if contribution > 0
-                else "gold's own recent trend is a headwind"
-                if contribution < 0
-                else "gold's own recent trend is currently neutral"
+                "gold price confirms an upward market move"
+                if asset["change_pct_24h"] > 0.05
+                else "gold price confirms a downward market move"
+                if asset["change_pct_24h"] < -0.05
+                else "gold price is roughly flat over 24 hours"
             ),
         }
         fundamental_drivers.append({
             "key": key,
             "name": asset["name"],
-            "weight_pct": round(spec["weight"] * 100),
+            "weight_pct": round(spec["fundamental_weight"] * 100),
+            "change_pct_24h": asset["change_pct_24h"],
             "change_pct_5d": asset["change_pct_5d"],
-            "trend_label": asset["trend_label"],
+            "trend_label": asset["short_trend_label"],
             "impact_pct_points": round(contribution * 50, 1),
-            "direction": "Supports gold" if contribution > 0 else "Weighs on gold" if contribution < 0 else "Neutral",
+            "direction": (
+                "Gold price confirmation"
+                if key == "GOLD"
+                else "Supports gold"
+                if contribution > 0
+                else "Weighs on gold"
+                if contribution < 0
+                else "Neutral"
+            ),
             "explanation": explanations[key],
         })
-    supportive = [driver for driver in fundamental_drivers if driver["impact_pct_points"] > 0]
-    opposing = [driver for driver in fundamental_drivers if driver["impact_pct_points"] < 0]
-    strongest = max(fundamental_drivers, key=lambda driver: abs(driver["impact_pct_points"]))
+    scored_drivers = [driver for driver in fundamental_drivers if driver["weight_pct"] > 0]
+    supportive = [driver for driver in scored_drivers if driver["impact_pct_points"] > 0]
+    opposing = [driver for driver in scored_drivers if driver["impact_pct_points"] < 0]
+    strongest = max(scored_drivers, key=lambda driver: abs(driver["impact_pct_points"]))
     if bullish_pct >= 55:
-        summary = f"The fundamental backdrop leans bullish for gold ({bullish_pct}% rules-based bullish pressure). "
+        summary = f"The live market-based fundamental backdrop leans bullish for gold ({bullish_pct}% model score). "
     elif bullish_pct <= 45:
-        summary = f"The fundamental backdrop leans bearish for gold ({bullish_pct}% rules-based bullish pressure). "
+        summary = f"The live market-based fundamental backdrop leans bearish for gold ({bullish_pct}% model score). "
     else:
-        summary = f"The fundamental backdrop is mixed for gold ({bullish_pct}% rules-based bullish pressure). "
-    summary += f"{len(supportive)} of 3 factors support gold"
+        summary = f"The live market-based fundamental backdrop is mixed for gold ({bullish_pct}% model score). "
+    summary += f"USD direction and oil/inflation context: {len(supportive)} of 2 factors support gold"
     if opposing:
-        verb = "weighs" if len(opposing) == 1 else "weigh"
-        summary += f", while {len(opposing)} {verb} against it"
-    summary += f". {strongest['name']} is the largest current influence ({strongest['impact_pct_points']:+.1f} percentage points)."
+        summary += f"; {len(opposing)} weigh against it"
+    summary += f". {strongest['name']} is the largest current influence ({strongest['impact_pct_points']:+.1f} score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input."
     refreshed_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     return {
         "generated_at": refreshed_at,
@@ -231,7 +255,7 @@ def build_snapshot() -> dict[str, Any]:
             "bullish_pct": bullish_pct,
             "bearish_pct": 100 - bullish_pct,
             "direction": direction,
-            "method": "Weighted five-trading-day price trend; DXY inverted (45%), WTI crude (20%), gold (35%). Each return is capped at +/-2% before weighting.",
+            "method": "Live 30-minute market snapshot, refreshed every 30 minutes. Fundamental score uses the latest 24-hour DXY move inverted (60%) and WTI move as an inflation-pressure proxy (40%), each capped at +/-2%. Gold price is shown separately for confirmation and is not counted in the fundamental score.",
             "summary": summary,
             "drivers": fundamental_drivers,
         },

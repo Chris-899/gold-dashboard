@@ -148,10 +148,10 @@
       <section class="hero" aria-label="XAUUSD bias summary">
         <article class="panel bias-panel">
           <div class="bias-copy">
-            <div class="eyebrow">Rules-based fundamental context · XAUUSD</div>
+            <div class="eyebrow">Live market-based fundamental bias · XAUUSD</div>
             <h2 id="fundamental-label">Waiting for market data</h2>
-            <p id="fundamental-summary">Five-day context from the US dollar (inverted), oil, and gold trends.</p>
-            <span id="fundamental-method" class="method-note">Inputs: DXY inverted · WTI crude · gold trend</span>
+            <p id="fundamental-summary">30-minute snapshots of the dollar and oil/inflation context drive the fundamental score.</p>
+            <span id="fundamental-method" class="method-note">USD strength (60%) · oil / inflation proxy (40%) · gold confirmation is separate</span>
           </div>
           <div class="score">
             <div id="fundamental-ring" class="score-ring"><span id="fundamental-pct">—</span></div>
@@ -172,7 +172,7 @@
       </section>
       <section class="panel fundamental-details" aria-labelledby="fundamental-details-title">
         <h2 id="fundamental-details-title">Fundamental summary</h2>
-        <p id="fundamental-outlook" class="fundamental-lede">Waiting for the latest DXY, oil, and gold data.</p>
+        <p id="fundamental-outlook" class="fundamental-lede">Waiting for the latest 30-minute dollar and oil data. The fundamental model is separate from the technical score.</p>
         <div id="fundamental-drivers" class="driver-grid">
           <div class="driver-card">Factor-by-factor context will appear with the next market snapshot.</div>
         </div>
@@ -195,7 +195,7 @@
           <article class="panel tv-panel"><div class="tv-title">WTI crude oil · 30m</div><iframe title="Live TradingView WTI oil chart" src="https://www.tradingview.com/widgetembed/?symbol=NYMEX%3ACL1%21&interval=30&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=%23191d18&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=1&hideideas=1&studies=%5B%5D" loading="lazy" allowfullscreen></iframe></article>
         </div>
       </section>
-      <aside class="notice"><strong>Informational only.</strong> Fundamental bias is a simple, rules-based interpretation of recent DXY (inverted), WTI and gold price trends—not investment advice or a forecast. Technical percentages reflect a TradingView 30-minute rating when available, or a locally calculated estimate clearly identified as such. Percentages are normalized score splits, not odds or probabilities of future price moves. Scheduled data points update every 30 minutes; only the embedded charts may refresh more frequently. Market feeds can be delayed, unavailable, or differ from your broker. Not financial advice.</aside>
+      <aside class="notice"><strong>Informational only.</strong> The fundamental score is a market-based proxy from live 24-hour DXY strength (inverted) and WTI oil's price move as an inflation-pressure proxy. Gold's own price move is confirmation only and is excluded from that score; technical sentiment is shown separately. This free model does not ingest live economic releases, rate decisions, or news, and its scores are not probabilities or forecasts. Data snapshots refresh every 30 minutes and may be delayed; embedded charts may update more often. Market data may differ from your broker. Not financial advice.</aside>
     </main>
     <footer><span>Free data sources: Yahoo Finance chart feed and TradingView widgets / technical rating.</span><span id="refresh-status">Refresh schedule: every 30 minutes via GitHub Actions.</span></footer>
     <p id="install-help" class="install-help" role="status" aria-live="polite"></p>
@@ -244,14 +244,14 @@
         if (!asset) continue;
         const card = document.createElement("article");
         card.className = "panel asset";
-        const impact = asset.bias_contribution > 0 ? "Supports gold" : asset.bias_contribution < 0 ? "Weighs on gold" : "Little directional change";
-        const tone = asset.change_pct_5d > 0 ? "bull" : asset.change_pct_5d < 0 ? "bear" : "neutral";
-        const observation = formatObservation(asset.provider_observed_at || asset.last_price_at, "1d");
+        const impact = key === "GOLD" ? "Gold price confirmation" : asset.bias_contribution > 0 ? "Supports gold" : asset.bias_contribution < 0 ? "Weighs on gold" : "Little directional change";
+        const tone = asset.change_pct_24h > 0 ? "bull" : asset.change_pct_24h < 0 ? "bear" : "neutral";
+        const observation = formatObservation(asset.provider_observed_at || asset.last_price_at, "30m");
         const observationClass = observation.status === "Stale" || observation.status === "Delayed" ? "bear" : observation.status === "Recent" ? "bull" : "neutral";
         card.innerHTML = `<div class="asset-top"><span class="asset-name">${asset.name}</span><span class="pill">${asset.provider}</span></div>
           <div class="asset-value">${formatPrice(asset)}</div>
-          <div class="asset-foot"><span>${asset.currency} · last price</span><span class="${tone}">${signed(asset.change_pct_5d)} / 5d</span></div>
-          <div class="asset-impact">${impact} · ${asset.trend_label}</div>
+          <div class="asset-foot"><span>${asset.currency} · last price</span><span class="${tone}">${signed(asset.change_pct_24h)} / 24h</span></div>
+          <div class="asset-impact">${impact} · ${signed(asset.change_pct_5d)} over 5d</div>
           <div class="observation-time">${observation.label}<span class="freshness ${observationClass}"> · ${observation.status}</span></div>`;
         root.append(card);
       }
@@ -274,11 +274,11 @@
         const stats = document.createElement("div");
         stats.className = "driver-stats";
         const move = document.createElement("span");
-        move.textContent = `${signed(driver.change_pct_5d)} · 5 trading days`;
+        move.textContent = `${signed(driver.change_pct_24h)} · 24 hours`;
         const weight = document.createElement("span");
-        weight.textContent = `${driver.weight_pct}% model weight`;
+        weight.textContent = driver.weight_pct > 0 ? `${driver.weight_pct}% fundamental weight` : "Confirmation only";
         const impact = document.createElement("span");
-        impact.textContent = `${driver.impact_pct_points > 0 ? "+" : ""}${driver.impact_pct_points} pts to bullish score`;
+        impact.textContent = driver.weight_pct > 0 ? `${driver.impact_pct_points > 0 ? "+" : ""}${driver.impact_pct_points} score points` : "Not included in fundamental score";
         stats.append(move, weight, impact);
         const explanation = document.createElement("p");
         explanation.className = "driver-explanation";
@@ -371,7 +371,7 @@
         setText("fundamental-split", `${percent(fundamental.bullish_pct)} bull · ${percent(100 - fundamental.bullish_pct)} bear`);
         document.getElementById("fundamental-ring").style.setProperty("--score-angle", `${fundamental.bullish_pct * 3.6}deg`);
         document.getElementById("fundamental-pct").className = tone;
-        setText("fundamental-summary", `${fundamental.direction} five-day context from the US dollar (inverted), oil, and gold trends.`);
+        setText("fundamental-summary", `${fundamental.direction} market-based fundamental context from 24-hour DXY and oil moves. Technical sentiment is scored separately.`);
         setText("fundamental-outlook", fundamental.summary);
         setText("fundamental-method", fundamental.method);
         renderFundamentalDrivers(fundamental.drivers || []);
