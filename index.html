@@ -161,7 +161,7 @@
           <article class="panel tv-panel"><div class="tv-title">WTI crude oil · 30m</div><iframe title="Live TradingView WTI oil chart" src="https://www.tradingview.com/widgetembed/?symbol=NYMEX%3ACL1%21&interval=30&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=%23191d18&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=1&hideideas=1&studies=%5B%5D" loading="lazy" allowfullscreen></iframe></article>
         </div>
       </section>
-      <aside class="notice"><strong>Informational only.</strong> Fundamental bias is a simple, rules-based interpretation of recent DXY (inverted), WTI and gold price trends—not investment advice or a forecast. Technical percentages reflect a TradingView 30-minute rating when available, or a locally calculated estimate clearly identified as such. Scheduled data points update every 30 minutes; only the embedded charts may refresh more frequently. Market feeds can be delayed, unavailable, or differ from your broker. Not financial advice.</aside>
+      <aside class="notice"><strong>Informational only.</strong> Fundamental bias is a simple, rules-based interpretation of recent DXY (inverted), WTI and gold price trends—not investment advice or a forecast. Technical percentages reflect a TradingView 30-minute rating when available, or a locally calculated estimate clearly identified as such. Percentages are normalized score splits, not odds or probabilities of future price moves. Scheduled data points update every 30 minutes; only the embedded charts may refresh more frequently. Market feeds can be delayed, unavailable, or differ from your broker. Not financial advice.</aside>
     </main>
     <footer><span>Free data sources: Yahoo Finance chart feed and TradingView widgets / technical rating.</span><span id="refresh-status">Refresh schedule: every 30 minutes via GitHub Actions.</span></footer>
   </div>
@@ -169,6 +169,7 @@
     const DATA_PATH = "./data/";
     const COLORS = { gold: "#e2bd63", green: "#69d2a0", grid: "#30372e", muted: "#a0a99a", text: "#f0f2eb" };
     const instrumentOrder = ["DXY", "WTI", "GOLD"];
+    let currentHistory = [];
 
     function setText(id, value) {
       const element = document.getElementById(id);
@@ -255,13 +256,29 @@
     }
     async function loadData() {
       try {
-        const [latestResponse, historyResponse] = await Promise.all([
+        const [latestResult, historyResult] = await Promise.allSettled([
           fetch(`${DATA_PATH}latest.json?ts=${Date.now()}`, { cache: "no-store" }),
           fetch(`${DATA_PATH}history.json?ts=${Date.now()}`, { cache: "no-store" })
         ]);
+        if (latestResult.status === "rejected") throw latestResult.reason;
+        const latestResponse = latestResult.value;
         if (!latestResponse.ok) throw new Error(`Latest market snapshot unavailable (${latestResponse.status}).`);
         const latest = await latestResponse.json();
-        const history = historyResponse.ok ? await historyResponse.json() : [];
+        let historyProblem = historyResult.status === "rejected";
+        let history = [];
+        if (historyResult.status === "fulfilled" && historyResult.value.ok) {
+          try {
+            history = await historyResult.value.json();
+            if (!Array.isArray(history)) {
+              history = [];
+              historyProblem = true;
+            }
+          } catch {
+            historyProblem = true;
+          }
+        } else {
+          historyProblem = true;
+        }
         if (!latest.assets || !latest.fundamental_bias || !latest.technical_bias) throw new Error("Market snapshot is missing required fields.");
         const fundamental = latest.fundamental_bias;
         const [tone, label] = biasTone(fundamental.bullish_pct);
@@ -279,10 +296,11 @@
         setText("technical-detail", technical.source === "TradingView" ? "TradingView's 30-minute technical rating; this is a scheduled snapshot, not a tick-by-tick signal." : "TradingView rating unavailable; locally calculated from recent 30-minute gold futures candles. Not a TradingView signal.");
         document.getElementById("tech-meter-fill").style.width = `${technical.bullish_pct}%`;
         renderAssets(latest.assets);
-        drawHistory(Array.isArray(history) ? history : []);
+        currentHistory = history;
+        drawHistory(currentHistory);
         const updated = new Date(latest.generated_at);
         setText("updated", Number.isNaN(updated.valueOf()) ? "Timestamp unavailable" : updated.toLocaleString([], { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC");
-        setText("refresh-status", "Snapshot refresh: every 30 minutes · embedded charts may update more often.");
+        setText("refresh-status", historyProblem ? "Snapshot refresh: every 30 minutes · bias history is temporarily unavailable." : "Snapshot refresh: every 30 minutes · embedded charts may update more often.");
       } catch (error) {
         setText("updated", "Data unavailable");
         setText("fundamental-label", "Market data unavailable");
@@ -291,7 +309,7 @@
       }
     }
     loadData();
-    window.addEventListener("resize", () => fetch(`${DATA_PATH}history.json?ts=${Date.now()}`, { cache: "no-store" }).then(response => response.ok ? response.json() : []).then(drawHistory).catch(() => {}));
+    window.addEventListener("resize", () => drawHistory(currentHistory));
   </script>
 </body>
 </html>
