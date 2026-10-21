@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-10-21T11:28:53+00:00",
+  "fundamental_bias": {
+    "bullish_pct": 78,
+    "bearish_pct": 22,
+    "direction": "Bullish",
+    "method": "Weighted five-trading-day price trend; DXY inverted (45%), WTI crude (20%), gold (35%). Each return is capped at +/-2% before weighting.",
+    "summary": "Bullish rules-based context from equally transparent trend inputs: US Dollar Index down over 5 trading days (-0.82%): a falling dollar supports gold; WTI crude oil up over 5 trading days (+4.40%): rising oil can support inflation-hedge demand; Gold futures up over 5 trading days (+0.98%): gold's own recent trend adds directional context."
+  },
+  "technical_bias": {
+    "bullish_pct": 100,
+    "bearish_pct": 0,
+    "source": "Local estimate",
+    "timeframe": "30m"
+  },
+  "assets": {
+    "DXY": {
+      "name": "US Dollar Index",
+      "symbol": "DX-Y.NYB",
+      "provider": "Yahoo Finance",
+      "currency": "index points",
+      "price": 101.713,
+      "change_pct_5d": -0.816,
+      "trend_label": "down over 5 trading days",
+      "bias_contribution": 0.1836,
+      "last_price_at": "2026-10-21T04:00:00+00:00"
+    },
+    "WTI": {
+      "name": "WTI crude oil",
+      "symbol": "CL=F",
+      "provider": "Yahoo Finance",
+      "currency": "USD / barrel",
+      "price": 99.27,
+      "change_pct_5d": 4.396,
+      "trend_label": "up over 5 trading days",
+      "bias_contribution": 0.2,
+      "last_price_at": "2026-10-21T04:00:00+00:00"
+    },
+    "GOLD": {
+      "name": "Gold futures",
+      "symbol": "GC=F",
+      "provider": "Yahoo Finance",
+      "currency": "USD / troy oz",
+      "price": 4148.1001,
+      "change_pct_5d": 0.979,
+      "trend_label": "up over 5 trading days",
+      "bias_contribution": 0.1713,
+      "last_price_at": "2026-10-21T04:00:00+00:00"
+    }
+  },
+  "disclaimer": "Informational only, not investment advice. Data can be delayed or unavailable."
+}
