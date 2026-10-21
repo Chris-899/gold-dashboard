@@ -17,24 +17,23 @@ def sample_asset(name, contribution, change=0.5):
     }
 
 
-class SnapshotTests(unittest.TestCase):
-    def setUp(self):
-        self.news_patch = patch("agent.fetch_headlines", return_value={
-            "provider": "Google News RSS",
-            "queried_at": "2026-10-21T12:00:00+00:00",
-            "status": "unavailable",
-            "headline_count": 0,
-            "scored_count": 0,
-            "bias_score": 0,
-            "bias_direction": "Mixed",
-            "summary": "No recent headlines could be retrieved.",
-            "limitations": "Test feed",
-            "failed_search_count": 4,
-            "headlines": [],
-        })
-        self.news_patch.start()
-        self.addCleanup(self.news_patch.stop)
+def unavailable_news():
+    return {
+        "provider": "Google News RSS",
+        "queried_at": "2026-10-21T12:00:00+00:00",
+        "status": "unavailable",
+        "headline_count": 0,
+        "scored_count": 0,
+        "bias_score": 0,
+        "bias_direction": "Mixed",
+        "summary": "No recent headlines could be retrieved.",
+        "limitations": "Test feed",
+        "failed_search_count": len(agent.NEWS_SEARCHES),
+        "headlines": [],
+    }
 
+
+class SnapshotTests(unittest.TestCase):
     def test_headline_rules_classify_explicit_usd_and_rate_signals(self):
         bearish_for_gold = agent.classify_headline("Dollar rallies as Fed signals rates higher for longer")
         bullish_for_gold = agent.classify_headline("Greenback falls after dovish Fed signals possible rate cut")
@@ -102,6 +101,8 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(news["headline_count"], 0)
         self.assertEqual(request.call_count, len(agent.NEWS_SEARCHES))
 
+    @patch("agent.fetch_headlines", return_value=unavailable_news())
+    @patch("agent.fetch_headlines", return_value=unavailable_news())
     @patch("agent.tradingview_technical_rating", return_value=0.4)
     @patch(
         "agent.fetch_instrument",
@@ -111,7 +112,7 @@ class SnapshotTests(unittest.TestCase):
             sample_asset("Gold futures", 0.0),
         ],
     )
-    def test_snapshot_percentages_and_tradingview_source(self, _fetch, _rating):
+    def test_snapshot_percentages_and_tradingview_source(self, _fetch, _rating, _news):
         snapshot = agent.build_snapshot()
 
         self.assertEqual(snapshot["fundamental_bias"]["bullish_pct"], 70)
@@ -164,6 +165,7 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(snapshot["fundamental_bias"]["drivers"][-1]["impact_pct_points"], 10.0)
         self.assertEqual(snapshot["news"]["scored_count"], 2)
 
+    @patch("agent.fetch_headlines", return_value=unavailable_news())
     @patch("agent.tradingview_technical_rating", return_value=0.0)
     @patch(
         "agent.fetch_instrument",
@@ -173,7 +175,7 @@ class SnapshotTests(unittest.TestCase):
             sample_asset("Gold futures", 0.0),
         ],
     )
-    def test_summary_calls_out_conflicting_fundamental_factors(self, _fetch, _rating):
+    def test_summary_calls_out_conflicting_fundamental_factors(self, _fetch, _rating, _news):
         summary = agent.build_snapshot()["fundamental_bias"]["summary"]
 
         self.assertIn("; 1 factor weighs against it", summary)
@@ -226,6 +228,7 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(observed_at, "2023-11-14T22:13:49+00:00")
 
     @patch("agent.local_technical_rating_with_observation", return_value=(-0.4, "2026-10-21T11:00:00+00:00"))
+    @patch("agent.fetch_headlines", return_value=unavailable_news())
     @patch("agent.tradingview_technical_rating", side_effect=RuntimeError("unavailable"))
     @patch(
         "agent.fetch_instrument",
@@ -235,7 +238,7 @@ class SnapshotTests(unittest.TestCase):
             sample_asset("Gold futures", 0.0),
         ],
     )
-    def test_local_technical_fallback_is_labeled(self, _fetch, _rating, _local):
+    def test_local_technical_fallback_is_labeled(self, _fetch, _rating, _news, _local):
         snapshot = agent.build_snapshot()
 
         self.assertEqual(snapshot["technical_bias"]["bullish_pct"], 30)
