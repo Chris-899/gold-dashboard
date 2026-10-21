@@ -42,6 +42,12 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(bullish_for_gold["direction"], "Bullish")
         self.assertIn("USD strength", bearish_for_gold["topics"])
         self.assertIn("Dovish rates", bullish_for_gold["topics"])
+        oil_and_risk = agent.classify_headline(
+            "Oil prices jump as escalating Middle East tensions fuel supply fears"
+        )
+        self.assertEqual(oil_and_risk["direction"], "Bullish")
+        self.assertIn("Rising oil prices", oil_and_risk["topics"])
+        self.assertIn("Risk escalation", oil_and_risk["topics"])
 
     @patch("agent.request_text", return_value="""<?xml version="1.0"?>
         <rss><channel><item>
@@ -49,7 +55,16 @@ class SnapshotTests(unittest.TestCase):
           <link>https://news.example.com/story</link>
           <pubDate>Wed, 21 Oct 2026 12:00:00 GMT</pubDate>
           <source url="https://news.example.com">Example News</source>
-        </item></channel></rss>""")
+        </item>
+        <item>
+          <title>Dollar falls after dovish Fed signals possible rate cut</title>
+          <link>https://news.example.com/duplicate</link>
+        </item>
+        <item>
+          <title>Beyond Finance Wins Gold for Company of the Year</title>
+          <link>https://news.example.com/unrelated</link>
+        </item>
+        </channel></rss>""")
     def test_headline_feed_keeps_real_source_and_publication_time(self, request):
         news = agent.fetch_headlines(datetime(2026, 10, 21, 12, tzinfo=timezone.utc))
 
