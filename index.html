@@ -86,6 +86,18 @@
     .driver-direction { font-size: 12px; font-weight: 650; }
     .driver-stats { justify-content: flex-start; flex-wrap: wrap; margin-top: 10px; color: var(--muted); font-size: 12px; }
     .driver-explanation { margin-top: 8px; color: var(--muted); font-size: 12px; }
+    .news-panel { margin: 18px 0; padding: 22px; }
+    .news-panel h2 { font-size: 19px; }
+    .news-meta { margin-top: 5px; color: var(--muted); font-size: 12px; }
+    .news-summary { margin-top: 12px; color: var(--text); }
+    .news-limitations { margin-top: 6px; color: var(--muted); font-size: 12px; }
+    .headline-list { display: grid; gap: 10px; margin-top: 16px; }
+    .headline-card { padding: 14px 15px; background: var(--panel-raised); border: 1px solid var(--line); border-radius: 12px; }
+    .headline-title { color: var(--text); font-weight: 620; text-decoration: none; }
+    .headline-title:hover { color: var(--gold); text-decoration: underline; }
+    .headline-meta { display: flex; flex-wrap: wrap; gap: 7px 14px; margin-top: 7px; color: var(--muted); font-size: 12px; }
+    .headline-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .headline-tag { padding: 2px 8px; border: 1px solid var(--line); border-radius: 99px; color: var(--muted); font-size: 11px; }
     .install-help { color: var(--muted); font-size: 12px; }
     .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin: 28px 0 12px; }
     .section-heading h2 { font-size: 18px; }
@@ -148,10 +160,10 @@
       <section class="hero" aria-label="XAUUSD bias summary">
         <article class="panel bias-panel">
           <div class="bias-copy">
-            <div class="eyebrow">Live market-based fundamental bias · XAUUSD</div>
+            <div class="eyebrow">Rules-based fundamental bias · XAUUSD</div>
             <h2 id="fundamental-label">Waiting for market data</h2>
-            <p id="fundamental-summary">30-minute snapshots of the dollar and oil/inflation context drive the fundamental score.</p>
-            <span id="fundamental-method" class="method-note">USD strength (60%) · oil / inflation proxy (40%) · gold confirmation is separate</span>
+            <p id="fundamental-summary">30-minute snapshots combine the dollar, oil/inflation context, and recent news headlines.</p>
+            <span id="fundamental-method" class="method-note">DXY (40%) · oil/inflation proxy (35%) · keyword-scored headlines (up to 25%)</span>
           </div>
           <div class="score">
             <div id="fundamental-ring" class="score-ring"><span id="fundamental-pct">—</span></div>
@@ -177,6 +189,13 @@
           <div class="driver-card">Factor-by-factor context will appear with the next market snapshot.</div>
         </div>
       </section>
+      <section class="panel news-panel" aria-labelledby="news-title">
+        <h2 id="news-title">Today’s gold-relevant headlines</h2>
+        <div id="news-meta" class="news-meta">Fetching free RSS headlines…</div>
+        <p id="news-summary" class="news-summary">A separate news read-through will appear with the next snapshot.</p>
+        <p id="news-limitations" class="news-limitations"></p>
+        <div id="headline-list" class="headline-list"></div>
+      </section>
       <section id="assets" class="assets" aria-label="Market instruments">
         <div class="panel asset empty">Loading DXY, oil and gold…</div>
       </section>
@@ -195,9 +214,9 @@
           <article class="panel tv-panel"><div class="tv-title">WTI crude oil · 30m</div><iframe title="Live TradingView WTI oil chart" src="https://www.tradingview.com/widgetembed/?symbol=NYMEX%3ACL1%21&interval=30&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=%23191d18&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=1&hideideas=1&studies=%5B%5D" loading="lazy" allowfullscreen></iframe></article>
         </div>
       </section>
-      <aside class="notice"><strong>Informational only.</strong> The fundamental score is a market-based proxy from live 24-hour DXY strength (inverted) and WTI oil's price move as an inflation-pressure proxy. Gold's own price move is confirmation only and is excluded from that score; technical sentiment is shown separately. This free model does not ingest live economic releases, rate decisions, or news, and its scores are not probabilities or forecasts. Data snapshots refresh every 30 minutes and may be delayed; embedded charts may update more often. Market data may differ from your broker. Not financial advice.</aside>
+      <aside class="notice"><strong>Informational only.</strong> The rules-based fundamental score combines the 24-hour DXY move (inverted), WTI's price move as an inflation-pressure proxy, and up to 25% free RSS headline tone when a headline has a publication time within 24 hours and matches the disclosed keyword rules. Headlines are not full-article analysis or human interpretation; read linked reporting for context. Gold's own price move is confirmation only and technical sentiment is separate. The model does not directly ingest economic releases or rate-decision data, and its scores are not probabilities or forecasts. Snapshots refresh every 30 minutes and may be delayed; embedded charts may update more often. Market data may differ from your broker. Not financial advice.</aside>
     </main>
-    <footer><span>Free data sources: Yahoo Finance chart feed and TradingView widgets / technical rating.</span><span id="refresh-status">Refresh schedule: every 30 minutes via GitHub Actions.</span></footer>
+    <footer><span>Free data sources: Yahoo Finance chart feed, Google News RSS headlines, and TradingView widgets / technical rating.</span><span id="refresh-status">Refresh schedule: every 30 minutes via GitHub Actions.</span></footer>
     <p id="install-help" class="install-help" role="status" aria-live="polite"></p>
   </div>
   <script>
@@ -287,6 +306,69 @@
         root.append(card);
       }
     }
+    function renderNews(news) {
+      setText("news-summary", news.summary || "News summary is unavailable.");
+      setText("news-limitations", news.limitations || "");
+      const queried = news.queried_at ? new Date(news.queried_at) : null;
+      const queriedLabel = queried && !Number.isNaN(queried.valueOf())
+        ? queried.toLocaleString([], { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC"
+        : "time unavailable";
+      setText("news-meta", `${news.provider || "Free RSS"} · searched ${queriedLabel} · ${news.headline_count || 0} headlines · ${news.status || "unavailable"}`);
+      const list = document.getElementById("headline-list");
+      list.replaceChildren();
+      for (const headline of (news.headlines || []).slice(0, 10)) {
+        const card = document.createElement("article");
+        card.className = "headline-card";
+        const link = document.createElement("a");
+        link.className = "headline-title";
+        link.textContent = headline.title;
+        try {
+          const headlineUrl = new URL(headline.url);
+          if (headlineUrl.protocol === "https:") {
+            link.href = headlineUrl.href;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+          }
+        } catch {
+          link.removeAttribute("href");
+        }
+        const metadata = document.createElement("div");
+        metadata.className = "headline-meta";
+        const source = document.createElement("span");
+        source.textContent = headline.source || "News source";
+        const published = document.createElement("span");
+        const date = headline.published_at ? new Date(headline.published_at) : null;
+        published.textContent = date && !Number.isNaN(date.valueOf())
+          ? `Published ${date.toLocaleString([], { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" })} UTC`
+          : "Publication time unavailable";
+        if (date && !Number.isNaN(date.valueOf())) {
+          const ageHours = Math.max(0, (Date.now() - date.valueOf()) / 3600000);
+          published.textContent += ageHours >= 24 ? ` · ${Math.floor(ageHours / 24)}d old` : ` · ${Math.floor(ageHours)}h old`;
+        }
+        const direction = document.createElement("span");
+        direction.textContent = `Headline screen: ${headline.direction || "Unscored"} · ${headline.score_status || "not scored"}`;
+        metadata.append(source, published, direction);
+        card.append(link, metadata);
+        if (headline.topics && headline.topics.length) {
+          const tags = document.createElement("div");
+          tags.className = "headline-tags";
+          for (const topic of headline.topics) {
+            const tag = document.createElement("span");
+            tag.className = "headline-tag";
+            tag.textContent = topic;
+            tags.append(tag);
+          }
+          card.append(tags);
+        }
+        list.append(card);
+      }
+      if (!list.childElementCount) {
+        const empty = document.createElement("p");
+        empty.className = "news-limitations";
+        empty.textContent = "No headline articles are currently available from the free RSS searches.";
+        list.append(empty);
+      }
+    }
     function drawHistory(history) {
       const canvas = document.getElementById("history-chart");
       const ctx = canvas.getContext("2d");
@@ -371,10 +453,18 @@
         setText("fundamental-split", `${percent(fundamental.bullish_pct)} bull · ${percent(100 - fundamental.bullish_pct)} bear`);
         document.getElementById("fundamental-ring").style.setProperty("--score-angle", `${fundamental.bullish_pct * 3.6}deg`);
         document.getElementById("fundamental-pct").className = tone;
-        setText("fundamental-summary", `${fundamental.direction} market-based fundamental context from 24-hour DXY and oil moves. Technical sentiment is scored separately.`);
+        setText("fundamental-summary", `${fundamental.direction} rules-based fundamental snapshot from 24-hour DXY and oil moves plus recent headlines when directionally scored. Technical sentiment is separate.`);
         setText("fundamental-outlook", fundamental.summary);
         setText("fundamental-method", fundamental.method);
         renderFundamentalDrivers(fundamental.drivers || []);
+        renderNews(latest.news || {
+          provider: "Free RSS",
+          status: "unavailable",
+          headline_count: 0,
+          summary: "News feed is not available in this snapshot; the fundamental score is based on market data only.",
+          limitations: "No news feed details were included in this snapshot.",
+          headlines: []
+        });
         const technical = latest.technical_bias;
         setText("tech-bull", percent(technical.bullish_pct));
         setText("tech-bear", percent(100 - technical.bullish_pct));
