@@ -245,7 +245,8 @@ def build_snapshot() -> dict[str, Any]:
         summary = f"The live market-based fundamental backdrop is mixed for gold ({bullish_pct}% model score). "
     summary += f"USD direction and oil/inflation context: {len(supportive)} of 2 factors support gold"
     if opposing:
-        summary += f"; {len(opposing)} weigh against it"
+        opposing_label = "factor weighs" if len(opposing) == 1 else "factors weigh"
+        summary += f"; {len(opposing)} {opposing_label} against it"
     summary += f". {strongest['name']} is the largest current influence ({strongest['impact_pct_points']:+.1f} score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input."
     refreshed_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     return {

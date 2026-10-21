@@ -49,6 +49,20 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(drivers[2]["direction"], "Gold price confirmation")
         self.assertIn("not counted as a fundamental input", snapshot["fundamental_bias"]["summary"])
 
+    @patch("agent.tradingview_technical_rating", return_value=0.0)
+    @patch(
+        "agent.fetch_instrument",
+        side_effect=[
+            sample_asset("US Dollar Index", 0.1),
+            sample_asset("WTI crude oil", -0.4, change=-0.5),
+            sample_asset("Gold futures", 0.0),
+        ],
+    )
+    def test_summary_calls_out_conflicting_fundamental_factors(self, _fetch, _rating):
+        summary = agent.build_snapshot()["fundamental_bias"]["summary"]
+
+        self.assertIn("while 1 factor weighs against it", summary)
+
     @patch("agent.yahoo_chart", return_value=([1, 2], [100.0, 102.0]))
     def test_rising_dollar_has_bearish_gold_contribution(self, _chart):
         result = agent.fetch_instrument("DXY", agent.INSTRUMENTS["DXY"])
