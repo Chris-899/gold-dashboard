@@ -32,6 +32,16 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(snapshot["technical_bias"]["bullish_pct"], 70)
         self.assertEqual(snapshot["technical_bias"]["source"], "TradingView")
         self.assertEqual(snapshot["technical_bias"]["timeframe"], "30m")
+        self.assertIn("fundamental backdrop leans bullish", snapshot["fundamental_bias"]["summary"])
+        self.assertEqual(len(snapshot["fundamental_bias"]["drivers"]), 3)
+        self.assertEqual(
+            [driver["weight_pct"] for driver in snapshot["fundamental_bias"]["drivers"]],
+            [45, 20, 35],
+        )
+        self.assertEqual(
+            [driver["impact_pct_points"] for driver in snapshot["fundamental_bias"]["drivers"]],
+            [10.0, 5.0, 10.0],
+        )
 
     @patch("agent.yahoo_chart", return_value=([1, 2], [100.0, 102.0]))
     def test_rising_dollar_has_bearish_gold_contribution(self, _chart):

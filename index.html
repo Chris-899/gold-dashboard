@@ -4,6 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10130f">
+  <meta name="description" content="Free XAUUSD dashboard with DXY, WTI, gold, and a transparent fundamental bias summary.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Gold Bias">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/gold.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/gold-192.png">
   <title>Gold Bias — XAUUSD market dashboard</title>
   <style>
     :root {
@@ -35,6 +41,10 @@
     .eyebrow { color: var(--muted); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
     .updated { color: var(--muted); font-size: 13px; text-align: right; }
     .updated strong { display: block; color: var(--text); font-size: 14px; font-weight: 550; }
+    .header-actions { display: flex; align-items: center; gap: 16px; }
+    .install-button { padding: 9px 13px; color: #17170f; background: var(--gold); border: 0; border-radius: 10px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .install-button:hover { background: #f0d17e; }
+    .install-button[hidden] { display: none; }
     main { padding: 30px 0 54px; }
     .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; margin-bottom: 18px; }
     .panel { background: linear-gradient(145deg, #1e231d, #171b16); border: 1px solid var(--line); border-radius: 18px; }
@@ -64,6 +74,17 @@
     .asset-value { margin: 13px 0 3px; font-size: 25px; font-weight: 700; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
     .asset-foot { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 12px; }
     .asset-impact { margin-top: 15px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .fundamental-details { margin: 18px 0; padding: 22px; }
+    .fundamental-details h2 { font-size: 19px; }
+    .fundamental-lede { max-width: 850px; margin-top: 7px; color: var(--muted); }
+    .driver-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; }
+    .driver-card { padding: 15px; background: var(--panel-raised); border: 1px solid var(--line); border-radius: 13px; }
+    .driver-top, .driver-stats { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .driver-name { font-weight: 650; }
+    .driver-direction { font-size: 12px; font-weight: 650; }
+    .driver-stats { justify-content: flex-start; flex-wrap: wrap; margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .driver-explanation { margin-top: 8px; color: var(--muted); font-size: 12px; }
+    .install-help { color: var(--muted); font-size: 12px; }
     .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin: 28px 0 12px; }
     .section-heading h2 { font-size: 18px; }
     .section-heading p { color: var(--muted); font-size: 12px; }
@@ -86,7 +107,7 @@
     a { color: var(--gold); }
     @media (max-width: 760px) {
       .hero { grid-template-columns: 1fr; }
-      .assets, .charts { grid-template-columns: 1fr; }
+      .assets, .charts, .driver-grid { grid-template-columns: 1fr; }
       .bias-panel { align-items: flex-start; padding: 22px; }
       .score { min-width: 112px; }
       .score-ring { width: 92px; height: 92px; }
@@ -99,6 +120,7 @@
     @media (max-width: 430px) {
       .shell { width: min(100% - 24px, 1180px); }
       header { align-items: flex-start; }
+      .header-actions { flex-direction: column-reverse; align-items: flex-end; gap: 10px; }
       .updated { max-width: 135px; }
       .bias-panel { flex-direction: column; }
       .score { display: flex; align-items: center; gap: 12px; text-align: left; }
@@ -115,7 +137,10 @@
         <div class="brand-mark" aria-hidden="true">Au</div>
         <div><div class="eyebrow">Free market dashboard</div><h1>Gold Bias</h1></div>
       </div>
-      <div class="updated"><span>Latest snapshot</span><strong id="updated">Loading market data…</strong></div>
+      <div class="header-actions">
+        <button id="install-app" class="install-button" type="button">Install app</button>
+        <div class="updated"><span>Latest snapshot</span><strong id="updated">Loading market data…</strong></div>
+      </div>
     </header>
     <main>
       <section class="hero" aria-label="XAUUSD bias summary">
@@ -123,7 +148,7 @@
           <div class="bias-copy">
             <div class="eyebrow">Rules-based fundamental context · XAUUSD</div>
             <h2 id="fundamental-label">Waiting for market data</h2>
-            <p id="fundamental-summary">The dashboard will show its latest scheduled snapshot when data is available.</p>
+            <p id="fundamental-summary">Five-day context from the US dollar (inverted), oil, and gold trends.</p>
             <span id="fundamental-method" class="method-note">Inputs: DXY inverted · WTI crude · gold trend</span>
           </div>
           <div class="score">
@@ -142,6 +167,13 @@
           </div>
           <div id="technical-detail" class="score-label">TradingView 30m indicator rating when available; otherwise an explicitly labeled local estimate.</div>
         </article>
+      </section>
+      <section class="panel fundamental-details" aria-labelledby="fundamental-details-title">
+        <h2 id="fundamental-details-title">Fundamental summary</h2>
+        <p id="fundamental-outlook" class="fundamental-lede">Waiting for the latest DXY, oil, and gold data.</p>
+        <div id="fundamental-drivers" class="driver-grid">
+          <div class="driver-card">Factor-by-factor context will appear with the next market snapshot.</div>
+        </div>
       </section>
       <section id="assets" class="assets" aria-label="Market instruments">
         <div class="panel asset empty">Loading DXY, oil and gold…</div>
@@ -164,12 +196,14 @@
       <aside class="notice"><strong>Informational only.</strong> Fundamental bias is a simple, rules-based interpretation of recent DXY (inverted), WTI and gold price trends—not investment advice or a forecast. Technical percentages reflect a TradingView 30-minute rating when available, or a locally calculated estimate clearly identified as such. Percentages are normalized score splits, not odds or probabilities of future price moves. Scheduled data points update every 30 minutes; only the embedded charts may refresh more frequently. Market feeds can be delayed, unavailable, or differ from your broker. Not financial advice.</aside>
     </main>
     <footer><span>Free data sources: Yahoo Finance chart feed and TradingView widgets / technical rating.</span><span id="refresh-status">Refresh schedule: every 30 minutes via GitHub Actions.</span></footer>
+    <p id="install-help" class="install-help" role="status" aria-live="polite"></p>
   </div>
   <script>
     const DATA_PATH = "./data/";
     const COLORS = { gold: "#e2bd63", green: "#69d2a0", grid: "#30372e", muted: "#a0a99a", text: "#f0f2eb" };
     const instrumentOrder = ["DXY", "WTI", "GOLD"];
     let currentHistory = [];
+    let deferredInstallPrompt = null;
 
     function setText(id, value) {
       const element = document.getElementById(id);
@@ -200,6 +234,37 @@
           <div class="asset-value">${formatPrice(asset)}</div>
           <div class="asset-foot"><span>${asset.currency} · last price</span><span class="${tone}">${signed(asset.change_pct_5d)} / 5d</span></div>
           <div class="asset-impact">${impact} · ${asset.trend_label}</div>`;
+        root.append(card);
+      }
+    }
+    function renderFundamentalDrivers(drivers) {
+      const root = document.getElementById("fundamental-drivers");
+      root.replaceChildren();
+      for (const driver of drivers) {
+        const card = document.createElement("article");
+        card.className = "driver-card";
+        const top = document.createElement("div");
+        top.className = "driver-top";
+        const name = document.createElement("span");
+        name.className = "driver-name";
+        name.textContent = driver.name;
+        const direction = document.createElement("span");
+        direction.className = `driver-direction ${driver.impact_pct_points > 0 ? "bull" : driver.impact_pct_points < 0 ? "bear" : "neutral"}`;
+        direction.textContent = driver.direction;
+        top.append(name, direction);
+        const stats = document.createElement("div");
+        stats.className = "driver-stats";
+        const move = document.createElement("span");
+        move.textContent = `${signed(driver.change_pct_5d)} · 5 trading days`;
+        const weight = document.createElement("span");
+        weight.textContent = `${driver.weight_pct}% model weight`;
+        const impact = document.createElement("span");
+        impact.textContent = `${driver.impact_pct_points > 0 ? "+" : ""}${driver.impact_pct_points} pts to bullish score`;
+        stats.append(move, weight, impact);
+        const explanation = document.createElement("p");
+        explanation.className = "driver-explanation";
+        explanation.textContent = `${driver.trend_label}; ${driver.explanation}.`;
+        card.append(top, stats, explanation);
         root.append(card);
       }
     }
@@ -287,8 +352,10 @@
         setText("fundamental-split", `${percent(fundamental.bullish_pct)} bull · ${percent(100 - fundamental.bullish_pct)} bear`);
         document.getElementById("fundamental-ring").style.setProperty("--score-angle", `${fundamental.bullish_pct * 3.6}deg`);
         document.getElementById("fundamental-pct").className = tone;
-        setText("fundamental-summary", fundamental.summary);
+        setText("fundamental-summary", `${fundamental.direction} five-day context from the US dollar (inverted), oil, and gold trends.`);
+        setText("fundamental-outlook", fundamental.summary);
         setText("fundamental-method", fundamental.method);
+        renderFundamentalDrivers(fundamental.drivers || []);
         const technical = latest.technical_bias;
         setText("tech-bull", percent(technical.bullish_pct));
         setText("tech-bear", percent(100 - technical.bullish_pct));
@@ -309,7 +376,39 @@
       }
     }
     loadData();
+    window.setInterval(loadData, 30 * 60 * 1000);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") loadData();
+    });
     window.addEventListener("resize", () => drawHistory(currentHistory));
+    window.addEventListener("beforeinstallprompt", event => {
+      event.preventDefault();
+      deferredInstallPrompt = event;
+      document.getElementById("install-app").hidden = false;
+    });
+    window.addEventListener("appinstalled", () => {
+      deferredInstallPrompt = null;
+      document.getElementById("install-app").hidden = true;
+      setText("install-help", "Gold Bias has been installed on your device.");
+    });
+    document.getElementById("install-app").addEventListener("click", async () => {
+      if (!deferredInstallPrompt) {
+        setText("install-help", "In Microsoft Edge or Chrome, open the browser menu and choose Install this site as an app (or Apps → Install Gold Bias).");
+        return;
+      }
+      deferredInstallPrompt.prompt();
+      const choice = await deferredInstallPrompt.userChoice;
+      setText("install-help", choice.outcome === "accepted" ? "Gold Bias is being installed on your device." : "Installation was cancelled.");
+      deferredInstallPrompt = null;
+    });
+    if (window.matchMedia("(display-mode: standalone)").matches) {
+      document.getElementById("install-app").hidden = true;
+    }
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js").catch(error => {
+        console.error("Could not enable offline app support:", error);
+      });
+    }
   </script>
 </body>
 </html>

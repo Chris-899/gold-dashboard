@@ -161,16 +161,57 @@ def build_snapshot() -> dict[str, Any]:
         rating = local_technical_rating()
         technical_source = "Local estimate"
     technical_pct = round(max(0, min(100, 50 + rating * 50)))
-    asset_explanations = {
-        "DXY": "a falling dollar supports gold",
-        "WTI": "rising oil can support inflation-hedge demand",
-        "GOLD": "gold's own recent trend adds directional context",
-    }
-    drivers = [
-        f"{assets[key]['name']} {assets[key]['trend_label']} ({assets[key]['change_pct_5d']:+.2f}%): {asset_explanations[key]}"
-        for key in INSTRUMENTS
-    ]
-    summary = f"{direction} rules-based context from equally transparent trend inputs: " + "; ".join(drivers) + "."
+    fundamental_drivers = []
+    for key, spec in INSTRUMENTS.items():
+        asset = assets[key]
+        contribution = asset["bias_contribution"]
+        explanations = {
+            "DXY": (
+                "a falling dollar can support gold"
+                if contribution > 0
+                else "a rising dollar can pressure gold"
+                if contribution < 0
+                else "the dollar trend is currently neutral for this model"
+            ),
+            "WTI": (
+                "rising oil can support inflation-hedge demand"
+                if contribution > 0
+                else "falling oil can reduce some inflation-hedge support"
+                if contribution < 0
+                else "the oil trend is currently neutral for this model"
+            ),
+            "GOLD": (
+                "gold's own recent trend is supportive"
+                if contribution > 0
+                else "gold's own recent trend is a headwind"
+                if contribution < 0
+                else "gold's own recent trend is currently neutral"
+            ),
+        }
+        fundamental_drivers.append({
+            "key": key,
+            "name": asset["name"],
+            "weight_pct": round(spec["weight"] * 100),
+            "change_pct_5d": asset["change_pct_5d"],
+            "trend_label": asset["trend_label"],
+            "impact_pct_points": round(contribution * 50, 1),
+            "direction": "Supports gold" if contribution > 0 else "Weighs on gold" if contribution < 0 else "Neutral",
+            "explanation": explanations[key],
+        })
+    supportive = [driver for driver in fundamental_drivers if driver["impact_pct_points"] > 0]
+    opposing = [driver for driver in fundamental_drivers if driver["impact_pct_points"] < 0]
+    strongest = max(fundamental_drivers, key=lambda driver: abs(driver["impact_pct_points"]))
+    if bullish_pct >= 55:
+        summary = f"The fundamental backdrop leans bullish for gold ({bullish_pct}% rules-based bullish pressure). "
+    elif bullish_pct <= 45:
+        summary = f"The fundamental backdrop leans bearish for gold ({bullish_pct}% rules-based bullish pressure). "
+    else:
+        summary = f"The fundamental backdrop is mixed for gold ({bullish_pct}% rules-based bullish pressure). "
+    summary += f"{len(supportive)} of 3 factors support gold"
+    if opposing:
+        verb = "weighs" if len(opposing) == 1 else "weigh"
+        summary += f", while {len(opposing)} {verb} against it"
+    summary += f". {strongest['name']} is the largest current influence ({strongest['impact_pct_points']:+.1f} percentage points)."
     return {
         "generated_at": now.isoformat(),
         "fundamental_bias": {
@@ -179,6 +220,7 @@ def build_snapshot() -> dict[str, Any]:
             "direction": direction,
             "method": "Weighted five-trading-day price trend; DXY inverted (45%), WTI crude (20%), gold (35%). Each return is capped at +/-2% before weighting.",
             "summary": summary,
+            "drivers": fundamental_drivers,
         },
         "technical_bias": {
             "bullish_pct": technical_pct,

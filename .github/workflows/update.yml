@@ -31,6 +31,10 @@ jobs:
           python-version: "3.x"
       - name: Test snapshot logic
         run: python -m unittest discover -s tests
+      - name: Validate web app assets
+        run: |
+          node --check sw.js
+          node -e 'const fs = require("fs"); const html = fs.readFileSync("index.html", "utf8"); const match = html.match(/<script>([\s\S]*?)<\/script>/); if (!match) throw new Error("Dashboard script is missing"); new Function(match[1]); JSON.parse(fs.readFileSync("manifest.webmanifest", "utf8"));'
       - name: Update free market snapshot
         run: python agent.py
       - name: Commit updated data
