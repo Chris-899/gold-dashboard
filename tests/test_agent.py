@@ -40,6 +40,24 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(result["change_pct_5d"], 2.0)
         self.assertLess(result["bias_contribution"], 0)
 
+    @patch(
+        "agent.request_json",
+        return_value={
+            "chart": {
+                "result": [
+                    {
+                        "timestamp": [1],
+                        "indicators": {"quote": [{"close": [100.0]}]},
+                    }
+                ]
+            }
+        },
+    )
+    def test_yahoo_symbol_path_keeps_equals_unescaped(self, request):
+        agent.yahoo_chart("CL=F", "1d", "1mo")
+
+        self.assertIn("/CL=F?", request.call_args.args[0])
+
     @patch("agent.local_technical_rating", return_value=-0.4)
     @patch("agent.tradingview_technical_rating", side_effect=RuntimeError("unavailable"))
     @patch(

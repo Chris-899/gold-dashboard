@@ -40,9 +40,12 @@ def request_json(url: str, payload: dict[str, Any] | None = None) -> Any:
 
 
 def yahoo_chart(symbol: str, interval: str, period: str) -> tuple[list[int], list[float]]:
-    encoded = urllib.parse.quote(symbol, safe="")
+    encoded = urllib.parse.quote(symbol, safe="=")
     url = f"https://query1.finance.yahoo.com/v8/finance/chart/{encoded}?range={period}&interval={interval}"
-    result = request_json(url)["chart"]
+    try:
+        result = request_json(url)["chart"]
+    except RuntimeError as exc:
+        raise RuntimeError(f"Yahoo Finance chart failed for {symbol}: {exc}") from exc
     if result.get("error"):
         raise RuntimeError(f"Yahoo Finance returned an error for {symbol}: {result['error']}")
     rows = result.get("result") or []
