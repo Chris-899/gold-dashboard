@@ -395,7 +395,12 @@
         const updated = new Date(latest.last_successful_refresh_at || latest.generated_at);
         setText("updated", Number.isNaN(updated.valueOf()) ? "Timestamp unavailable" : updated.toLocaleString([], { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC");
         const refreshObservation = formatObservation(latest.last_successful_refresh_at || latest.generated_at, "refresh", 1.5, 3);
-        setText("refresh-freshness", refreshObservation.age === null ? "Refresh age unavailable" : `${Math.floor(refreshObservation.age)}h since refresh · ${refreshObservation.status.toLowerCase()}`);
+        const refreshAge = refreshObservation.age === null
+          ? "Refresh age unavailable"
+          : refreshObservation.age < 1
+            ? `${Math.round(refreshObservation.age * 60)}m since refresh · ${refreshObservation.status.toLowerCase()}`
+            : `${Math.floor(refreshObservation.age)}h since refresh · ${refreshObservation.status.toLowerCase()}`;
+        setText("refresh-freshness", refreshAge);
         document.getElementById("refresh-freshness").className = `observation-time ${refreshObservation.status === "Stale" || refreshObservation.status === "Delayed" ? "bear" : ""}`;
         setText("refresh-status", historyProblem ? "Snapshot refresh: every 30 minutes · bias history is temporarily unavailable." : "Snapshot refresh: every 30 minutes · embedded charts may update more often.");
       } catch (error) {
