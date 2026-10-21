@@ -61,7 +61,7 @@ class SnapshotTests(unittest.TestCase):
     def test_summary_calls_out_conflicting_fundamental_factors(self, _fetch, _rating):
         summary = agent.build_snapshot()["fundamental_bias"]["summary"]
 
-        self.assertIn("while 1 factor weighs against it", summary)
+        self.assertIn("; 1 factor weighs against it", summary)
 
     @patch("agent.yahoo_chart", return_value=([1, 2], [100.0, 102.0]))
     def test_rising_dollar_has_bearish_gold_contribution(self, _chart):
