@@ -21,6 +21,8 @@ class WebAppTests(unittest.TestCase):
             if icon["type"] == "image/png":
                 with icon_path.open("rb") as image:
                     self.assertEqual(image.read(8), b"\x89PNG\r\n\x1a\n")
+                    self.assertEqual(struct.unpack(">I", image.read(4))[0], 13)
+                    self.assertEqual(image.read(4), b"IHDR")
                     width, height = struct.unpack(">II", image.read(8))
                 expected_width, expected_height = map(int, icon["sizes"].split("x"))
                 self.assertEqual((width, height), (expected_width, expected_height))
