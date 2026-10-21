@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import math
 import email.utils
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -27,12 +28,19 @@ INSTRUMENTS = {
     "GOLD": {"name": "Gold futures", "symbol": "GC=F", "currency": "USD / troy oz", "fundamental_weight": 0.0, "inverse": False},
 }
 NEWS_SEARCHES = (
-    "gold OR XAUUSD when:1d",
+    "gold price OR gold futures OR XAUUSD when:1d",
     "Federal Reserve OR FOMC OR inflation OR Treasury yields when:1d",
     "US dollar OR dollar index OR DXY when:1d",
-    "WTI crude oil OR OPEC when:1d",
+    "WTI crude oil OR oil prices OR OPEC when:1d",
 )
 NEWS_SOURCE = "Google News RSS"
+NEWS_RELEVANCE_TERMS = (
+    "gold price", "gold futures", "xau", "dollar", "usd", "dxy",
+    "treasury yield", "yields", "fed", "fomc", "inflation", "cpi", "pce",
+    "jobs", "employment", "unemployment", "crude", "oil", "opec",
+    "central bank", "safe haven", "safe-haven", "geopolitical",
+    "middle east", "war", "conflict",
+)
 
 
 def request_json(url: str, payload: dict[str, Any] | None = None) -> Any:
@@ -68,14 +76,18 @@ def classify_headline(title: str) -> dict[str, Any]:
     score = 0.0
     topics = []
     signals = (
-        ("USD strength", -0.75, ("dollar gains", "dollar rises", "dollar jumps", "dollar strengthens", "dollar rallies", "dxy rises", "greenback gains", "greenback rises", "dollar strengthens")),
-        ("USD weakness", 0.75, ("dollar falls", "dollar slips", "dollar weakens", "dollar drops", "dxy falls", "greenback falls", "greenback weakens")),
+        ("USD strength", -0.75, ("dollar gains", "dollar rises", "dollar jumps", "dollar strengthens", "dollar rallies", "dxy rises", "greenback gains", "greenback rises", "usd rallies", "dollar rebounds")),
+        ("USD weakness", 0.75, ("dollar falls", "dollar slips", "dollar weakens", "dollar drops", "dxy falls", "greenback falls", "greenback weakens", "dollar under pressure", "usd under pressure", "faces mild pressure", "softer momentum")),
         ("Hawkish rates", -0.75, ("hawkish fed", "fed signals hikes", "rate hike", "rates higher for longer", "higher for longer", "yields rise", "yields surge", "treasury yields climb")),
         ("Dovish rates", 0.75, ("dovish fed", "rate cut", "rates cut", "rate cuts", "yields fall", "yields slide", "treasury yields drop")),
-        ("Risk escalation", 0.45, ("war escalates", "war intensifies", "conflict escalates", "attack on", "military strikes", "invasion", "safe-haven demand", "safe haven demand")),
+        ("Risk escalation", 0.45, ("war escalates", "war intensifies", "conflict escalates", "conflict widens", "attack on", "military strikes", "invasion", "safe-haven demand", "safe haven demand", "middle east tensions", "supply fears", "geopolitical tensions rise")),
         ("Risk de-escalation", -0.35, ("ceasefire", "peace deal", "peace talks", "tensions ease", "conflict de-escalates")),
         ("Oil supply tightens", 0.3, ("opec cuts", "opec+ cuts", "supply cuts", "supply disruption", "oil supply tightens", "crude supply falls")),
         ("Oil supply expands", -0.3, ("opec raises output", "opec+ raises output", "output hike", "supply glut", "oil inventories rise", "crude inventories build")),
+        ("Rising oil prices", 0.25, ("oil prices rise", "oil prices jump", "oil prices surge", "oil prices climb", "wti climbs", "wti rises", "crude prices rise", "crude oil jumps", "oil rallies", "oil above $")),
+        ("Falling oil prices", -0.25, ("oil prices fall", "oil prices drop", "oil prices slide", "wti falls", "wti drops", "crude prices fall", "crude oil tumbles", "oil tumbles")),
+        ("Central bank gold buying", 0.25, ("central bank buys gold", "central banks buy gold", "central bank buying gold", "central bank purchases gold")),
+        ("Central bank gold sales", -0.25, ("central bank sells gold", "central banks sell gold", "central bank selling gold", "central bank sales of gold")),
         ("Weaker US data", 0.35, ("us jobs miss", "jobs data misses", "unemployment rises", "weak us jobs", "economic data disappoints", "growth slows")),
         ("Stronger US data", -0.35, ("us jobs beat", "jobs data beats", "strong us jobs", "economic data beats", "growth accelerates")),
         ("Cooling inflation", 0.35, ("inflation cools", "inflation eases", "cpi cools", "pce cools", "inflation slows")),
@@ -88,6 +100,11 @@ def classify_headline(title: str) -> dict[str, Any]:
     score = max(-1.0, min(1.0, score))
     direction = "Bullish" if score > 0.1 else "Bearish" if score < -0.1 else "Mixed / unscored"
     return {"score": score, "topics": topics, "direction": direction}
+
+
+def headline_is_relevant(title: str) -> bool:
+    text = title.casefold()
+    return any(term in text for term in NEWS_RELEVANCE_TERMS)
 
 
 def fetch_headlines(now: datetime | None = None) -> dict[str, Any]:
@@ -115,9 +132,10 @@ def fetch_headlines(now: datetime | None = None) -> dict[str, Any]:
         for item in root.findall("./channel/item"):
             title = (item.findtext("title") or "").strip()
             link = (item.findtext("link") or "").strip()
-            if not title or not link or link in seen:
+            normalized_title = re.sub(r"\W+", "", title.casefold())
+            if not title or not link or not headline_is_relevant(title) or normalized_title in seen:
                 continue
-            seen.add(link)
+            seen.add(normalized_title)
             source = item.findtext("source") or "Google News result"
             pub_date = item.findtext("pubDate")
             try:
