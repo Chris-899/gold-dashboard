@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-23T21:24:55+00:00",
-  "last_successful_refresh_at": "2026-10-23T21:24:55+00:00",
+  "generated_at": "2026-10-23T21:58:55+00:00",
+  "last_successful_refresh_at": "2026-10-23T21:58:55+00:00",
   "fundamental_bias": {
-    "bullish_pct": 63,
-    "bearish_pct": 37,
+    "bullish_pct": 65,
+    "bearish_pct": 35,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (63% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 5 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (65% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 6 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 5 scored headlines",
-        "impact_pct_points": -3.1,
+        "trend_label": "bearish tone across 6 scored headlines",
+        "impact_pct_points": -1.7,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,22 +64,46 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-23T21:24:53+00:00",
+    "queried_at": "2026-10-23T21:58:54+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 5,
-    "scored_count": 5,
-    "bias_score": -0.25,
+    "matched_count": 6,
+    "scored_count": 6,
+    "bias_score": -0.133,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 5 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 6 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
       {
+        "title": "Gold (XAUUSD), Silver, Platinum Forecasts – Gold Tests $4000 As Pullback Continues - FXEmpire",
+        "source": "FXEmpire",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU19Ra2otVFVKRTlhaW5MYjdLMVhxd1BTaWN0Z3Y0eFBKc1FLbnZJOTVIaTFJUW1xYTlZTW5XWG9JUFVtaW54ZWxMTm50MWY4U1hBYUpqR0otRElyci0tNTQxc1VIQVNLU3RYcVM1d3MwQUdXMDNUdFZ2bS11d19TcXRtMVM0MVhSdXhDaWdITU1EUzl5SkNrYmowbFNXVkZRMzI0YWdZMFIwaW5KbUVpM3p4bVo1bkE5MzFWdC01MXZYa0oz?oc=5",
+        "published_at": "2026-10-23T21:43:29+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Dow Falls 652 Points, First Drop in Four Sessions, as Oil Surge and Middle East Tensions Spur Selling in Consumer and Cyclical Stocks - BigGo Finance",
+        "source": "BigGo Finance",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KQmZsRV9RbmI5ZFlxNlJ5NkFRNUhnTXloQmU1NEJtcGlyZUlBZXRZdTJWUkRvd3RGUnhpOWJjWmxIWUh6OTRBMnY2OHJRVV9kTmRjWTJaUUU1Y3NvSkNOUm1vdzg2YXZET1o2RVJ2M2Uwc1NfWXc?oc=5",
+        "published_at": "2026-10-23T21:35:00+00:00",
+        "score": 0.45,
+        "topics": [
+          "Risk escalation"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
         "title": "Gold (XAU/USD) Price Forecast: Bearish Momentum Puts Major Support at Risk - FXEmpire",
         "source": "FXEmpire",
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVVlMV0p6MmhrT2NsanpnY3ZPLUp4SGJQQk5JRkpNYVJ0aExicFluSU1aaG5nQXhGcEdYc2dLZ1dhREJfazQxZjM2S1BpQ0g5RG1DVUdFYWNfTkQ2V0VXRU1iUWZNOERJb2Y2Q3JEQUY5QndxcVZBaTFIS1djVDVtZXhrTlREcHZRbkp6UGJqUURqUFV2VGxlakxTYnlYX2drcUpYT0lTS1FxN0lmTHBkbWVHSW9CWGY5SDRpUkRkTQ?oc=5",
-        "published_at": "2026-10-23T21:01:38+00:00",
+        "published_at": "2026-10-23T21:30:09+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -100,7 +124,7 @@
       {
         "title": "Treasury Yields Snapshot: October 23, 2026 - Advisor Perspectives",
         "source": "Advisor Perspectives",
-        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPLV9rVlJZbklfLS10OHhDRUEwZFJLZS1fc2luSTFhLXRzM0pDejJSRlhXZjlBV2VOWkVxZnZXbW0yNmNrUUNwbFhrRmNoeklzbElnZ1otTGdHOXBwNDhHYmFYMXlqSU1SVV9RaERBZzM0X0dPWWNuMjRkbU1zbmdlb2hhenJiU3kyV2hDUlpqWmdvZUoxRWxPZVFuTFRCVmxpZEJBQWNDajMwNlZfMVNLT0tWdFMtUQ?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObEpEcXJUUm1JM0kydjNaUGVrS28zSG5qc3NmU2RZRS1Xd0FDbHE2dm5PMXFNWXNGYVRSQXlaeHc0VHRXN3pQVW5KeFdqbWpQZmlKd0lxM3hJR1ZNRkM0S2VDRnpVRUZONms0dmh3U1ZBVVpyMGdpUGdpemk3b0YyZ1piVklSNDBNeFc3ZlNTOG03aHpsV08tV2Rac1ladzlLcWhaVw?oc=5",
         "published_at": "2026-10-23T20:42:29+00:00",
         "score": 0.0,
         "topics": [],
@@ -215,7 +239,7 @@
         "in_scoring_window": true
       },
       {
-        "title": "[Global Oil Prices] Crude tops $117 intraday ... next April contract also breaks $100 - 파이낸셜뉴스",
+        "title": "Global Oil Prices Top $117 Intraday; Next April Contract Also Breaks $100 - 파이낸셜뉴스",
         "source": "파이낸셜뉴스",
         "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5ERktzb2kxV3N6VWJ0UlNXVEtoMWNTVllDYVBFT0tOSndlcFRRSVpyVjdqM1hqMzlZTkVUTTlSdEtES19pVUtNRnhwcDFxaElJMjVUVXJxejM?oc=5",
         "published_at": "2026-10-23T18:14:30+00:00",
@@ -237,17 +261,6 @@
         ],
         "direction": "Mixed / unscored",
         "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold (XAUUSD), Silver, Platinum Forecasts – Gold Tests $4000 As Pullback Continues - FXEmpire",
-        "source": "FXEmpire",
-        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU19Ra2otVFVKRTlhaW5MYjdLMVhxd1BTaWN0Z3Y0eFBKc1FLbnZJOTVIaTFJUW1xYTlZTW5XWG9JUFVtaW54ZWxMTm50MWY4U1hBYUpqR0otRElyci0tNTQxc1VIQVNLU3RYcVM1d3MwQUdXMDNUdFZ2bS11d19TcXRtMVM0MVhSdXhDaWdITU1EUzl5SkNrYmowbFNXVkZRMzI0YWdZMFIwaW5KbUVpM3p4bVo1bkE5MzFWdC01MXZYa0oz?oc=5",
-        "published_at": "2026-10-23T18:07:04+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
         "in_scoring_window": true
       },
       {
@@ -290,17 +303,6 @@
         "source": "FXStreet",
         "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNaGRUN09iclhFTHhrQWVDRkd6SDh0Um5Ibi1sNWdRdTAzR1ZqTjhCR0N6bm1VNE1ITm5xX2xHVkN3bkNYV19JMHEzYTAxTnBvT3dDLU1YZHZRQ2xQVjlWVFNoQXowLW5ibzRXOHJZZEtmUDZtdU1JYS0taWN2R0Z4YjVubGllcUhfSVJPRUtST2hKeVJVNHFZ?oc=5",
         "published_at": "2026-10-23T17:07:24+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil Stocks Rally as WTI Crude Price Tops $103: Devon Energy and Diamondback Energy Gain 5%, Occidental Petroleum Rises 3% - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQakFqRHRzV1RVSTVLRWpWc2JWRjA1MXdTTWpjRm5ERUhFeXQ5NWs1SkswSTNleDNIbm1yai00S0ZhUlJOY1BUR1VKNnhDWkVfaDJhTjA3d1BTQkNPelM2S2hLZ0V6SnJ4UWlncmxXdTJsOVltUkVGUlRSS3g5UnVXVkhiUkFKVERkOFVZ?oc=5",
-        "published_at": "2026-10-23T17:05:32+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
