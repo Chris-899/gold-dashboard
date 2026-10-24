@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-24T10:56:58+00:00",
-  "last_successful_refresh_at": "2026-10-24T10:56:58+00:00",
+  "generated_at": "2026-10-24T11:24:45+00:00",
+  "last_successful_refresh_at": "2026-10-24T11:24:45+00:00",
   "fundamental_bias": {
-    "bullish_pct": 69,
-    "bearish_pct": 31,
+    "bullish_pct": 66,
+    "bearish_pct": 34,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (69% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bullish across 2 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (66% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 5 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bullish tone across 2 scored headlines",
-        "impact_pct_points": 3.1,
-        "direction": "Bullish",
+        "trend_label": "mixed tone across 5 scored headlines",
+        "impact_pct_points": -0.6,
+        "direction": "Mixed",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,17 +64,30 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-24T10:56:56+00:00",
+    "queried_at": "2026-10-24T11:24:43+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 2,
-    "scored_count": 2,
-    "bias_score": 0.25,
-    "bias_direction": "Bullish",
-    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bullish.",
+    "matched_count": 5,
+    "scored_count": 5,
+    "bias_score": -0.05,
+    "bias_direction": "Mixed",
+    "summary": "Reviewed 20 recent headlines; 5 matched the published directional keyword rules. Their overall news tilt is mixed.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Dollar rises on black market - VnExpress International",
+        "source": "VnExpress International",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSkQ0Y3FRdHdXRlNfWlhTdHRQaXZuUHVqN3FiVldxTEJrQTUzLXRqam5SNE9UZkVDVVBXQU10TzdHTmRKUnNmRU1IVEtlaDVsenZkVm5xYXd0RXZnOUg1cC1odEdLMTU1QUN4QXk2YlAyVGoxS255emsyMk9mTGZKWF9wZjVwZkI5Wk1HOHFfMTI?oc=5",
+        "published_at": "2026-10-24T10:53:20+00:00",
+        "score": -0.75,
+        "topics": [
+          "USD strength"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
       {
         "title": "Chart of the day: Gold price eyes $4,200 breakout, but buyers still face two major hurdles - investingLive",
         "source": "investingLive",
@@ -131,17 +144,6 @@
         "in_scoring_window": true
       },
       {
-        "title": "GBP/USD (GBPUSD=X) live rate, chart and news - Yahoo Finance Singapore",
-        "source": "Yahoo Finance Singapore",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45cXk5ODVxV3l3RWQ1Vl9aYzVSaGpNQmV0aUxPN1l6bllfNmxRR2xNcXFGVmczOEJFbnlIcThZVGtWcmJlSUZNc0lpbEJJbDJReG5VeFRWZ1g0QQ?oc=5",
-        "published_at": "2026-10-24T08:38:12+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
         "title": "Brent Crude Hits $116: Oil Price Surge Impact on Stocks 2026 - Intellectia AI",
         "source": "Intellectia AI",
         "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBaX293RkJOUEl3T1dJeFVfdFBiS1lfeE5YZ0VRWjNXVUE1akNaTXBvVHk0dWVVdDktSmZiWjA5dTkxd1I3WkpxX0pvbDJxRlVLdWZOT3E0b19YVzVMY0tyV2ppUmdwRHUyUnc0dA?oc=5",
@@ -164,6 +166,19 @@
         "in_scoring_window": true
       },
       {
+        "title": "Fed Rate Cuts Gain Support as Weak Jobs Data Weighs on Outlook - SuaraGarut.ID",
+        "source": "SuaraGarut.ID",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBsZ3NDVndGRkZsT2JjdkQ1djE3T1ExMFhDNW5vekpldTV2TG1EYVN5UTdwaklxd1BWanU1QXUxRGcyY3dtV3RFNWhsQVVwTHBrZU9aOVBXakFhQ3BxeFFYX1Fnc3pUQnM?oc=5",
+        "published_at": "2026-10-24T08:04:32+00:00",
+        "score": 0.75,
+        "topics": [
+          "Dovish rates"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
         "title": "THINK Ahead: This is how bad European inflation could get this winter - ing think",
         "source": "ing think",
         "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQS28xZlZaV09LRm4wWXBOdDcydzZvc2JOX0NlS2VxYUNhR0Z1dlYwcjhwdDFFMzAzMlo4LWNqQkxhVEJlNTdNaEhUVW9LREhJYldJWjBTZ1ZxZmtILUpkMGlVd1dhMW1qZzc0OG5sUV83bW5VaFBKWFFLcGkxU1NSZGJwVnlCR2VLMVRjUVFVVUNVNGhwZUEyTTdabHpTS0cxdkE?oc=5",
@@ -175,10 +190,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Gold, silver prices drop sharply as oil prices surge - The Assam Tribune",
-        "source": "The Assam Tribune",
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcWlETkt4SV9pZExmTDhmS1l6Y3Z3VU53MmJWUXZPYnZTd2EwRFNDT3duRGlGeHBCWkhoTHlqTW4wZ2lhTmpvT19DWVhnNEpyT2FsZ1hsVzg4a1IxQjR0SFBGaHdlcTB6RGFlLW1jS0NFbFduVkdlZmd5ZDV1TjBnUlNUUG43WTF3NHJTMEpnX1ZUZTZ5eElZX9IBngFBVV95cUxQS2I5ZklVZktuaWFBelUzYzZReDJsUW5DNFBKQno1eVVhNkt6VnRKbVlhS1R3X2R2eDBuLWVLVWVHVmJBWnNUU3gzOVpTclJZMG8wU1p1MzYwLWYzQUJXbXlXRWR2UlZ5cEl5TmlwNFZtYWVlNnMwUGdzOE4ycEcyT0Q0VzdEdzFXQVRSQ2tULXhmQ2pYVTdrb3pMeFl2QQ?oc=5",
-        "published_at": "2026-10-24T07:15:13+00:00",
+        "title": "Gold, silver decline sharply on weekly basis as crude prices rise - DT Next",
+        "source": "DT Next",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbE5HZ25uemhnTjlqclZtT2p2SVpsaHg3UFZFUkpOaHA1TUlpcFhnM2FjLXUyLUNDTTZqRjV5TUdqMVRUYnhlZE5XUnIyRmRIZGhydlhwbXZRYUVzeENMQlVCdXFkT3dSZEdfR1RaTkRpd0RSS2VIY09KZURVWUY5b0lkXzZyUl91ZlREQUluNURIMEI5YkduckdBZFdqVlU5RWfSAa8BQVVfeXFMTTdyelB4R0VLTkJRMHVQU2NlM0Q0VVd3MkVoMFZVYkkwVExlbmdpMEUtLW5hS3dwVnhUT2xqTmg1SXgwM0NndWFadnlMUk1qQnFsY3ZZdDF6TEUzTi13Q01pV0NURV9HVG5zbUlIT1JuR1FoeHhlQTdNT3BjNy15SjRaTE1kNHpuR2pkT3B4c3pKNkR4UFUzdTNOVzA0ZjQxeGdzNzNJNFptenZvenFPdw?oc=5",
+        "published_at": "2026-10-24T07:32:02+00:00",
         "score": 0.25,
         "topics": [
           "Rising oil prices"
@@ -199,10 +214,32 @@
         "in_scoring_window": true
       },
       {
+        "title": "Goldman Sachs Says Refiners See 'High Probability' Of Sharp Oil Supply Drop As Houthi Attacks Escalate — Crude Oil Prices Hit 6-Month High - TradingView",
+        "source": "TradingView",
+        "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPeERUZDdiNGYwVWpFYUEzYU43RExxbWk3WURYVEFiX25mRlJRdWFMTklvV3d3UlNfZy1FMlZhQURYSi1fLXlLbFNMa3hpaUNpRWNzV1JaY1V5ZVd6czhGNDVsWWpneXZUUXdEbEUtaWw5dGJ2X1RtMC1JYjZJbTlhc0hnbUlVM3Z6WlNzMlJyWmFOcW50ZDBPTnBfeC0tQWlyLVBFQ2llQ2tKSGVLRTZCWk5SblVxbmt6eE1xVFhZakJTMUFkblhnOGpyNWcwbUxzTWJjcTBHM0cydkxVLXdIVWxSVTIzTjg3cHlJS0JycXd5OWNBUXVocWVhaUFEd2R3dHZaRExOOXFSNnpxMThoVFNhZENudi1xcFdTaV9ubw?oc=5",
+        "published_at": "2026-10-24T06:28:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Goldman Sachs Says Refiners See 'High Probability' Of Sharp Oil Supply Drop As Houthi Attacks Escalate — Crude Oil Prices Hit 6-Month High - Stocktwits",
         "source": "Stocktwits",
         "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxONno2Wnc0ZUFoZVpUbkVHcm1yU0pBdHRnbE1WNzhVYXpObzVCbkJHSWtuU1lPcTFoRE9ONXpBZ3hZaEk3YU9BdGpjVXZ5OWhWNE5oeHRuYWZmV08yMVhhaTB1a0pybUFrMkQ4bXNZT0t4VG9YVmVDcjZ0Qmk5WjQ3SFVLenpuY012UVFsZVdlTnVaYksta0xycUFENHhzQ3BYNlpEWEdyMVI2WDVkTVA4Z2hCNHRGLThkSlJSckZleVlNZHp0ZHVQX1VvVQ?oc=5",
         "published_at": "2026-10-24T06:28:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gulf attacks lift Crude Oil to a 22-week high - www.tmgm.com",
+        "source": "www.tmgm.com",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNVBaNHVCcGhNSDZCWVVhNER4bWx4b2l3dnZreG9kZERsLVU2UGxSR3BKcDFsLXlHOE4tYzJPaDJTRmtpc0NaYWFXeUhEVGNkNllwVVdQbzg4RmxiUXpWdTIwLWhlekRvS2NhYXRxd1JDaWtfa2xnTkp4NEZTZUFORFp2cnNidFNkekp4SFAwMzM1a25BMUp6eFVzczJTeERKckxlMFA2SHZLb2RnOUFZaUhudl94MXlmRFE?oc=5",
+        "published_at": "2026-10-24T06:20:23+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -232,6 +269,19 @@
         "in_scoring_window": true
       },
       {
+        "title": "U.S. Treasury Yields Turn Higher With Oil; French Bond Yields Rise on Protests - WSJ",
+        "source": "WSJ",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOSk1wWWp6WG1vZjdfYjZXX1hRU0lPVEl6WnVGbkozSXB5eTU5UHN2aG9nRHRpc1VMNlI5eF92YXNZNTFUOGFBMnk1anY0cUxFcG5YTTF0NFRhaGZ0VjkwbjNETmpiWkVXUHlNMmZJV014MlJ2LXRKZWlmS3E1N21wZHdnUXZybnJBRzlVSmdwUQ?oc=5",
+        "published_at": "2026-10-24T05:52:31+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
         "title": "Oil prices surge sharply on global markets - Apa.az",
         "source": "Apa.az",
         "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcURBdmZkRmdweG5aTmszS1M3UkYwSHZtMnRtOGVaemVhclRRekNsOFgyRFQ5dEViWGJVRmhVQXljVkVqODl6cjdxTHk2RlhiNFpaVU96Rnl2TWM4RmlMbGY4TXV2TUNjYmh3c1BQNXpxWFJsMWVwTFNHdXlnY3BWLVhmUUdZbFBNU0RWdk1MeTg?oc=5",
@@ -249,50 +299,6 @@
         "source": "Tekedia",
         "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQS1FFd1FNMW1Ia2o0Um51NjdXYUdEWDZWTzMyRGw4aUpiR3hnblZfcXN4V0pXNktmNTBBT0pTdC1DeElSeERYeUVWcy1CMnhaYjFQQ0ZRMFg3dkJyMzJyU0RwbXE5dHlGUmRjZDZHTEFjMXZtT2xrOXFiVjdnZldrTUhRS1BHV2FqWEJYY3pua2UybVhpT2FzeEk4VUdOY0JiX1FWck0tbHdIWGtqWEItOGR5cnJYQQ?oc=5",
         "published_at": "2026-10-24T04:57:16+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Perpetual Futures on Stocks, Gold and Crude Oil Surge 33-Fold in 10 Months as Traditional Assets Flow Into Crypto Exchanges - BigGo Finance",
-        "source": "BigGo Finance",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1VelFyOEtqbnFONnF2T1A2T1Mxb1k5M3hZWTZXN1hNcVRtd3prbzdvcE5VZHN6cjBLTDRxNS1keXp6N211YTJuOE5JYjZxZkliLXMxWTQ4WTFYNjdtQWQycHBiMXAxR2FONTlJcGJYZzhrM3JXdXc?oc=5",
-        "published_at": "2026-10-24T04:25:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Federal Reserve preview: A pause before a December hike - ing think",
-        "source": "ing think",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOcVJoZ1lwbW55OENBSXEtTVVBNWpaUTJfVWozbW1aVV9oRGdXZXo1MnQ2bEJOVTlfbXY2X0x3WmpBQi00VTIza2hNNy1PZ0FlMjdGMjlHYmRBeG4xN2NCc1NiQlNRbkt6dW5XM2ZjQ1BQUkhtSlNkSEJQaGpGbHBCV1d6TXJ4dV82RWlsdXpmVQ?oc=5",
-        "published_at": "2026-10-24T04:21:39+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Treasury Yields Snapshot: October 23, 2026 - Advisor Perspectives",
-        "source": "Advisor Perspectives",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObEpEcXJUUm1JM0kydjNaUGVrS28zSG5qc3NmU2RZRS1Xd0FDbHE2dm5PMXFNWXNGYVRSQXlaeHc0VHRXN3pQVW5KeFdqbWpQZmlKd0lxM3hJR1ZNRkM0S2VDRnpVRUZONms0dmh3U1ZBVVpyMGdpUGdpemk3b0YyZ1piVklSNDBNeFc3ZlNTOG03aHpsV08tV2Rac1ladzlLcWhaVw?oc=5",
-        "published_at": "2026-10-24T04:18:46+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil Prices Above $100: How Crude's Surge Is Reshaping Markets in October 2026 - Intellectia AI",
-        "source": "Intellectia AI",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5vTHJoZlo4Z2FvNlBCd2hNVVdjWVg4aXdfeDNoc2dpS3Bma0djRlhGSUdpczItT19BTm9Bdi1GUzNOSXh3cTdGTVlTclFkSzhaRmF1UEZwUGdmNWdES1FtWWZpTnZ3eGM1dUpYWGN0LTE0aHZ3ZlE?oc=5",
-        "published_at": "2026-10-24T04:14:05+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
