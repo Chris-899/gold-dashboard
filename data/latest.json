@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-23T23:54:30+00:00",
-  "last_successful_refresh_at": "2026-10-23T23:54:30+00:00",
+  "generated_at": "2026-10-24T00:34:48+00:00",
+  "last_successful_refresh_at": "2026-10-24T00:34:48+00:00",
   "fundamental_bias": {
-    "bullish_pct": 66,
-    "bearish_pct": 34,
+    "bullish_pct": 67,
+    "bearish_pct": 33,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (66% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 3 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (67% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 4 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "mixed tone across 3 scored headlines",
-        "impact_pct_points": -0.2,
+        "trend_label": "mixed tone across 4 scored headlines",
+        "impact_pct_points": 0.6,
         "direction": "Mixed",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,52 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-23T23:54:28+00:00",
+    "queried_at": "2026-10-24T00:34:46+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": -0.017,
+    "matched_count": 4,
+    "scored_count": 4,
+    "bias_score": 0.05,
     "bias_direction": "Mixed",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is mixed.",
+    "summary": "Reviewed 20 recent headlines; 4 matched the published directional keyword rules. Their overall news tilt is mixed.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "New York Gold Futures Briefly Fall Below $4,000 as U.S. Long-Term Yields Return to 5% Range, Lowest Since July - BigGo Finance",
+        "source": "BigGo Finance",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1sam1oeHlucmxFRjg1VHlUOHl4Qk12ei1KWG9mYzF4ajRyODQ4V2FQX1NXbHZpNDJWNDFMc1IwS0J3c2lpdXZ1TGYtVUdxRTAyMlZkblNtUlNicG9FNW1MQVJtS3hISjduU1I0RE1ldFVmSFp1eVE?oc=5",
+        "published_at": "2026-10-24T00:05:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Global oil prices surge amid war fears in the Middle East; Brent crude hits six-month high - 파이낸셜뉴스",
+        "source": "파이낸셜뉴스",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1oQ2VxVTFtY0xvQnFra19MUnJ0V1AxYnZCUVpYcHZ2eWpuVkpYSER2QS1pSWhycTc4SmdMb1lWMW5WMmdrY0N2TDJsdGtDbEVaTDdNSjA4ZmE?oc=5",
+        "published_at": "2026-10-23T23:36:24+00:00",
+        "score": 0.25,
+        "topics": [
+          "Rising oil prices"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "USD/JPY Forecast: Is Rising Japanese Inflation Supporting the Yen? - FOREX.com",
+        "source": "FOREX.com",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTzhfekJIS0RHM3RzXzJiU1BNT19PRVhwTm1LS1NaRm1pWHdLeUtnMDNQSmFSU3paNFMxLTNZMDlCTldnZ24yUHJUaWRvNDFLZkNEcUNjeFZXQ0ppazNPWkRRbzB4LWUtMTBPSWs5RklnLXJoZXBOX0FqRHp2MjEwWTRDVWJ2QlpiUlppZDd2SEFYaFlCc3YwZEJmMWpvWHRkaTJ6OGg3ZGtkR08waHJ4S01EZDRxM0IwUm9QRNIBvAFBVV95cUxPTzhfekJIS0RHM3RzXzJiU1BNT19PRVhwTm1LS1NaRm1pWHdLeUtnMDNQSmFSU3paNFMxLTNZMDlCTldnZ24yUHJUaWRvNDFLZkNEcUNjeFZXQ0ppazNPWkRRbzB4LWUtMTBPSWs5RklnLXJoZXBOX0FqRHp2MjEwWTRDVWJ2QlpiUlppZDd2SEFYaFlCc3YwZEJmMWpvWHRkaTJ6OGg3ZGtkR08waHJ4S01EZDRxM0IwUm9QRA?oc=5",
+        "published_at": "2026-10-23T23:16:54+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Oil Futures Post Weekly Gains on Middle East Escalation Fears - WSJ",
         "source": "WSJ",
@@ -153,21 +188,23 @@
         "in_scoring_window": true
       },
       {
+        "title": "Oil Prices Surge 3% as Brent Crude Tops $117 - Sada Elbalad English",
+        "source": "Sada Elbalad English",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5oczVwSk8wQ1l3YzdxRVZCUkZiQlhoQXR3X1lCR2ptZmE5aEtwd1lrUlVRY09KME5oSFlodExYdm92Qmw0aWRveGdzbzA4VWVESXNqVlBtV080S2o5UGFYUnFoeERvc3V1R2o0?oc=5",
+        "published_at": "2026-10-23T21:54:32+00:00",
+        "score": 0.25,
+        "topics": [
+          "Rising oil prices"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
         "title": "Gold (XAU/USD) Price Forecast: Bearish Momentum Puts Major Support at Risk - FXEmpire",
         "source": "FXEmpire",
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVVlMV0p6MmhrT2NsanpnY3ZPLUp4SGJQQk5JRkpNYVJ0aExicFluSU1aaG5nQXhGcEdYc2dLZ1dhREJfazQxZjM2S1BpQ0g5RG1DVUdFYWNfTkQ2V0VXRU1iUWZNOERJb2Y2Q3JEQUY5QndxcVZBaTFIS1djVDVtZXhrTlREcHZRbkp6UGJqUURqUFV2VGxlakxTYnlYX2drcUpYT0lTS1FxN0lmTHBkbWVHSW9CWGY5SDRpUkRkTQ?oc=5",
         "published_at": "2026-10-23T21:53:29+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold (XAUUSD), Silver, Platinum Forecasts – Gold Tests $4000 As Pullback Continues - FXEmpire",
-        "source": "FXEmpire",
-        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU19Ra2otVFVKRTlhaW5MYjdLMVhxd1BTaWN0Z3Y0eFBKc1FLbnZJOTVIaTFJUW1xYTlZTW5XWG9JUFVtaW54ZWxMTm50MWY4U1hBYUpqR0otRElyci0tNTQxc1VIQVNLU3RYcVM1d3MwQUdXMDNUdFZ2bS11d19TcXRtMVM0MVhSdXhDaWdITU1EUzl5SkNrYmowbFNXVkZRMzI0YWdZMFIwaW5KbUVpM3p4bVo1bkE5MzFWdC01MXZYa0oz?oc=5",
-        "published_at": "2026-10-23T21:43:29+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -256,45 +293,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Oil Prices Rise on Fears of Middle East Conflict Escalation - WSJ",
-        "source": "WSJ",
-        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQM1hJV09vQ2pHZVVPLU5uUVVCSTdEVk56TzBQSW5Walc2eU5XTTVqWmZLVUdJSGRFRUhUR2RJb18xbWVGOFN1OHJyZWpNYXNQU1d4R3RTcnRjTkJNc3FPTFVUa1lhRDFreU9Dc3JucjNvR0tTNUJScmtBYWdwLVZiUDUwaVFnMEZrQkRWdzNqNDNGRTVmZWc?oc=5",
-        "published_at": "2026-10-23T19:54:00+00:00",
-        "score": 0.25,
-        "topics": [
-          "Rising oil prices"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "US stocks fall as oil rally and AI spending concerns weigh on Wall Street - Economies.com",
-        "source": "Economies.com",
-        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNWUY2cWFNTFZRaUxIb3pQNDYtMkQwUGRDRW1vLUdLQ3R0NUh1dU5PZXBjWFZpelpNelhZU0s1Yl81cTU3TE01T3pmUnp4NkFkcHlLOFZzcTROSWgtWERwRnpIcmg0M29NQ05mNWhVQlVNcUpNRjAzSHgta1RrSlJESXIwQ2NmcUdpalY0c2RhNEhTRnd3bmtOWGtkWWczem9tLUUzMVhQY2xxWFZtWXBVRlpYN0p5UzhUMUQwTzl2U1JVd0ZLdGtFNlRYSQ?oc=5",
-        "published_at": "2026-10-23T19:36:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Federal Reserve Votes Unanimously to Raise Rates 25 Basis Points to 3.75%-4.00%; Warsh Defies White House Pressure to Launch Tightening Cycle - BigGo Finance",
-        "source": "BigGo Finance",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBiUlVZRmEyWHF1andZbE5mUUV6TmFIX1VZZkVQd0RkbDJDRTlqMGVGRzg5ZV90QjV4dWU2Z012eWhpYkxyYkE3UDdJSFZWcXhnSjMyek5ycVViRVNQZmNtMGh5MF9VQmpTWGhXd1RCUUNGejZ3M0E?oc=5",
-        "published_at": "2026-10-23T19:35:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Crude Oil Futures Jump as Global Trends Push Prices Up - Lokmat Times",
-        "source": "Lokmat Times",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORUhJWENBNFpLVHp1RzJhNERSVnpoeXZ2Ujh3SFV5RnQyXzRCYVI2aWtFalhnczNLQnpraUNSNEZOaS1IaHByOEFLemVjOUlwSDJyOElkckowdHlTa0hrOTAtT1YtZjNvUU9la3dIU0NpcXAzWWhTTW5DUmlOQkxYZ2kwMUNMR0hhWXR1eUpMNHZiTnNaRUJfNDV6WkJEbWI1ZVBz0gGoAUFVX3lxTFBsVkNETGRaOTRMNGRfTjloR213bERtLWhSSTBjbGhjcV9xeHdjaERtT1hhSTlSaGtUY29XeE5RYW1tbU53UXNNR181dTZ3ZVpON3o5V0g1UjlWMHBuck14ZmxtUlRweS1IQlZPNHA0MExlSVM0ekdOMDhCNUd1R3A3d1B6RUExUGpHTTRnQ1V4YXRVQmRDeUpBY0c1QmJwcjNkSDdneTQtMw?oc=5",
-        "published_at": "2026-10-23T19:24:22+00:00",
+        "title": "Crude oil price forecast as Brent hits $117 amid US-Iran war fears - Invezz",
+        "source": "Invezz",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOM1p2VXlPdTMwZ3VVbGhhM2trNGY4R1BXZk1DT2p3OXZtcTJhWXU2OXloZWU4SEpJU1N2Y0d4MFZjUWJyM1FLVi0yV00zTlhWTlFNQS1IWHhHQ29qZ1ZRdmE1QlNzenU4RmdBT2t3cXV0LXNEcTYzSFdMV0ZLU1pmTm9rR2kzeGtmQWNaLU1CSThqNTV6cmtPTEpVZ0locWpnQVVacjRIdnIwc25PY0I4?oc=5",
+        "published_at": "2026-10-23T20:03:45+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
