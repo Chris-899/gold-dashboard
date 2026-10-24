@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-24T18:59:31+00:00",
-  "last_successful_refresh_at": "2026-10-24T18:59:31+00:00",
+  "generated_at": "2026-10-24T19:27:03+00:00",
+  "last_successful_refresh_at": "2026-10-24T19:27:03+00:00",
   "fundamental_bias": {
-    "bullish_pct": 61,
-    "bearish_pct": 39,
+    "bullish_pct": 57,
+    "bearish_pct": 43,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (61% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 6 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (57% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 4 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -23,8 +23,8 @@
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": 4.379,
-        "change_pct_5d": 6.125,
+        "change_pct_24h": 4.208,
+        "change_pct_5d": 5.951,
         "trend_label": "up over 24 hours",
         "impact_pct_points": 17.5,
         "direction": "Supports gold",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 6 scored headlines",
-        "impact_pct_points": -5.2,
+        "trend_label": "bearish tone across 4 scored headlines",
+        "impact_pct_points": -9.4,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,39 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-24T18:59:29+00:00",
+    "queried_at": "2026-10-24T19:27:02+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 6,
-    "scored_count": 6,
-    "bias_score": -0.417,
+    "matched_count": 4,
+    "scored_count": 4,
+    "bias_score": -0.75,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 6 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 4 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Realty Income Stock Climbs Back as Treasury Yields Retreat, Yet Challenges Persist - Benzinga",
+        "source": "Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUFliRnhCcFVLbFU3TVhWX3BXNzhERHdDRnIyU0lCNFFuRzRic0J5Z3I4R1pCNW1mblI2THN0SXJzU0F4cE1xYkoxWkZ1WG4yckJ5bkk2VG1GdWN6ZGtwZUhNMGZTRlJxWUx4ak1JZjNsSGQ5cldGUDRQWFlQXzU5VVFoUzNHWmQ1R2pQYm1IaU5KcHFRcWNqem03NU9RR0JFRWgzRlVPNlhwLXdsY0Z1WFdYeHZFaWJrNWdoRGFJQWZ4TkducUpKQ1FqXzhnTlM1eHdMZQ?oc=5",
+        "published_at": "2026-10-24T19:15:07+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Brent crude oil prices remain above $116 per barrel after surge amid escalating tensions in Middle East - Open4business.com.ua.",
+        "source": "Open4business.com.ua.",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcUg4RlhuRU5ISTM2cDBXSW9yOXRKX3kxX29QbFR0eTc1bnJRV2ZtTW5SdXpTamJuOVBSNmVYdnFka05RMXF4TWxaR2RCMExTbEl1clpXMWc1dU1EQmtiTWdjNkRDeER4dEcyN0U0SXR4VEQ2SHd6bDlGTFVWY1pVRWdBSVpmRU9MYWtfamFFQlBTOWM0Z3dZZ3FNQVFjdzUzVUEtazBQb19rY1Q3Q2NDcGVJRWpWSXlqVlN1VTJWRmNnRHR0V01TNGc1WHduLUtr?oc=5",
+        "published_at": "2026-10-24T18:28:56+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "September CPI Hits 3.7% as Trump's Iran Action Lifts Energy Costs; Fed Rate Hikes Back in Play - BigGo Finance",
         "source": "BigGo Finance",
@@ -111,23 +133,21 @@
         "in_scoring_window": true
       },
       {
-        "title": "World Oil Prices Fall Despite Increased Tanker Attacks in the Strait of Hormuz - VOI.ID",
-        "source": "VOI.ID",
-        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5BR2pXa1NRZ192RVh4d3Nmb3VRVkJTeWJSb1lJekVJd3RFNUZEcXdXZGNBX0R2eVBCTjlEVThfOTRoZTF0d01r0gFCQVVfeXFMTWNzRmJuTnViNzFqNGdPYWpwaWF5V2pkUVhlaTRNZ2wzWDdxT3ZicTg1QUJFb3NKNVlCb0hqQkJlbndn?oc=5",
-        "published_at": "2026-10-24T17:13:18+00:00",
-        "score": -0.25,
-        "topics": [
-          "Falling oil prices"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
         "title": "EUR/USD, GBP/USD Price Outlook: Can the Dollar Pullback Fuel a Bullish Rebound? - StoneX",
         "source": "StoneX",
         "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPekJmbTI0OG9YSEFiNE84NWJBd3FQd3R6MlhsY1E5N0F1US1qNnVESVV5ZjF3OXJhVWhTMzBJVnJfRF9wWXpWU2I1LUg5TDRLcTlxUWUySVFXQTRHSE1wOXFjYlY2N2ZSVlZZRW9fbURQVThlNVA3T0hNclZ2bkRvQUVmMHhJQzh4QkVGWlpyYXF4aXU4RTJkM2FtU3NaaDRwNEhnTzVFWGtwbmZZbExIWkNZS3dqOFhBc1RjMFhiOTNsdw?oc=5",
         "published_at": "2026-10-24T16:16:17+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold extends losses to near one-week low on elevated oil prices - The Daily Star",
+        "source": "The Daily Star",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNTUNzd29CQkp3eU5MWER5YXVyLUxZeGN2ZmZaYnpTYS10S2FHX0RnUmI1STcwT1pERkpqUjgyNWxabmNDZV9pQ3pERmJjWWxELTVreF9qRVNTT1VkNy13U3ZuNGpKOU5CX3c0UzNsVVgzb1lJSUgtVDcwMVJQRkVETEkzdy1aMHlkZnNpTGg4YWRTYW9venNsYkU0QWdqUmlJZVlQc2JVNjJKY1VzTjM1WGhIb2dqSFJNLV9UYWpLa3I?oc=5",
+        "published_at": "2026-10-24T14:57:21+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -282,30 +302,6 @@
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
         "in_scoring_window": true
-      },
-      {
-        "title": "October Fed Meeting Preview: A Pause Is Still A Recalibration - Seeking Alpha",
-        "source": "Seeking Alpha",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdEJ6U0E1WFhDeF9MSU14c3Flbnk3Tkc5TXhZbWs4bk9RLUdVWjg3WXFVR3hSRGlhaEkzQThqQmh6MDNwUGZIcFVmZFFHTGlady1XM0V5YldLakhGZllWcTYzTXRJZkNnSUgwY3liRVhiVC1uSDJJT0IyV0x6QnhwZXJzNkttLWJDZ0JyYjFRQndEZHhtZHNVMnd3?oc=5",
-        "published_at": "2026-10-24T11:05:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Treasury Yields Fall on String of Weak Housing Data - WSJ",
-        "source": "WSJ",
-        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNa0ZrSXl6OXBoV0o4dU9HQ2VkMHV5SGV3OG9vMW00S245MDZGYld5SXVOM0MtakhEWF9rU3lLdXJCMFRWS2ExbXRQZWhCM25fVmhMcGI3LXdRZ0I3UmE2SHJBYTZ0Mi11ZV9jU3IxRGRsNkFhRW9tdE1acTBPRVp4M3laTUVqcnlfd2UtUldmcU9wWEdyczNBSkZuekhHS01tazBtbUwwYms?oc=5",
-        "published_at": "2026-10-24T11:02:48+00:00",
-        "score": 0.75,
-        "topics": [
-          "Dovish rates"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
       }
     ]
   },
@@ -329,9 +325,9 @@
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 103.44,
-      "change_pct_24h": 4.379,
-      "change_pct_5d": 6.125,
+      "price": 103.27,
+      "change_pct_24h": 4.208,
+      "change_pct_5d": 5.951,
       "short_trend_label": "up over 24 hours",
       "trend_label": "up over 5 trading days",
       "bias_contribution": 0.35,
