@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-24T09:57:20+00:00",
-  "last_successful_refresh_at": "2026-10-24T09:57:20+00:00",
+  "generated_at": "2026-10-24T10:56:58+00:00",
+  "last_successful_refresh_at": "2026-10-24T10:56:58+00:00",
   "fundamental_bias": {
-    "bullish_pct": 63,
-    "bearish_pct": 37,
+    "bullish_pct": 69,
+    "bearish_pct": 31,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (63% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 4 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (69% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bullish across 2 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -23,8 +23,8 @@
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": 4.208,
-        "change_pct_5d": 5.951,
+        "change_pct_24h": 4.379,
+        "change_pct_5d": 6.125,
         "trend_label": "up over 24 hours",
         "impact_pct_points": 17.5,
         "direction": "Supports gold",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 4 scored headlines",
-        "impact_pct_points": -3.1,
-        "direction": "Bearish",
+        "trend_label": "bullish tone across 2 scored headlines",
+        "impact_pct_points": 3.1,
+        "direction": "Bullish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,17 +64,28 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-24T09:57:18+00:00",
+    "queried_at": "2026-10-24T10:56:56+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 4,
-    "scored_count": 4,
-    "bias_score": -0.25,
-    "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 4 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "matched_count": 2,
+    "scored_count": 2,
+    "bias_score": 0.25,
+    "bias_direction": "Bullish",
+    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bullish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Chart of the day: Gold price eyes $4,200 breakout, but buyers still face two major hurdles - investingLive",
+        "source": "investingLive",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOER5UkJFZFQ0TFdXaXBaaW40TXNHYWFGeU9HQTlQcnlraURWQTFPZFJfY0pKZUVJdWZwSGpiS0hmMXFLT2xHX2xXX1kxVEtxMTZrR1VCQ21TclRBTFQwQTlvbFJGellfUkd1X0NTeFNHMmQ5dGtQMDZyOEJpX0lRSUM0a1NxYmJVREl3WWQzZDdHbUNMRjdYUF9zYTZDdWs0NXFVTGdlYWo3YjBYVEVoM0R4eFhnYkF5ZGVITlE4ejdBZFpDc1ZwYTlnQW94dw?oc=5",
+        "published_at": "2026-10-24T09:25:40+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Trump-Fed Tensions Could Reignite, Weighing on US Stocks - bloomingbit",
         "source": "bloomingbit",
@@ -113,6 +124,17 @@
         "source": "Britannica",
         "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNWlvMl92WWlMQjVnSFA0ZGhlbFpMQXRiXzhQNUNDLU92UHpDU19PTU4ya1prUm9XN3NrNy1fSXZsWjczbXhVUVBYTTZCNjVjVWVOZVpmR1VuSHAzVUszNC1vSjFaQ3hSWm95bFhSd2daak9YRzQ0WEtLMkV0akNWSWxwUVd6d21HeGc?oc=5",
         "published_at": "2026-10-24T08:38:20+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "GBP/USD (GBPUSD=X) live rate, chart and news - Yahoo Finance Singapore",
+        "source": "Yahoo Finance Singapore",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45cXk5ODVxV3l3RWQ1Vl9aYzVSaGpNQmV0aUxPN1l6bllfNmxRR2xNcXFGVmczOEJFbnlIcThZVGtWcmJlSUZNc0lpbEJJbDJReG5VeFRWZ1g0QQ?oc=5",
+        "published_at": "2026-10-24T08:38:12+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -210,19 +232,6 @@
         "in_scoring_window": true
       },
       {
-        "title": "U.S. Treasury Yields Turn Higher With Oil; French Bond Yields Rise on Protests - WSJ",
-        "source": "WSJ",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOSk1wWWp6WG1vZjdfYjZXX1hRU0lPVEl6WnVGbkozSXB5eTU5UHN2aG9nRHRpc1VMNlI5eF92YXNZNTFUOGFBMnk1anY0cUxFcG5YTTF0NFRhaGZ0VjkwbjNETmpiWkVXUHlNMmZJV014MlJ2LXRKZWlmS3E1N21wZHdnUXZybnJBRzlVSmdwUQ?oc=5",
-        "published_at": "2026-10-24T05:52:31+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
         "title": "Oil prices surge sharply on global markets - Apa.az",
         "source": "Apa.az",
         "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcURBdmZkRmdweG5aTmszS1M3UkYwSHZtMnRtOGVaemVhclRRekNsOFgyRFQ5dEViWGJVRmhVQXljVkVqODl6cjdxTHk2RlhiNFpaVU96Rnl2TWM4RmlMbGY4TXV2TUNjYmh3c1BQNXpxWFJsMWVwTFNHdXlnY3BWLVhmUUdZbFBNU0RWdk1MeTg?oc=5",
@@ -258,6 +267,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Federal Reserve preview: A pause before a December hike - ing think",
+        "source": "ing think",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOcVJoZ1lwbW55OENBSXEtTVVBNWpaUTJfVWozbW1aVV9oRGdXZXo1MnQ2bEJOVTlfbXY2X0x3WmpBQi00VTIza2hNNy1PZ0FlMjdGMjlHYmRBeG4xN2NCc1NiQlNRbkt6dW5XM2ZjQ1BQUkhtSlNkSEJQaGpGbHBCV1d6TXJ4dV82RWlsdXpmVQ?oc=5",
+        "published_at": "2026-10-24T04:21:39+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Treasury Yields Snapshot: October 23, 2026 - Advisor Perspectives",
         "source": "Advisor Perspectives",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObEpEcXJUUm1JM0kydjNaUGVrS28zSG5qc3NmU2RZRS1Xd0FDbHE2dm5PMXFNWXNGYVRSQXlaeHc0VHRXN3pQVW5KeFdqbWpQZmlKd0lxM3hJR1ZNRkM0S2VDRnpVRUZONms0dmh3U1ZBVVpyMGdpUGdpemk3b0YyZ1piVklSNDBNeFc3ZlNTOG03aHpsV08tV2Rac1ladzlLcWhaVw?oc=5",
@@ -273,30 +293,6 @@
         "source": "Intellectia AI",
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5vTHJoZlo4Z2FvNlBCd2hNVVdjWVg4aXdfeDNoc2dpS3Bma0djRlhGSUdpczItT19BTm9Bdi1GUzNOSXh3cTdGTVlTclFkSzhaRmF1UEZwUGdmNWdES1FtWWZpTnZ3eGM1dUpYWGN0LTE0aHZ3ZlE?oc=5",
         "published_at": "2026-10-24T04:14:05+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Fed rate hike outlook pressures Bitcoin, gold, and copper; $10,000 Bitcoin downside possible. - Pluang",
-        "source": "Pluang",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMlRESVk2T3NTc1o3RTNpREZQVkFKV184dEh6ekFqSnVpb2gxVTB0RV9LR1hBTUlDR2RCaGdFV3BMbk1xMzNIN3N2SzlId3VQdVFjcnZZUXlOTzUtZkpsNXdXYndLS3RfTEdINGVwOHlFME5nZHhmb2JhcVM2MUVMSTVlTkIxU2J5cGhwQkpoOXVoUTVrREpGNUNWbDNvRWcwbGFTUVJnZzZTX2d6SS1lRw?oc=5",
-        "published_at": "2026-10-24T04:04:38+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold (XAU/USD) Price Forecast: Bearish Momentum Puts Major Support at Risk - FXEmpire",
-        "source": "FXEmpire",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVVlMV0p6MmhrT2NsanpnY3ZPLUp4SGJQQk5JRkpNYVJ0aExicFluSU1aaG5nQXhGcEdYc2dLZ1dhREJfazQxZjM2S1BpQ0g5RG1DVUdFYWNfTkQ2V0VXRU1iUWZNOERJb2Y2Q3JEQUY5QndxcVZBaTFIS1djVDVtZXhrTlREcHZRbkp6UGJqUURqUFV2VGxlakxTYnlYX2drcUpYT0lTS1FxN0lmTHBkbWVHSW9CWGY5SDRpUkRkTQ?oc=5",
-        "published_at": "2026-10-24T03:57:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -325,9 +321,9 @@
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 103.27,
-      "change_pct_24h": 4.208,
-      "change_pct_5d": 5.951,
+      "price": 103.44,
+      "change_pct_24h": 4.379,
+      "change_pct_5d": 6.125,
       "short_trend_label": "up over 24 hours",
       "trend_label": "up over 5 trading days",
       "bias_contribution": 0.35,
