@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-24T21:20:44+00:00",
-  "last_successful_refresh_at": "2026-10-24T21:20:44+00:00",
+  "generated_at": "2026-10-24T21:54:52+00:00",
+  "last_successful_refresh_at": "2026-10-24T21:54:52+00:00",
   "fundamental_bias": {
-    "bullish_pct": 59,
-    "bearish_pct": 41,
+    "bullish_pct": 63,
+    "bearish_pct": 37,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (59% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 3 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (63% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 3 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -23,8 +23,8 @@
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": 4.208,
-        "change_pct_5d": 5.951,
+        "change_pct_24h": 4.379,
+        "change_pct_5d": 6.125,
         "trend_label": "up over 24 hours",
         "impact_pct_points": 17.5,
         "direction": "Supports gold",
@@ -48,7 +48,7 @@
         "change_pct_24h": null,
         "change_pct_5d": null,
         "trend_label": "bearish tone across 3 scored headlines",
-        "impact_pct_points": -7.3,
+        "impact_pct_points": -3.1,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,30 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-24T21:20:43+00:00",
+    "queried_at": "2026-10-24T21:54:50+00:00",
     "status": "available",
     "headline_count": 20,
     "matched_count": 3,
     "scored_count": 3,
-    "bias_score": -0.583,
+    "bias_score": -0.25,
     "bias_direction": "Bearish",
     "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "S&P 500 (SPY) And Dow Jones Industrial Average (DJIA) Slide As Oil Prices Surge And AI Profitability Fears Persist - Foreign Policy Journal",
+        "source": "Foreign Policy Journal",
+        "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxObjRzUUtUajluaXpBRWNWeWpjczlVZEVYUzJDSkQ2QTBsdzdNV29mQnZSR2czT3YxZnBpbWp4Q3kxblkzc3ZNNEFZcjdQMmpGcFNEcG1lZ2lYQVFfTnhENFJRSFFURGJkMlBDXzQwYnkyd1hkeExpWTdSS1p2YllPQzJSVHZBWVdWUkZkdHF2anhMSHMxY3lmMmtfNVVHc21CNXQ5eFllX1U1bnp1d3MzUWRfcFpjV1BMR1FrSmJ1ZXdpOE53MHBqZXdKN1V1V2lmaDZ6NjVMRFl0d2xMRHVVVzl2Qk9BUzFrVENXbVQyRQ?oc=5",
+        "published_at": "2026-10-24T21:14:00+00:00",
+        "score": 0.25,
+        "topics": [
+          "Rising oil prices"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
       {
         "title": "October 2026 FOMC Meeting Preview: Will the Fed Raise Rates Again? What Does This Mean for US Stocks? - TradingKey",
         "source": "TradingKey",
@@ -166,6 +179,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Russian central bank keeps key rate on hold at 14% - Kuwait Times",
+        "source": "Kuwait Times",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQanhBbks5dklTYWdJZ2MzMEVJUFV6Tk41TlRFci1lc3UtOUNkcFNGZ2ZzTTNaenV1cGxBR1UtRC1ZQ245VDczUGlXV0lrdktUSmVTRkRKRHRqRDFKaWo3SEZDZkItWk1wd2FTNklMcVdpZmtyMURfX19mRlNhSFpBNGdaXzVLa2VEUXBNaVZsZzVTd2dxMWMxY1NBMHZWd9IBogFBVV95cUxQemdpZ3FNRDNoalptdXVhODNwMnJrWW4zQWZ5Vl9JOWJ6VWlMSjZZSlUzLVc3eGFCMHB1MW9sdVctNHhrVTQ0Mm5ka3FDRFB2cmdncGlWdjZrSkFQZU4tVDZBN1JkMFNKMHhLZWhMYXN5aFZrNmdCcDBOMmZaMWYzamxrWUc1NEoyeTUwRGxYR2tackprVGtrRkZRNTcxUUhVekE?oc=5",
+        "published_at": "2026-10-24T17:29:01+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "World Oil Prices Fall Despite Increased Tanker Attacks in the Strait of Hormuz - VOI.ID",
         "source": "VOI.ID",
         "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5BR2pXa1NRZ192RVh4d3Nmb3VRVkJTeWJSb1lJekVJd3RFNUZEcXdXZGNBX0R2eVBCTjlEVThfOTRoZTF0d01r0gFCQVVfeXFMTWNzRmJuTnViNzFqNGdPYWpwaWF5V2pkUVhlaTRNZ2wzWDdxT3ZicTg1QUJFb3NKNVlCb0hqQkJlbndn?oc=5",
@@ -209,19 +233,6 @@
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Trump Criticizes Fed Chair Warsh as Rate Hikes Threaten Stocks - SuaraGarut.ID",
-        "source": "SuaraGarut.ID",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBYbVdRZEIyOUU2bHpqZTYwWVhaYXhyWHBPRURoM2tfcHFJbWlld050eXlmZGFLa3lhSkVZSlJRNDZ5UWpfWFFYdzUzTGpObElrZ2ZPZm14NXpMLWo5Y3MyUVJMUGU?oc=5",
-        "published_at": "2026-10-24T14:29:44+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
         "in_scoring_window": true
       },
       {
@@ -289,17 +300,6 @@
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
         "in_scoring_window": true
-      },
-      {
-        "title": "Canadian Dollar Technical Outlook: USD/CAD Five-Week Rally Sets Up Major Breakout Test - StoneX",
-        "source": "StoneX",
-        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQSjBfVmpvTXhhMzNMbmkyU0Vndm1vb2wzZ3d2Vzk2T1p5TERTVHBlQVd1bmF0QS00ZkpFV2JvalppY3NJUzRoY2ZMajBrV0Z2YjVsdGJCaEgtek9sYVlnREl0RFZiM3lTWXA1M2VJRzc5eVp4T1MxV1Q1RW5ZWXlUTGtQWDFVV0JCLWpwYWJoU2NPTUNfVWNXZ3dXdmJmakhBRjdIVUh1R3hIS2lUdkFBb0IzWDJoRkxGdF92SEFFaHlXYTFGdWVvY3pMV0hvdw?oc=5",
-        "published_at": "2026-10-24T12:12:39+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
       }
     ]
   },
@@ -323,9 +323,9 @@
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 103.27,
-      "change_pct_24h": 4.208,
-      "change_pct_5d": 5.951,
+      "price": 103.44,
+      "change_pct_24h": 4.379,
+      "change_pct_5d": 6.125,
       "short_trend_label": "up over 24 hours",
       "trend_label": "up over 5 trading days",
       "bias_contribution": 0.35,
