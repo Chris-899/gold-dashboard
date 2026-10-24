@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-24T14:26:49+00:00",
-  "last_successful_refresh_at": "2026-10-24T14:26:49+00:00",
+  "generated_at": "2026-10-24T14:57:00+00:00",
+  "last_successful_refresh_at": "2026-10-24T14:57:00+00:00",
   "fundamental_bias": {
-    "bullish_pct": 67,
-    "bearish_pct": 33,
+    "bullish_pct": 64,
+    "bearish_pct": 36,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (67% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 5 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (64% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 6 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -23,8 +23,8 @@
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": 4.208,
-        "change_pct_5d": 5.951,
+        "change_pct_24h": 4.379,
+        "change_pct_5d": 6.125,
         "trend_label": "up over 24 hours",
         "impact_pct_points": 17.5,
         "direction": "Supports gold",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "mixed tone across 5 scored headlines",
-        "impact_pct_points": 0.6,
-        "direction": "Mixed",
+        "trend_label": "bearish tone across 6 scored headlines",
+        "impact_pct_points": -2.1,
+        "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,17 +64,30 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-24T14:26:47+00:00",
+    "queried_at": "2026-10-24T14:56:58+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 5,
-    "scored_count": 5,
-    "bias_score": 0.05,
-    "bias_direction": "Mixed",
-    "summary": "Reviewed 20 recent headlines; 5 matched the published directional keyword rules. Their overall news tilt is mixed.",
+    "matched_count": 6,
+    "scored_count": 6,
+    "bias_score": -0.167,
+    "bias_direction": "Bearish",
+    "summary": "Reviewed 20 recent headlines; 6 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Trump Criticizes Fed Chair Warsh as Rate Hikes Threaten Stocks - SuaraGarut.ID",
+        "source": "SuaraGarut.ID",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBYbVdRZEIyOUU2bHpqZTYwWVhaYXhyWHBPRURoM2tfcHFJbWlld050eXlmZGFLa3lhSkVZSlJRNDZ5UWpfWFFYdzUzTGpObElrZ2ZPZm14NXpMLWo5Y3MyUVJMUGU?oc=5",
+        "published_at": "2026-10-24T14:29:44+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
       {
         "title": "Gold falls below $4,000 amid rising oil prices and rate hike fears, hitting a three-month low. - Pluang",
         "source": "Pluang",
@@ -93,6 +106,17 @@
         "source": "Laodong.vn",
         "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMC1HTEJXNUdONVJXalFJNzJrSHlaSmQwQ0lVczdEMnRQdGRFRjM0aDBpT1BLMkhMdFFmc2lia2ZSRThpNmE1V1dsUjRBS1NUV2p3cnJHTjhTdjU4SllCcXp4QmtVRXFxSFRfeFk5Q2p3TENQNzBGdkthM3RpZ3F5UjdCU3hzZ29WSHplZlhlLU8wVmo0VVVUQy1BWU43SFJ2Ujh0TUp3X2pjSEhuMldPSl9ET3dkSWxOS2I4?oc=5",
         "published_at": "2026-10-24T12:41:54+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Oil prices are near record highs, adding pressure on Trump. - Vietnam.vn",
+        "source": "Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1SdThoeUJSSi0tSy1GR3BwZ29SbXJwd3lkbzYtZ3BoNXd0ZEQ1S1BZb1I5TF9NTjN4Q1pRTGRVREI2Q2toLTdaMDFLRU9vbFlMUlZVeE4zMDBIc3VjWXNqdzQ1Q292c0d1VmZzWTBhQnI4R1puTk5zcA?oc=5",
+        "published_at": "2026-10-24T12:33:44+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -181,6 +205,19 @@
         "in_scoring_window": true
       },
       {
+        "title": "Gold, Silver Decline Sharply On Weekly Basis As Crude Prices Rise - Ommcom News",
+        "source": "Ommcom News",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMENmZlZBQi1fRWNzOXFGeDcyLVJOR09lWDk4WGlnSDJHYzNKelZRUXVqcVpmc2M2NnZhdEg3dElPTV9NYkZqVnl4UzJFc0pmeU5IWDc2Zks3WFJLclhmVzk2SDk5aDBfX1N2U01YWnhYYXVKVkYzdTdlWFVXaW9NcmRvUVVFbGlHNWtuS3BFRHl5d09McTVYZW00UzlPUHVVZ1B6Zw?oc=5",
+        "published_at": "2026-10-24T09:33:02+00:00",
+        "score": 0.25,
+        "topics": [
+          "Rising oil prices"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
         "title": "Gold Price October 26 2026 - Robinhood",
         "source": "Robinhood",
         "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPa3FkSmtDdzg2aldueXo1UExDdV9Lb1B6SU4zaUpGQlNlc2Y3VFhXZldSYXlqSVk3TE5haF9pTkNGLTY2bWNHS1I5TmJGdnBrVC1fd09LZFJhVkYtWEZ3TG52MGZvdFptdVNPWWtfZVc2R1BERVZKSVJxbGpuc1oyQjJMVmJkWU9rQWJGZWpqbW96WmFLMWg3WmpOQVcwRldWOGc?oc=5",
@@ -260,17 +297,6 @@
         "in_scoring_window": true
       },
       {
-        "title": "GBP/USD (GBPUSD=X) live rate, chart and news - Yahoo Finance Singapore",
-        "source": "Yahoo Finance Singapore",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45cXk5ODVxV3l3RWQ1Vl9aYzVSaGpNQmV0aUxPN1l6bllfNmxRR2xNcXFGVmczOEJFbnlIcThZVGtWcmJlSUZNc0lpbEJJbDJReG5VeFRWZ1g0QQ?oc=5",
-        "published_at": "2026-10-24T08:38:12+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
         "title": "Brent Crude Hits $116: Oil Price Surge Impact on Stocks 2026 - Intellectia AI",
         "source": "Intellectia AI",
         "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBaX293RkJOUEl3T1dJeFVfdFBiS1lfeE5YZ0VRWjNXVUE1akNaTXBvVHk0dWVVdDktSmZiWjA5dTkxd1I3WkpxX0pvbDJxRlVLdWZOT3E0b19YVzVMY0tyV2ppUmdwRHUyUnc0dA?oc=5",
@@ -279,30 +305,6 @@
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold price falls below $4,000 - Apa.az",
-        "source": "Apa.az",
-        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE10LWVTOE1qMU41eC1LNU01TTBKYWFRMDFVbnJJb0NCN3hsNy04SEVJbENMX05BN21TWDZyMEpWeGtJMkZXSTc2SFhZRmlJR0J0YWN0dW9weUIwdHo5UEowblNsVnZwQUFobzZN?oc=5",
-        "published_at": "2026-10-24T08:31:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Fed Rate Cuts Gain Support as Weak Jobs Data Weighs on Outlook - SuaraGarut.ID",
-        "source": "SuaraGarut.ID",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBsZ3NDVndGRkZsT2JjdkQ1djE3T1ExMFhDNW5vekpldTV2TG1EYVN5UTdwaklxd1BWanU1QXUxRGcyY3dtV3RFNWhsQVVwTHBrZU9aOVBXakFhQ3BxeFFYX1Fnc3pUQnM?oc=5",
-        "published_at": "2026-10-24T08:04:32+00:00",
-        "score": 0.75,
-        "topics": [
-          "Dovish rates"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
         "in_scoring_window": true
       }
     ]
@@ -327,9 +329,9 @@
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 103.27,
-      "change_pct_24h": 4.208,
-      "change_pct_5d": 5.951,
+      "price": 103.44,
+      "change_pct_24h": 4.379,
+      "change_pct_5d": 6.125,
       "short_trend_label": "up over 24 hours",
       "trend_label": "up over 5 trading days",
       "bias_contribution": 0.35,
