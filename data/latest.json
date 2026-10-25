@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-25T14:24:55+00:00",
-  "last_successful_refresh_at": "2026-10-25T14:24:55+00:00",
+  "generated_at": "2026-10-25T14:56:23+00:00",
+  "last_successful_refresh_at": "2026-10-25T14:56:23+00:00",
   "fundamental_bias": {
-    "bullish_pct": 63,
-    "bearish_pct": 37,
+    "bullish_pct": 57,
+    "bearish_pct": 43,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (63% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 2 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (57% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 1 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 2 scored headlines",
-        "impact_pct_points": -3.1,
+        "trend_label": "bearish tone across 1 scored headlines",
+        "impact_pct_points": -9.4,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,39 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-25T14:24:53+00:00",
+    "queried_at": "2026-10-25T14:56:21+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 2,
-    "scored_count": 2,
-    "bias_score": -0.25,
+    "matched_count": 1,
+    "scored_count": 1,
+    "bias_score": -0.75,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 1 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Can the Federal Reserve Keep Rates High Without Breaking Something? - CryptoPotato",
+        "source": "CryptoPotato",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPcG1oYmtBUGg5eDZJanJfRHhZQmswR2QxY3JYVVhJMi1JMHA4YnZHWVd1OUpfczR0MjNEdFBaenV4YTg5OS1oNGw5RXMwZzlzV0pTc3UtU0pLVjdhZmRhd0RoelZ5SjRlcjdpZWppZ2FMNTZ4aVFrLVlRRlZESUlCU1pNUUl3RjBJanJqS2JhdUxsdG16TDhn?oc=5",
+        "published_at": "2026-10-25T14:49:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold, silver face fresh test as oil surge puts Fed policy decision in focus - Business Standard",
+        "source": "Business Standard",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPQjNMaDdhMzE0OGZoMjRMNlRuNGV4X3dna01qbWNtQ1FCSnhjRjJkQmgtaXZkOHo1X25LUkJBalUyQU0ySzZ1SFRfNHJzbkFEUU83bHE4M2hSVmpHa29TdW9FcUpDb0hiX2J2Si1ZTTNyZWUwSHpPUS15T2tGc1VNRVZXTnl0RXg4OWlxLVp1aUhOQ003UzE2RWFVeXVkQ0R1MlNhcVg3bzlsRVl1cjBNMlRoRjJkakhpVFVvaVkzQ0tQajFYS01oemJNY04yM0xtWklObXUzVUfSAd4BQVVfeXFMTlZEYjZzVVZZeFpoVmpDNUNXT1JJTldGcHhreHBqVnN6eU1DQ1lra3B2TDdEOUk4UU9NY0hqY29Zbm94ZVVGSFNLSGsxRzRETmJUSlhDUVE0dWhMeFdzeGotUTd2eDF2MXhNYU85T3dDd0VYZlBDeUZMTTZGcFcxWENrb1ctenQ1Z1N1bHk1dXRZUU5DQ3dmQy01SE1mZF9PUHN2SFhOdF9qUUxXNG54Q3VIOF9fTTBVRHdfUkZfanpENG9FcjZLX01BZ0FHemkxRU9rUUFCTEtFdGRfa2V3?oc=5",
+        "published_at": "2026-10-25T13:39:24+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "The Fed May Have To Raise Rates Much More Than Markets Expect - Mott Capital Management",
         "source": "Mott Capital Management",
@@ -98,6 +120,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "US Interest Rate Forecast: Oil Rally Fuels December Fed Hike Risks - FXEmpire",
+        "source": "FXEmpire",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVjE0dGZiWG5BVFM3OHRuV0hGMzVSNFF1SzJNODdRTTdQY0hnOEc4Z05aODNiU3EtdkhoNmFCVUp6SG01VHBQTDcwVVBCZzk0NWVmakJSQ2ZhS2FQVzBlMnBFMWNFX3E2MDdYMlcyWHljRkQ0clFuZUVvaE5xSnVCQUdmNmJaNEVYMzlNZHY4TTVNWTcwZFVuYTg3RlRkQ2JwcE5ybTNsY3NqYV9XSFJ0aHFZZHhFUGs?oc=5",
+        "published_at": "2026-10-25T13:02:49+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "'No more shine' - Gold set for steep weekly loss as rising oil prices bolster Fed rate hike bets - The Star",
         "source": "The Star",
         "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNT1BWOXZCeWs2M29VbWYySGIySXFFNnhwWmdDR2V1OGdyRHJsbVpfWlJ4eUdWNDVUemJGbUxNSkhFQXE4bl9VRGkyWlZ5WVA1X0tCMVFTUC1Zd2lRM2Q5cWpzcHVEdGF2aEd0UjkwVU0yTldSSzV5X1RUeHdKSi1fZERWS3VqZVJSdWNnOEh1bjlIZUJXQl9GeGZJRlVaSWJfNDdhMW5VeTlMbnk4eUVuUFMtb2RYTDZ3ZGhvQmY4ZkhIc2RHV2Y4MGpzMUhaUXN5WVZ6M2ktanhObGQ2d0xuZm85UEZKR25RM1NCWEYwQ25TMHI1MlE?oc=5",
@@ -108,17 +141,6 @@
         ],
         "direction": "Bearish",
         "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "US Interest Rate Forecast: Oil Rally Fuels December Fed Hike Risks - FXEmpire",
-        "source": "FXEmpire",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVjE0dGZiWG5BVFM3OHRuV0hGMzVSNFF1SzJNODdRTTdQY0hnOEc4Z05aODNiU3EtdkhoNmFCVUp6SG01VHBQTDcwVVBCZzk0NWVmakJSQ2ZhS2FQVzBlMnBFMWNFX3E2MDdYMlcyWHljRkQ0clFuZUVvaE5xSnVCQUdmNmJaNEVYMzlNZHY4TTVNWTcwZFVuYTg3RlRkQ2JwcE5ybTNsY3NqYV9XSFJ0aHFZZHhFUGs?oc=5",
-        "published_at": "2026-10-25T12:49:02+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
         "in_scoring_window": true
       },
       {
@@ -159,6 +181,17 @@
         "source": "Udaipur Kiran",
         "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMHFHMHVlb1c3Uk43elJuVllTa3Z6Ull0QWRJWF9aSG5oMWJQTy14TmF5emhuNmZlWENBY3NrbkJFX1dSZVJ3R09yU1lLOG4tcGFLb1M0SGNoT1FhNXpBbnlkemwzS29MV2x4TkFMc2NHbE40Qlg5aWZQY25fN1Y3OXoxZHNWUWhtVW1EVg?oc=5",
         "published_at": "2026-10-25T12:20:21+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "GBP/USD, Gold Forecasts: Two trades to watch - FOREX.com",
+        "source": "FOREX.com",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZTFxU1E0ZWo0UnIyM2xjNWJ0WnluSjc3UEVnUHRYbXJjUUt2b0MzMkUtWjhwQ2xMNkxkZk5acVU0LTYwYWlwdmdEMTZfQ1F5MHFKNktreEg5SEhzcFBzLXo5TnpIWEtiVzNEX2ZDc1JfZ2hLNUxZR2tDU0xaMjJCUWpQUHY2VW54QUlwbUFRdlpLTFE?oc=5",
+        "published_at": "2026-10-25T12:08:20+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -258,41 +291,6 @@
         "source": "StoneX",
         "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQd3ZRMzRIczA4b2JCOUJmanYwYjFySmg0bllWemFHNU9hR3k4emNLOTVqQ2ZOcFR1dF9DaWY1QVF1dlVUNVVCakViRE8zRnVjOGUybDZNYS1UVzBSZzdlczU2NlV2akViZTMzS29yN3YxTTNZQ1JiVWZ2aWxMdmNDdlU2Q1RpbmVMTlBKc0IyaS1WLWxobmRZcXVfMHFHWkxaTjg4UDNFNm1PeDRhZkphNzFITkFfOUU?oc=5",
         "published_at": "2026-10-25T10:45:39+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil Prices Rise After Ship Attacks, US-Iran Talks Deadlock - EnergyNow",
-        "source": "EnergyNow",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWHRpbFkxaFV4cVBJS2IzZHZsZUJPOVF1MmVHckdfQW92QjNrSDZVNzVLM2ttTndtMEgwYzk0VFFMTVVTVl9kNnFLblZnaFhwandXTV9HUGNvM2o5WnBldmJ4SWhZTlFBNVBFbGRWS3RHaGZ3WTduLWNiODBwRWFETHBkUlVQVzVERUktYjh5NFQ?oc=5",
-        "published_at": "2026-10-25T10:42:20+00:00",
-        "score": 0.25,
-        "topics": [
-          "Rising oil prices"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "S&P 500 Today: Stock Market Index Drops to 7,623.68 as Oil Surges and the 10-Year Treasury Yield Hovers at 5% Ahead of the Fed - BBN Times",
-        "source": "BBN Times",
-        "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZG81TzZadUxsS2VHU1doLWlEalZQclMzUFRnaUtzT2xaYm12YnM4ZzhXRFg3MjR4aHZ3N0hfQS1qMkwzVE90REViVGJRYXdpcDlrMVJ4S2E0Z0FKMkFjWFRmQy14VTlTdDg4RGE2cExQRFJVdEZmX05YQTUxdzhEOFB4dVNIVnExbW1pMmtIUjNqbWxLc2syWTZoekl0amxLMGluOEZwSDlxa3ZBRmt0VjNDVXhyUVdaZ2x4d0R2VTdDZHphQWtzMEFidWNjQ3dOUTJfQUZoTjJla0tHVXZ3Rk5QS0wtcHRCM2ctS2ZzRGc?oc=5",
-        "published_at": "2026-10-25T10:35:10+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold prices recover from two-month low - برق الإمارات",
-        "source": "برق الإمارات",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOLUFNc0VzVmtUSkxvQTFEakMtVDRBR1hBZ05QS3BIQ2RDZ0FxeVJJYU9wYkFDMW0xVXQ1SHJpb3ZraE16OUh5Z3Nhekl5ajQwUktvSnRELVVhU2lKTEVocS04OGdSSE8yTmJRblA5MUlrR3FIaW1EQTdURTFtalh2NEh3?oc=5",
-        "published_at": "2026-10-25T10:28:28+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
