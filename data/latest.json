@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-25T02:32:17+00:00",
-  "last_successful_refresh_at": "2026-10-25T02:32:17+00:00",
+  "generated_at": "2026-10-25T03:25:08+00:00",
+  "last_successful_refresh_at": "2026-10-25T03:25:08+00:00",
   "fundamental_bias": {
-    "bullish_pct": 65,
-    "bearish_pct": 35,
+    "bullish_pct": 69,
+    "bearish_pct": 31,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (65% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 3 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (69% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bullish across 1 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "mixed tone across 3 scored headlines",
-        "impact_pct_points": -1.0,
-        "direction": "Mixed",
+        "trend_label": "bullish tone across 1 scored headlines",
+        "impact_pct_points": 3.1,
+        "direction": "Bullish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,17 +64,39 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-25T02:32:16+00:00",
+    "queried_at": "2026-10-25T03:25:06+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": -0.083,
-    "bias_direction": "Mixed",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is mixed.",
+    "matched_count": 1,
+    "scored_count": 1,
+    "bias_score": 0.25,
+    "bias_direction": "Bullish",
+    "summary": "Reviewed 20 recent headlines; 1 matched the published directional keyword rules. Their overall news tilt is bullish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Kospi Seeks Direction Ahead of Fed FOMC, Samsung Electronics and SK Hynix Earnings - bloomingbit",
+        "source": "bloomingbit",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9nREJZNzBhUFFoRHBMS3lLbC1BOXpiWHpaeGdmTFJDdkl4dHdmakpGR1REVk82eURab09NVUdhYUxFUzh2Uk5jT2dNTlljb2paZkt1bw?oc=5",
+        "published_at": "2026-10-25T02:29:33+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Federal Reserve to Hold Rates in October, Weigh December Hike - 조선일보",
+        "source": "조선일보",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQTm10RFY2QnpXbDF6YnZQOTc5THpxRlBheE9QSFNQcnFEU0ZfN0o5Mkp4ZlNkaW1kekFjOGdWdzdDQmVRa2xlNExQRXNnT1YwdXF0SjRwSU80T0w2bnVSeHYtemlZYkVEbHA4TG9jVThjcGJ1SS1rdHBsaS1wZ2dmeVFmUFdYLTJQOERQNXpB?oc=5",
+        "published_at": "2026-10-25T02:16:52+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Fed expected to hold rates steady days ahead of U.S. midterms - CTV News",
         "source": "CTV News",
@@ -87,10 +109,21 @@
         "in_scoring_window": true
       },
       {
-        "title": "Federal Reserve Pauses October, Eyes December Hike - 조선일보",
-        "source": "조선일보",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQTm10RFY2QnpXbDF6YnZQOTc5THpxRlBheE9QSFNQcnFEU0ZfN0o5Mkp4ZlNkaW1kekFjOGdWdzdDQmVRa2xlNExQRXNnT1YwdXF0SjRwSU80T0w2bnVSeHYtemlZYkVEbHA4TG9jVThjcGJ1SS1rdHBsaS1wZ2dmeVFmUFdYLTJQOERQNXpB?oc=5",
-        "published_at": "2026-10-25T01:08:15+00:00",
+        "title": "Brent oil prices near 5-month high - The Daily Star",
+        "source": "The Daily Star",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWnB6eGxnaEVmaFdwZ012Nm0ybURGWlQtT1gxdXF4R1FDMW5xajhaTXYteXc5RkZiVDd5d01qY29sY1VxbDE0aHBfQVpkYTNhcVhZTXJCdGswcjdmQ25WX0t1d1JaS0xwMlVfWjJxNXNOYXpRRWtFazdYUHZPcUhBRE5LcElmTk9WMmo2UHVtdlRLOEJSaUJTVnNvWExvM1BaQmc?oc=5",
+        "published_at": "2026-10-25T01:32:09+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "USD exchange rate today (October 25): The US dollar experienced a week of fluctuations and faced significant pressure. - Vietnam.vn",
+        "source": "Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZkQ4T2JFcXloRkxaVmNYc1Z5TU0tOGxXcjRXejdIbVhYT09kQ1JBb1VOWkxlM1Bka1pTT0lMb3BpNklkZ0Jibk5ienY1ZEVDMkExdXBQaDZ6MUNiU3NCd3pGRzBMWWhEd0V5bTJVaWs3UTR3UG9iQ1c3LXNldmx0cURONVNZaFUtLTN1YXg1aEV1el9hZ0lRYUdFcThiNU8yQm9Cd2Y0SQ?oc=5",
+        "published_at": "2026-10-25T01:20:47+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -102,6 +135,17 @@
         "source": "CubaHeadlines",
         "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1WQXJpOS00eGNTTmVOVjkySDlIblNKY1FoSnRwd25EbEtxTElsYWswU212aFBaLTUzUFp2Mk0ySnJTbDVJMGlLRlIxdHJVd0tQRjVMNnZVQks?oc=5",
         "published_at": "2026-10-25T01:03:05+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold prices today, October 25th: Falling for the entire week, SJC gold loses 1.9 million VND. - Vietnam.vn",
+        "source": "Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNOEd1Q25tZHBYVG9QaURZQkl3cFVZM1RyNFRyYzFOcWswUV9sTF81VGdlLU03ZlpERlAyUERYbEtnME1DMUZYeDhnS3ZMODFtbjk0bGJ6Wkxiak5JMVpfcnMybm9wbXlJNEwyUWNwUVVNY3JuMDZ6UnE0VncwYy10bUUwQlo2ajlUNVFwdFhyNndoQ052ZXhaeTB3?oc=5",
+        "published_at": "2026-10-25T00:38:30+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -124,6 +168,17 @@
         "source": "StoneX",
         "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQSXVHTFJfVEpSaGhVMFAtakNvaGxDVWNJUWx3enlfOE9hZ283MmMzWWJld3hVc01HWlozSWZEcjl6WUNHa20tOG1XdmZvbzB1eGNrckhCTUR2S3hOSUNRSk0zcE01RXA3U2RpZlZvM18yZVlUN3hidmd2bGhUay1faDJPaE51TUxldFRVanFsZFNoWWVieS1HYVUwSDZwYTcwQ3RQaVpVR1F4OWRKazdDX2pYOXlmZFptZUltUzAyaXJSelNN?oc=5",
         "published_at": "2026-10-25T00:17:39+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold Price Canada Today | Live Gold Price in CAD - Kitco",
+        "source": "Kitco",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBVMHM0YXN3UkRUdlVZXzdrUjJmSHh5eFZ6Q0pSOVhYV1pLU0VzSXNhWGRVREpJbm9uX3pvSkZsMDNVRmg4a3JPYXlTY2N3OEF5Wm00MA?oc=5",
+        "published_at": "2026-10-25T00:00:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -155,10 +210,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "EUR/USD Bounce Hits a Wall of Fed Hawks and French Finances - StoneX",
+        "title": "Crude Oil Weekly Outlook: Brent Tests September Highs, WTI Tops $100, and XLE Reclaims 18-Year Resistance - StoneX",
         "source": "StoneX",
-        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdDBUR0xuQWc1bEpSU2NTWUJxNnhkU1hNczlHRmpibFdQV3lNako0LXMzeE1pNVRyQ0VyVFdRXzVka054U0dLYzdGbHFWNjB4WHBjTHNQRHBwYkJzRU1HdnhZQl9odF8tWktMWFpVdjFFMkZWRUNMMmZBSElfMFpWYjFnOWZtY2laMERHc0locG9uSTI2djdyNmhFM2tWUDdHdDIxcldYYXRUdWM?oc=5",
-        "published_at": "2026-10-24T21:04:02+00:00",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPSzBqSmZyMG5ucHhrS3Z3Um9SQk9TM3pFMjBWdnNIT1E5VVNLd3A4WjNUN3FRYmUwWDZkWm5uMEhoeS1adEJVTmxTc3pvZ1hWdHhWOFZySm5qRnhBc1dDSGg5S2UzTzNISFlCdkRwU0ota3lwX2VNMUEyOWxKS3V3VDlURDlVVm9DYnpUTVVuM1cwR21MX05sWG1VM21ITUVpQzhENEZ6YTcxYkR5dGxNd0hyTmhUOVI5VDFoWG4tYUhEZXdYeHVnTHZpMVRfNVhMNVdvR0xOZmVhMVdvWmp5Yy1wUQ?oc=5",
+        "published_at": "2026-10-24T20:35:16+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -166,10 +221,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Crude Oil Weekly Outlook: Brent Tests September Highs, WTI Tops $100, and XLE Reclaims 18-Year Resistance - StoneX",
+        "title": "GBP/USD, Gold Forecasts: Two trades to watch - StoneX",
         "source": "StoneX",
-        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPSzBqSmZyMG5ucHhrS3Z3Um9SQk9TM3pFMjBWdnNIT1E5VVNLd3A4WjNUN3FRYmUwWDZkWm5uMEhoeS1adEJVTmxTc3pvZ1hWdHhWOFZySm5qRnhBc1dDSGg5S2UzTzNISFlCdkRwU0ota3lwX2VNMUEyOWxKS3V3VDlURDlVVm9DYnpUTVVuM1cwR21MX05sWG1VM21ITUVpQzhENEZ6YTcxYkR5dGxNd0hyTmhUOVI5VDFoWG4tYUhEZXdYeHVnTHZpMVRfNVhMNVdvR0xOZmVhMVdvWmp5Yy1wUQ?oc=5",
-        "published_at": "2026-10-24T20:35:16+00:00",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOMEVPc2ZzZXRwVVdPNmtLNFBUQnJYSVE0RHNuRDJ4U1g1cGpJLXprMTM3bm5kOENqWFNLUEF6bjFJYWFQOGFZLUVoSjRiZkNkUGlPdnFmT0oydkVYMHh1WnFCZ2JMRTl6dGR0czJ2eFZfUGVrVktpQU5Odm96aU5uUU5xTmFxcDM4cHhiT2o1ZE1IWkRF?oc=5",
+        "published_at": "2026-10-24T20:07:59+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -210,6 +265,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Wall Street Review: Small Caps Outperform as Bond Yields Ease - NTD News",
+        "source": "NTD News",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUWt2NXE5cGkwLTRYdGRhczIyVG5GNXZYRmljSFRfRm52UmYtSmFSVkhjZGhKSEFqXzU0ZEs3S0V0WkswREpDY3VYeGFrSUoyQ05jeXlIWFZMRnVZVG00Y1RQX1RCbkVNNjdFOUNkVHZMVGpIclJfUDJkZUcxeWVTZGNoeU1YVzhtYmZnRl9zcnJSTXVGVHc0Yw?oc=5",
+        "published_at": "2026-10-24T20:03:34+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Fed Set to Lead G7 Trio in Hawkish Rate Pause: Eco Week Ahead - Bloomberg.com",
         "source": "Bloomberg.com",
         "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbFg3ZkV4QzdBaTNjLTU0N3lHTUpMWEFETVhtYU9NS2l5QlhfMU0zeV9SLTd4ZTFwbnBGUGFOa29IQ25VMmQ3aXotU1hPRkZHR0szdFQ2RzRCemE4SzNVYS1GRG5oZjh0RHVIU2FiUzJLemdEdlk3TGF3SWdKQi1ZZGk5SFNwS2ZKTU1HNzJZSk85T0tiTlU4VXVVVlVsVkE2R2VlSGIxOVd1MUpjY1U2cA?oc=5",
@@ -225,76 +291,6 @@
         "source": "Benzinga",
         "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUFliRnhCcFVLbFU3TVhWX3BXNzhERHdDRnIyU0lCNFFuRzRic0J5Z3I4R1pCNW1mblI2THN0SXJzU0F4cE1xYkoxWkZ1WG4yckJ5bkk2VG1GdWN6ZGtwZUhNMGZTRlJxWUx4ak1JZjNsSGQ5cldGUDRQWFlQXzU5VVFoUzNHWmQ1R2pQYm1IaU5KcHFRcWNqem03NU9RR0JFRWgzRlVPNlhwLXdsY0Z1WFdYeHZFaWJrNWdoRGFJQWZ4TkducUpKQ1FqXzhnTlM1eHdMZQ?oc=5",
         "published_at": "2026-10-24T19:15:07+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Falls to Three-Month Low, Oil Prices Fuel Fed Rate Concerns - Morocco World News",
-        "source": "Morocco World News",
-        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMHpfQWhCN2haOVlaTXBiMVo2ZGNmMURKdG54TVM1MGQwc2pSb29tZFNUYjJBM1V3VEthdl9OMGlwbHRlb1BXM2hzWUtZU3FWZnhEb1NfNlMwRGw2OWoyeGpoZ2EwRUhleWtENXUzWU1qMEpjamJQNTBoT2NZZGdCU1FQMEV0RjlyNktjX0pfbUpCX1dtTG41anpZcVdSMy1POVlnYnNPTEpnSkJPOEJ6cENR?oc=5",
-        "published_at": "2026-10-24T18:48:09+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil prices jump more than $3 to six-month high - The Jordan News Agency - وكالة الانباء الاردنية",
-        "source": "وكالة الانباء الاردنية",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1RMTVoajJhSDJwSG0yaHBXdjNmNlNRNFpFd3JIY2lJQ21Jdy1GcmpMX1dkYndheE5MQlJQT0xJQWZ5MzhKQ29HQ0J6X0VUSmtka3phZ3lIZWdwY3VkOWpQOWtKaVh6dzhsdVNhU2RocC03eGFuakVpakhTYzRXUmc?oc=5",
-        "published_at": "2026-10-24T18:37:02+00:00",
-        "score": 0.25,
-        "topics": [
-          "Rising oil prices"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Brent crude oil prices remain above $116 per barrel after surge amid escalating tensions in Middle East - Open4business.com.ua.",
-        "source": "Open4business.com.ua.",
-        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcUg4RlhuRU5ISTM2cDBXSW9yOXRKX3kxX29QbFR0eTc1bnJRV2ZtTW5SdXpTamJuOVBSNmVYdnFka05RMXF4TWxaR2RCMExTbEl1clpXMWc1dU1EQmtiTWdjNkRDeER4dEcyN0U0SXR4VEQ2SHd6bDlGTFVWY1pVRWdBSVpmRU9MYWtfamFFQlBTOWM0Z3dZZ3FNQVFjdzUzVUEtazBQb19rY1Q3Q2NDcGVJRWpWSXlqVlN1VTJWRmNnRHR0V01TNGc1WHduLUtr?oc=5",
-        "published_at": "2026-10-24T18:28:56+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "September CPI Hits 3.7% as Trump's Iran Action Lifts Energy Costs; Fed Rate Hikes Back in Play - BigGo Finance",
-        "source": "BigGo Finance",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA2RGRSZGFPM2szTUEySFN3YkFEdU5wM0tNcjRtQnM4OW4yUjdIaXVUOG1jS0tNNnRabFhxdks1cnlsS3F2WWd4cml5N3djUjR2UkFBTzNDTUR1NTJ5UDJETm9EVS1UVjcyblc1ei1CbG5sYXhWR2c?oc=5",
-        "published_at": "2026-10-24T18:06:00+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Technical Outlook: XAU/USD Breakdown Threatens Deeper Selloff - StoneX",
-        "source": "StoneX",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPd3NQUG9FcEFvTWtkdHpCejdVT3hTSHBRbVlyVlhkUVdFYVJFTlNwNzVvbGNBai00aFBYcHZ5TjVvMC1OT3pualptUDZDZ1M2VGtGSjZOcVpvSXh3b3pmQ2RuY1ZMaFV3dEVnOVNiNjJqX1c2MlpPT3dUTkp0SkhsSWNwU1V5SWdWdWFrdHR2eG53U0RQX1JOejE0NUk0UU9mcFJHZHl3QkFlSThsUnJzMmNUWQ?oc=5",
-        "published_at": "2026-10-24T18:02:03+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Nasdaq, Treasury yields and dollar face a major AI sentiment test - StoneX",
-        "source": "StoneX",
-        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZlpmc3pTTnVwTkp5aS1HMXpISUhTSnBndTNiTWdzMmlkZ21QOUJsRm1CaWtidGtKVWVvV3N2cm5KTnE0NW93X2JfRUtzcjZoR1VVZWp5NzFheUEyOWFRd19vTjBCTUFVdnFaMWhaTXBBOW5rSDBRakQzNXBraTEyVklqajEyUjhaWUFIZXViVWZ3SFpkZmhfQmh1N1NQRXZjVUQyeDZyMGlaemNNdElyNGdB?oc=5",
-        "published_at": "2026-10-24T17:43:55+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
