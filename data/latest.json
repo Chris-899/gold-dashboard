@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-10-26T07:26:34+00:00",
-  "last_successful_refresh_at": "2026-10-26T07:26:34+00:00",
+  "generated_at": "2026-10-26T08:18:28+00:00",
+  "last_successful_refresh_at": "2026-10-26T08:18:28+00:00",
   "fundamental_bias": {
-    "bullish_pct": 35,
-    "bearish_pct": 65,
+    "bullish_pct": 33,
+    "bearish_pct": 67,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (35% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bullish across 5 keyword-scored reports. WTI crude oil is the largest current influence (-17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (33% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is mixed across 3 keyword-scored reports. WTI crude oil is the largest current influence (-17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
         "name": "US Dollar Index",
         "weight_pct": 40,
-        "change_pct_24h": -0.019,
-        "change_pct_5d": -0.04,
+        "change_pct_24h": 0.017,
+        "change_pct_5d": -0.005,
         "trend_label": "roughly flat over 24 hours",
-        "impact_pct_points": 0.2,
-        "direction": "Supports gold",
-        "explanation": "a weaker dollar can support gold"
+        "impact_pct_points": -0.2,
+        "direction": "Weighs on gold",
+        "explanation": "a stronger dollar can pressure gold"
       },
       {
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": -2.011,
-        "change_pct_5d": 2.188,
+        "change_pct_24h": -2.214,
+        "change_pct_5d": 1.976,
         "trend_label": "down over 24 hours",
         "impact_pct_points": -17.5,
         "direction": "Weighs on gold",
@@ -34,8 +34,8 @@
         "key": "GOLD",
         "name": "Gold futures",
         "weight_pct": 0,
-        "change_pct_24h": 0.225,
-        "change_pct_5d": -2.802,
+        "change_pct_24h": 0.492,
+        "change_pct_5d": -2.543,
         "trend_label": "up over 24 hours",
         "impact_pct_points": 0.0,
         "direction": "Gold price confirmation",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bullish tone across 5 scored headlines",
-        "impact_pct_points": 2.4,
-        "direction": "Bullish",
+        "trend_label": "mixed tone across 3 scored headlines",
+        "impact_pct_points": 1.0,
+        "direction": "Mixed",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -59,22 +59,200 @@
     "bearish_pct": 0,
     "source": "Local estimate",
     "timeframe": "30m",
-    "provider_observed_at": "2026-10-26T07:16:30+00:00",
+    "provider_observed_at": "2026-10-26T08:08:22+00:00",
     "observation_status": "available"
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-26T07:26:32+00:00",
+    "queried_at": "2026-10-26T08:18:26+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 5,
-    "scored_count": 5,
-    "bias_score": 0.19,
-    "bias_direction": "Bullish",
-    "summary": "Reviewed 20 recent headlines; 5 matched the published directional keyword rules. Their overall news tilt is bullish.",
+    "matched_count": 3,
+    "scored_count": 3,
+    "bias_score": 0.083,
+    "bias_direction": "Mixed",
+    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is mixed.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Oil Prices Today : Brent Retreats to $115.3 Per Barrel as Traders Weigh Middle East Conflict De-escalation Hopes - Arbiterz",
+        "source": "Arbiterz",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQcXlCOXh3RE95bk8zdXVwUzR0eFN0RkxFYmpDSHk0cDRoS2JkeVMzZDZXc0swRElxVVpRN3JDdUNicGZnUXdPakNybjZ3eFNpYlU1ckZYaG85S1NvMTJyWEU5SGF1TGkzdk0zQlM3aXA2UmNMeEFnVkdXcGR5d0pzN0p6c1NEaGdXNXRKQ0pwQ3ZFX2VlMHNTVnJtczVEdW8tdFprZHJkNUhMdHFKWUNfendZM2g2aXBoOGpFYUUzbDZ1RGNRNnhWRGRZbw?oc=5",
+        "published_at": "2026-10-26T08:13:52+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Treasury Yields Rest Above 5%: How Homeowners—and Buyers—Can Take Advantage of the Moment - Realtor.com",
+        "source": "Realtor.com",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbjBnVUljSlY2cWNDUlZTdFBhSkNuaG1KTEY5VUdmVlhSM05TMDU1UEhBU2txbllUQTM3Q3k4cXRkanJ1dWZDcFRHU2ZONTVJOUZnQnJmekxQLXNzRzhWNEo1aXc5Y24yYWpmZTBfOVUzNHR0T2ZEZ3k1b0drd1o1TEtISlVQWGNDNWE5MlYzZjFSaUtqbG5v?oc=5",
+        "published_at": "2026-10-26T08:13:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Oil Prices Fall 2% on Iran Talks, Brent Hits $114.51 - grafa.com",
+        "source": "grafa.com",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTTBNSEhMNE8zaG5aNHA0V3JXWFVGVzRxMmFxbGJxUi16bUFBZy1wakRDRWJ3bzZiazROQ3dVSzVwQUdibURlMUZqYTM3ekNCNXJaWFZXUC1saGVuMEVEOXE1Nmdvc1FkdlJHT29kcExxcGwxdW1xbEpvM1NnSWVTZUlOY0JIZmM4T0xET0M2Tkxwc0E?oc=5",
+        "published_at": "2026-10-26T08:11:07+00:00",
+        "score": -0.25,
+        "topics": [
+          "Falling oil prices"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "USD/MXN (USDMXN) Surges on Oct 26: What Are the Key Reasons? - TradingKey",
+        "source": "TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQdUEtVzJCWldtdGZCaVh1LXFaZDlJajVzcTM4UU9VWWdGRXVUeXVySjN2d0xzcVVQWV9DVXl6MC1NWUlhZXNVd1IzcV9qeVkydUFYbm1od1EzZXNqRXE4UTE4T3B4bkRzeElDdjhZVlF0VWJHaUhTTENLSnV1ZHFDM2RGYmFwamVhbS1NVHhB?oc=5",
+        "published_at": "2026-10-26T08:05:16+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold Futures Rise To Rs 1.42 Lakh/10 Gm On Firm Spot Demand; Silver futures Jump - ETV Bharat",
+        "source": "ETV Bharat",
+        "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQcWZ1ajRuOXFLQXdUNlpuTWNaVi02Q1pPclhFN1BSdGxDbzZ4Qkh0M1FkSkFGWEM5UUNueDFDNWRnQWJwdkF2c0hCcjgtbmNtd3hIN09MMWJyWkNCQXBzdmZxNTZWR2I4NmJJcG1SZ0FNZnVRY29yYldfd1lqdFZjMmlfZVJELUlqbnFHTk1nVERLcVpnRnpCZ0l3RVNwdVp1Q1BydDAyaDJyTjhZWFVPdGJ4cFZzeUgwa1RLeVV2a0NaTlJrejhhMkhCVlkwQ2dJWWFyY0YyZ2dEREJLSTczbFZBcDZYTUJGVVRRTXBTa0I4cVY2LUQyUC14cVZRQdIBgwJBVV95cUxPQzdlNG5xcHh4UU9VSFUzeVdFdlBwQnM0d3BvRFVuUGtKcmZ0TkswRUlTdk00LWN1Q3BOaE9zd0Y0ZWF2dFZCSjFRb0lYR2szZ0xXWndKaHpIVmktQjkzWlRLdERYa0tJUzZLUHRRRUFGcnlqVWhqamRwMkhwdmdVQVg0cUNVeG0wSk9mNVB3OWtrd2hLOEZaMTQtQ3ZKR2d5bWdmcHFEMmVBX0xyUXgxaWdZalRLTW0wbXp1ZXVETWhPSlVITnJMM2x5ZFFwd0ljUGh4M0JydGpZU0gxY2UtVGdoaUV5Zi1iOXByZ2dNMHhMU1FYWEpGdElEUXVNZHA3bzRJ?oc=5",
+        "published_at": "2026-10-26T08:04:02+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "FTSE 100 set to rise 44 points as bond yields ease and UK Budget takes centre stage - Share Talk",
+        "source": "Share Talk",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNd25XLTZ0OTRVSXpvSE8tN0VqYVVkY3c5SHZFZFhzWXRBb2lOZ2J1dWdOSFZ3elNSTnVCOVowUWpQTm9SQ2wzV1lGZllqWHBvVVVKamZzT2NyVWxXeEpGMXEzb1czd0thSEhoSU5NaGZ2dDF4Y09ha2NwaDlLaDBHeG9XNlowVHM5R3IwTkZ0SENWSEZxN3h5MWFfdmtZMHNzLThCTzg3WWRZdmNrZ2xUeA?oc=5",
+        "published_at": "2026-10-26T07:59:59+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold prices under pressure ahead of Dhanteras: What should buyers consider - CNBC TV18",
+        "source": "CNBC TV18",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOaF9fV3ZIZUtRNGEwMDZzT2l2RVJXRlJDQ0RvaUZBVWN3anlmQlRSeDlmZmJ5MklTTXo1eGJNclRxUlZaWXRZMXB5aFFSSUFRQ3NvUTJKY19YbGxwY2NyTWt1NUF5cTVBUEpISmtSRzZuYk1wSFlvUnhVbmJFcHVtenRxbGV6Q0NBQzVCMmpvTWxrWWY1OUhRNmFCZ1lFdFRRWTA4emJFVmpzYTFpRlZFamkwVGxyZkEwYjRHUjZTdWZpckHSAcgBQVVfeXFMTXZHZjRkNEFESG8tYlYxQWgza0NqYUN0bThIMlk1VmZVdDlfNE1UbGNtaXN3YUxRb3lsclUyM2pfekJWZjVwbGl3VE5PYmFpdXhfcllVRzZyMGFHaW56cjFkYWtWUDhQOVJXRHdYOWlYZG5CWS1BUzIzcGVyX3YyZFRTcGJhYXVPbDg3LUViSXdBNXdZd19lb3dtTGJUZUplUFhiSWNjM2ZoZzh4UUVaMjdaMjNsRFpSVUExMENRWGJUUXJfR1NuWWY?oc=5",
+        "published_at": "2026-10-26T07:54:56+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "U.S. Treasury yields edge lower before Fed rate decision - Traders Union",
+        "source": "Traders Union",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcmMtNzlDSXI1alN2TFk4eFZkSXRLamdjVHBJdEJPZUVWNkNHZVpnZ1BKZm9MTHM4OEI5ZWgyWXMyNndVRVZjUmdvSXpXdndBeHYwRkMxNDloLXNoZ3NxZ2xCVmt1c0VfaFV0T0E2UG1vcHhyUHRkdjZDTm5rV2dDaGx5V1VhdkZvak91UXhRRWd5OWlJbVE?oc=5",
+        "published_at": "2026-10-26T07:54:22+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "XAUUSD: Gold Reclaims $4,000 as Fed Week Begins. Silver Sinks to 2026 Lows - TradingView",
+        "source": "TradingView",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOeUVtb3BMSE5yUnY2MzB3Rmloa1dmQm9DVTFiZmdhc21KcWE1eGZ4cTFkaFVPN21EQUYxVHJnRDVMT05pLWZjMC1ReTNQazJaWjhSUm1UemdHdXowVUlhcUctclcwRkFEQnlscEhUYXk5WlY4elljLWJ3bmNmeWt2YTV0elBPMlRwWEVsaVpEa2RpX0l3U2NrS3VNNzV2d05EdWlQX0N2SWxVV1ZpcU9rNjhhRXQtb0J0aXRoMlJXWWUzM3daSFBPODRFbkNnQQ?oc=5",
+        "published_at": "2026-10-26T07:50:48+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "U.S. Treasury yields inch lower as investors look ahead to the Fed's rate decision - CNBC",
+        "source": "CNBC",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdnVMeHR0cjdhVXpVQk9hZWdUUkVoMjAwX3g5OG5iWWprMW5XeEJoaC1CaTlDUVZSZ1ZjZnE4SFpsLWlCMXFXWE1lNnRoNzBKU1NqM2J1QmNUSVNhRzB4MUJxdXpMR0dQRUpNeGFOdDJ6Z25fcjA2QmVvczUxQko5RHc0d0tycDdIZGxIaGlqM3Z3OWhKeEhGMUxB0gGfAUFVX3lxTFA4SUxwS3ZmSEZwWmtRM0VkOUtZQUlSN0djS0JYRkxhMnF1VFhpVzdRWU91b1BoTjBhUm5HVkt4OHhMNElOR0JHYXpGTm5Md0NRa0lmTC1MRzNmWlAwb1lzX2hYbWgzSExzS0pZRXNfd01LNktjbVZBYTJwa2t2d0M5NUxqd2ZMVXJIam9lRHJrN09hcmlyVEpUYVptZzM0VQ?oc=5",
+        "published_at": "2026-10-26T07:49:09+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Crude Oil Prices Decline On Renewed US-Iran Negotiations - MarketForces Africa",
+        "source": "MarketForces Africa",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcjZTVnlfUWhsTUh1VzJ5eHpPYkpNY2dyUVVTay0wTm41TUFCVTFIMzgxaHVma1RkSFpUQnB4OC1UQTRaZHc5TVM4b002Mi1MWWYtSW8zMmZHUEduUm1KOWlLVXVYSmsxS2MxY1FSR29kaktBa2RndzhzOWtycmNBUGpla1FXbjNjYW9B?oc=5",
+        "published_at": "2026-10-26T07:43:25+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Global equity funds attract $28.16 billion as easing yields boost sentiment - The Economic Times",
+        "source": "The Economic Times",
+        "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPdGc5UElGSmxMcWFfbDg4MnhieGtUZnV4b0ZJMlVSOElwYnZPNHBpclJ0TXlub2k0dFJGY0tWTDZlanROeHRRckNERWlRbXhQQko1elRzZVBJUjBQNWpmcTI0M2Z6eGhMdF9XSVRDdjJnNkFxOHRHZ2hwdzJnVC1TMmU2WlpCS0VrVE14V2pQaU5BNG16ZVZOSWxoN3hOVFFsNmJfUm8yU2EwYkczdlZLOXpLT3FHT2RBX0theDluUTdXSjVhOFdaTndhUXU5UERZZ3BmdFdRNFZHNlgxLUswc1BfUUhWUU5ldVJQZEt5MkdQemFwMDc00gH8AUFVX3lxTE4tOGZKWGQ2Z1hySGY4aUVpLWFLNjZkeGg5M1hjNlhUNUJ2dTR3cUswYlhOMHBMMUE4R2FUb1ZHbFhtcjFfWE1sS1MtRnhNek1ZaDFwYV94V1FHSWhkNW8xR1g2bGlzRjZPeDJZXzJwbjVSSGR5b29vUVRvZ3JYZHpVWWh4b25YRE53SjRKbFNjYVFOdTBLYlFVNW5pV2JFNDE2VVIzZ0xCajhvZzlyZmExVVhCeHZja1ZILUdfbVhfdW9BWVU2VGNiUHY1eDZFTUUwM2JNUW1MVW9HSjFTd3dWT2V2azFoWlVLWVdnYlRBZFNoVkFXcWpVZENTbQ?oc=5",
+        "published_at": "2026-10-26T07:43:14+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Crude Oil Price Forecast: Brent Drops From Near Six-Month High and Falls Below $110, Can Middle East Supply Risks Limit Losses? - TradingKey",
+        "source": "TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYUptbXRZTncwd1JhemY5WXcxZ09aMGR2TjZnWEpZVzlqNzdibmhBbnlBeFZrdk4zNXFkN2ZBNVlJUmRfQmptRVM4NWFVWHhuUG1yMkJuaVNGRFRMWEQzWG5BN3JDZndndUw1SHBvWWxfTi1YTWtrb3QwcXZhVkwySlYyanlBV3ZrQmZ6OVQ0MnREdURmLVhDOGg3V2F6b0VqTUd5WEhwOWNCcUFPQ051LTFVVldKN2FrV0JjZVlLd041MnlFaTUw?oc=5",
+        "published_at": "2026-10-26T07:32:52+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Currency markets subdued ahead of busy central bank week - Global Banking & Finance Review",
+        "source": "Global Banking & Finance Review",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNUk1oblBJMU9SeFVvU1ZlWmk2MGwwVWpGaEFOUU5abFU3ZVc2NmU5S3NhR0c5SDY3bVd0MVpRM2VRbWlmNjhMdEVqWWxvYl80RUwxazU2cTZTeW5TX2VBUWpuTTFtLTJMMmZEdG5ZaXRxLS1kSWdFZi1HMmJiZlc5cXl1RDE2cU9CVTVPcGswNlV2RzRUMmV5bmFMeTlFdw?oc=5",
+        "published_at": "2026-10-26T07:30:06+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "US Dollar Price Forecast: Five Central Banks Loom, DXY Holds 101.60 as EUR/USD, GBP/USD Coil - FXEmpire",
+        "source": "FXEmpire",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPTE9xUVRtTl9hSFg5VkZzdXFNdVpXQjlKVlduXzVEODRacUVTYXFwcDVFTUttalpjT05FQkdqSU4wUGFHXzg3eWMzYUExdlFOdWZLZWI1S09Nek83S0hJWjVVZFNxRFhHWWxaZXhxTWpCNGZMS0JjZWhBQlFPakVXS1BwT3dvSlFCdmU5VTlzU0s3cW5rVFJMSGVXZzZQTnZTRXpYaHI1emJDdm1tQ0tfZFF1M0gzME1kY2JCOUNjdUdnd3dhczJXNTJlUTdzTll6VTFVZnFNRQ?oc=5",
+        "published_at": "2026-10-26T07:30:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Fed Rate Decision Looms as Inflation Fears Rise: What’s Next for Markets? - Investing.com",
+        "source": "Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMFduSnhLMzhjUTI4MkI4bXlIcWU0MEEwSmJzWDNTZGpzT1BQU2wzd3BRY2VKR1BYb2RzbklSX3JsNlRPMExEYXJzN1FCUmo2bXVpYjFFeXdBQzloVEtBb3RkVTZnY2lNLWxtVHNQeThJVVJnc1hxUFplUC03MnJHMkdEZ1Y5WkFLbWpjUkY4cEF5RXZDdWZ5TUQ3ZkdSVUc1dGlyd0EzQzNoZlZvMnJYNVlDajVhdw?oc=5",
+        "published_at": "2026-10-26T07:28:04+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Gold Price Update: Bullion Rises After 4% Weekly Decline - MM News",
         "source": "MM News",
@@ -122,188 +300,6 @@
         "direction": "Bearish",
         "score_status": "included in score",
         "in_scoring_window": true
-      },
-      {
-        "title": "Gold prices rise Rs 700/10 gram; silver gains Rs 1,500/kg ahead of US Fed meet. Key levels to track today - The Economic Times",
-        "source": "The Economic Times",
-        "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQVzJsdjBoMFFRdnlPODVjUTNiVVpmcEtZaDJFOVI0bTNKVHNyLUh6VFMwWUh4Y1FoT2pKUnlaTFhUNWM2QUJlMW8zUDZfdXFMQS1nLVFwU0c4Qzl6dFRyY3U3VnZYcmtqbkJtcC1YSGNsV1RqR0U3SG82dnJsTEl5RTVmOHhUNDNOVktGQlRHdERDT2NIaU90dGUtelZDZDladFdkNDRVVE02bG5tYy0xOTZWN0FIQWJrSkNKa0VQOXdPakt5RWhpOXZSYkZROElkNnJ6SFZpalNkUkdzNlhFN1FzOThmWjc1SEtYX24wTGZHc215akg4d1JpMDlkcW5ueVdYZU5pZFdHWlI2aEHSAZMCQVVfeXFMTkhtVzJUUkJjZWwwc0x0dnNqRWNpRk1rVUdSMzNyMTBEUkRZZnZvRGNiVW5obWZMdEpZZ3BTZG02WnhFQWxWOUJBWmZ5bFdDWFAwcnhPZ3gydXBOM1FCRGdRZUNNUXNwNWFJdzhMZzlROFlEUnhlTGtSYmNaM0hjTnVpVHJzT3k5dC00a1ItWklPZ2tsOUtpWnMzYnRlYzZqZkFrbDdta1VGWlVpT1pQZXhFRzRrUHBMNHFPSldfT0R6UmFQdy0wNHFUQy1lMzBBakIxeUVYLVhaUzBaTTNkRWFKTFIzNGY3a21pb2txb3hqX2M4R0ZfbUpMZFNvd3pPOFdxQ29KTzYyV3hzUnI5azF1SnM?oc=5",
-        "published_at": "2026-10-26T06:52:40+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Price Today: $4,010 on Monday of Fed Week - 28 October Decision, PCE on 29 October - Bull $4,075, Bear $3,890 - FinanceFeeds",
-        "source": "FinanceFeeds",
-        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNdXRJb184TF9POThycGRVemhNT1A4TzVCeXdmYkk5TjJnUG1JTzdZdFE3NFFsQWswLTJEOU9qTUExNUJzZGtUakl3VlhGYW9wbG96aEVQMjhYS3B3UWFCVzR5MWtPeFI2RHZWUXJiLU9qaGhEWlJyM3hiY1RtNVFMbzFQYVdXMnVmeWtBNTV3dnpCdTZqSnpHVk9JVWNDcFRqSHBjOXJTbVFhZU5lOVE?oc=5",
-        "published_at": "2026-10-26T06:49:47+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Crypto Prices Drop Ahead of FOMC: Bitcoin $80K, Ethereum $2.3K, XRP $1.29 - The Crypto Times",
-        "source": "The Crypto Times",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbWdVc0xQYk5PT2lFaWVmTUFHYlNXUTBJRTdneW40a0VQS3ZyV3B4YUt6QXZabXp5bVphMDNHbHl5N1ZoS1BfdGtqaUdhbV90QlFCakJWOUJwdHZfeEdZQjBYNDloNDFoLUs2VW1KT3RjOUxiUGtuMVpkSUtTZjhMMVBXaC1wRm9FTEdFb1lTbGFEd1piLUdFd044V3JHVnlBTFhVWFFMSVNnZw?oc=5",
-        "published_at": "2026-10-26T06:47:01+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Price Prediction: Analyst Warns Late Buyers Could Get Trapped - CaptainAltcoin",
-        "source": "CaptainAltcoin",
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMlZSek51OThmdjM4QUpGS3NNVUZfQVR5VXI0dTR1WmtOaE5vY1RNcmJOYm9iV19fb1V5VFZxSGM3YVFSWmJqcTN1YUwtazR2M0hxSXFsMVUzNGZTTlRaVnpBdHJhLWNicURMSlFjbUNJR0hYYV9HWXh6eXVzX1QxQld6Y2JtbGwwNGFTR3dhSHB1cTk5ZzJSUQ?oc=5",
-        "published_at": "2026-10-26T06:44:54+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Futures Outlook: Critical Support, Resistance and Potential Reversal Zones - Investing.com Canada",
-        "source": "Investing.com Canada",
-        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZTJENjJSbnFQLWRvUXY1SHBIOTZkOTJLVHZRVHpkeXIxblZyNU93aTh5UEwyaUREYzEybUZFbVU3MEpwdXVLZ3pxdWNQY0sxZWdMRUhhT0VGNF9SbFcydGxGQlBvb0FSNUZKSnl1Nm4wSFpZOENlZ2JRUmJqX0FQUXpKR0lkT1pycEZ6dlBYQnJrUkNjUlpBVWh4VFZtMnNUYmpvRE5DYV9DaW1UOXlCbmdCRy1mZE0zdHpuRnN3?oc=5",
-        "published_at": "2026-10-26T06:41:55+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Rupee Falls To 94.98 Against US Dollar As Crude Oil Prices Rise - BW Businessworld",
-        "source": "BW Businessworld",
-        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOd2Zid0xxSVVtcWJyNVRUTHF4VFk4ZktIR3VWZE5WZWJGSm9EblROemdKcGdEdGk2ODI3dTJEWVQtZlB4WVZhQ09tLWpOY0dHbHg0OHpjeGlIUXp0bklzNmpNSzk3STdMYWpyWHpzaVNKRUtVTUFOanBDOTJrZi1IMlNyU2IwZV9Hb0dRMndINF9TZXVfb2w1cWM5U3E2RHR5TERMRjNQSU16TEE?oc=5",
-        "published_at": "2026-10-26T06:39:13+00:00",
-        "score": 0.25,
-        "topics": [
-          "Rising oil prices"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil prices falling - NEWS.am",
-        "source": "NEWS.am",
-        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1ieWVtS2RUVVJ0Z0pOUG05a3RNaEswVmtLSjA3RC1TOGtoZWNaYVNJX1gydmNheHBfRzVOT3JFdld2YzREM0E?oc=5",
-        "published_at": "2026-10-26T06:36:00+00:00",
-        "score": -0.25,
-        "topics": [
-          "Falling oil prices"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold (XAUUSD) & Silver Price Forecast: Gold Steadies Into Fed Week as Hike Odds Hit 75%, Can Gold Hold $3,946? - FXEmpire",
-        "source": "FXEmpire",
-        "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQVVlzRVlEUVBWQWU0WUJWaEZ1QjVPZExDQWdfay1ZT1ZvS1ZkZVA4VWhzSVVOM1NSOURVU25HZDZON0JhaHBJeG9sbDZnaFp2NjVBRWF4Wlg1cHc4TWFpX25rTTh2cnF0UGxzN1JVb1ZvNlBWSjVONVJQYk5va0dORXVOVEF4N2I4Qnlibnc2UVhXMTZZcktxUTZFZlg4NUVScUluNmgzLVVNMXA1OGVmakpaQVhrNk83eVJWQUVNTlJleXJxZnBRWnNJdmdOZU1wZEk5WHVaV205VFlVR0REcS10clc5dw?oc=5",
-        "published_at": "2026-10-26T06:30:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "MCX Gold Rises 0.39% to Rs. 1,42,750 Amid Declining Oil Prices, Brent at USD 114.5 - Analytics Insight",
-        "source": "Analytics Insight",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOSVFPaFQyRWNjRjU3ckNTdkFkYjJjdEVHbjk0akliQ3RKdVRnMXZ1T0RpNlVtRUZPY1d3ZHFFVzl2OFE5N3Jhd0V2ck8teXlZc0xmWVd2SW9WSVdLdEl2Z1VrY1FsbTF2NEEwMzdQWm81SE5OcDZwc2NtbVhVLXJoazRUUlR6ZE9CLUx2N1NBX1hHbjRxZGdlNG9OYzh4VHB3MDh1M0MtOHUtUFdoX1J2aTA0TDItYjFwN1o1UVFTONIBzAFBVV95cUxNMTFJQ2dpNU5yaGdkbk1JZFNQeW9TYjgzS0pqMktUQ2ZEZVZBZG9BSnRiX3hZVnJHVmR0blJUYWNBTlE5TVVlTWNtZll0X0VGcnBta0FFcENjYV9QaUUyNXYydHRHT0FidEIyMHdNaVQ4ZkYtc3hINGMtZXhoc2ZuTklIcW5jelZXRjJFUDhKWnR4Rm91QnU5b0ZUVURia1FmWEpHRFFCazcxNnM5eXF0NDRtVjYxSDdfTUQ2MlJzUFdmT1NXQTJqZlpPVGk?oc=5",
-        "published_at": "2026-10-26T06:30:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil slides from six-month highs on hopes of easing Middle East hostilities - Latest news from Azerbaijan",
-        "source": "Latest news from Azerbaijan",
-        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbGc4d0ZWdDl5bUJzRENTWjJDUXc1YTMxbjR6UlpobkdlMGFTdjdHV29HREZ2cUwtV2xMUGxLQjB1aWdVQ2ZBYkdFUVNIVjNfNDhwdlNwTGlJeTVwMWFiU09kNWIzNlRaYlZxbkFzM01Rb3RVSlY4R2RLNHo3ampSaDUxLUY4amNiT3JlVzh1UVB6eHdjUTV1YVNuTQ?oc=5",
-        "published_at": "2026-10-26T06:27:15+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Sensex falls 134 points, Nifty slips below 22,600 amid crude oil prices and West Asia tensions - IBTimes India",
-        "source": "IBTimes India",
-        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPOWlxei16VzRTZjljRTZmNnlLaXh3b1dTanczejhrX2hIdUVaUl9JM3U0T2dJMlR2cXlWSDJkdlpaeEJOQ0VTWUxlYmVQdEJqTUI5ZzFzQm5fNXJMVW5nQnpjNGE0d1BrVXJNUnh0NE52ckpVc1JXMGhzMXRqTC02RWdYQWoxbkx1UWNWN3pBU0JleUcxbDFfbzlBSkhSb0RGZEZWLWJOUUlwRUJod1NSSG1hSmtYWUx6V0hHZzJB?oc=5",
-        "published_at": "2026-10-26T06:27:14+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Week Ahead: Fed, Inflation and Earnings Set Market Direction - VT Markets",
-        "source": "VT Markets",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNEpGRTl0RTJ3QUZoMGZ3X3FqR19kVlFERzB1WEJ0ZDFtS2lpcnZRNGRlVF9TLUE1S2dOek5ZTkVreFhZeEM5VDQ2Sk5RbTg4cVBDMWpuLXVOekVfeDhQOENzY2dLN0x1TWRLNmhYY1VtaFI0QkxNaUl5eUgzeE9vR2lMelFQaGIzRnI5elR6RC1LN2V4V3lfbXdsdjRJVXRFV0E?oc=5",
-        "published_at": "2026-10-26T06:22:15+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "U.S. Dollar Index Slips Ahead Of Key Economic Data - MarketForces Africa",
-        "source": "MarketForces Africa",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQR01jdlgxX2IxVFpraHpOWUI0eTR2eVVDUEtSZjEyOW04MkFhU0pja0tjV1dfOERxWFd1Z3VrTjZkLUFTNDgxdWVLVy1zNWRmTWNsWk1POTBSbzYzTWd4MXhUdzFtY3Z5cjdQT3hucGZHLWtyb3BKVHRpeGlSU2MweUZ3?oc=5",
-        "published_at": "2026-10-26T06:15:51+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil Prices Retreat as Trump's Latest Iran Remarks Push WTI Down Over 2%, Brent Below $110 - TradingKey",
-        "source": "TradingKey",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdVdhZHNPWDZ5UjBRd3NsWDZyTDV0Zkc5al9YQ0JNc0RpWUNNQWU0RHhhbjltZGhYY3Z6bU5Pek9TdnhreWFMb3ZvY1AybVQ5Tm9NdFdmakZ4YWRTM05qdEVYWWlFVndYNU5tbDdWd2RFcWhvSlcybXlSTnhtNHZsblN0cnhmeXc0V3B0RXRtNlN4a0VVel9FcGI5YzNFcEtPY3B1RFA3UHJXdTAzUzA3bzRUVGI3c3RINzZEbGxQSEg?oc=5",
-        "published_at": "2026-10-26T06:12:14+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Global Market: Japan bond yields edge higher ahead of key central bank meetings - The Economic Times",
-        "source": "The Economic Times",
-        "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOTFVOdDVFSUVBRDVzNkQzR2NOX1BMNzJ0SjY1SFdBcnlSVFJrLTRBVzdvYnRfczJ0Ti0ybmFiWWNvaE5YSWhjbXN1cHJoN2FadUhQMVQ1U0tibDNtcC14aXNYem8tUkxselhDS2l2MWRaMnBPMzBrSlpzUE5aT21PajhHcGNkc3JvNVdvWEFvbzktNTVyZmZ3VkFCa0VPZEpLRnVEZjVDdVFOX2s2cHFMOWxsWXpWR0xaTFYxLVhQeUNlVkFtcWdDb2dkMVd2WDYyV3QtY25hSFZKOGp4bklMZWFqRHVNYXZKRW9r0gHwAUFVX3lxTE03RXQ3OWlabWZ2WXkxMEVRbW9KbGhTTVdybmhHdXRmQnN0dV82MHZ3dzNnaUVsN3pKaDZlek1ocFFxWHZPSmt1UmFHTnNRdjVIVlRFYUdqdWhzRXZKa0RDVFVfM2lVYzFZejVjdlZpTEVKcnlKU280RUg0cUhBSlZwTUw5anJRZEt5eWZSUDR3NW5Sb01XMGdTLThrc3Z6dVFLU2dRTmZVRXNkbzhuUW5TaGpKY1pJLUNBbWtlLVFTS2w4U3Z4RXdQcmUxRFY5MWRjR1VFbG45LURNT0ZCSk4zNTF1NmR6eWIxOTdCYmVpSA?oc=5",
-        "published_at": "2026-10-26T06:09:59+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil prices dip after hitting multi-month highs amid Middle East tensions and possible US-Iran talks. - Pluang",
-        "source": "Pluang",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNS1VsZVQzT2U3d1lnY3g2M1A4YXJsOWhTM0c0aEdTMlo1RkNxdlpiVmNoRXdsOHFfaGo2cEJ5MXNSMDQ3Q3phaVhLT1A1VFVyWHl5dE9TZGhtMmZudFU1QVpMNERZY1pVNC16UE1Ca0ppYXJjcmlpbHVnMEx1TGZGdVJDdXl6TE44VG9YRlowbzdsQjI1NFoyTnVoSGJhaFVGcndZ?oc=5",
-        "published_at": "2026-10-26T06:07:29+00:00",
-        "score": 0.45,
-        "topics": [
-          "Risk escalation"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
       }
     ]
   },
@@ -313,42 +309,42 @@
       "symbol": "DX-Y.NYB",
       "provider": "Yahoo Finance",
       "currency": "index points",
-      "price": 101.733,
-      "change_pct_24h": -0.019,
-      "change_pct_5d": -0.04,
+      "price": 101.769,
+      "change_pct_24h": 0.017,
+      "change_pct_5d": -0.005,
       "short_trend_label": "roughly flat over 24 hours",
       "trend_label": "roughly flat over 5 trading days",
-      "bias_contribution": 0.0037,
-      "last_price_at": "2026-10-26T07:16:30+00:00",
-      "provider_observed_at": "2026-10-26T07:16:30+00:00"
+      "bias_contribution": -0.0033,
+      "last_price_at": "2026-10-26T08:08:24+00:00",
+      "provider_observed_at": "2026-10-26T08:08:24+00:00"
     },
     "WTI": {
       "name": "WTI crude oil",
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 101.36,
-      "change_pct_24h": -2.011,
-      "change_pct_5d": 2.188,
+      "price": 101.15,
+      "change_pct_24h": -2.214,
+      "change_pct_5d": 1.976,
       "short_trend_label": "down over 24 hours",
       "trend_label": "up over 5 trading days",
       "bias_contribution": -0.35,
-      "last_price_at": "2026-10-26T07:16:31+00:00",
-      "provider_observed_at": "2026-10-26T07:16:31+00:00"
+      "last_price_at": "2026-10-26T08:08:26+00:00",
+      "provider_observed_at": "2026-10-26T08:08:26+00:00"
     },
     "GOLD": {
       "name": "Gold futures",
       "symbol": "GC=F",
       "provider": "Yahoo Finance",
       "currency": "USD / troy oz",
-      "price": 4016.8999,
-      "change_pct_24h": 0.225,
-      "change_pct_5d": -2.802,
+      "price": 4027.6001,
+      "change_pct_24h": 0.492,
+      "change_pct_5d": -2.543,
       "short_trend_label": "up over 24 hours",
       "trend_label": "down over 5 trading days",
       "bias_contribution": 0.0,
-      "last_price_at": "2026-10-26T07:16:28+00:00",
-      "provider_observed_at": "2026-10-26T07:16:28+00:00"
+      "last_price_at": "2026-10-26T08:08:22+00:00",
+      "provider_observed_at": "2026-10-26T08:08:22+00:00"
     }
   },
   "disclaimer": "Informational only, not investment advice. Data can be delayed or unavailable."
