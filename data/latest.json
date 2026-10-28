@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-28T21:31:32+00:00",
-  "last_successful_refresh_at": "2026-10-28T21:31:32+00:00",
+  "generated_at": "2026-10-28T22:32:06+00:00",
+  "last_successful_refresh_at": "2026-10-28T22:32:06+00:00",
   "fundamental_bias": {
-    "bullish_pct": 77,
-    "bearish_pct": 23,
+    "bullish_pct": 79,
+    "bearish_pct": 21,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (77% model score). USD direction and oil/inflation context: 2 of 2 factors support gold. Recent headline tone is bullish across 1 keyword-scored reports. WTI crude oil is the largest current influence (+15.2 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (79% model score). USD direction and oil/inflation context: 2 of 2 factors support gold. Recent headline tone is bullish across 1 keyword-scored reports. WTI crude oil is the largest current influence (+17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
         "name": "US Dollar Index",
         "weight_pct": 40,
-        "change_pct_24h": -0.225,
-        "change_pct_5d": 0.453,
+        "change_pct_24h": -0.205,
+        "change_pct_5d": 0.481,
         "trend_label": "down over 24 hours",
-        "impact_pct_points": 2.2,
+        "impact_pct_points": 2.1,
         "direction": "Supports gold",
         "explanation": "a weaker dollar can support gold"
       },
@@ -23,10 +23,10 @@
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": 1.737,
-        "change_pct_5d": 1.848,
+        "change_pct_24h": 2.185,
+        "change_pct_5d": 1.868,
         "trend_label": "up over 24 hours",
-        "impact_pct_points": 15.2,
+        "impact_pct_points": 17.5,
         "direction": "Supports gold",
         "explanation": "higher oil can add inflation-hedge support, though energy prices are only a proxy"
       },
@@ -34,12 +34,12 @@
         "key": "GOLD",
         "name": "Gold futures",
         "weight_pct": 0,
-        "change_pct_24h": 0.199,
-        "change_pct_5d": 1.517,
-        "trend_label": "up over 24 hours",
-        "impact_pct_points": 0.0,
+        "change_pct_24h": -0.135,
+        "change_pct_5d": 1.264,
+        "trend_label": "down over 24 hours",
+        "impact_pct_points": -0.0,
         "direction": "Gold price confirmation",
-        "explanation": "gold price confirms an upward market move"
+        "explanation": "gold price confirms a downward market move"
       },
       {
         "key": "NEWS",
@@ -59,12 +59,12 @@
     "bearish_pct": 0,
     "source": "Local estimate",
     "timeframe": "30m",
-    "provider_observed_at": "2026-10-28T20:59:59+00:00",
+    "provider_observed_at": "2026-10-28T22:22:05+00:00",
     "observation_status": "available"
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-28T21:31:31+00:00",
+    "queried_at": "2026-10-28T22:32:04+00:00",
     "status": "available",
     "headline_count": 20,
     "matched_count": 1,
@@ -75,6 +75,118 @@
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Fed holds interest rates steady amid rising inflation - Ticker News",
+        "source": "Ticker News",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRDVNLXg5eWthUE5RUG8yMEJRVmRpNkdZdnNsb3IxNGNqVVBGQzFWanc2Zlk1QXduanFKQ1JFMzVSbDV6WkN2T1pFbm4xdmpEbWlXTzJRUnYzdXBmMVpBZDVlMUZJWXdmZmxFRTlXb2d0ZGhRek5xYVA2ZkJ4UzVLaDB3?oc=5",
+        "published_at": "2026-10-28T21:56:45+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Federal Reserve keeps rates unchanged despite elevated inflation - AP News",
+        "source": "AP News",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdmpNR3hXT3B1c2RacHY4TFZnNjlfaTY2c0tXMXZjSWE5Z2JCZlNDZTE0dGRQYjNEejl5ZXFILTNPQ05pX0NyRWpwNW1YVzdpREhYblpHWTZMZkkzNFZnVTZ1NWV4M3FtR0VMUmRNTjczY1NGaTEtSFptWEY0NF9RZ1otWWdjMTZDYXE3SHRWM0NhdEtyczFDeXFYT3RWVF9DTmdGTHdGWHR1QQ?oc=5",
+        "published_at": "2026-10-28T21:54:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Fed leaves rates unchanged as it awaits 'accumulation of more information' - Reuters",
+        "source": "Reuters",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPaU93czlpTHJXMTJGby0yOGppZGVlVkZzZW4tNC11WTcwVk1yQUZHTVMza0dTLURMRi0tTUtYTHhITkI2OVBWN2k0anZCN2liNnlyNFpaTmFTaWlFTHItWmtBXzh1VWhkRjZBNjVDejQxOGNUTW1HWWRBUzNjbGdKUDV0MlFSWXRsaWQwMXpWQXI?oc=5",
+        "published_at": "2026-10-28T21:51:35+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "How the Iran war is raising mortgage costs for US homebuyers - KOCO",
+        "source": "KOCO",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNWdEVkdzd1lRbVZhN0dBMjR3M1ZJVG9Pbm9fU3N1VXI5a1dxSjRySVRSRDJlS1pKWWRsS2piY25zeG9Id0FOTlY0Q2lUb001aXhjMmxla3NlQzhyZWRlTDNFMFN6ekdsMjVsSnJHT3hBdXNTV3R0OEJ1c1dDaUZwRg?oc=5",
+        "published_at": "2026-10-28T21:46:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Federal Reserve leaves interest rates unchanged - Santa Clarita Valley Signal",
+        "source": "Santa Clarita Valley Signal",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSlFOcHdOMkc2WHl2bTUtZUplakJ2ZWM4ckNYdWNMakhVSjdkUmRjYTNnV1hIMVl4YlRpY24yRUdMcHJod3ZaTW9pdW1vVTlmamtSUUtLRktYS2MtZ1JOOFd6R3pDZ2JuNFA0U0NScnpfdkVoWnVFRGUyR3RwQlQxTXFfak4?oc=5",
+        "published_at": "2026-10-28T21:44:55+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold little changed after Fed holds rates steady; analyst sees gold sliding to $3,900 - TradingView",
+        "source": "TradingView",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOR2dOTk9taUkzNlJQNnR0Y1UzUF9kZFVHNHkzRVVwLXI0MnZZUE5qbi1lYmYxS1h2U3BZNVRTZVl4OFZtU2lJS1BpR0lmU2RSU0dYZm80aHE5S2xuRmVvc1VRaFlvSUZJLUtYQ1VyTnAtenl3TzdUTjhYVUFzNWZOdmpzVC1oVU93Z241Sldqc2tVc3NqNTJBQjI3RGxKcFdLeDRncWpMYjgwMkdYV0JyWVlISGRrVWE1d1BKLUxFM2dBY2xDZndqY1oydExURmV0MHNIMHVkRkJKVHJkMV9z?oc=5",
+        "published_at": "2026-10-28T21:40:29+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "US Short-End Yields Fall After Warsh Signals Fewer Fed Meetings - Bloomberg.com",
+        "source": "Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRUNlWElDTGpDVE1ZTGNKaERIbnpvVjNlbHViLU9kd2NaWjhkWWRNbE5tY0RyLTJpTmJyVnF1R1RSVzl2VVktVXJGQ1pvTGNDS0NBNm8tUmV5N1JKd0c1MTkySHFsbVdfMzhrUWszNG9UbHc1dG1MU2tGM3BFQlg2RU85blBMM0t2YXFCa3NTcUtwVl9VVDVDZHFJSm50ZGNCc3p1RDl4TzZTdndtX25V?oc=5",
+        "published_at": "2026-10-28T21:39:20+00:00",
+        "score": 0.75,
+        "topics": [
+          "Dovish rates"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Federal Reserve holds fire on interest rates despite intensifying inflation - Financial Times",
+        "source": "Financial Times",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOb01WZnNoVWtvSG5SMU1hTzNBQkF4V2JVTWY1ZVV2bFdiYjlMM3FXakV1UXJyU2l3a290U2VZU1hQMHZ4dHZrSlV4Z0x4c01Gc0pBZ3BHMzl2MUJGd0ZEdTNPUWJqUi13T2V5YVJURWNFa19GTS05dkJFVUJIUUZJTElreWQ?oc=5",
+        "published_at": "2026-10-28T21:32:08+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Here are five key takeaways from the Fed rate decision and Warsh news conference - CNBC",
+        "source": "CNBC",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5HTy1FRHJET2ZsWjdodm1pYU11UnkxQnJwU09YdjVUQV9xaEJfc2V6blhkdHJNV3ZLTGtaZ3lYZ2pYTElPQXVLMFl5T2IwVkhaWUo4Y2hrZGxfMXJ3d1NaYXhTSHBXM3RnS2NJMzA1cUppWGxRelEta1pR0gF_QVVfeXFMTXBjUk5HbWZHZHBtbFdrTDU0c2FpdUxrQmtCakJZTUxQUWdCYXcydWFfVmFDdnViazVkRmxhOHNuR1ZNdmdpSUFZUEt4OXphUlR2bjNqejg4UkpZZ3VNWU9DZ0RTMnUzd1lPUEphVTZXV2ktV3BUYXBJNDZrVVRZaw?oc=5",
+        "published_at": "2026-10-28T21:31:46+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Fed holds rates steady as inflation remains elevated - Honolulu Star-Advertiser",
+        "source": "Honolulu Star-Advertiser",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPa3hLLWY0eUs4YzZRdkI2QXU1c0c1RnBiTVRNc3Y5U0dBTl9HWTNibTJ5aUFteXBEY3d6ZUVlSzJ5cVhuUDV6VjV2YWc3VjctbVlVSmZzc19UdUtYb2pjVF9LV25UU3FXUWZCcTJqTE4wN25BQlBkRzhiYTFZOEY4NUFQdHh0eThHOEhaTG96MkpLVUNpY3dsZFRDZkRmMkVQc2IzeHVvT0toOGZCdlE?oc=5",
+        "published_at": "2026-10-28T21:29:13+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Gold (XAU/USD) Price Forecast: Bearish Trend Faces Critical Test - FXEmpire",
         "source": "FXEmpire",
@@ -109,10 +221,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Federal Reserve leaves interest rates unchanged - Santa Clarita Valley Signal",
-        "source": "Santa Clarita Valley Signal",
-        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSlFOcHdOMkc2WHl2bTUtZUplakJ2ZWM4ckNYdWNMakhVSjdkUmRjYTNnV1hIMVl4YlRpY24yRUdMcHJod3ZaTW9pdW1vVTlmamtSUUtLRktYS2MtZ1JOOFd6R3pDZ2JuNFA0U0NScnpfdkVoWnVFRGUyR3RwQlQxTXFfak4?oc=5",
-        "published_at": "2026-10-28T21:21:09+00:00",
+        "title": "Bessent Plays Down Concerns Over AI Financing, Fed Rate Policy - Bloomberg.com",
+        "source": "Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUEVESE1Tb0FzR0xWY0NTUGVlNmFtWGhvdk9LVERpci0wY1VwMGtvMVU5T0RaOWktSkpZWWwxQnV0YkZyNU5uZC1qT0NXR1J3dDhwZ3puZXgtdkFBSzUtTHVGbHpQQ09nbjExRm9vRUQtWVphSEFOQ203OWtvd1FHck13alNJQ0ZGdjlzV09uT09icWFZd0M2TGJ6Zk50TlIxYU54cHk1ZUZ2Q0FDNTVSZm1R?oc=5",
+        "published_at": "2026-10-28T21:26:25+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -164,133 +276,21 @@
         "in_scoring_window": true
       },
       {
+        "title": "Federal Reserve holds interest rates steady as midterm elections loom - ABC News - Breaking News, Latest News and Videos",
+        "source": "ABC News - Breaking News, Latest News and Videos",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPUEhoYVl4OGJtaXFLRU1idHB1dmlvYk1uNEtNNnlMVkFlZEN4N3hpNVB5cmNjWkFEajM2WUZ4bDJJN0pNYlpra21QSGI4cFFwLWllM0xxZlptYWRmdkRlbXAwRWVLcGRBd3J3MDFpUDBvUjVWMElMOGwtZlJMemRJQzczLXI1cWNFMnJKeEcwcGJhUjkzVjZfZ3puam1BQUZFMTRFZ1BIa9IBrAFBVV95cUxQeXRhLUNLYUFqaEtwY25VNnhEUzVzZmRMczBrdVo0SnJXdjdCZjhCbVpURUZJQ2M2MUwyVzlHblFrcTQ0UGhIYUVubHhUZHFVbldqNnJxOFprRG9FRmJIV3ZPaFJiSHZ2a1k0N2R4Q2swcFJ2cDNhZVVJdG0zbG9qaFdvd1l5MXcwbjFWZnBFelBZdFZBMk9pekEzOGFmaEVqVVNmTkx4dXU0eXha?oc=5",
+        "published_at": "2026-10-28T21:09:41+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "The bond market swings, but U.S. stocks remain steady after the Fed says it won't raise interest rates - Pittsburgh Post-Gazette",
         "source": "Pittsburgh Post-Gazette",
         "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMG5sbDJYY2Y0YUo1bXItVXdRTkk5RlJHSVBDS0NVUk9wOVI2c2hZUXlIaWpRM09vOHVPazV2SHJKSGlxMmdnVUQ2SExVZVNJMUs4VWczZ0pWWHZtQ0dycGtlVUxURkF6cUp2NmQzUm5WS3MtT09NbmEyQVR3cDYzamlkaC14VTVHekNLRHNRUzdPdFE5X2lzeWR0d1VhUkVsb3JUTDJ2M2Y2OFUtVndR?oc=5",
         "published_at": "2026-10-28T21:09:13+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Update: US Equity Indexes Rise, Treasury Yields Fall After Fed Stays on Hold - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQWVkM3VkaVE1X0VFdVB0T3FVSXpINmRLVHkxaExLeENZbkxiQktrWDhwczVIVUwzVUt4a2hVUFhtVDVadTVNQVZMbXhqQV9EbXdkMkIyRVltMW1TTlQ5M0JMbkZSLTNlbVk5MHp4Z3lqZ0FaTkVJbzlfWXF0VlFXeDRWNTBzN0hMSXV2bl9yVTZDRnA2cVlQdDJ6aGI?oc=5",
-        "published_at": "2026-10-28T21:03:52+00:00",
-        "score": 0.75,
-        "topics": [
-          "Dovish rates"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Federal Reserve holds interest rates steady as midterm elections loom - 1430wcmy.com",
-        "source": "1430wcmy.com",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPcXVTaWNsYkxwOFR1WmNhSlBuTlY1b1VCR0VwbjlCMHBRYkF5X3hSdFhRemNTYzE2Z3FNaExENTJpalJDeFZxWUlaV0l5TzJ6cXBXeHBMN0UtR2hkbDBlU0g2dE9tVnkxeG5PSXdhS3RFWGtEOW9Wdmk5czIwRW0tenV2elNJYjd0WW8zcEZ4Q3Ayb3dBbFVqUnVRejJDN0FNSzBVcA?oc=5",
-        "published_at": "2026-10-28T20:48:56+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Does Anyone Know Why the Fed Didn’t Raise Rates? - National Review",
-        "source": "National Review",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZzRscGl4MTZtRkVfMC1VeXBaMS1fU3I5S2VJN0tOUmhXdXRzTTNIMmQ2b0NBalpoVWJNdjhERWxPeFdCNi1BWFpZVllQVVp6TVZsTDJKRFBuLUxBZzRHRGJHQkgzb01nRWhWcmRQNDVtYjRoM0JuWDJRUktONlR0bGNXTlhfcXFNTmtqTzh30gGTAUFVX3lxTE4zUHdOcWhKOGNDSk1jLWFhODdPMXdsWndEUjZScWhYMTUteVdYVHpkbjVYZi04cU9tLU5XaDY0Z1FybnE4MDJfT2RvaWtSU2VHMG1uYTVTWU1IZmZwVVowZzBYeGRscXU0YnNpRHpNNWNTaEllUXNRemswS3gzcFZLbk8wc2IxMkxFWGQyaTVPUnVFTQ?oc=5",
-        "published_at": "2026-10-28T20:39:25+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Wall Street ends higher as Fed holds key rate steady, focus turns to earnings - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRkVoN1pJbDg0SnFHSl90ODVwYTlmQ3VTLWRGT2pwUEtpNWo5bGNpeVpLLXZ6ZEIwczhlc2RGQkRQaHRuV3lBSEJUenQzY1VteEVBNl9kNUx5V2FPQURURzBUZ1Z2a1BuZmQ4Q2xlTzlxRm0zRjVlWFppN1dkYVRlUUM1LThQWXRWaVRRTE44dzlCT2RPRHJkbWZ3?oc=5",
-        "published_at": "2026-10-28T20:23:13+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "U.S. Stocks Up, Treasury Yields Mixed After Fed Hold - WSJ",
-        "source": "WSJ",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQLVpkc0tPSDBPVHptQ0w1dG1CTjVvTXpYZTAwbWlJOVpJUHc3UTN5R2pPeTA0QnoyVWpRVGpLS3JFd0xSeDdoWjJtRlJBNHZXVm5kcTBRaUdxQTNNeGdNQmFxYWE0MjBoZG80SVlscnJSaGRDdDBmUFRsT3BtWnd5TjlwZ3dqWDNDRnFVamJ4RlVqZThYTm5tVTJB?oc=5",
-        "published_at": "2026-10-28T20:21:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Fed Says More Data Will Help Next Rate Decision as It Stands Pat - Bloomberg.com",
-        "source": "Bloomberg.com",
-        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYTNINnF3d0YzSWhxXzBuRUxDc2RycVdyV1FFVGFMcFMtdUZxVmx4RGQ5NDdJRmpRdlhMRlN4d1NTV1BFYVFXekxSQUhjRjBKWlNxTzNrb04xTmx5THJ1OVBZem1HWldlb2EzaWFsbmVNYUIxVWtqano5ZFJZanllZVJTYWNuYXVqRzFxMjRRSjVqaXBvWFQ5cTJiSElpWldqbjA5bXl6eEM?oc=5",
-        "published_at": "2026-10-28T20:16:34+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Federal Reserve keeps rates unchanged despite elevated inflation - AP News",
-        "source": "AP News",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdmpNR3hXT3B1c2RacHY4TFZnNjlfaTY2c0tXMXZjSWE5Z2JCZlNDZTE0dGRQYjNEejl5ZXFILTNPQ05pX0NyRWpwNW1YVzdpREhYblpHWTZMZkkzNFZnVTZ1NWV4M3FtR0VMUmRNTjczY1NGaTEtSFptWEY0NF9RZ1otWWdjMTZDYXE3SHRWM0NhdEtyczFDeXFYT3RWVF9DTmdGTHdGWHR1QQ?oc=5",
-        "published_at": "2026-10-28T20:15:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Fed holds rates steady as expected, though two policymakers prefer 25 bps hike - Investing.com",
-        "source": "Investing.com",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOc3hWWFF3bXE3RWdIX3ZleWQ3UjdRTnlPU1E5bWsyeTZ2R1lJMzV2eE1uMDczM1JON1l5OHY5T0tlNms4d0k3M2pmbUFSMVd5cUhvN2k0SHJTbDE3ZWttR0ZJQ1NiVExXakRVaXR6Wjhsd0FENjhQM1pYRWlFUmR3OGd5VWExZGEtNi14eXk3VQ?oc=5",
-        "published_at": "2026-10-28T20:09:10+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "US Equity Markets End Higher After Federal Reserve Votes to Keep Policy Rate Unchanged - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdjBETFFhRmZySm1fVVczRWJTS09NLW8xX29UbmZpLXJvVF9tVWthSmVxWW9vVFFlbkQxR1Z5bERQZkdkZDlSdnFQTmNBUnFWbGFWRVhjTG03SlQyTmxIS1BDbFlvNHVXWnNmZmxZZXY3OGw2S29vVzRja190WTRFQ1FMSXpQekI2NG03MHFucDJJRGxkempzcw?oc=5",
-        "published_at": "2026-10-28T20:07:27+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Fed’s Rate Hold Sends Bond Yields in Different Directions - WSJ",
-        "source": "WSJ",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPaEkwMGl6T29kQlFSbU9EanZNX3VMdG5PcG9tWXh3cUQ0U0R5ZTFuUU1QRl9PWl9nd2l4bFpwWl9OOFFTS0VfSV9UcFR0VEtsRW9ld25admRIbkFQa292VTNWVV9xb2g3ZlQwZ2ZuNlVSQkNTQzhGN0RDSl9wZ0hDWi1fcGFTRnJHUTAzeEhUY1BZeVFJU1ZyaVFPdDkzNm9sVTVmcm9pSkxRWjlTOHRpSjlPNmxUb0pPaHBN?oc=5",
-        "published_at": "2026-10-28T20:03:45+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Fed leaves rates unchanged as it awaits 'accumulation of more information' - Reuters",
-        "source": "Reuters",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPaU93czlpTHJXMTJGby0yOGppZGVlVkZzZW4tNC11WTcwVk1yQUZHTVMza0dTLURMRi0tTUtYTHhITkI2OVBWN2k0anZCN2liNnlyNFpaTmFTaWlFTHItWmtBXzh1VWhkRjZBNjVDejQxOGNUTW1HWWRBUzNjbGdKUDV0MlFSWXRsaWQwMXpWQXI?oc=5",
-        "published_at": "2026-10-28T20:03:43+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -305,42 +305,42 @@
       "symbol": "DX-Y.NYB",
       "provider": "Yahoo Finance",
       "currency": "index points",
-      "price": 102.127,
-      "change_pct_24h": -0.225,
-      "change_pct_5d": 0.453,
+      "price": 102.155,
+      "change_pct_24h": -0.205,
+      "change_pct_5d": 0.481,
       "short_trend_label": "down over 24 hours",
       "trend_label": "up over 5 trading days",
-      "bias_contribution": 0.0449,
-      "last_price_at": "2026-10-28T21:21:26+00:00",
-      "provider_observed_at": "2026-10-28T21:21:26+00:00"
+      "bias_contribution": 0.041,
+      "last_price_at": "2026-10-28T22:04:58+00:00",
+      "provider_observed_at": "2026-10-28T22:04:58+00:00"
     },
     "WTI": {
       "name": "WTI crude oil",
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 101.94,
-      "change_pct_24h": 1.737,
-      "change_pct_5d": 1.848,
+      "price": 101.96,
+      "change_pct_24h": 2.185,
+      "change_pct_5d": 1.868,
       "short_trend_label": "up over 24 hours",
       "trend_label": "up over 5 trading days",
-      "bias_contribution": 0.3039,
-      "last_price_at": "2026-10-28T20:59:58+00:00",
-      "provider_observed_at": "2026-10-28T20:59:58+00:00"
+      "bias_contribution": 0.35,
+      "last_price_at": "2026-10-28T22:20:43+00:00",
+      "provider_observed_at": "2026-10-28T22:20:43+00:00"
     },
     "GOLD": {
       "name": "Gold futures",
       "symbol": "GC=F",
       "provider": "Yahoo Finance",
       "currency": "USD / troy oz",
-      "price": 4081.19995,
-      "change_pct_24h": 0.199,
-      "change_pct_5d": 1.517,
-      "short_trend_label": "up over 24 hours",
+      "price": 4071.0,
+      "change_pct_24h": -0.135,
+      "change_pct_5d": 1.264,
+      "short_trend_label": "down over 24 hours",
       "trend_label": "up over 5 trading days",
-      "bias_contribution": 0.0,
-      "last_price_at": "2026-10-28T20:59:59+00:00",
-      "provider_observed_at": "2026-10-28T20:59:59+00:00"
+      "bias_contribution": -0.0,
+      "last_price_at": "2026-10-28T22:22:01+00:00",
+      "provider_observed_at": "2026-10-28T22:22:01+00:00"
     }
   },
   "disclaimer": "Informational only, not investment advice. Data can be delayed or unavailable."
