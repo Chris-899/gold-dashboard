@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-29T15:45:13+00:00",
-  "last_successful_refresh_at": "2026-10-29T15:45:13+00:00",
+  "generated_at": "2026-10-29T16:45:03+00:00",
+  "last_successful_refresh_at": "2026-10-29T16:45:03+00:00",
   "fundamental_bias": {
-    "bullish_pct": 30,
-    "bearish_pct": 70,
+    "bullish_pct": 31,
+    "bearish_pct": 69,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (30% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 2 keyword-scored reports. WTI crude oil is the largest current influence (-17.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (31% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 5 keyword-scored reports. WTI crude oil is the largest current influence (-15.6 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
         "name": "US Dollar Index",
         "weight_pct": 40,
-        "change_pct_24h": -0.252,
-        "change_pct_5d": 0.309,
+        "change_pct_24h": -0.209,
+        "change_pct_5d": 0.274,
         "trend_label": "down over 24 hours",
-        "impact_pct_points": 2.5,
+        "impact_pct_points": 2.1,
         "direction": "Supports gold",
         "explanation": "a weaker dollar can support gold"
       },
@@ -23,10 +23,10 @@
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": -2.943,
-        "change_pct_5d": -1.552,
+        "change_pct_24h": -1.787,
+        "change_pct_5d": -0.658,
         "trend_label": "down over 24 hours",
-        "impact_pct_points": -17.5,
+        "impact_pct_points": -15.6,
         "direction": "Weighs on gold",
         "explanation": "lower oil can reduce some inflation-hedge support, though energy prices are only a proxy"
       },
@@ -34,8 +34,8 @@
         "key": "GOLD",
         "name": "Gold futures",
         "weight_pct": 0,
-        "change_pct_24h": -0.444,
-        "change_pct_5d": 0.618,
+        "change_pct_24h": -0.777,
+        "change_pct_5d": 0.304,
         "trend_label": "down over 24 hours",
         "impact_pct_points": -0.0,
         "direction": "Gold price confirmation",
@@ -47,39 +47,52 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 2 scored headlines",
-        "impact_pct_points": -4.7,
+        "trend_label": "bearish tone across 5 scored headlines",
+        "impact_pct_points": -5.2,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
   },
   "technical_bias": {
-    "bullish_pct": 38,
-    "bearish_pct": 62,
+    "bullish_pct": 0,
+    "bearish_pct": 100,
     "source": "Local estimate",
     "timeframe": "30m",
-    "provider_observed_at": "2026-10-29T15:35:12+00:00",
+    "provider_observed_at": "2026-10-29T16:35:00+00:00",
     "observation_status": "available"
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-29T15:45:11+00:00",
+    "queried_at": "2026-10-29T16:45:01+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 2,
-    "scored_count": 2,
-    "bias_score": -0.375,
+    "matched_count": 5,
+    "scored_count": 5,
+    "bias_score": -0.42,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 5 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
       {
-        "title": "Federal Reserve Holds Rates Amid Inflation Skepticism - 조선일보",
-        "source": "조선일보",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSnpiOGhXZW9UVmYtQlo0aWVpcWtZdzVBM1VaYTdIOFVfUEo4Q2hyVkQ3Y01DdzRoRGVmZlE5WE9kNFl4YnI4N0RMWGJiandjenpkSjNJV19feGllTEtzRG1GY1oyRGFRV3lnUWdXakRIMFFKNDFXTHhwODFLLVlHT2Vnb3RVdTI2d0lCNHZn?oc=5",
-        "published_at": "2026-10-29T15:36:13+00:00",
+        "title": "Inflation heats up as rising costs threaten to spread beyond energy - WKEF",
+        "source": "WKEF",
+        "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPRzdJeTFadVFIczdWbUJxNklPcUcwZUhhN195UmxmbUMtcXdBZV90bGNKejNKOHhyd3FWOElfbk94bDFrT0pSaWFITThEQzFUQURjVG44S002ZXJUZ1o3QTZNZG5ibUVITUJUUjN4bHJqRnNHVldFN2JfUExTWEtpcU5melRxZUw1eFBubENxTUowbC1TME5uZnVuaWNjN3pCM055ck9CRlVzS3h1WDJWQlhpQ1Bnem1KbEJ0ZDFURHFnajk1NTJ1c0haMmZyRWhiSjBzazlENGFobllDSld1aGlwRDByZ0x4?oc=5",
+        "published_at": "2026-10-29T16:43:04+00:00",
+        "score": -0.35,
+        "topics": [
+          "Hotter inflation"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "How a run-up in Treasury yields sent mortgage affordability plunging - Scotsman Guide",
+        "source": "Scotsman Guide",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbVloY1EwLVJmMnVfUURYVnVtRzBjMGNzVThURTl1X011RmpOM2NaWkN0SGtjTWJzMVFEUmtTTzFIODg1TGlWMDdnZ09RVHY0QzZyWV9xTmw3MDNtWVUtUTVGZFl3M21mcllpLXRfZkx0R1NYTVp1anhCT3BEalBCLWpXUGxEbDZZWWRGbGcxcF9wV05DR1NnbUx3RDFFQ0pBeWo0RmlROA?oc=5",
+        "published_at": "2026-10-29T16:26:21+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -87,10 +100,70 @@
         "in_scoring_window": true
       },
       {
+        "title": "IMF says Federal Reserve is 'appropriately' keeping close eye on data - Yahoo Finance",
+        "source": "Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRE05Y214SmpEbURJUXQwdlBZNjR3ei1DSHFlNmR0aHhGdTdWdU1aaFZhSWtqWjVOYnoyc3JSOW5zNVpfNEVWdzE3alJXNnJUaFg3b2IwZThxQlhlNkh1eWF0bWZRdXFPZld1RTNvNDJiRE4zRjJLcG9WdlBvT3UwZUpTYW9PMVgwSEx3bVlHNERieXJfbG1fT1Y2OWxTX3ZqOGV1NjZ3?oc=5",
+        "published_at": "2026-10-29T16:19:28+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "The Fed Risks Falling Behind in its Inflation Fight - The New York Times",
+        "source": "The New York Times",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQT0duQ2s1THJaQTllWHI4eXh0UEZXVjVLUkdBbUFyaHpERDhqQkxLcnhTRzVQU3k0MW5FeWF4Q25BZnJ4dHZuckZiRHZnN2V4eEljbEZDbFFxZnFZREJnQ29wTHdJSDhfV0FzYkdRQ1NkblZyZDAwTmZOdzhyZFlUc3N6M25CMWt6Y0VQMGZ3QmE?oc=5",
+        "published_at": "2026-10-29T16:06:49+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "US Inflation Accelerates in September, Raising Odds of Rate Hike - Yahoo Finance",
+        "source": "Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRlZ0TU1MWDJ4OEo3YzR0R2Z1eno2UHlWOUN5TjhYbjZjeHU5cjFJRnhham9Hc0hndWxEZVFILVc5MENiQ3lNSjJGbW1naTBWdGtLb0I4MVZfNk4tRUpCYlFfdkdqRldMaHlYNUY1YmN3NEhjb0h3YXhDYk8zNERzQkY3Q0dyQks1OUljSVBEeGdLYUJRV1ZicUQwRC0xRGNyck1pNVRoWGI1cjg?oc=5",
+        "published_at": "2026-10-29T16:02:29+00:00",
+        "score": -1.0,
+        "topics": [
+          "Hawkish rates",
+          "Hotter inflation"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "September's Inflation Was in Line With Expectations. Odds of a Rate Hike Dropped But Remain High. - International Business Times",
+        "source": "International Business Times",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLTg0RFV2cWcwMkhCaDB5WXdIRXVjc3VGNFMzYmFBbHFYelVUekdVMTNpd0t1U1U0TVo2Y1NjbkZvcnNnbDljazE0QmxySzIybDVYYXdrT21WR3VPUHFLY3lKLXRhQzB6ekZ6Q083VEl2MjVTeGcwSFdSakZWX0h0M2M0Y2twQUdkTmdkZzk3N3hBVlhPRm1jU1UwdmlqdFVtdnZCNkhFUF9hbzE0VFE?oc=5",
+        "published_at": "2026-10-29T15:58:53+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
         "title": "Fed Holds Rates, but 5% Treasury Yields Complicate the Outlook - Investing.com",
         "source": "Investing.com",
         "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPMHJpUGhnVUVTYkJsR3F6UXJBMjBGTmNzbXg0Q05CWThuYU1pV0dTSnExRWpRb0dmaGMyU1dnZTd1cXk5SWhUTTVqRTZBdzNNQ3RjZlNPUHgtVGJNanFBYlZOcFBGTXhUcFczUEJTT0dVazM2RlJ5VGZoVF9VbzNUamh1T1Rvb2t2ajM3QjZyVklCYkd2aVkwRFExeHJkM0RjTW83SVF1bFg?oc=5",
         "published_at": "2026-10-29T15:32:49+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Interest Rates Remain Unchanged, Experts Predict Federal Reserve will Raise Rates by End of Year - WENY News",
+        "source": "WENY News",
+        "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNWkNfNGJPWjZfY1RaamlFRjFoZlBVOVVDXzB3X3dmRVJDRzVOSGpfV2JScTN1alRlemhZRTk1OG1IWG4wT1N2ajNSSUlKTEd6YS1lQk5SVGJsczJKY0QwR0lCRGM2SzJfZkc3MjV6bE95MXdYc1pPdnp6MnMyMG5DZGMyOG5FWjEzSXdadzJrTlNYSVhYR19wVDdqdjhSQ3FMcm5VbWQ3Wk0ybGdQX2lYZG9LOWZhNTZ1SE8zWXF6S2IxektDQzh5d2x1TVN5UUpQNHFsR3RjTHZ1ZUF1Yjk5UmJtU0hTV3MtQ25Zb3Nkd3RlRkt6RDc5a0FYblNiSWhkZnhoYXp0TTM2SWstbDVUNzJaRQ?oc=5",
+        "published_at": "2026-10-29T15:30:51+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -106,6 +179,30 @@
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Euro steady against dollar after ECB leaves rates unchanged - Yahoo Finance",
+        "source": "Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVUozWWlwWnlpUFZjdWQ5MjRBWlVjZ2xQdFNpZzF1aGFySGlJaks3QWhiVlMwMGU5MnBrbTQ2M3dZcVRUbE1rOGxKU3MxLWNLaUJEaWdkQ1lWa1NBVHZ5ZGU0bjg5SV9ORThaeEFlbURmbXhkV2tjeHFFZkRma3ZDMG92UEJlWnFId0dRbi1VblZ6dDRuWE9BbmJtbGxXY1k?oc=5",
+        "published_at": "2026-10-29T15:23:50+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "U.S. Treasury, European Bond Yields Fall After Fed, ECB Hold - WSJ",
+        "source": "WSJ",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMVJzTU8waHdld3FnbVROOGw4ZEtGS2g3UHpKYVFXTXhzdW9DeW8xYmJrY1RmWGFvNUlqWThQR2FWaTRuaklmYWlhbTNQV0lfa3BNNmFjSHBUaTk0NDVNSHRFLUg5MFFhTFZZMWZrTHh5ZHpYVnVzMlpNZ2hqaEM3LVJuOUhrUV9kc3NGRHpfdFNkUEhTX2oyTzVRMUhvS1dyNkF1UVV4eEtFM3VXTXJvUG9Lc3dnRjRDc190d0Vzem5ZNmxfNktGcUl3?oc=5",
+        "published_at": "2026-10-29T15:23:00+00:00",
+        "score": 0.75,
+        "topics": [
+          "Dovish rates"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
         "in_scoring_window": true
       },
       {
@@ -208,97 +305,6 @@
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
         "in_scoring_window": true
-      },
-      {
-        "title": "Canadian Dollar and Business Outlook: Loonie strengthens after rate announcements - Country Guide",
-        "source": "Country Guide",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQYWFFakg0YkhvRm52WU5qdXkzVU1nMTBSS1dtWVZhOWJoRi1UODAtOGhfcnJUUmZwZjFhdzBrdUVNaVFoWTBEeUVGZFFxcGZiUDdBaDFISjMwbTFVbUdxemc5dzJrSFR0Zm1tX2JtX3R2MWN3RV81cEZpSWpZQjUyUk9zY2FZNHY4TjNMTUI1aGNhRnNUTjlBV19QSHA0YkVqQWVHM3RQbHlvU1hCczVVWE41bzhZMk1HUVAtcjhCZWUxdw?oc=5",
-        "published_at": "2026-10-29T14:07:32+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "BC-Gold Futures - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSndaUTFiNk1LSGdqb1VQaEFJTkdMTXR1SXpxbE9GY2F1cmdjaHRUMVlOVVl6cjdqZndWaHV0Mm9pUllwclpVNm1yRlV5WGNjS2hIN3NyYWQ1TGQ1VzBkQTBJMm9HWDl2UUZ2Z0UwbGdlUHFUdVlScFFiUld4QWs5NUxQeHI0Mzg5MGtOZGNB?oc=5",
-        "published_at": "2026-10-29T14:00:47+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Canadian Dollar weakens as US PCE inflation and GDP back hawkish Fed bets - FXStreet",
-        "source": "FXStreet",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQaVFxTEhzMHBZVVNGVVlDQkJrM0ExdEVhRkplenFNV1lTa0ppNWxrOTl1R3hJRWNQSnhZYTNvTWtXOFdzVVF2N19QV1VCNTdIMDNuUks4OWJJeWFJVzBlS293U0MzVGJvWFkyVG5Lc3Q4QzVDY3ppcDNyMzFNVk1EclE5YVdNcm9IMkkyTnVPSHhKUU41d1dSMVhxckE2NWZoLVIwLTF6bDlwM2ZvZU5zZjNMdE9IYUE?oc=5",
-        "published_at": "2026-10-29T13:55:44+00:00",
-        "score": 0.0,
-        "topics": [
-          "USD weakness",
-          "Hawkish rates"
-        ],
-        "direction": "Mixed / unscored",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Federal Reserve pauses federal funds rate after first increase in more than three years - Logistics Management",
-        "source": "Logistics Management",
-        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPTWx1V0xEZ3F6SmFpQll1Snd4cF82cVFjU1FQZVVzbV91aFRZNTZhdG93WnFmaFppWkh2QThDMUlJTGNEaUNOdHA1TWJYQ0JOanVOT3pBRVNFZGJUOTBkUmpOVHhpaldFOGctNzlVRTNuTFVfMkZ2Qi1ueGxQc0xCbkxSRUM4YUVTcGVBNDY5OG95LS1nR1JxWEhPcGp1TndiVEdrWjhqMHR2WVhaZXZkZzhQM1prSjM4eGtSUkdnS21JRWs?oc=5",
-        "published_at": "2026-10-29T13:46:05+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "European Stocks Advance Following Federal Reserve Rate Decision as Corporate Earnings Drive Trading: DAX, CAC, FTSE100 - Yahoo Finance UK",
-        "source": "Yahoo Finance UK",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbU13NXNUWGhfUEkweXVTaFVhSnVXRHNVdUd0SUJOQUl2Z1RURmtRYk1GNFo4UjIyWnJxSGJyRFQyZURnMmRBZDhQTmV0ek9QYTh6Z056YXN3VlRCaXYxLTZldGJrNDJ2M182aXJFaFNOM2U2blYxNW9uSFpWei1fYmFMR0tYTG5IdXFrdVVFS2RkU0pj?oc=5",
-        "published_at": "2026-10-29T13:41:28+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Mortgage rates could still rise after Fed holds rates steady - TheStreet",
-        "source": "TheStreet",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSWtMUkNZcC0yckk3UjBHV29VQ1RHcnJNUlVDaUZDdE9XV1ZfaERVS1kybWxGQVotRC1lcGV5MHpKcVlqMjFzbFE0bnh6Sk5IMkpSREdQLXdBMHRuN2xzb1VJcjNPMzRiakRzcmZ0UXNZaWRNRDlyNjdWTFVQRXlVVkI4TUNfWWRhRjVYbkZUTjNGVEZKMHVXVjJibVVBbUpqUlZOVEZ3?oc=5",
-        "published_at": "2026-10-29T13:33:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "In Moving Gradually, Fed Risks Having to Play Catch-Up to Quell Inflation - The New York Times",
-        "source": "The New York Times",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQT0duQ2s1THJaQTllWHI4eXh0UEZXVjVLUkdBbUFyaHpERDhqQkxLcnhTRzVQU3k0MW5FeWF4Q25BZnJ4dHZuckZiRHZnN2V4eEljbEZDbFFxZnFZREJnQ29wTHdJSDhfV0FzYkdRQ1NkblZyZDAwTmZOdzhyZFlUc3N6M25CMWt6Y0VQMGZ3QmE?oc=5",
-        "published_at": "2026-10-29T13:31:26+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "September's Inflation Rate Was in Line With Expectations, But Still Well Above the Fed's Target - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYUlmMDQwWk8tTWRpSVdqN1JhVnpkTkxXaXNMRzBFeURJSmRHc1ZBcElmeHZscjc0YmE4Wk1TNS1lNkZnUzZBNUxVYVlOalN5S3lLZjVzMGZuZ2tmRDlaT004cjhEMjZoUGxQcHBrX0p2bnV5YUZ6Y0JsUEhCbTJ0VXd0TnN5SjhOT1czdXdua25aZDNfMlRkV2U0MjNaVlNrWFNOZFktUE02Nlkx?oc=5",
-        "published_at": "2026-10-29T13:23:30+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
       }
     ]
   },
@@ -308,42 +314,42 @@
       "symbol": "DX-Y.NYB",
       "provider": "Yahoo Finance",
       "currency": "index points",
-      "price": 102.057,
-      "change_pct_24h": -0.252,
-      "change_pct_5d": 0.309,
+      "price": 102.022,
+      "change_pct_24h": -0.209,
+      "change_pct_5d": 0.274,
       "short_trend_label": "down over 24 hours",
       "trend_label": "up over 5 trading days",
-      "bias_contribution": 0.0504,
-      "last_price_at": "2026-10-29T15:35:10+00:00",
-      "provider_observed_at": "2026-10-29T15:35:10+00:00"
+      "bias_contribution": 0.0419,
+      "last_price_at": "2026-10-29T16:34:59+00:00",
+      "provider_observed_at": "2026-10-29T16:34:59+00:00"
     },
     "WTI": {
       "name": "WTI crude oil",
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 100.24,
-      "change_pct_24h": -2.943,
-      "change_pct_5d": -1.552,
+      "price": 101.15,
+      "change_pct_24h": -1.787,
+      "change_pct_5d": -0.658,
       "short_trend_label": "down over 24 hours",
       "trend_label": "down over 5 trading days",
-      "bias_contribution": -0.35,
-      "last_price_at": "2026-10-29T15:35:09+00:00",
-      "provider_observed_at": "2026-10-29T15:35:09+00:00"
+      "bias_contribution": -0.3127,
+      "last_price_at": "2026-10-29T16:34:59+00:00",
+      "provider_observed_at": "2026-10-29T16:34:59+00:00"
     },
     "GOLD": {
       "name": "Gold futures",
       "symbol": "GC=F",
       "provider": "Yahoo Finance",
       "currency": "USD / troy oz",
-      "price": 4036.5,
-      "change_pct_24h": -0.444,
-      "change_pct_5d": 0.618,
+      "price": 4023.8999,
+      "change_pct_24h": -0.777,
+      "change_pct_5d": 0.304,
       "short_trend_label": "down over 24 hours",
       "trend_label": "up over 5 trading days",
       "bias_contribution": -0.0,
-      "last_price_at": "2026-10-29T15:35:08+00:00",
-      "provider_observed_at": "2026-10-29T15:35:08+00:00"
+      "last_price_at": "2026-10-29T16:34:55+00:00",
+      "provider_observed_at": "2026-10-29T16:34:55+00:00"
     }
   },
   "disclaimer": "Informational only, not investment advice. Data can be delayed or unavailable."
