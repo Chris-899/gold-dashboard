@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-29T19:43:20+00:00",
-  "last_successful_refresh_at": "2026-10-29T19:43:20+00:00",
+  "generated_at": "2026-10-29T20:36:43+00:00",
+  "last_successful_refresh_at": "2026-10-29T20:36:43+00:00",
   "fundamental_bias": {
-    "bullish_pct": 51,
-    "bearish_pct": 49,
-    "direction": "Neutral",
+    "bullish_pct": 58,
+    "bearish_pct": 42,
+    "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop is mixed for gold (51% model score). USD direction and oil/inflation context: 2 of 2 factors support gold. Recent headline tone is bearish across 3 keyword-scored reports. Recent news headlines is the largest current influence (-4.6 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (58% model score). USD direction and oil/inflation context: 2 of 2 factors support gold. Recent headline tone is bearish across 3 keyword-scored reports. WTI crude oil is the largest current influence (+10.6 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
         "name": "US Dollar Index",
         "weight_pct": 40,
-        "change_pct_24h": -0.13,
-        "change_pct_5d": 0.24,
+        "change_pct_24h": -0.247,
+        "change_pct_5d": 0.154,
         "trend_label": "down over 24 hours",
-        "impact_pct_points": 1.3,
+        "impact_pct_points": 2.5,
         "direction": "Supports gold",
         "explanation": "a weaker dollar can support gold"
       },
@@ -23,10 +23,10 @@
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": 0.491,
-        "change_pct_5d": 0.412,
+        "change_pct_24h": 1.209,
+        "change_pct_5d": 1.149,
         "trend_label": "up over 24 hours",
-        "impact_pct_points": 4.3,
+        "impact_pct_points": 10.6,
         "direction": "Supports gold",
         "explanation": "higher oil can add inflation-hedge support, though energy prices are only a proxy"
       },
@@ -34,8 +34,8 @@
         "key": "GOLD",
         "name": "Gold futures",
         "weight_pct": 0,
-        "change_pct_24h": -1.502,
-        "change_pct_5d": 0.399,
+        "change_pct_24h": -0.85,
+        "change_pct_5d": 0.636,
         "trend_label": "down over 24 hours",
         "impact_pct_points": -0.0,
         "direction": "Gold price confirmation",
@@ -55,16 +55,16 @@
     ]
   },
   "technical_bias": {
-    "bullish_pct": 25,
-    "bearish_pct": 75,
+    "bullish_pct": 62,
+    "bearish_pct": 38,
     "source": "Local estimate",
     "timeframe": "30m",
-    "provider_observed_at": "2026-10-29T19:33:10+00:00",
+    "provider_observed_at": "2026-10-29T20:26:40+00:00",
     "observation_status": "available"
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-29T19:43:18+00:00",
+    "queried_at": "2026-10-29T20:36:41+00:00",
     "status": "available",
     "headline_count": 20,
     "matched_count": 3,
@@ -76,10 +76,10 @@
     "failed_search_count": 0,
     "headlines": [
       {
-        "title": "Gold, silver fall over 2% as US inflation rises - ارقام : اخبار ومعلومات سوق الأسهم السعودي - تاسي",
-        "source": "ارقام : اخبار ومعلومات سوق الأسهم السعودي - تاسي",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE52d2FDWlhScG9QdzZqc255dnpvR2ZRdEQyeWFqeC1PM3l2elBrREpQOWZpQjdaNUk2a0V6WmhycmlSVlNRTWlnc0pYc2tQVVNMRTdmNXhlVVJlUEt6YVV0Nk53QWw3UF9qSnc?oc=5",
-        "published_at": "2026-10-29T19:31:50+00:00",
+        "title": "US dollar retreats despite strong GDP growth as Fed rate outlook remains uncertain - Economies.com",
+        "source": "Economies.com",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPVlh3M2lIRndjNDBuSVQ4cW9XT2dGU1BRLXNPWTdyWmh1N1N0aEVzTkpKT0p0YTNrbzl1Q3pMSk1vMnZOZktFQUFrVGM2ZEhmOW9vdEFMeVFKd29mb1BKUFcxOGtXc1EyUzNRU1U3NmptdWtzOVpUVVR2X1pob0FMZlhGTld0bDM0MjItWmFPeGUzNld6OXVpbUExcV9RSndXNllOZjFzcXZLNXNQUjlweUdSZU0yQmR2T0prSVBYbmRCNnpVMGhfWnh4bHozSzJSb0NmWGF4UQ?oc=5",
+        "published_at": "2026-10-29T19:41:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -155,6 +155,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Nasdaq, Treasury yields and dollar face a major AI sentiment test - StoneX",
+        "source": "StoneX",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZlpmc3pTTnVwTkp5aS1HMXpISUhTSnBndTNiTWdzMmlkZ21QOUJsRm1CaWtidGtKVWVvV3N2cm5KTnE0NW93X2JfRUtzcjZoR1VVZWp5NzFheUEyOWFRd19vTjBCTUFVdnFaMWhaTXBBOW5rSDBRakQzNXBraTEyVklqajEyUjhaWUFIZXViVWZ3SFpkZmhfQmh1N1NQRXZjVUQyeDZyMGlaemNNdElyNGdB?oc=5",
+        "published_at": "2026-10-29T18:11:09+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Did the Fed make a mistake with its October rate pause? The Treasury could help save the day. - MarketWatch",
         "source": "MarketWatch",
         "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQZk45ZWVGX3Q2YVVVRTN4R1I0cld2ZmsydjNDTExsZWh3TFhObTRMdENLYUlIc014WUZJY2pPcDE1OHFiSU41T2gyNFh0cVhvemxSNHU1SU05czhJTFVnMWRBMUZlQnZ1dmpSQ1dRcmZhU1FsbGttUE9zMmRzLWtoUkNsUUF2ZTBfa05nUkFMR3RCRWNsNkJHXy0zZzNGMlhoRExYbi0wT1F0NFdUSVc5SHVmeVBTY1dnazQtSlp5U1FVbE1ZQWxCS00yMXNubHM?oc=5",
@@ -210,9 +221,9 @@
         "in_scoring_window": true
       },
       {
-        "title": "U.S. economy grows faster than expected as inflation rises - WCPO 9 Cincinnati",
-        "source": "WCPO 9 Cincinnati",
-        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTmpxZnVnN1ZTbUVnYnBPZ0pVcnpfZUljMXFNUE9QcTNwTU1PMTgzelg3NUJuZEdMOVphRDcwWC1tLUFKQTRvVV9seXRmdndVaDg5WTRDVEUyY2daeENfOWdZNHVaNGhYTkRGVWpOOWg0UC1nb2dQcExzSFJwck1QNmZtWFotYnY5cHJvX3pSQUo1T1pXSS05ZlRDRQ?oc=5",
+        "title": "U.S. economy grows faster than expected as inflation rises - Denver7",
+        "source": "Denver7",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdzdURGV3T093bGtPX090eXB5RW5nN2V0YUlIRmkzN09HRnZ3RTZ3Z2QtVWhqSVpsRlhWNWpwMWtRTmZzOFUwdG4wdWZSeEtWb0dYc3hoMDlTZE1kR0RLcENQS0VNWk9mU1RkZWt4X1JKYzZjYVRmV2htMFdhMGp1Q1RqdlhYdW1GOTVNYlQtSmtMSFdENEFCY3lFQzNpdXc?oc=5",
         "published_at": "2026-10-29T17:09:44+00:00",
         "score": 0.0,
         "topics": [],
@@ -290,17 +301,6 @@
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
         "in_scoring_window": true
-      },
-      {
-        "title": "IMF says Federal Reserve is 'appropriately' keeping close eye on data - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRE05Y214SmpEbURJUXQwdlBZNjR3ei1DSHFlNmR0aHhGdTdWdU1aaFZhSWtqWjVOYnoyc3JSOW5zNVpfNEVWdzE3alJXNnJUaFg3b2IwZThxQlhlNkh1eWF0bWZRdXFPZld1RTNvNDJiRE4zRjJLcG9WdlBvT3UwZUpTYW9PMVgwSEx3bVlHNERieXJfbG1fT1Y2OWxTX3ZqOGV1NjZ3?oc=5",
-        "published_at": "2026-10-29T16:19:28+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
       }
     ]
   },
@@ -310,42 +310,42 @@
       "symbol": "DX-Y.NYB",
       "provider": "Yahoo Finance",
       "currency": "index points",
-      "price": 101.987,
-      "change_pct_24h": -0.13,
-      "change_pct_5d": 0.24,
+      "price": 101.9,
+      "change_pct_24h": -0.247,
+      "change_pct_5d": 0.154,
       "short_trend_label": "down over 24 hours",
       "trend_label": "up over 5 trading days",
-      "bias_contribution": 0.026,
-      "last_price_at": "2026-10-29T19:33:15+00:00",
-      "provider_observed_at": "2026-10-29T19:33:15+00:00"
+      "bias_contribution": 0.0493,
+      "last_price_at": "2026-10-29T20:26:39+00:00",
+      "provider_observed_at": "2026-10-29T20:26:39+00:00"
     },
     "WTI": {
       "name": "WTI crude oil",
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 102.24,
-      "change_pct_24h": 0.491,
-      "change_pct_5d": 0.412,
+      "price": 102.99,
+      "change_pct_24h": 1.209,
+      "change_pct_5d": 1.149,
       "short_trend_label": "up over 24 hours",
       "trend_label": "up over 5 trading days",
-      "bias_contribution": 0.086,
-      "last_price_at": "2026-10-29T19:33:14+00:00",
-      "provider_observed_at": "2026-10-29T19:33:14+00:00"
+      "bias_contribution": 0.2115,
+      "last_price_at": "2026-10-29T20:26:40+00:00",
+      "provider_observed_at": "2026-10-29T20:26:40+00:00"
     },
     "GOLD": {
       "name": "Gold futures",
       "symbol": "GC=F",
       "provider": "Yahoo Finance",
       "currency": "USD / troy oz",
-      "price": 4027.69995,
-      "change_pct_24h": -1.502,
-      "change_pct_5d": 0.399,
+      "price": 4037.19995,
+      "change_pct_24h": -0.85,
+      "change_pct_5d": 0.636,
       "short_trend_label": "down over 24 hours",
       "trend_label": "up over 5 trading days",
       "bias_contribution": -0.0,
-      "last_price_at": "2026-10-29T19:33:10+00:00",
-      "provider_observed_at": "2026-10-29T19:33:10+00:00"
+      "last_price_at": "2026-10-29T20:26:35+00:00",
+      "provider_observed_at": "2026-10-29T20:26:35+00:00"
     }
   },
   "disclaimer": "Informational only, not investment advice. Data can be delayed or unavailable."
