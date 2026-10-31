@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-31T07:45:28+00:00",
-  "last_successful_refresh_at": "2026-10-31T07:45:28+00:00",
+  "generated_at": "2026-10-31T08:37:26+00:00",
+  "last_successful_refresh_at": "2026-10-31T08:37:26+00:00",
   "fundamental_bias": {
     "bullish_pct": 61,
     "bearish_pct": 39,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (61% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 4 keyword-scored reports. WTI crude oil is the largest current influence (+10.7 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (61% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 5 keyword-scored reports. WTI crude oil is the largest current influence (+10.7 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -34,8 +34,8 @@
         "key": "GOLD",
         "name": "Gold futures",
         "weight_pct": 0,
-        "change_pct_24h": -3.332,
-        "change_pct_5d": -3.104,
+        "change_pct_24h": -3.679,
+        "change_pct_5d": -3.452,
         "trend_label": "down over 24 hours",
         "impact_pct_points": -0.0,
         "direction": "Gold price confirmation",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "mixed tone across 4 scored headlines",
-        "impact_pct_points": 0.6,
+        "trend_label": "mixed tone across 5 scored headlines",
+        "impact_pct_points": 1.1,
         "direction": "Mixed",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,22 +64,57 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-31T07:45:26+00:00",
+    "queried_at": "2026-10-31T08:37:24+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 4,
-    "scored_count": 4,
-    "bias_score": 0.05,
+    "matched_count": 5,
+    "scored_count": 5,
+    "bias_score": 0.09,
     "bias_direction": "Mixed",
-    "summary": "Reviewed 20 recent headlines; 4 matched the published directional keyword rules. Their overall news tilt is mixed.",
+    "summary": "Reviewed 20 recent headlines; 5 matched the published directional keyword rules. Their overall news tilt is mixed.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Global Oil Prices Surge Sharply, Brent Hits US$117 and WTI US$104 Amid Middle East Conflict - Aktualita.co",
+        "source": "Aktualita.co",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNeXVpS1BYWTBhQ3hzU3NXUVNTaW1jb0JlSUxmbWNWbTlTbTAxbEczSmdSX1M2NlpYdEJkcDBfdjJVanl1emY5bTA5VGYyUHB5Y1RtY3dXUnk5ekVXdjM5clJqbmtDbzZmWHcwZkJQVWZHZGViZVM2Wm5WLVZzU3VkZUttOWItRDlqV213N0dzZkh6X3RoNl9yOG42d2tlYTRLRDlHSTJpbktQaUh4VmNsRTJzMXZmRXdoampSVkU3RWVhc1Nw?oc=5",
+        "published_at": "2026-10-31T08:28:12+00:00",
+        "score": 0.25,
+        "topics": [
+          "Rising oil prices"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Azerbaijani oil surges past $126 per barrel as Iran tensions drive global prices higher - AzerNews",
+        "source": "AzerNews",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hYWZDR3NwQVJLZFBMMjRrWVNFQUtyOEVlVFA1QWpyYXhFWFNXVXZTNTZvZmdSNjJxWjZYRFYzWmdLa2NiM29oSDhtNjkzaEVHSHByd3hRY3F0Qk0?oc=5",
+        "published_at": "2026-10-31T08:19:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Oil Prices - 30-10-26 - Armenpress",
         "source": "Armenpress",
         "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE00eDhxdmQ3cXRidXhjTlgzRmhMYS1ONFdpcTdBMU12QXROREFrSThrSXh1SzdaeWMtekN3c3lLU2lxcU9lSU9xbEdidVRGRXFQLVHSAVdBVV95cUxOYzNBMl8wcnNUb3QtY3A3YmpHMmZuQ3ctdF9mdWFvZUpwc3NNTzFRTlQxcHJWV1JUS2ZZVElJblJ3OVI1czV2bWhGWWVQUWM4aVgwUndrYUE?oc=5",
         "published_at": "2026-10-31T07:11:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Falling below the $4,000 mark, world gold prices hit their lowest level in a year. - Vietnam.vn",
+        "source": "Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMTN0UWZrOXhMNGR3MWhOS0o0UmJldWYxVHNuUjY5Q0F3Tm52dXNVVUJvdW9oZ1dhRXozZTJtUHlDbGpIVlhmbmRvYnJTd05VT3o3RHBrRWxaNFNpcXBlcDl2TExGakdqRlBkelBYNHVHRnBJMTlaM3RxWWo5cDhnOGh1SmlES3V4Qy1zUWdIMUhpT0NxQ1FTcTNQVQ?oc=5",
+        "published_at": "2026-10-31T06:29:18+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -216,6 +251,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Gasoline and oil prices today, October 31st: Sharp increase, to the highest level in 6 months - Laodong.vn",
+        "source": "Laodong.vn",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQ2ktRDJJTURZZUhvUS02M3U4eFdMbVFra3JNZERlY210MUViSEJ0WG5HQjFlWDd6NHFWV1k1Tnh0Wkd3ejNtV21fZFRvWVd1NDgyWGtxcWplSlRodktfdEt5VnptOFZqSjdvTDBTYndoNlFpWkRWTzJpcGxYQTNaVWlZR3lJZWd3UXk2LUUzYnpHNnI3ZTlYNzgwY09KRURyY3BQQUp5Ykh1ZjQ?oc=5",
+        "published_at": "2026-10-31T01:57:10+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Oil Futures Post Weekly Gains on Middle East Escalation Fears - WSJ",
         "source": "WSJ",
         "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUUprNnpxZE5idzlOR3htMEsyS0FmSHFfUi1EZ2dpZEVzNGd5ckRsQnVob0daYXdVMzZBbm9YdFBHQk5fV0NIeU5oZjZZdDdCY0FGbXRoUXNtblo4UmF2OUR6VG54LW95ekJ0eFNPbjBRUGp6R1F0S0xsdEc3MmZReXpCT0lIUmxyR1Npd2pYMlRFb3RndXBjU05OTXM0bFBmazFkY09lcnVJUG1LU3ItNlJpYnl5X01x?oc=5",
@@ -258,50 +304,6 @@
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
         "in_scoring_window": true
-      },
-      {
-        "title": "Stocktwits Weekly Spread: What Shaped Treasury Yields And The Dollar This Week - TradingView",
-        "source": "TradingView",
-        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOSzBZaC1xblEtX21nMEFJUkR3V2tXcGZDZlRrdTNlVzZjaVltaWVvY1NaZlNjTC1Xa3pFbm4wQ1lUVDlZdnF0cEw5eEFtVDdGQllhTVFOT3NVZ1JrT1pqbVRNLUhwcnhvbWpXbTl5X1BYTzJiUGJHeUpWZHZHUGc5eUZ4TG9IODdnTVpuV3ZHZnMzRkFRaGRTT1BYRlg3Yk9ock1FcE8wcXlYdF9QOXV5TFB0VmZHUFlvaWxlczk0bU1iVmNHU2Uxb0VVb0RDQ1ZzMEltaw?oc=5",
-        "published_at": "2026-10-31T00:54:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold prices today, October 31st: Continuously 'evaporating', gold falls to its lowest level in a year. - Vietnam.vn",
-        "source": "Vietnam.vn",
-        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQU1JU0tYMG5kdlZHV3pFTVpvUjhsVEY0UnlpaTAtdlhEa1J4eTVSd2Q0NmRPTkZIRUpCeWM5b3V5RTJLN25CZWtKQmI1NGtMSGFkdDMyV0NKWVBfNEM4bEppZ2FFanpPd1hBNklQTndJV0hncUNVQjVTWEZsOXJ6MXQwekhsSDNZeE1FVjJpZ1o5Uk5YcW1teWs1Sms?oc=5",
-        "published_at": "2026-10-31T00:12:45+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "2-Year Treasury Yield Drops to 4.61% as Fed Holds Rates Steady - 24/7 Wall St.",
-        "source": "24/7 Wall St.",
-        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdXVfcE5IdTZzSlVBakFNOTBKSmZjcmUzakZUZy1QeGtWeEotZHRZQ1BwQ1htRVlxVzh1aGJadUhSVlpUSnFvMENxU285SEcwZzYyazVzckcyakQ5RzNBeXFzWGlqcC1jYWpPZmpaZUFicWdJSHVQTzlEalJJOEZEbzYtbWhvVEZQY0JZNEdRZnhQTjhTLXRqUnRNelZ4Z0hzTVVYNk5JVnVnekpPVG1EX1JITE52MjhtcGo1VEYzMkFCaExDLVQw?oc=5",
-        "published_at": "2026-10-31T00:07:37+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Discount on Western Canada Select Widens as US Crude Soars - EnergyNow",
-        "source": "EnergyNow",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNYlpNQXNjRDBUUU0yVVVuMXpVZmtNT3JUXzI3UnB5ejJoa3ZDeXVVcVVRV2lUeTk0R3Q3c3RRcV9tM0Z5NWNsQ2wtR2IxTmp0RWRsQzJZcFZ1SXJjQnMxcXlpUEVrSmk4ZGg4TUN6MWVrYko0WWtMWEZyUVZIS3A1azdERVdzaDlqT25wMnNwVTZXUQ?oc=5",
-        "published_at": "2026-10-30T23:56:50+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
       }
     ]
   },
@@ -339,9 +341,9 @@
       "symbol": "GC=F",
       "provider": "Yahoo Finance",
       "currency": "USD / troy oz",
-      "price": 3898.8999,
-      "change_pct_24h": -3.332,
-      "change_pct_5d": -3.104,
+      "price": 3884.8999,
+      "change_pct_24h": -3.679,
+      "change_pct_5d": -3.452,
       "short_trend_label": "down over 24 hours",
       "trend_label": "down over 5 trading days",
       "bias_contribution": -0.0,
