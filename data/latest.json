@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-31T15:03:48+00:00",
-  "last_successful_refresh_at": "2026-10-31T15:03:48+00:00",
+  "generated_at": "2026-10-31T16:01:57+00:00",
+  "last_successful_refresh_at": "2026-10-31T16:01:57+00:00",
   "fundamental_bias": {
     "bullish_pct": 59,
     "bearish_pct": 41,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (59% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 3 keyword-scored reports. WTI crude oil is the largest current influence (+10.7 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (59% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 5 keyword-scored reports. WTI crude oil is the largest current influence (+10.7 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,7 +47,7 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "mixed tone across 3 scored headlines",
+        "trend_label": "mixed tone across 5 scored headlines",
         "impact_pct_points": -1.0,
         "direction": "Mixed",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
@@ -64,17 +64,28 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-31T15:03:47+00:00",
+    "queried_at": "2026-10-31T16:01:56+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": -0.083,
+    "matched_count": 5,
+    "scored_count": 5,
+    "bias_score": -0.08,
     "bias_direction": "Mixed",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is mixed.",
+    "summary": "Reviewed 20 recent headlines; 5 matched the published directional keyword rules. Their overall news tilt is mixed.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Gold price crash: Sovereign rate falls Rs 2,480; October decline reaches Rs 7,600 - BUSINESS - GENERAL - Kerala Kaumudi",
+        "source": "Kerala Kaumudi",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWG5NNDBRMlZyX2dJYkREcDRpVjMxRTgwOFlVMUlpTXJDaHdNMzVKQ0xjVHpSd0x2bWZpVGxJOHA3OV9ONmJIWXNUTG9rMkFQdzVMampJdlZKc1VuRUVsdHB4RkwtdE5wVVREM0FRYjhpMDhLbW82VjJlUmdLOWZadnpIQ3REZHRDWVZvOVd4dDNOQngtVUZnZ0stYmIwcENFdTlJMVZtSXdieVhUUU1ESHI1cHQ5YS1ldmc?oc=5",
+        "published_at": "2026-10-31T15:15:40+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Two Fed Officials Just Called for More Rate Hikes, Starting Soon - 24/7 Wall St.",
         "source": "24/7 Wall St.",
@@ -157,17 +168,6 @@
         "in_scoring_window": true
       },
       {
-        "title": "GBP/USD (GBPUSD=X) live rate, chart and news - Yahoo Finance Singapore",
-        "source": "Yahoo Finance Singapore",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45cXk5ODVxV3l3RWQ1Vl9aYzVSaGpNQmV0aUxPN1l6bllfNmxRR2xNcXFGVmczOEJFbnlIcThZVGtWcmJlSUZNc0lpbEJJbDJReG5VeFRWZ1g0QQ?oc=5",
-        "published_at": "2026-10-31T10:57:52+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
         "title": "Market Wrap: Oil Prices Inched Higher Slightly In 5 Days - MarketForces Africa",
         "source": "MarketForces Africa",
         "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQckxIOV9pWEdaR05KV0pNZmJhd2RCeGw5Z1FMaDN2Zmpva05hc3ZVZGtlU1ZwUzVuc0ZvY2xLQ3dEOXhkUnNOZW5NMWF3YVdqa0FjbHVCVjR0dUE4bi1YbURsNWlmLUY3UkxEajExSDBPcXI2UnFnM2VUNS02UXU0Q1gyOEF6bGVpa1E?oc=5",
@@ -190,14 +190,30 @@
         "in_scoring_window": true
       },
       {
-        "title": "Global stocks get AI lift, dollar holds steady ahead of Fed decision - DD India",
-        "source": "DD India",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPR0Z1bHdDbDFKMzdPZE9ILUdaZW9QVFprYmNINDV3bi1pTmJtVHpIUlQ0N1ZOVzJjczF1SnlGYzJ3ckdrdzBLUmgwNU9QQlA1akJDTjFVN21RQVVXNk9hRUhPTWtZRXRxZi1valktdnFvT2VpZlN1alJiRC1sb3NWblVJNWhObGlJLXRlSEE1YXNUSWNNUUs4bGhkLV9tS2c?oc=5",
-        "published_at": "2026-10-31T10:38:14+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
+        "title": "Global oil prices fall as hopes for US-Iran peace talks emerge - Daily Ausaf",
+        "source": "Daily Ausaf",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObW9ITU10a1EwaEdETzJTOXRTWXllT0prY2hBQ1dHaDdsMFBLOVo5NGx0QlY4RFBSWHVKSTd6M3p3NndfLVFHY2E3YUI4RVJsVWdGTXhVYnprWjdSUlY5eW84N3RBUjZPVUZXYi1BNWRTdVY0LThOUWQxdjA3cGxmQzFTc3g5VzlBXzY2TFhoTW1qMHBiSUdWTE92c9IBoAFBVV95cUxNUkNyWFNwbERXV1MtSnUxVmNUdmRZUXo4RS1ab0ExNE9mcG5JRThzT2tGUnpseU9YNUc5Ul83dFBkVTFLNXhzQS1velZRUUVMdFI3SzQyOVBNQmktWGFRRHRMZXFadE1qYk4yeWRxVHhGRk1FTHY4dV9EZk14ZEtGRTRzUTM4ZGJ0Qjh4YWVjM2dLX0JtbWVIQ1NpWm01Nzln?oc=5",
+        "published_at": "2026-10-31T10:47:47+00:00",
+        "score": -0.6,
+        "topics": [
+          "Risk de-escalation",
+          "Falling oil prices"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Middle East tensions keep oil markets on edge - Bol News",
+        "source": "Bol News",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQ3lRaUlfQ08wZ2luRGE1Tk5qYm8tbjVxTUw3ZmZUWG5oQVhLTmNtb0xnXzVPY194MkVMR1BJS1EtNERIZE9MbnM5bXhBamE1NU9FczZsUC1WU0VKUDNYLWV3dThSenloXzNOTjVWcU1KZ3ROemc1dExSekRWMUdXSl9YaEczWDQ?oc=5",
+        "published_at": "2026-10-31T10:11:21+00:00",
+        "score": 0.45,
+        "topics": [
+          "Risk escalation"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
         "in_scoring_window": true
       },
       {
@@ -216,17 +232,6 @@
         "source": "Laodong.vn",
         "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOSHl1bURnNWV3eElDRlZGVlFJWDVfVk5nM1MzbjNCT0ZwTVc3TVdlS056YUVTZzVRNU5feldzajJLMzh6aE9HYmk4ZkN2eVJxUU5seEdVRTRmWGRCanNyaXpDZlNJRFRBamEyazQ0c2dpS0ltRjVRdzlYWG1VcmFEdnlQOEpNWktTZmhMRTFWWkg2b0NnclVfUVRQaDBNMVlfeHdRYUVCNFk5SkhHSFFfeGVJcFJNaGNzZFFnSmpR?oc=5",
         "published_at": "2026-10-31T08:55:57+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "EUR/USD (EURUSD=X) Live Rate, Chart & News - Yahoo Finance - Yahoo! Finance Canada",
-        "source": "Yahoo! Finance Canada",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8zSUFCZmxoakVmQW1kNlNLdzU5SzNSb01UdHBTdVJKMXlVVkl4cnV3eXUwcXpFWHF3STc0OXFnWXRWY2p1ZkJNVlpWSG5rRWx1aTBrNHhSbHduZw?oc=5",
-        "published_at": "2026-10-31T08:51:21+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -280,10 +285,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Brent crude oil price rises - Apa.az",
-        "source": "Apa.az",
-        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBmM2tMUGFseWFvV3kzWFlWbTZmaWZFZWNzSHIwalVSUEJzaXFfZTh6OTlpZEt2M0pJODdwTGduel8yM1Y3eUVabnJlS3phazNoRTFxbjlVZkpoX2xZamRXN095clZ5QWZhUm5j?oc=5",
-        "published_at": "2026-10-31T05:29:00+00:00",
+        "title": "World oil prices rose to a six-month high amid concerns over the US-Iran situation. - Vietnam.vn",
+        "source": "Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNFlIaHhhUzR4d1dyRTFIcDhtUWxfZ0ZWUFlwRkpuNnplUzlXN2NRWVdQVm11N0JKbVpldjlEV3hEVUlzOTBWMTNmMHlkTkFnXzh4cnF1dUMtdVU2NHE3UEZkOWpnc0I0S0Y4c0NROXNDaFg3dGxmaWhvRF9zVGF4eWVEQ0lNZ1BWdXBtN1RCRjY1b3BRQ1NRTGN0SXI?oc=5",
+        "published_at": "2026-10-31T05:53:54+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -291,10 +296,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "US Fed holds interest rate steady ahead of midterm elections - China Daily Global Edition",
-        "source": "China Daily Global Edition",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQW9ncGU1T0doWmh0ZUtIcHRncUhzMjZ6NE5HcnRLTDltSXNLcGZaS3JrUkRpSEtSTmU5c2ZKcTUzejFXY2ZrWFBHNTNEeVpScW0td08tUnZ5QnR5Y1FKb3VFZ3U5OXJQU2JLOUU5aXJGdjlyVE9fX2ZMZUE2dmZ1T0FB?oc=5",
-        "published_at": "2026-10-31T05:15:04+00:00",
+        "title": "Brent crude oil price rises - Apa.az",
+        "source": "Apa.az",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBmM2tMUGFseWFvV3kzWFlWbTZmaWZFZWNzSHIwalVSUEJzaXFfZTh6OTlpZEt2M0pJODdwTGduel8yM1Y3eUVabnJlS3phazNoRTFxbjlVZkpoX2xZamRXN095clZ5QWZhUm5j?oc=5",
+        "published_at": "2026-10-31T05:29:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
