@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-31T04:36:41+00:00",
-  "last_successful_refresh_at": "2026-10-31T04:36:41+00:00",
+  "generated_at": "2026-10-31T05:33:22+00:00",
+  "last_successful_refresh_at": "2026-10-31T05:33:22+00:00",
   "fundamental_bias": {
-    "bullish_pct": 53,
-    "bearish_pct": 47,
-    "direction": "Neutral",
+    "bullish_pct": 64,
+    "bearish_pct": 36,
+    "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop is mixed for gold (53% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bullish across 3 keyword-scored reports. Recent news headlines is the largest current influence (+3.1 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (64% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bullish across 2 keyword-scored reports. WTI crude oil is the largest current influence (+10.7 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -23,10 +23,10 @@
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": 0.087,
-        "change_pct_5d": 1.941,
+        "change_pct_24h": 1.225,
+        "change_pct_5d": 3.099,
         "trend_label": "up over 24 hours",
-        "impact_pct_points": 0.8,
+        "impact_pct_points": 10.7,
         "direction": "Supports gold",
         "explanation": "higher oil can add inflation-hedge support, though energy prices are only a proxy"
       },
@@ -34,8 +34,8 @@
         "key": "GOLD",
         "name": "Gold futures",
         "weight_pct": 0,
-        "change_pct_24h": -3.679,
-        "change_pct_5d": -3.452,
+        "change_pct_24h": -3.332,
+        "change_pct_5d": -3.104,
         "trend_label": "down over 24 hours",
         "impact_pct_points": -0.0,
         "direction": "Gold price confirmation",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bullish tone across 3 scored headlines",
-        "impact_pct_points": 3.1,
+        "trend_label": "bullish tone across 2 scored headlines",
+        "impact_pct_points": 4.4,
         "direction": "Bullish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,41 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-10-31T04:36:39+00:00",
+    "queried_at": "2026-10-31T05:33:20+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": 0.25,
+    "matched_count": 2,
+    "scored_count": 2,
+    "bias_score": 0.35,
     "bias_direction": "Bullish",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is bullish.",
+    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bullish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Oil prices soar 14% in October to end at 6-month high… - inkl",
+        "source": "inkl",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOSDlQUFlQRnppeko3QjQwUmYwS3lvMGIyNkRfRXlWUGhGOUZueThuTm9IM2tIRDNuUWtxZlRPRGlaX2JtUHdtN1BWenc3eTNaSHJaTVU0SFBQQm1PZktvNlFmWnk3ZFNKV1d5X1JFbUIybnZUc3hUNGlPdEZRT1RaVE9Gc29LMDBEMGN2X2dEcEVaTkZucDVEZUhVeU9keTVWTTJfNXZwa21fdVozVEk4V1gtaEg5MzhVa2xoQld0UVdVOWtpRno2X2U3ZVVVM0owWkJOcG1vemZST25CdFdiMw?oc=5",
+        "published_at": "2026-10-31T04:45:11+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Middle East tensions keep oil markets on edge - Bol News",
+        "source": "Bol News",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQ3lRaUlfQ08wZ2luRGE1Tk5qYm8tbjVxTUw3ZmZUWG5oQVhLTmNtb0xnXzVPY194MkVMR1BJS1EtNERIZE9MbnM5bXhBamE1NU9FczZsUC1WU0VKUDNYLWV3dThSenloXzNOTjVWcU1KZ3ROemc1dExSekRWMUdXSl9YaEczWDQ?oc=5",
+        "published_at": "2026-10-31T04:35:20+00:00",
+        "score": 0.45,
+        "topics": [
+          "Risk escalation"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
       {
         "title": "Oil Prices Climb After Tanker Attack in Strait of Hormuz - Bloom Pakistan",
         "source": "Bloom Pakistan",
@@ -115,6 +139,17 @@
         "source": "BusinessToday Malaysia",
         "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaXhYY2tPX0czaHhLeHBUdUJfd283N1FOY2ZyNUk1V0dQa0lSRjdfMFU2LVdEVXo2VGNBbkhCZ2pJRXpKR2gzV2ZhWWpzNmtfaDlaWi1COFRsOXI1eUpfQWp1UVpaUWpRaU9nMGRpT1hqcmxvVlI5OGJGd2w2cDF3NUJ2Z1loeklSbDBELUhvUUZfLUNFS0drRjgwczFEeDJLaVpv?oc=5",
         "published_at": "2026-10-31T04:00:47+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Silver Tumbles as Fed Rate Jitters and a Tech Rout Overpower the Deficit Narrative - ad-hoc-news.de",
+        "source": "ad-hoc-news.de",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPdDFydDFRbGlIb2M2TzFkUzhCUF95cG9jRXY0U3RKaUQ5QXViTUZaVEZJVV9MQ1VubXlnWTRRVW1sU1AwQXpBLU5lWmt1bEFZdVBXMi1KcDdER2xWZVZ4YkpuRFR5T2lNNWFZekJhblBHSXdGamNDTWFMZ3hNeXBsTE9ZaE1iaUJBZDM4c3oxSEFCTmJuMkZXZ3lSbi16aVhwa3BFbzdxeHhSYVlHbkRXLVlMOTB1X2N5ZkJTZGZKYmVTSEJiVDVIcE00QlRGUWg5S2VYV2k2Vm10a1NmZGVUM3ZCS2hTMjRzVGc?oc=5",
+        "published_at": "2026-10-31T02:51:08+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -221,21 +256,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Discount on Western Canada Select Widens as US Crude Soars - EnergyNow",
-        "source": "EnergyNow",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNYlpNQXNjRDBUUU0yVVVuMXpVZmtNT3JUXzI3UnB5ejJoa3ZDeXVVcVVRV2lUeTk0R3Q3c3RRcV9tM0Z5NWNsQ2wtR2IxTmp0RWRsQzJZcFZ1SXJjQnMxcXlpUEVrSmk4ZGg4TUN6MWVrYko0WWtMWEZyUVZIS3A1azdERVdzaDlqT25wMnNwVTZXUQ?oc=5",
-        "published_at": "2026-10-30T23:56:50+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold price prediction: Gold rate closes October on 1-year low, what to expect in November, December? - inkl",
-        "source": "inkl",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQamY2VXBkM19MSXMyZUNXd0pJYmoyVHpZbTZPSjZJM1RiM1hEeTZTR0N1cUNRLTR5RWdqaWtRSmRWVHJzT3JnQXhBZzIzNHZXUEFrT2FjLUF6b196R3dnY1hMY1U1S1h6QTdheGVOT1hpVlZGZHlVc2NNUEVOSW4ySjNKNTZndmg1b042ZXVXVlV6ZUpBZldILWR6OTRuLXBNRFY0ZkFEM3NhS3hrdFB6eld5RHJoRk1xT0prTnBmVQ?oc=5",
-        "published_at": "2026-10-30T23:42:00+00:00",
+        "title": "Gold price prediction: Gold rate closes October on 1-year low, what to expect in November, December? - The Economic Times",
+        "source": "The Economic Times",
+        "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQNFA5OEpUei1pUzBZWm9pN3p3R3FHZUJwTmp5Y2dmUUg0Nllwc18yYlpHWEJvd21oSU5mVDhZaWZSS0JFZkg5Ui1MMVZ0RGl0Y1BGV01RNWlHWExwYnFmTmRfWnZVV01IRHhwazV1Tk9OQ2wwVDdfUlNtX0diSzhYUGpKSFdoVjhnWGZWanRuMEhISUJfVS0yZllXUHZYVjFBYlVNcndORkJ1b1pRX3I1M2VpR2Y0TkR0TDM4R0xGM0lrZUR5d1pEWjByYVM1NEZqSFVCc1NpYWFjdXhkWnJyb3pqa3dtSGtDdVF4WjdZT29rQ2xjN0Z0Z01xMTJUZGthMHfSAYcCQVVfeXFMT00xSmMzMjcyajVvVU1HbEh6cWlMbGhKeGZ3UWxObVBRdmhzMXBXQS1ya3dBdWpleDRZSGl2TXJZOXNFdzdGaDktU3MtZlRpLTZ6SmVtYWxRRUNVOUVLWUJEYkxkSENCdHQwWDBDVVg0ajhEdGQzLWZvUTN5SlJnT3JNMFVZMmJIdDFVbEFGS1Z1NU1heGxmb3pYSHNQV29QOFlRNE4yM2QtVmZ5ekY4bFRsQTlDdnk0VVFBLWxpUDRDRjJaWE41ZnJLWTcwbG1aODhWTXJHNktfbWpuYW5scF8zZEVleVNtT3dGUFhhNEE1LXNfb0lEaEY0T1pFazRmNGpORVhkTUU?oc=5",
+        "published_at": "2026-10-30T23:42:45+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -254,23 +278,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Global oil prices surge over 2% on fears of escalating conflict in Iran; Brent crude reaches $117.64 - 재경일보",
-        "source": "재경일보",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5hdWltUXBCanZWRE1fTGpSazhuSUJvWmk5VkxOWXhNXzhTejdCaHlZSllaZERCN3hERm9fX3gxYjVDd3g4cWUzRWhHTExPOHZ5bE1jdmtnZ2RZejN4UjNBMmx3?oc=5",
-        "published_at": "2026-10-30T22:45:00+00:00",
-        "score": 0.25,
-        "topics": [
-          "Rising oil prices"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days - LiteFinance",
-        "source": "LiteFinance",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcm51RHFTMGNQcnB2aFl5bjNQQzFXUVVHckh1eW1IVktpM0lfaXlCQ2p6RF9nYWxkajlxb2R2V0lkRi1FNnljalUwMlhaU2FFT2dCUDBwem9tVG14Y1FXZGVKbWJvSm0xNlVVZ1BwdTItWnJkOTF3TnFTU2FQLWZibmhXRXlnX2RJY25leTB2ekVVUHZMZS1zbjBhWkNJLWs?oc=5",
-        "published_at": "2026-10-30T22:21:32+00:00",
+        "title": "Gold Technical Outlook: XAU/USD Breakdown Threatens Deeper Selloff - StoneX",
+        "source": "StoneX",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPd3NQUG9FcEFvTWtkdHpCejdVT3hTSHBRbVlyVlhkUVdFYVJFTlNwNzVvbGNBai00aFBYcHZ5TjVvMC1OT3pualptUDZDZ1M2VGtGSjZOcVpvSXh3b3pmQ2RuY1ZMaFV3dEVnOVNiNjJqX1c2MlpPT3dUTkp0SkhsSWNwU1V5SWdWdWFrdHR2eG53U0RQX1JOejE0NUk0UU9mcFJHZHl3QkFlSThsUnJzMmNUWQ?oc=5",
+        "published_at": "2026-10-30T23:31:55+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -278,27 +289,14 @@
         "in_scoring_window": true
       },
       {
-        "title": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com",
-        "source": "EnergyNow.com",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN1ZOVFVuUnFFYUstVktuczhxdzBYN1lUbUlqbTIwZEVnX2lCclN2dDZyeVJxUnFPLXdLLWhHcTd1MUUyM0kxTFBUZWJZSVlfN2RCZkRlRXhqT3ZfdUJTQkFjSkR1dDFsQ2Rmc19VTERhc1hsV2Nka2RDVEFvZ0FUcFdJQ0dCR21lcm5mZU12UzJZZHlyOFh3WGEzVWpCVDlUeHc?oc=5",
-        "published_at": "2026-10-30T22:18:07+00:00",
+        "title": "Nasdaq, Treasury yields and dollar face a major AI sentiment test - StoneX",
+        "source": "StoneX",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZlpmc3pTTnVwTkp5aS1HMXpISUhTSnBndTNiTWdzMmlkZ21QOUJsRm1CaWtidGtKVWVvV3N2cm5KTnE0NW93X2JfRUtzcjZoR1VVZWp5NzFheUEyOWFRd19vTjBCTUFVdnFaMWhaTXBBOW5rSDBRakQzNXBraTEyVklqajEyUjhaWUFIZXViVWZ3SFpkZmhfQmh1N1NQRXZjVUQyeDZyMGlaemNNdElyNGdB?oc=5",
+        "published_at": "2026-10-30T22:32:55+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil Prices Rise After Ship Attacks, US-Iran Talks Deadlock - EnergyNow.com",
-        "source": "EnergyNow.com",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSXFwRjliNjJSakhhNDA1YlQ3S20zRG82UUhOMnhxanFONHdpT09sWlVGb3Q4RmRqbTBzSWg4RVVKb3piREVQUjI1cFphaVpiQi03Y1IyMFRWMmkwOEc2RVN0bF9jajNiYWdHWU84SGcycGwzY2N2czV0NHJhOHlrc3JfSXMtYTQzS3dBLTZhN3FHdw?oc=5",
-        "published_at": "2026-10-30T22:14:55+00:00",
-        "score": 0.25,
-        "topics": [
-          "Rising oil prices"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
         "in_scoring_window": true
       }
     ]
@@ -323,12 +321,12 @@
       "symbol": "CL=F",
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
-      "price": 102.95,
-      "change_pct_24h": 0.087,
-      "change_pct_5d": 1.941,
+      "price": 104.12,
+      "change_pct_24h": 1.225,
+      "change_pct_5d": 3.099,
       "short_trend_label": "up over 24 hours",
       "trend_label": "up over 5 trading days",
-      "bias_contribution": 0.0153,
+      "bias_contribution": 0.2144,
       "last_price_at": "2026-10-30T20:30:00+00:00",
       "provider_observed_at": "2026-10-30T20:30:00+00:00"
     },
@@ -337,9 +335,9 @@
       "symbol": "GC=F",
       "provider": "Yahoo Finance",
       "currency": "USD / troy oz",
-      "price": 3884.8999,
-      "change_pct_24h": -3.679,
-      "change_pct_5d": -3.452,
+      "price": 3898.8999,
+      "change_pct_24h": -3.332,
+      "change_pct_5d": -3.104,
       "short_trend_label": "down over 24 hours",
       "trend_label": "down over 5 trading days",
       "bias_contribution": -0.0,
