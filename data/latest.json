@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-01T01:59:23+00:00",
-  "last_successful_refresh_at": "2026-11-01T01:59:23+00:00",
+  "generated_at": "2026-11-01T02:47:33+00:00",
+  "last_successful_refresh_at": "2026-11-01T02:47:33+00:00",
   "fundamental_bias": {
-    "bullish_pct": 59,
-    "bearish_pct": 41,
+    "bullish_pct": 57,
+    "bearish_pct": 43,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (59% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is mixed across 3 keyword-scored reports. WTI crude oil is the largest current influence (+10.7 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (57% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 4 keyword-scored reports. WTI crude oil is the largest current influence (+10.7 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "mixed tone across 3 scored headlines",
-        "impact_pct_points": -1.0,
-        "direction": "Mixed",
+        "trend_label": "bearish tone across 4 scored headlines",
+        "impact_pct_points": -3.1,
+        "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,17 +64,50 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-01T01:59:21+00:00",
+    "queried_at": "2026-11-01T02:47:32+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": -0.083,
-    "bias_direction": "Mixed",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is mixed.",
+    "matched_count": 4,
+    "scored_count": 4,
+    "bias_score": -0.25,
+    "bias_direction": "Bearish",
+    "summary": "Reviewed 20 recent headlines; 4 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Gold's 3.6% Swoon: Inflation Data, Forced Selling and a Survey That Says Buyers Are Circling - ad-hoc-news.de",
+        "source": "ad-hoc-news.de",
+        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNVmVrdlVxaTRDSlhqX1dyQWEzZlF5dE5KV3BKY01lQU9YcXVNVFVtWm1jMjE3LW40ZVE3V2J0aUpJeWJOQWlLem5tRm55U3RySWdKN3lYN0ZCSkdWOW5yYUgxRHZlLUdiMFJ4S2d6ZVN0am0xaVpOT0t5R2lyRXVyUzh0alNVQm1lWG5KS0RSTU81UnhMTmQ1UTdsU196V0FWRjFFaU1VelRtWXFhekF4bjNLeGljdkVYV1JoVHVvNklwaGtTaUpseFNXM0FDTXl1bWNxdXg5QVBteEpVTkl0ZVhkX296TGpnNmVEb2taWGxfLTQ?oc=5",
+        "published_at": "2026-11-01T02:40:46+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Dollar and Euro Continue to Surge in Cuba's Informal Market Amid Financial Strains - CubaHeadlines",
+        "source": "CubaHeadlines",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5iTS1vSHcxSTQ4aVNyY3U1ZkQ1OG43ZGt5bVZ3cTJ6cHFfQzQzN0RLaG9UTmpMOGgzbzdaWGFCYU1JRFBLZWFIZ2M5OEpNVXdMYUVFUTZlSTU?oc=5",
+        "published_at": "2026-11-01T02:05:41+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold and Silver Plunge as Fed Rate-Hike Bets, Inflation Fears Weigh on Metals - BigGo Finance",
+        "source": "BigGo Finance",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB3SVUycURHbkpNR1RUaGR1SFA0Z1h2MG9oLW5fOGhDVHdQR1JfNkRTN0NFYzdJX3NmWDVMeEhoUTZIUVFmM3JCMktSNFRSblBDR2d2aDdiWTFmeUJVNXl5UDFRRzgyajh5QnZva19vVlNNZ003QkE?oc=5",
+        "published_at": "2026-11-01T02:05:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Global oil prices surge high in six-month - Textile Today",
         "source": "Textile Today",
@@ -154,6 +187,19 @@
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Bank of Japan Declares Inflation Win, Clearing Way for Rate Hikes - WSJ",
+        "source": "WSJ",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWnJWU0FUQ3RzZzNCVjVCREZiMTJvOGI5UjU1VmlwR2lmYThxSGt2LS10eTEzd054TXpCVjhnRFlVcDBWYjAxOHRSSFZKdlVqMGJ0WDJGck43cTFGRXRiYW1TYTlrZUVEdEJVWVdCZjI4ZUV0czFUOC15dG9FYlpwRk5FOHFNR25RbWhrRVVPVlVkcWJUTGtrNVlzMnFaa1JjOGtrQjRLWG5JTnBrMi1R?oc=5",
+        "published_at": "2026-10-31T23:08:33+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
         "in_scoring_window": true
       },
       {
@@ -251,50 +297,6 @@
         "source": "BBN Times",
         "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZG81TzZadUxsS2VHU1doLWlEalZQclMzUFRnaUtzT2xaYm12YnM4ZzhXRFg3MjR4aHZ3N0hfQS1qMkwzVE90REViVGJRYXdpcDlrMVJ4S2E0Z0FKMkFjWFRmQy14VTlTdDg4RGE2cExQRFJVdEZmX05YQTUxdzhEOFB4dVNIVnExbW1pMmtIUjNqbWxLc2syWTZoekl0amxLMGluOEZwSDlxa3ZBRmt0VjNDVXhyUVdaZ2x4d0R2VTdDZHphQWtzMEFidWNjQ3dOUTJfQUZoTjJla0tHVXZ3Rk5QS0wtcHRCM2ctS2ZzRGc?oc=5",
         "published_at": "2026-10-31T19:55:24+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Crude Oil Dec 26 (CL=F) stock price, news, quote and history - Yahoo Finance UK",
-        "source": "Yahoo Finance UK",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE53TTE4VVFxXzFERC1MYXc3NGtSMU1vVjFRUWhQbXZYZ1VlYW1wekVWd0psQ1hzdUdvR1BJT3BCbmxkd2JnQzhXOWVvZ2o2TmpGdG9CdA?oc=5",
-        "published_at": "2026-10-31T18:34:02+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "S&P 500 And Nasdaq 100 Slip From Record Highs Amid Pressure From Soaring Treasury Yields — SPCX, AMD, NVDA, MRVL In Focus - Stocktwits",
-        "source": "Stocktwits",
-        "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNbGpUc0YtYUhHNlpCYmFsNWpmSlVBNXVVMmZZeUNHWW9VeTA4emtsUkdrVVFLNWZRVC1kVmtNbVZ0OHlGOTVfNURWMXl5TW5vVWVacEZoTTdFZ2s2RHltZW1MX0JpOVJtS0xzWmF5YUdjdkd5ckNhTzdaSXBJSVlPQXZrejE2cEEyWl9Fejc5aXRDZmtoWTd1MmZmU1doam10UnNXVmVlMENPUEZmSG81UlVEVmNkdHg1SkhHQmpNaGZuaVZObElXbTgzOE1POWdIZmtQZHFPTlZOTWZIamNrd1A3Qm5NNlBNbE1WTTBKMUZRLThmY29xWUttbGd5LWo4eUlvaDhaM0l0bFU0SjdyUVp3?oc=5",
-        "published_at": "2026-10-31T18:02:21+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold's Worst Session in Weeks Exposes a Two-Sided Market: Inflation Fear on One Side, Chinese Buying - ad-hoc-news.de",
-        "source": "ad-hoc-news.de",
-        "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQNkdySmZabnNnMUpTbkVGS1hwdkt4VUd2M1cySF9qeUt5QS1pU2RKNEV3Ums4bjA0M0E2U19Za0JLV2ZzWHcxVWUwOHNuT0x4ZDE4WnJCdTlFb2RmNXYwRUk0OUdtcWk4Yi1uTkhkbVlvaHJoRDVRRXpJcHBNLXJzSzBqbnFlVzVzdXVNQ1k3X2tOY3MtbVF6S0czdjRyMnBDOUlxSklEemNHS0RuOXdpMC1hc3hvbWo0cTVGdjhSVmZNb3o4S211MmxFYlIzMkU3UVdaT3c2aWp5ZWdvX1dLMTZ3X29aVjZyMTJ1MkFZeXNVaGV2a09uSXNfOWwtWVE?oc=5",
-        "published_at": "2026-10-31T17:01:41+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "'The Fed put is very much back': Wall Street strategists weigh central bank's next move - شبكة تواصل الإخبارية",
-        "source": "شبكة تواصل الإخبارية",
-        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAyejZHN0FGMWZSZ3RLOHdzWXNiRjJKb29xMGRBcGtZSDIyeTBSazd2U21RSXVkbkZ3M3pxN1pGa091Yy1PMFVnZVhyQnR4NE9ZZng0?oc=5",
-        "published_at": "2026-10-31T16:43:02+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
