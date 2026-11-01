@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-11-01T06:46:37+00:00",
-  "last_successful_refresh_at": "2026-11-01T06:46:37+00:00",
+  "generated_at": "2026-11-01T07:51:53+00:00",
+  "last_successful_refresh_at": "2026-11-01T07:51:53+00:00",
   "fundamental_bias": {
     "bullish_pct": 63,
     "bearish_pct": 37,
     "direction": "Bullish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bullish for gold (63% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bullish across 1 keyword-scored reports. WTI crude oil is the largest current influence (+10.7 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bullish for gold (63% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Headlines were retrieved, but none matched the directional rules; no headline tilt is included. WTI crude oil is the largest current influence (+14.3 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
         "name": "US Dollar Index",
-        "weight_pct": 40,
+        "weight_pct": 53,
         "change_pct_24h": 0.072,
         "change_pct_5d": -0.067,
         "trend_label": "up over 24 hours",
-        "impact_pct_points": -0.7,
+        "impact_pct_points": -1.0,
         "direction": "Weighs on gold",
         "explanation": "a stronger dollar can pressure gold"
       },
       {
         "key": "WTI",
         "name": "WTI crude oil",
-        "weight_pct": 35,
+        "weight_pct": 47,
         "change_pct_24h": 1.225,
         "change_pct_5d": 3.427,
         "trend_label": "up over 24 hours",
-        "impact_pct_points": 10.7,
+        "impact_pct_points": 14.3,
         "direction": "Supports gold",
         "explanation": "higher oil can add inflation-hedge support, though energy prices are only a proxy"
       },
@@ -40,17 +40,6 @@
         "impact_pct_points": -0.0,
         "direction": "Gold price confirmation",
         "explanation": "gold price confirms a downward market move"
-      },
-      {
-        "key": "NEWS",
-        "name": "Recent news headlines",
-        "weight_pct": 25,
-        "change_pct_24h": null,
-        "change_pct_5d": null,
-        "trend_label": "bullish tone across 1 scored headlines",
-        "impact_pct_points": 3.1,
-        "direction": "Bullish",
-        "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
   },
@@ -64,17 +53,61 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-01T06:46:36+00:00",
+    "queried_at": "2026-11-01T07:51:51+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 1,
-    "scored_count": 1,
-    "bias_score": 0.25,
-    "bias_direction": "Bullish",
-    "summary": "Reviewed 20 recent headlines; 1 matched the published directional keyword rules. Their overall news tilt is bullish.",
+    "matched_count": 0,
+    "scored_count": 0,
+    "bias_score": 0.0,
+    "bias_direction": "Mixed",
+    "summary": "Retrieved 20 recent headlines, but none matched the published directional keyword rules. Headline tone is unscored rather than assumed neutral.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Brent Crude $113: OPEC+ Set to Hold, Futures Reopen - FinanceFeeds",
+        "source": "FinanceFeeds",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOU0p3SzQyaEdTRkl5akZmOGRBNHoxeU1HUVg1RjBrT0hWSG4wVmZFTGd4LWhVbWRHS3k1VTVreWdlSnRGaTFwUTVZQ19qa1lKMWlnRUVHYjBGVWNsc2ZvQTZSSV9Rd1k2TnE1QUlOYTlJZF9rQnJJaHlBR2pqQ1ZzNTBieHVGejdkbDN2eHRhQ0Z4UlVfV01tWm5NUDBJbUh0ZENTNWt3N0VlZWpzb0lDM2l4djBkQ1RSQ29GeUY3SmNtcF80WGc4eA?oc=5",
+        "published_at": "2026-11-01T06:55:43+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "As billion dollar valuations come crashing down under worries about AI demand; China sends a message to t - The Times of India",
+        "source": "The Times of India",
+        "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxOeFRjbGxScjJuRkY3ZTZhZlRnWDB5dXJ4bHRJWVZrekdmOHF1TnhDYWFIR2ZXVnEyU1ltZWUteFpxRG5LV2d2LU0tbjcxYXlPSFNRc21jWUFDLW5kWmZ5bXlEZmdvV0VqYkVCTkR5clhGV1pkN1lpM0NvT2ZqMUtURm5OWGRKLXlSZ1RIcXpqNGttNlFjOEp2OUdVS0k5UXJRTEhISEVZWTFKQmdNWTRVN2dQeWIwaHYxbXZvNm5rZ1llSGVYMFNDN1QxMlVsVmxjaXpjQUl4UE9lcVhVY05UYmxyYlVfajZnYWhZVlJJb2ttT2pUZk1yMlY2U2E2UUMzaHJmMmVhVDFwYzBpNWZ0bVZMc05qQk5ma3JKZVptM1ZFYU84VjB5ZWdRN3N6cHZDdWVWRnhzZFRGMFVOckdyN05zUzBMVUpocVZB0gHLAkFVX3lxTE54VGNsbFJyMm5GRjdlNmFmVGdYMHl1cnhsdElZVmt6R2Y4cXVOeENhYUhHZldWcTJTWW1lZS14WnFEbktXZ3YtTS1uNzFheU9IU1FzbWNZQUMtbmRaZnlteURmZ29XRWpiRUJORHlyWEZXWmQ3WWkzQ29PZmoxS1RGbk5YZEoteVJnVEhxemo0a202UWM4SnY5R1VLSTlRclFMSEhIRVlZMUpCZ01ZNFU3Z1B5YjBodjFtdm82bmtnWWVIZVgwU0M3VDEyVWxWbGNpemNBSXhQT2VxWFVjTlRibHJiVV9qNmdhaFlWUklva21PalRmTXIyVjZTYTZRQzNocmYyZWFUMXBjMGk1ZnRtVkxzTmpCTmZrckplWm0zVkVhTzhWMHllZ1E3c3pwdkN1ZVZGeHNkVEYwVU5yR3I3TnNTMExVSmhxVkE?oc=5",
+        "published_at": "2026-11-01T06:32:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Treasury Yields Little Changed, French Bonds Outperform - WSJ",
+        "source": "WSJ",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWk45NGlORUMtZ2RfUVBDZ2lTODZTT3lyaGpqZTJXd3hzb1NBNTdPVnlNc0p2QlI5cFZSUjNRYzhoY2E2cFlvNWNBNldoaE82X0N2bkpNZlctVnY0M1NCVnVoc2tBYThRYzlYMDVERTJiQ0JKX1dYMVU2RDdzTUVycUNCTUpEMkpCSHIzbGJvNkVKNzZYS0JYN3MwVmtRQjRFTmNFLXQzVlVTS3ZqQVI0d3ZGbw?oc=5",
+        "published_at": "2026-11-01T05:57:41+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Bitcoin, Ether Forecast: $6B Binance Hack Rattles BTC/USD and ETH/USD - StoneX",
+        "source": "StoneX",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaFpSWnVjRm9SMHRGeWg1cWZQTU5TUnUyWTU3ZjdCTHV5VV9KZUt2N2VKaHBESkJkTUtiaEk2UmVvZExLY2hYa1VoX2xhUDNsdzBXalZTYnBLb0NBbVJkZElWOTJGZXhmT0phN0RKX281QzhmSXF6Qk5nVTZIZk1pUXNLcDZSbDcyRXZHNmxNeW1WWk5PaWUxX1dyelhBd1NUREVBWjhrSHJvRmF4eFJYTFFabEU?oc=5",
+        "published_at": "2026-11-01T05:50:37+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "USD exchange rate today, November 1st: USD remains stable in both banks and the 'black market'. What should USD buyers be aware of? - Vietnam.vn",
         "source": "Vietnam.vn",
@@ -91,6 +124,17 @@
         "source": "Zamin.uz",
         "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbTVsZnBjek1UNU9IX2ltblZ5SUhLOHV5NlJWQ0FMa28wUU8yR0lYYmpNQkJ0bkk0dlBWX3dmTno1T2w3aEZtMjFJRFBzbVM1S3Zoek1xTWNYRVJvWl9UOVZ2ckNkYlE3dDdlTDF1amJ0S2RoMUVxUlhwRTEyaEdxMVNqNGxzWWttakhIYURvamxTQkwydEdVUElvODliVWo0d3VXR3d2RXlJbndMamw1RDdjZ3c?oc=5",
         "published_at": "2026-11-01T05:06:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Bank of Canada Hikes as Inflation Risks Intensify: AUD/CAD In Focus - FOREX.com",
+        "source": "FOREX.com",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZ0VQakVabUNKbzVWcDN6dmJRS0RIcUlLV2tycU05cG9seG1QYlVkWTMtUlpfTFVDVTV0a21uS0l3dmp3NkJFM2djWmd2Q0c1Wk96NEpXWjVkT0VqY3VIeXFWRHVZSnBwdlNxb2I5OFZyM2NwMkFEN2tQTkEyeWYwQXRpb2VmZ1kySGRfYkNmbkpQNUcybFI2WjF3R1dQZTE1VGg1OER4ZjZmZWJYVGRaTW1oNA?oc=5",
+        "published_at": "2026-11-01T05:03:53+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -120,6 +164,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Crude Oil Weekly Outlook: Brent Tests September Highs, WTI Tops $100, and XLE Reclaims 18-Year Resistance - StoneX",
+        "source": "StoneX",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPSzBqSmZyMG5ucHhrS3Z3Um9SQk9TM3pFMjBWdnNIT1E5VVNLd3A4WjNUN3FRYmUwWDZkWm5uMEhoeS1adEJVTmxTc3pvZ1hWdHhWOFZySm5qRnhBc1dDSGg5S2UzTzNISFlCdkRwU0ota3lwX2VNMUEyOWxKS3V3VDlURDlVVm9DYnpUTVVuM1cwR21MX05sWG1VM21ITUVpQzhENEZ6YTcxYkR5dGxNd0hyTmhUOVI5VDFoWG4tYUhEZXdYeHVnTHZpMVRfNVhMNVdvR0xOZmVhMVdvWmp5Yy1wUQ?oc=5",
+        "published_at": "2026-11-01T04:45:10+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "US Treasury yields could settle around 4.75 pc: SBI report - IANS LIVE",
         "source": "IANS LIVE",
         "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNX0NqMGtsaDBtVk1zTHR3N0NHRWhuMlN6Z0F1UHIxbEdSQTBIdUY3MFdvYUU3b29ONGd1cWlyN0ZWLUttd3pYbmVOMjlNMWNPUm9tNE5Ta0pCV3VDd0Z2YlcwSEtfSmc4cTcyc0JIbnFlMU5kWEtOenBNOWRvd256ZVo5MmNLTFN5SFJxdkwtYi1abDhtZXNB?oc=5",
@@ -142,6 +197,28 @@
         "in_scoring_window": true
       },
       {
+        "title": "US Government Sold $907 Billion of Treasury Securities this Week. That’s a Lot of Paper. Yields Pulled Back - Wolf Street",
+        "source": "Wolf Street",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOeEtWNU5nem1Kc25lMFZ3VExWakZZMTNOR3FQa1BvXzNpWHdTUnEzUFhmazhDWGhNUDU1Y1JqaDl4YmltX3RmeGl5RFZKWWQ3aGZuN1o4Wm9sdlFvTDZLUzRqUGhIcXZoX0VyNFBpWHNBOFp3ZzB2VlNQc0FoM1FCWGdnUTNTZ01TSnNBcHZkaDZ0VkdWZUQ1alNRcGFhY0NUUExQOU1ZZVNpZE1xY0ZudnZva1JxaXdjbVZjSlNnNHREVGZLTmE1U1RfbHpxZEtwX3lnMA?oc=5",
+        "published_at": "2026-11-01T03:38:05+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Asian markets make nervous start ahead of Fed decision - DD News",
+        "source": "DD News",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSUtFLWxuU1BqVWtqWHBjeVdCaVJvQmtaamZjV2ZCb3NRejNBaENuWi1pa0I3Vy0zckduWE5idWtOZmZKYmgyV05IcFBnUGJndWRmVTNDVlNQUXVwU0FSUGxVbUFBTWtQcEJpSjAxWlVnLUVfUU50cXd5Yko1WjcyelRKZWkzZ28?oc=5",
+        "published_at": "2026-11-01T03:19:27+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "US Inflation and the Fed: Bitcoin Before November 10 - CryptoTicker.io",
         "source": "CryptoTicker.io",
         "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE10Rnc1MzM4Rl9oamxZckNwNDRfQ2xNRlNDMjNkSUFVT2lvX1lPcHlxY20tbVk2UjVIRTFwSU9HUy1NOXRVTFcwUmZ5N2oxcVQ3RDBQWTFuOENBaE1kTFRxdXVkMmx0SkhJTDE4cXFJQ0E?oc=5",
@@ -153,10 +230,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Imperial Oil Ltd (IMO) (Q3 2026) Earnings Call Highlights: Record Downstream Earnings and $2. ... - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZmJfeHRwRFM2SVJIUU5US2xxclNFMFd2ZlkyTW5iNERMR1B0aFRvczNUVGJkcGd1T01xZ1dPcFNtTFd2SUVBZEV0T01ya1lYZ01UbFRJUUtwVmxHLVFyZUxRWmdCTXZ1c1JfN1BZNTVmdVlfYkRHOEhPdzZobGlYdlZBQ3o0T1k?oc=5",
-        "published_at": "2026-11-01T03:05:00+00:00",
+        "title": "US jobs pickup may keep Federal Reserve on track to hike rates again - Business Standard",
+        "source": "Business Standard",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOUGFFb1NwS01yaEp1OEpsczdkdEl6RExuV3BVazByU1ZYMmlEWENsX1lWU3VOQ19oOHRWdGpleDlJSFlsc196cnZZTlhQdGxEQnUtVkVjVTdhb0N1c2tXM3FLbEdTc1o3WHNQaEFaNW1FX0tFWmxHZUttdUxuRGZNNzExdHh0NnhvSEtsMGZWMEZsU2lISjNvT0k1TlM0Q2ZkZExSN2k4NGRXRjBIbThjblBOQzd4SFc5eHliRDFkMlNtS0d3eC1JSVMyUms3QdIB0wFBVV95cUxQQ09hUXVwWmFDX3cwMkptZnlnSDZKektyaUMwbzJ4cWs0U2phV1dqaEVaQ0tnczdmRVFoSkI4cmRYWldRbUtYQ21rVGVyZU9nWGJZWVU4WHpwa0drNzZ2eXhxN01YYXZHbDBnVUxSUEo5aElZSjA0OUhOZlhQVHNHaE9zak9Scng1MWlzVF9GcVdvcHVQUG5mdng1dHVUSG9LUnlVb0ZoREFjYk41ejBMdXhyb1QtSVBBc2VETDdpMDJMZTZuRU5xSVVKMUo3NnFMV2R3?oc=5",
+        "published_at": "2026-11-01T03:15:23+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -166,7 +243,7 @@
       {
         "title": "US Treasury yields could settle around 4.75 pc: SBI report - Social News XYZ",
         "source": "Social News XYZ",
-        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTUdrTjZaN1E4V0owV3JXUDlhMDN0RjFWN3dXTVIzWm4zWGhxeFZpMU82a200bTZBYzE3TjUxVGQycWZGVUJtU0dTbnJNNV90RVhNQzUtSkxMTndDd1ZGQ0JKV3lKcDB6R0hQMjBvVDhsb1BaN1NxaEQ3OS1JcFZKSUx4SlJKeDlWcVZFOGlRYXhLZVh4YnBlZjRCUTPSAZwBQVVfeXFMTU1Ha042WjdROFdKMFdyV1A5YTAzdEYxVjd3V01SM1puM1hocXhWaTFPNmttNG02QWMxN041MVRkMnFmRlVCbVNHU25yTTVfdEVYTUM1LUpMTE53Q3dWRkNCSld5SnAwekdIUDIwb1Q4bG9QWjdTcWhENzktSXBWSklMeEpSSng5VnFWRThpUWF4S2VYeGJwZWY0QlEz?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOd3pYZkpENVMyMkpjZGpweXNFaEEtemprcm1fYlU2MnJoOUptM3p5TGszN01QbnFQOG44cDZ0WTJiVUlvd0JqeUJIUG1BNnIwRTFsTjZlUGlEOUJYcV8zRGpRRUhfeDdQdEJkNzI3ZVRRbkRHM0RQQUVTRGo5MUI0SGNZZGpyYTU0dThVWTNOSU03V0otazR5NEQteTIzeGcwT0NqVHdxQXoxbUtQOFZPbDF6cElmQUxGTE1aUlN4dmFSdlhNOWpBenBWUTVXWjFYRFVVanpSYVZ5d0lkSWJsTHlEanVHcE1QMWZKSjZsNmdJaUlNNll6R0kzcWlEZXUwYmZaMG16Yk40X0VXS1B6SE5hRzhSck82NmxoU21PZlBFdVXSAaMCQVVfeXFMTnd6WGZKRDVTMjJKY2RqcHlzRWhBLXpqa3JtX2JVNjJyaDlKbTN6eUxrMzdNUG5xUDhuOHA2dFkyYlVJb3dCanlCSFBtQTZyMEUxbE42ZVBpRDlCWHFfM0RqUUVIX3g3UHRCZDcyN2VUUW5ERzNEUEFFU0RqOTFCNEhjWWRqcmE1NHU4VVkzTklNN1dKLWs0eTRELXkyM3hnME9DalR3cUF6MW1LUDhWT2wxenBJZkFMRkxNWlJTeHZhUnZYTTlqQXpwVlE1V1oxWERVVWp6UmFWeXdJZElibEx5RGp1R3BNUDFmSko2bDZnSWlJTTZZekdJM3FpRGV1MGJmWjBtemJONF9FV0tQekhOYUc4UnJPNjZsaFNtT2ZQRXVV?oc=5",
         "published_at": "2026-11-01T03:02:13+00:00",
         "score": 0.0,
         "topics": [],
@@ -201,96 +278,6 @@
         "source": "BigGo Finance",
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB3SVUycURHbkpNR1RUaGR1SFA0Z1h2MG9oLW5fOGhDVHdQR1JfNkRTN0NFYzdJX3NmWDVMeEhoUTZIUVFmM3JCMktSNFRSblBDR2d2aDdiWTFmeUJVNXl5UDFRRzgyajh5QnZva19vVlNNZ003QkE?oc=5",
         "published_at": "2026-11-01T02:05:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Global oil prices surge high in six-month - Textile Today",
-        "source": "Textile Today",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE16UVRuTkEwdVkxM241cDNHTlNXd3RkYUxaZnlZaGZnaXhNVm5va2ZfUEhoazlzYk54Mjd3bDM2ekdEWkdYR1ltTjI2QUFvblBSTXppeV96VmVKaXZtZHBDSVZPOFB2QkdmOHF6SFZfOHdWTkRtRi1fdXlrRy1YUQ?oc=5",
-        "published_at": "2026-11-01T01:55:45+00:00",
-        "score": 0.25,
-        "topics": [
-          "Rising oil prices"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Unstoppable: the dollar and euro continue to rise in the informal Cuban market at the end of the day - CiberCuba",
-        "source": "CiberCuba",
-        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPMFZVY2lpU0F0S2tuWUM0cXJmNHA3MHRuYWkzRzA1MElDT003Sm1ud2hwcTN0TXhKeDMzbWs0d3BKeG02ZGdGNndrNVR2Wk1LeWJvakJqZXFBcXRjUzh3M1J0XzJoTE1nNVB5bjRjRU52TzF5NjViZVhCWjZwa1ptdW9MY2NsSFZhN3BMV1JRb05jTEh2UG9qYXhQV01rR0FNMWFEY2NaeVR4SVFEVDZNdnFkdHZQZC1ycGc?oc=5",
-        "published_at": "2026-11-01T01:37:05+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Brent Leads Global Oil Gains as Crude Benchmarks Rise More Than 2% - Sada Elbalad English",
-        "source": "Sada Elbalad English",
-        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQZE1DTGtFVE1tS28yZHBTQkhpVFUzeGZIbXJOTGl3Q1FYYnFYdXAzNHpXempOcmwyTEhRV2dtV3J5YXYtWnozaHhDb1g5V3E2dUI0dkhnU0RFeVcwNFMtS3pDRmVWOGtNNVdBTFdnNlpJZ3RVczA2TVpXenlWOTZHU3ozcmFxMkg2Vnc?oc=5",
-        "published_at": "2026-11-01T00:38:43+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "International Gold Price Falls Below $3,900 Mark; Chinese Jewelry Prices Retreat Nearly 550 Yuan per Gram This Year - BigGo Finance",
-        "source": "BigGo Finance",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE90WGhVWnFUZmhzRkVOTU1BS3pTUFJrZkhWbm1NcDFrUGZ3MUJNdG1yalRzQVdQUXo3LU4zV3lidVZhZkhBaE1jUGZTdFZPTEEyai1lcEIxd0hXa1k2UHlyaTFlZnlwRFNpRVpqVmhqSGc5ZVc1U2c?oc=5",
-        "published_at": "2026-11-01T00:35:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "North Dakota Oil Companies Speed Up Well Completions as Prices Rise, State Regulator Says - EnergyNow.com",
-        "source": "EnergyNow.com",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNNnJOVnY2TS1XVFpRUWdmMWQyZnRIV2E2X2tacWw2dDNWbkE1Z19VM2lnQko0M0NZclh2eklYamJtRFNEa1Bzb21ESG4tRlZkTjREa3NCOGhXQklhQkZpRHppT1B3YmJWTmxqVkluTzIxQnFwTFpSYTRTVWdTMkxCV3JQc2JyMTZScmZXZGU3cFpUZEljYnZhZ0dyWkFaUFlkUzY3R3BVVmZUVjZnbDVuaHkxU0MzR290UDhB?oc=5",
-        "published_at": "2026-11-01T00:26:07+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Chart of the day: Gold price eyes $4,200 breakout, but buyers still face two major hurdles - investingLive",
-        "source": "investingLive",
-        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOER5UkJFZFQ0TFdXaXBaaW40TXNHYWFGeU9HQTlQcnlraURWQTFPZFJfY0pKZUVJdWZwSGpiS0hmMXFLT2xHX2xXX1kxVEtxMTZrR1VCQ21TclRBTFQwQTlvbFJGellfUkd1X0NTeFNHMmQ5dGtQMDZyOEJpX0lRSUM0a1NxYmJVREl3WWQzZDdHbUNMRjdYUF9zYTZDdWs0NXFVTGdlYWo3YjBYVEVoM0R4eFhnYkF5ZGVITlE4ejdBZFpDc1ZwYTlnQW94dw?oc=5",
-        "published_at": "2026-11-01T00:13:46+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold prices today, November 1st: SJC gold bars lose 4.8 million VND/ounce. - Vietnam.vn",
-        "source": "Vietnam.vn",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRlp2ZDhTNWRZRWlhNm9udFlSUGVYcEVXa1prdUtvTTNYVHVRNE1sZ1VEU2N5MW85aFVHTnNaeDlzSlVQWUNtMmtsNFpNR0RzaHhlVWlackRnenRtTXlMbTktT0t2VW9EbkNXdmFXdEQxTHNOeHR6R205UlN6NmVRdXcxUFNwazY3RHVvX3R4VG4?oc=5",
-        "published_at": "2026-10-31T23:58:01+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Fuel prices today, November 1st: World oil prices remain high, awaiting new signals at the beginning of the week. - Vietnam.vn",
-        "source": "Vietnam.vn",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbm41LV9BTHNfWXhVeEZSQzlzUHVuMGhMYUk5YWprX3ZpZWhIZDhnNHUwX1dKTmI5aXk2NVlUZEdheVNLMUczZ0hyLWF3dWNYZG96NmN0WS10OWJSSUlrMldFSWtCMTZsa3oxaXY0eTk1ck5lTzFqdGNsQWRlZ1FtSHhpLVUtNGVkRnhQbjhmWlZxaUgwRXQ5SURaUHFpYTA?oc=5",
-        "published_at": "2026-10-31T23:56:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
