@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-07T18:01:40+00:00",
-  "last_successful_refresh_at": "2026-11-07T18:01:40+00:00",
+  "generated_at": "2026-11-07T19:16:21+00:00",
+  "last_successful_refresh_at": "2026-11-07T19:16:21+00:00",
   "fundamental_bias": {
     "bullish_pct": 32,
     "bearish_pct": 68,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (32% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 3 keyword-scored reports. Recent news headlines is the largest current influence (-7.7 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (32% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 4 keyword-scored reports. Recent news headlines is the largest current influence (-8.1 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 3 scored headlines",
-        "impact_pct_points": -7.7,
+        "trend_label": "bearish tone across 4 scored headlines",
+        "impact_pct_points": -8.1,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,30 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-07T18:01:38+00:00",
+    "queried_at": "2026-11-07T19:16:19+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": -0.617,
+    "matched_count": 4,
+    "scored_count": 4,
+    "bias_score": -0.65,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 4 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "US Inflation Report Becomes Next Test for Fed Rate Hike After 165,000 Jobs Added in October - CryptoRank",
+        "source": "CryptoRank",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNeS1wX3hkLXhCY2VjbEllaUtPQnN5T2xfcVFNUUl5bjBWdHBLelJrUlR2RnlFWkg2eC1oWFE3U3YxYlhmT3U4NjVzYy1aV3JUdU9KTUhmUS0wZEtwMEdJMGEyTHViQ2tWR1FLY2F1N1MzNlh6NWswbUNaMjVKekpmUGgyNmZacDZsMm44bnQ5djNmQlV6UnVYUzR5a3VFRjRqaHJrU1lHUUFPcmhyRmh0N0VTM3lYdkI3Zk4zOFlyQ0w2UGp0MEhYRQ?oc=5",
+        "published_at": "2026-11-07T18:04:45+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
       {
         "title": "US Inflation Report Becomes Next Test for Fed Rate Hike After 165,000 Jobs Added in October - Coinpaper",
         "source": "Coinpaper",
@@ -112,6 +125,17 @@
         ],
         "direction": "Bearish",
         "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Real estate stocks gain as the Blue Wave sends Treasury yields lower (XLRE:NYSEARCA) - Seeking Alpha",
+        "source": "Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVWp6aHpUUmJmZmEtYUo2bTdsMk50ZGttVFhoS0VSWEM5R05ld3hPemxKbmE2ckZGcUVBdnRZOUhvcWpGTnN0TFczX2U4Q0FMSGFkS01KX3duZ2cya0hXOGZ4ZFo4djk4MTdid21jclE5RUxnd0VVT0NuTGo4VHhZMlNlUmw2X1MxM01XdWlQSjhOQVlnSVU2RUMtZ0ZnZ0xGWGlnZ2lBS0xJQQ?oc=5",
+        "published_at": "2026-11-07T17:00:28+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
         "in_scoring_window": true
       },
       {
@@ -170,6 +194,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "2-Year Treasury Yield Drops 12 Basis Points to 4.46% After Jobs Data - 24/7 Wall St.",
+        "source": "24/7 Wall St.",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRlN5QlA1SnVRTTg1SVA2Vzl1LTJRWko5Z2xJdmxCaURuYWhDTjhIWm5tU0RQOFdWTzhsTXVCZ3pkYXlCLUdHTTk1YmdCb3BYcUQyNGJvM01IOFhWakl0OVFNczI4UG8wMnNUOWRiNmZUU3NSUXVkRFdjQ2RTVy1scGQ1c0MtRGV2T2M3Ny1tYVNreGdTdGlyTTlZZTE3aG5rMVZzdjFxSWZRUktKQ0hIdzlSaTBFdVBDdjFmR0FTZFhDQVoxd21J?oc=5",
+        "published_at": "2026-11-07T13:48:52+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "US Dollar Bears Lose Their Grip Ahead of NFP, USD/JPY Vols Elevated - FOREX.com",
         "source": "FOREX.com",
         "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcjZQVDZ0Q0JGY3YtVno0bDBSSHZZaFZDWFg2aWMtQ1J3empORTMzb2xFcEhZb3hiU0VKWWxDSklqOHVHMzdTcTJCbVk5TXpHdlpPZExBWEN0b2JEZUM1V3ZvcW1EQmw0Wk04UjdIRUFnM2RIOHpod0FCREo4WkJfUjJOREpELXFwUUNzNVgwRFhkMlhVa3UwM20yTjQzRFlUYmxZMGFZSkNQcWR5WTREUGhsVdIBvwFBVV95cUxOc0hTQWZlUVNrSUpHQjl3bFNDM0tYS0gtdjM2Y1VVT1dObzF0RDZLRmRQZ1FWMlJ3Q2ZJY3NYLU1Tc2xNRGNrV3dRajdGU1RlVWdLZ2otLW9HUlFheUNGRVc3X0JwX2RLLW8zSzlRdHJaVUNzSTNKZmFfTjFoQW1nRWJnLTRIbVhUSWZNVzB0NG1VU0F1QndJelk5c0E3bVI2X1RtWDBLOTdyQ3RRekpRWWw0Z2s0c3pPbDhWckZZUQ?oc=5",
@@ -203,10 +238,43 @@
         "in_scoring_window": true
       },
       {
+        "title": "Conflicting numbers complicate Fed's monetary policy decisions - Axios",
+        "source": "Axios",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1PY0dMbS11QXpwYTlhSXhzdFFtMXdXcnJUTm0yWFBXcDFNZzh4ZmxyeER1MXAxTHVzWW1FVS1vYzFuV1lYZmdrSnlwY2U5QlRRekl1dlFZTHZSeDN6MFNyQVFLRk1ZUHZ1eHZSbHlxV3dMa3gx?oc=5",
+        "published_at": "2026-11-07T09:41:50+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Daily Financial Breakfast 6 November 2026: BoE Lifts Rate to 4%; Fed's Williams Judges Inflation Too High - www.tmgm.com",
+        "source": "www.tmgm.com",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZU9yV1ItRW9QR0JIVDc3RTVrbS1lVHJtWmNneGlVNExkRHhTVWxkRHVaRzRJbkFpMDBMYW9PeHpWM01MZUhwRDNKY2pIOExwYlA1NFhXVlJ2WVJlNWxycUJ1QjBycVRHQ0w2aTVBbXJlV1VtcXdIbWdGOWRYMXlUNg?oc=5",
+        "published_at": "2026-11-07T09:06:04+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "President Donald Trump Just Proclaimed That \"Inflation Is Way Down,\" but Federal Reserve Economists Have a Different Take - The Motley Fool",
         "source": "The Motley Fool",
         "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWUZrODR3aVR4d1FKVGs5a044TC0wMW9hMThPbHFDOGI4VmExMjJ5MFdzSGNKVW8tVTM4UmU0V1o1UW1MYzJMeXZHSUFUSlhOUFlnekhUTG9CQXhEdnlBY0ZfWC1meW43T2hVbm5vYzkwMXBpbV8zakpnSVR3Mk12NFpfdTQ3MEx1M29fWmhsaGZ5Q21hdEU0VXJUeHZ0bDlkeTdRTHVQVnl5Wm9IS3FxS3lrU0VHYVllVnZrX3IyV2tLNFF5TURaNUpB?oc=5",
         "published_at": "2026-11-07T09:06:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold logs strongest weekly gain since August as crude oil plunges over 12 pc - bfsi.economictimes.indiatimes.com",
+        "source": "bfsi.economictimes.indiatimes.com",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQcXlLNGlVaEh5VUNNUUtneDVpLUU3VFgwWmdFbTJUUmtIeF9fel9iRkxFLUxwV0FJS0hFWWMtR05HQzVFNTFQQkpoaTFnVGRUQ2t1SVBaYXhUdTg1WUlWYzR2MHNTbHpESDZJdlhEMVdOTkVXWmFid0phVFNWSmJnQk11QXFDWXFkV2ZhSTdIbm1BYm00X3Z6c192WC1PZVpMWVh6RkllblZJd2JxWlRVZ0NyYzZ2MzhjVHNnNTcyTjZUOUw3b2ZDOUJ3LVVQUVV3UjFv0gHYAUFVX3lxTE1GOEFacV9JT19Ldjd1REpoSlA2ZE5uc1ZfeDVqS1FvOHNzTnM2VXJSS1BINVFHd3h5ZW9wZ2NsVGg1S2dEenhRUWJaVk1mRENJTGpzXzNteEZOWnFobi1hQzZlSFZrQnpfdUd0a3dJOHotUGZ0WW5OTG1oNDFWNjEyQTdzcTdLV2wyNDhhcXp5NHllQ19nTUtLVU1JRlF5UnRCUHlvSFdOZ1I5TF9MN2ptOGJjYjg2TF90QlVhblpxMWp2emRoTlB5UERSZEtmQWFpQzFzQ0J5VA?oc=5",
+        "published_at": "2026-11-07T08:18:08+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -229,72 +297,6 @@
         "source": "www.malaysiasun.com",
         "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbm1aUWNDcTg5d3BRemp0YmVOZlBnc21BWW9qZlhTQnpRbFpULTczSHNocWhnMjc3Z0lpb0hhQ2ZQQTVVOFpJZDJfc3k5T0t5c3g3c1BXRnJTcUJ4TXlyOUVNcjlYU3lzSG9ENTN6TGc4Y19MZ0RKSUpkcTlpS001VzBGM3dCTzVVd1doZ2dNX2tlWk9OdXc?oc=5",
         "published_at": "2026-11-07T08:10:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Strong Jobs Print Pushed Treasury Yields Back Up - Finimize",
-        "source": "Finimize",
-        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQ2EzNmZvc29KYUdnNEh5bHpUcm8wSVhZdk9Nd3J5ZkM5TThWY29ZLVlNcG5GdE54WTBYaGRtV3ZIcUNBQ0VqLWJCQ2pKY2NSeWV6M09tMERfdE9VVEpWa2xWWXZqN2l3emlydmtYQmdBcWlYN2p0bU42R3NPbm1PaXVPSQ?oc=5",
-        "published_at": "2026-11-07T08:08:35+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "10-Year Treasury Yield Plunges 19 Basis Points in Single Day as AI Capex Fears Chill Fed Rate-Hike Expectations - BigGo Finance",
-        "source": "BigGo Finance",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9SbE5GbXJRMVBqbXNZTllPbGNlMDBSU2t4dUlJT20ySm91Qy1GaVk3QnNEYkFUcjRWV1BZZDdKbTFHYzZpU1lOdlp6RzNXNUpEOUZkOTVqeWVfanY5alNObDBmcEJSMDVnUmZqc25LUlN4dVdPWnc?oc=5",
-        "published_at": "2026-11-07T08:01:47+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Brent And WTI Crude Oil Price Forecast: BofA Expects Lower 2027 Averages - Exchange Rates UK",
-        "source": "Exchange Rates UK",
-        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUTgyemxMSXZ3Z3VNSVRPWlUtNnI1RTdETXFyanNKcVdmT1NSbnFKd3FiTzQtMnAtcW1TZW9RTWZ0WVF4bURxd0hXMWdiTFVFanA0QkdIT09rSlZPcHdRUGRPcDZ1TFd3Sk4yeXRsU2thTjdUYWdkX1FmUENDQkJ5c0pqdWo3ejl6U2MzV3FnNFpGWWJqTXlqeDFHa1Y5MFlPblRxRWt5VEdNQ2tzbklFUWY0Q08yNjFCMkFhNGxsUWxCOUJ3YzhONVFCSQ?oc=5",
-        "published_at": "2026-11-07T08:00:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold prices surge 4.5 per cent for strongest weekly gain since August as crude oil plunges - Telangana Today",
-        "source": "Telangana Today",
-        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOc19DVlZXQ1FaMi1aWDRwLV9mOVV4UmltdkdTMllWd1I5QVdlVWFFNV9SS0tDc3NlNlpGdS0yam5yMi1Hajk1VHFYdWM4blJ3ZnFRdHplcmRERk9RSzhpdTRzVjlMNkJoSDh1aFZCYnhtMUJkVUNYU1F1NlBERWV2bVVzZ19rNnp0UFJ1OTZ1QUJfWDJzb18zNmw3MWxmaE9tSlpXWDh6bjl3elVyNUJ0Z2tsOUZVWEMz?oc=5",
-        "published_at": "2026-11-07T07:36:40+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "China's central bank adds 830,000 ounces of gold in October, biggest monthly increase since resuming purchases - BigGo Finance",
-        "source": "BigGo Finance",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5uMW9SeUR3cUMza3dIY1RqZTVDakhoYTZteHFCU3hGMVIxUXZleERCUDcyWnNIR2VCaTdlSi1OVV9QLXlrM245NUo1TkRNM0dtZW1iZjRyVElTSXBkOG95a1dwLW12Y2NwaVBId09NME04aUx4amc?oc=5",
-        "published_at": "2026-11-07T07:25:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil Prices Down - 06-11-26 - Armenpress",
-        "source": "Armenpress",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5IdUZNTnV4U3lqVm1FZDE3dF9LeUhidnVDel85UUZIVXhLUWVQNXJ1ZU40NWpUQlYtWXJvdXhHbkdMd2tSZVZ6ZkVfak5QRUlkUlHSAVdBVV95cUxNcHhSTk1uYlNfRnRkNUhrbDA3VDloSTNFQ3I1ZERtbXU3Z3JXaDEyZTliX3VsTDd5SXhWa2lzWDZ3blBfZFQ3dk42dWwtRUxsRnNCY1k3YWs?oc=5",
-        "published_at": "2026-11-07T07:06:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
