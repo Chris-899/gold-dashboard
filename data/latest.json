@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-07T14:14:55+00:00",
-  "last_successful_refresh_at": "2026-11-07T14:14:55+00:00",
+  "generated_at": "2026-11-07T15:10:17+00:00",
+  "last_successful_refresh_at": "2026-11-07T15:10:17+00:00",
   "fundamental_bias": {
-    "bullish_pct": 39,
-    "bearish_pct": 61,
+    "bullish_pct": 34,
+    "bearish_pct": 66,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (39% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is mixed across 3 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (34% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 2 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "mixed tone across 3 scored headlines",
-        "impact_pct_points": -0.4,
-        "direction": "Mixed",
+        "trend_label": "bearish tone across 2 scored headlines",
+        "impact_pct_points": -5.3,
+        "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,28 +64,48 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-07T14:14:54+00:00",
+    "queried_at": "2026-11-07T15:10:15+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": -0.033,
-    "bias_direction": "Mixed",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is mixed.",
+    "matched_count": 2,
+    "scored_count": 2,
+    "bias_score": -0.425,
+    "bias_direction": "Bearish",
+    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
       {
-        "title": "US October Jobs Jump as December Fed Rate Hike Odds Near 80% - Analytics Insight",
-        "source": "Analytics Insight",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQV19YVmRUZGs0NWNCNFFIRVgycVd1dDg4UklLNEJSYkdEcU9UemwwMkoxcnFCaGVwZjdmaG00c0RNTk5YNWFIQ3JQWE8zQjRJVUhpRExKZ1gxQmxINjJJOWJFRlVjZ0Vwc3lKV0JZZHBSaGFsa1FMV3Q3dDU0R0NGUTBqQl9ObzhTSDlGbDJ0a2Z2UTF3eEFpdjF2eTAzQdIBqwFBVV95cUxOb1NMNGdIMGh2NGdRc0NkYnl0TU9KU0gtZ2huTXd2QUd5STNwajVaMDNablNuNjZ0ODg3TjRObUc3YVYydlBwUWliRk03SFhIV2RTdW5hZVhUbzhhSDVSYTdmcTF2YnR6cVFqcU1CYk9uQlA2aUNhWldJM0ExQkVrdjRGSnY1TkxmYnZ3VFBteWY4SDRvcmkwcngySUZPdUZNSVowUHRObFllakU?oc=5",
-        "published_at": "2026-11-07T14:00:00+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
+        "title": "US Dollar Technical Outlook: DXY Bulls Fight to Hold Critical Support Ahead of NFP - StoneX",
+        "source": "StoneX",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdHc2TWtFc2Z4MlBnckNieHZmU1JpMEFqVHdxN2UwM3I0UTJVZUR4WkpFUTdJNktrR292eUtHOV8wLVJtMjhYWUJ1NDJDOTNkb2lnWlR1bUtuRS14U0JOQmNsbmhaNlBGWm8wbmtVUmo1b1V0d21GU0N4X3NxcDlxQzk1QVJZV19NTE5TTlNZTk5sT3NTNnl0TFhISWRkLUQ0RWw3ZFBNbkh6YUVRS2E3NU5yb29tWFRCNkpqV0p3QmQ3TE1kbFlldA?oc=5",
+        "published_at": "2026-11-07T14:46:47+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Fed rate call leaves stock investors watching December closely - TheStreet",
+        "source": "TheStreet",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTHZoMFAyRFJZbWRFTVozY2M5bjBhRGJ1NnhpbkhqQy1TS3lHRG9UN3NtV09wTXZiV01hYk9WZWwxM3JfVTEwWVRGSnRpek5aMDJIZzVadGljZHNSblh2SlQ4eEVLblU0YVlrQ3JNVUlOTl84ZWhjeXc3SmxMeXZNVEpNeDBFUlpacnU2VkRFRQ?oc=5",
+        "published_at": "2026-11-07T14:33:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "US Dollar Bears Lose Their Grip Ahead of NFP, USD/JPY Vols Elevated - FOREX.com",
+        "source": "FOREX.com",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcjZQVDZ0Q0JGY3YtVno0bDBSSHZZaFZDWFg2aWMtQ1J3empORTMzb2xFcEhZb3hiU0VKWWxDSklqOHVHMzdTcTJCbVk5TXpHdlpPZExBWEN0b2JEZUM1V3ZvcW1EQmw0Wk04UjdIRUFnM2RIOHpod0FCREo4WkJfUjJOREpELXFwUUNzNVgwRFhkMlhVa3UwM20yTjQzRFlUYmxZMGFZSkNQcWR5WTREUGhsVdIBvwFBVV95cUxOc0hTQWZlUVNrSUpHQjl3bFNDM0tYS0gtdjM2Y1VVT1dObzF0RDZLRmRQZ1FWMlJ3Q2ZJY3NYLU1Tc2xNRGNrV3dRajdGU1RlVWdLZ2otLW9HUlFheUNGRVc3X0JwX2RLLW8zSzlRdHJaVUNzSTNKZmFfTjFoQW1nRWJnLTRIbVhUSWZNVzB0NG1VU0F1QndJelk5c0E3bVI2X1RtWDBLOTdyQ3RRekpRWWw0Z2s0c3pPbDhWckZZUQ?oc=5",
+        "published_at": "2026-11-07T13:47:11+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
         "in_scoring_window": true
       },
       {
@@ -115,17 +135,6 @@
         "source": "The Motley Fool",
         "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWUZrODR3aVR4d1FKVGs5a044TC0wMW9hMThPbHFDOGI4VmExMjJ5MFdzSGNKVW8tVTM4UmU0V1o1UW1MYzJMeXZHSUFUSlhOUFlnekhUTG9CQXhEdnlBY0ZfWC1meW43T2hVbm5vYzkwMXBpbV8zakpnSVR3Mk12NFpfdTQ3MEx1M29fWmhsaGZ5Q21hdEU0VXJUeHZ0bDlkeTdRTHVQVnl5Wm9IS3FxS3lrU0VHYVllVnZrX3IyV2tLNFF5TURaNUpB?oc=5",
         "published_at": "2026-11-07T09:06:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold drops as strong US payrolls boost dollar, yields - Ammon News",
-        "source": "Ammon News",
-        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8yd0QwWTdzNDBiYWZXUXlKbG5lOXRSR1c0aWFkdXRJZUlMajE3c2ZkbmJ0cjdBU0NaWk1FaWtzTUIzOFB1dHhfaDdzVktiZw?oc=5",
-        "published_at": "2026-11-07T08:54:52+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -199,6 +208,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "China's central bank adds 830,000 ounces of gold in October, biggest monthly increase since resuming purchases - BigGo Finance",
+        "source": "BigGo Finance",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5uMW9SeUR3cUMza3dIY1RqZTVDakhoYTZteHFCU3hGMVIxUXZleERCUDcyWnNIR2VCaTdlSi1OVV9QLXlrM245NUo1TkRNM0dtZW1iZjRyVElTSXBkOG95a1dwLW12Y2NwaVBId09NME04aUx4amc?oc=5",
+        "published_at": "2026-11-07T07:25:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Oil Prices Down - 06-11-26 - Armenpress",
         "source": "Armenpress",
         "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5IdUZNTnV4U3lqVm1FZDE3dF9LeUhidnVDel85UUZIVXhLUWVQNXJ1ZU40NWpUQlYtWXJvdXhHbkdMd2tSZVZ6ZkVfak5QRUlkUlHSAVdBVV95cUxNcHhSTk1uYlNfRnRkNUhrbDA3VDloSTNFQ3I1ZERtbXU3Z3JXaDEyZTliX3VsTDd5SXhWa2lzWDZ3blBfZFQ3dk42dWwtRUxsRnNCY1k3YWs?oc=5",
@@ -235,6 +255,19 @@
         "in_scoring_window": true
       },
       {
+        "title": "Dollar surges after robust jobs report fuels rate hike expectations - The San Joaquin Valley Sun",
+        "source": "The San Joaquin Valley Sun",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcy1ZUFhKbWZWc0Y1UElrMzhqOEw5bm90SkJnLWFUVjI0bmVzVmdZV2RYRDBOOHkyUWJwNzZ5S0pFMUxsYnh3TFJ1LThiT29yTWtrTEh1RGEyWENXc1VzeDJ1bFZjWWFSOEdLVmhuVVVPYTVzMnJ2akFKVGVzUncxQi1rQ1hpQW90TTJKdElqOEdEVVlxNnc?oc=5",
+        "published_at": "2026-11-07T05:57:57+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
         "title": "Kenyan Shilling Holds Against U.S. Dollar as Pound, Euro Gain - CBK - Kenyans.co.ke",
         "source": "Kenyans.co.ke",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdWhnbG9wTGNiNHpUS1FpTjVkZ0x3T2NTbmJmc0wxa1NNNWlkMVFMSWZrTktFbUl0bkZSU1FZQ21BQ091TUpOeGFSNjlfbElwaDR4dlRCbThtT0ZiMVZ5Wnc5X05MckJ5NE1jTVJ3QVBqSWRSdXJJR1BuNDYxTjhjQzczY3VHTVR4dVZ0cllBWUtXRWdJV243bmhQYUJkS21UVTN0cw?oc=5",
@@ -257,45 +290,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Dollar weakens against dong on black market - VnExpress International",
-        "source": "VnExpress International",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNLWxINkZzcUJGbExvS0NXV0NvR01rb3BUTEFDRlNabFJtU0ZydXVHWkNfWHQ0T3JpS2Q5S2dZcXNRdl9pUlE5UEpMS2d5WER6bnVjNFFpMGd3Yi1sUXlYUDhkVng3ZDlZX1dtb3A0azFJdXpLTU5DQVJwbklSUFdsYWFBZWZzWndlTmg1bzhvWGVnMXZtLV9QN0lodHk3T0duWWRsdw?oc=5",
-        "published_at": "2026-11-07T04:46:29+00:00",
-        "score": 0.75,
-        "topics": [
-          "USD weakness"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Crude Oil Drops Over 12% in a Week Amid Collapse of War Premium - KuCoin",
-        "source": "KuCoin",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbTBYM0FpVnItNG9ycFZFbkRxR1B3b3lfRDhBR3A4U0txUEV6b2MwMGZhUm1BWHhwemNyV3BNWlg1bHFzUTczN0EtaWdJd19aWWVTNnctUWl4UUJmYlVFbU5TVTVBeDZ1WWR0d1NzRGY3STZENVF0WXBaMEg3MHNzSG9adFZYMFZTYjFKQVE5M3FXZEZST0pNWUp3?oc=5",
-        "published_at": "2026-11-07T04:30:14+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Why won't the October CPI report have a yearly inflation rate? The 2025 shutdown left a gap - Nacionale",
-        "source": "Nacionale",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOa0lrVk5BS0tJUWZqZmlrYzZPaW1HSmZfZDRlWVVPN1J6Nkpfc3hIbUZsRmZHbXFKMzVmeUxMclE0Q0NDeGFwUnl6TmNHSUo3MU5OeVNDRlRUUE5SaUNfTlppZ01fNHBYdF9vbjFFNzJSb2s3YUVKQ2dWUDlOZmlrcG1BQUhWMFM3a1l6V1BnVDFPUHhMOFA2bGNBNTh5LVpBcmhJQjh1RU9xYnBCTmFwXw?oc=5",
-        "published_at": "2026-11-07T04:27:39+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "US Treasury yields rose after the October jobs report exceeded expectations. - Vietnam.vn",
-        "source": "Vietnam.vn",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbG9MbHBnd3pBTGN5N25Pb3QwY3BnemYzUnJvdTJXUlVLLWlQQUJaenJTbnNybUFVVnpQVFB6cmpVNUh4MDJWOEpnQndZODZhWkVXMHlURUpkdWM3cHZ5RUhLZEw4d2lveEJCa2FDYVk5RzlTQXRWMGlmcXhodEs2Y1VfY2F6S3pxbXg5Sl9ZeUJGMTZvcHo5eF9kOUhsTFNXUzFwN0duQk9YUQ?oc=5",
-        "published_at": "2026-11-07T04:16:18+00:00",
+        "title": "Oil Prices Set for Biggest Weekly Drop Since COVID-19 Pandemic - Bloom Pakistan",
+        "source": "Bloom Pakistan",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQckxRTDFYYTdfcGZ6SGJSangzaTZVSzItYWdfWDhtYW1Ma21tSElwMlBqWFlBeG4wUVB1SW1WX0xhbm1SeVowNEdOU0dEWWdhOW56N3hORDhoY0tJb2hqcFRTOWNNbzQ1U05yclFIRnZDUzc1SlkxckdYb1BHUmxGU0p3TE45MThfejJnSDA5d0xya3M?oc=5",
+        "published_at": "2026-11-07T04:48:43+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
