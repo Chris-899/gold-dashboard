@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-07T02:42:33+00:00",
-  "last_successful_refresh_at": "2026-11-07T02:42:33+00:00",
+  "generated_at": "2026-11-07T03:42:10+00:00",
+  "last_successful_refresh_at": "2026-11-07T03:42:10+00:00",
   "fundamental_bias": {
     "bullish_pct": 29,
     "bearish_pct": 71,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (29% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 7 keyword-scored reports. WTI crude oil is the largest current influence (-8.2 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (29% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 6 keyword-scored reports. WTI crude oil is the largest current influence (-8.2 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 7 scored headlines",
-        "impact_pct_points": -6.0,
+        "trend_label": "bearish tone across 6 scored headlines",
+        "impact_pct_points": -6.2,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,52 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-07T02:42:31+00:00",
+    "queried_at": "2026-11-07T03:42:09+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 7,
-    "scored_count": 7,
-    "bias_score": -0.479,
+    "matched_count": 6,
+    "scored_count": 6,
+    "bias_score": -0.5,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 7 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 6 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Dollar surges after robust jobs report fuels rate hike expectations - The San Joaquin Valley Sun",
+        "source": "The San Joaquin Valley Sun",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcy1ZUFhKbWZWc0Y1UElrMzhqOEw5bm90SkJnLWFUVjI0bmVzVmdZV2RYRDBOOHkyUWJwNzZ5S0pFMUxsYnh3TFJ1LThiT29yTWtrTEh1RGEyWENXc1VzeDJ1bFZjWWFSOEdLVmhuVVVPYTVzMnJ2akFKVGVzUncxQi1rQ1hpQW90TTJKdElqOEdEVVlxNnc?oc=5",
+        "published_at": "2026-11-07T03:02:35+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Brent crude oil prices fell sharply last week, the biggest drop since 2020. - Vietnam.vn",
+        "source": "Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPc0RTRVR6eTlaQmZjaXQwbzhQVmdIeVdvaHBMblBDOWdOZjBuOFhlQldxQWg4dWtDTUQwUy1XLVFqLTFiaVBsWXJvb1NqNEdRRnQwZHlKckR0cmpndU9IQS1XNUxBejZBckVTdUNzTzRmNTVtSXlzS2g4WFlSY1g4bTE5S2s?oc=5",
+        "published_at": "2026-11-07T02:57:22+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "US dollar outlook: Nasdaq breakdown raises stakes for EUR/USD, USD/JPY - StoneX",
+        "source": "StoneX",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZGZlUGllU0xGVW40X3RZUk10NXdvb2tZcDNLTXFtZFpXVFo5LU9nNFBSeGFaN25CSDNfMXo3SGR5SC1rMER4V09peGNZanBiMVpQX3ZtZ0Y5ZGJ0VC15ek1nUnFaRU1kQzJiS2NKRzRUN1RqNlZwVFVIODY5emxCaHpBeGRHWHY4NUNDWnhscFFscFk0UnNrMjNES21PQ0VhYndrc3R3M3RLSHFQeGktWDhCcFpCbkE?oc=5",
+        "published_at": "2026-11-07T02:55:54+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Gold (XAU/USD) Price Forecast: Breakout Signals Potential End to Correction - FXEmpire",
         "source": "FXEmpire",
@@ -192,6 +227,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Crude Oil Price | WTI Price Chart - Investing.com India",
+        "source": "Investing.com India",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE96N3B3UlR6VmE5N1F6Y25LVDM1b2tod3BUYmczcGNwLWdqeDFvT2pLeS1nMDlwckI4b3pPeWNLY0luV0pYc0xlcHk2ZGpadnZqYXVTWnUyN3NqQQ?oc=5",
+        "published_at": "2026-11-06T23:25:37+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Today's USD exchange rate (November 7): The US dollar rises sharply. - Vietnam.vn",
         "source": "Vietnam.vn",
         "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBTeVRjenZ1M1Bmd0dJZElBaWJ0cVhvSDNQdGw2d25IeS1OQjBPMndqR2dtVTVZYklwQ1NLREJzWjdzNUxQTGl2RzhZVDRlU19fNHRKc182Q0RMWm9QcHJJMEVpa1dWRFJxVzNCc21QSVNMYnZsOGhF?oc=5",
@@ -209,6 +255,17 @@
         "source": "Vietnam.vn",
         "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNY25SMUpMSEpnU1E2M3M3OTlrUDJjQU1PTjg5ZGFrVEZXR19ON3BGYVcxR1F3eTA5QlBIUkloUV9xNV9RdnBBemtzMlkxZUFVVk1GUUhNN3JEdU1sT0dicVhjMENleTZGc2toVnU4R29RajFOVU1FLUJxVFlqM09KQnRnTE50R3I5?oc=5",
         "published_at": "2026-11-06T23:19:28+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold Futures Streaming Chart - Investing.com",
+        "source": "Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1aeTFoLWFsUHNUX24yTVZlQm03eU5lbWJIM3VwX3hnY0JkZW9mWXB2Z2ROaEkyazZrSEI5UGlDM2p3MEE2R2pDeEYtM0liVkNRN1ZJdHZ5SWs0R3BhNnpsX1A2TlpybEdRbUE?oc=5",
+        "published_at": "2026-11-06T22:47:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -248,65 +305,6 @@
         ],
         "direction": "Bearish",
         "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil Prices Plunge 13% in One Week as U.S. Election Results Raise Hopes of Iran Peace Deal — WTI Closes Below $91, Brent Below $99 - EnergyNow.com",
-        "source": "EnergyNow.com",
-        "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQZFdLYldUV3dnVGQ3dHA5aFVzeDdTeDZKMF9WQ0Fyc2Y1UHNRUjVNWVZmXzNSdElCaUdtaGRmRG5ITHNlUG9UNllVTWtzOF9ORnlxal9TUHE0V2J2YnI3UEFjMUg2TjM0WjM0V1Q4U0Q3SllxS0NHUXpRSTVMbGVKSmRObGZ2cmlKWFVXeHMtM1F2cUk4ZDdlODVmT19ucmVSWlBnWFFrR1BLSFRkb0Ntbk1TRFhMdEVETU5lbklZZmY3ajlWWTBheVRCTlQyTnJVWk5pTGtjSXl0NEtjYUFROXUzVjNzbU4t?oc=5",
-        "published_at": "2026-11-06T22:03:00+00:00",
-        "score": -0.35,
-        "topics": [
-          "Risk de-escalation"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "[Oil Prices] Prices End Slightly Higher Amid Ongoing Uncertainty; Plunge More Than 16% for the Week - 파이낸셜뉴스",
-        "source": "파이낸셜뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5pQWg5TTZTbkVmcG0zRGdRUzJidkJ2VER2emJvMU1TaldQOHEwbTNLWGxiNGZoemliaFo5OWJXWTJSN3JIMm8wUW9IclN0X1QtMnNHVklOM0E?oc=5",
-        "published_at": "2026-11-06T21:49:10+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Futures Streaming Chart - Investing.com",
-        "source": "Investing.com",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1aeTFoLWFsUHNUX24yTVZlQm03eU5lbWJIM3VwX3hnY0JkZW9mWXB2Z2ROaEkyazZrSEI5UGlDM2p3MEE2R2pDeEYtM0liVkNRN1ZJdHZ5SWs0R3BhNnpsX1A2TlpybEdRbUE?oc=5",
-        "published_at": "2026-11-06T21:47:31+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Dollar surges after robust jobs report fuels rate hike expectations - The San Joaquin Valley Sun",
-        "source": "The San Joaquin Valley Sun",
-        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcy1ZUFhKbWZWc0Y1UElrMzhqOEw5bm90SkJnLWFUVjI0bmVzVmdZV2RYRDBOOHkyUWJwNzZ5S0pFMUxsYnh3TFJ1LThiT29yTWtrTEh1RGEyWENXc1VzeDJ1bFZjWWFSOEdLVmhuVVVPYTVzMnJ2akFKVGVzUncxQi1rQ1hpQW90TTJKdElqOEdEVVlxNnc?oc=5",
-        "published_at": "2026-11-06T21:31:51+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "U.S. adds 165,000 jobs as unemployment rate falls to 4.1% - Honolulu Star-Advertiser",
-        "source": "Honolulu Star-Advertiser",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMHVRSGcyTzBzTDFuMFpOZ01PQVN1eTVEZVNRY2xZMW5DNXVNcF9PcG83Y2llNWVmWkxGSFpUMFk2Y3BoUDBvbEFXaTBfZVJkdnR1d3Zhb1Q0dk8zTjZaQVBvbElSRk1zcmlqazB5YWNiYjBnZTFGZ3ctTkVsQnV6cGlHZU9hWkhmdlFUbXV2aDdnYlVhaXQtM29DQ0k3dUdOa2syZTRfVjlxUGJ1Y0lVaA?oc=5",
-        "published_at": "2026-11-06T21:22:30+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
         "in_scoring_window": true
       }
     ]
