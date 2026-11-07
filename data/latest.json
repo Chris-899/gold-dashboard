@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-07T11:29:42+00:00",
-  "last_successful_refresh_at": "2026-11-07T11:29:42+00:00",
+  "generated_at": "2026-11-07T12:11:16+00:00",
+  "last_successful_refresh_at": "2026-11-07T12:11:16+00:00",
   "fundamental_bias": {
-    "bullish_pct": 34,
-    "bearish_pct": 66,
+    "bullish_pct": 44,
+    "bearish_pct": 56,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (34% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 2 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (44% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bullish across 2 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 2 scored headlines",
-        "impact_pct_points": -5.3,
-        "direction": "Bearish",
+        "trend_label": "bullish tone across 2 scored headlines",
+        "impact_pct_points": 4.1,
+        "direction": "Bullish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,28 +64,17 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-07T11:29:40+00:00",
+    "queried_at": "2026-11-07T12:11:15+00:00",
     "status": "available",
     "headline_count": 20,
     "matched_count": 2,
     "scored_count": 2,
-    "bias_score": -0.425,
-    "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "bias_score": 0.325,
+    "bias_direction": "Bullish",
+    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bullish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
-      {
-        "title": "Gold gains 4.5% in a week, crude oil suffers sharpest fall since 2020 - Daijiworld",
-        "source": "Daijiworld",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1FLWlWUndpS0hkNmFJRHQ4QWZlQlVqVzRMZVc4bUkyN2xXOTU0LTB1b1hwSTg2WVdrS1kxUmszTnctLVhCQUpfYVIwQjhUWXRRd2Q2SzNzNHNFbU9hbFN2bzlidFJMcUNJMnc?oc=5",
-        "published_at": "2026-11-07T10:34:23+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
       {
         "title": "GBP/USD (GBPUSD=X) live rate, chart and news - Yahoo Finance UK",
         "source": "Yahoo Finance UK",
@@ -233,6 +222,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Gold Futures Streaming Chart - Investing.com",
+        "source": "Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1aeTFoLWFsUHNUX24yTVZlQm03eU5lbWJIM3VwX3hnY0JkZW9mWXB2Z2ROaEkyazZrSEI5UGlDM2p3MEE2R2pDeEYtM0liVkNRN1ZJdHZ5SWs0R3BhNnpsX1A2TlpybEdRbUE?oc=5",
+        "published_at": "2026-11-07T06:39:56+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Gold (XAU/USD) Price Forecast: Breakout Signals Potential End to Correction - FXEmpire",
         "source": "FXEmpire",
         "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcU1ZMFpnVFpmTFRyMnBBdWo4cFZOY25kaGFiODEyR21JYUdEeElhVjd1MFBBUlV5UGlSRHVmSGk3d1ZrYm5WenNtQzlfRlBPRmhuNEhsaWFRODBOa3lwOFNwb0VuTXFaVEluRVg3eHBYRjBMdTNOcFhqT3lfcUcxZEROTnAtMW9VMlZOVE9fNlhMN1k2cGdxM0diM0J4Y2FaX1lHdGRqQVZPaGpFck5zZW9zUWtWMTJJbERpSmVqX2g?oc=5",
@@ -241,30 +241,6 @@
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Futures Streaming Chart - Investing.com",
-        "source": "Investing.com",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1aeTFoLWFsUHNUX24yTVZlQm03eU5lbWJIM3VwX3hnY0JkZW9mWXB2Z2ROaEkyazZrSEI5UGlDM2p3MEE2R2pDeEYtM0liVkNRN1ZJdHZ5SWs0R3BhNnpsX1A2TlpybEdRbUE?oc=5",
-        "published_at": "2026-11-07T06:14:46+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Dollar surges after robust jobs report fuels rate hike expectations - The San Joaquin Valley Sun",
-        "source": "The San Joaquin Valley Sun",
-        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcy1ZUFhKbWZWc0Y1UElrMzhqOEw5bm90SkJnLWFUVjI0bmVzVmdZV2RYRDBOOHkyUWJwNzZ5S0pFMUxsYnh3TFJ1LThiT29yTWtrTEh1RGEyWENXc1VzeDJ1bFZjWWFSOEdLVmhuVVVPYTVzMnJ2akFKVGVzUncxQi1rQ1hpQW90TTJKdElqOEdEVVlxNnc?oc=5",
-        "published_at": "2026-11-07T05:57:57+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
         "in_scoring_window": true
       },
       {
@@ -294,6 +270,30 @@
         "source": "InteractiveCrypto",
         "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaTBwTzN6MlM2RDFpQUJ3bXJZU2FYWF8xU21icnNfUFVzcC1uYmVGUlk2YVRMTTJMeVBfSWQ0bHVjT2NndFdjWXBZSDIwT1ZyUm5BSDFVV0pmYnc4MzJiLWpQOVFBN05rX05CTXdiWl9zdTJMTl84alF2VUpUbVFpSmF3SEVsOTd1UTVrbHpzbnJNY3dKRFM3ZWFfcGVtb3A4dnFR?oc=5",
         "published_at": "2026-11-07T04:47:48+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Dollar weakens against dong on black market - VnExpress International",
+        "source": "VnExpress International",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNLWxINkZzcUJGbExvS0NXV0NvR01rb3BUTEFDRlNabFJtU0ZydXVHWkNfWHQ0T3JpS2Q5S2dZcXNRdl9pUlE5UEpMS2d5WER6bnVjNFFpMGd3Yi1sUXlYUDhkVng3ZDlZX1dtb3A0azFJdXpLTU5DQVJwbklSUFdsYWFBZWZzWndlTmg1bzhvWGVnMXZtLV9QN0lodHk3T0duWWRsdw?oc=5",
+        "published_at": "2026-11-07T04:46:29+00:00",
+        "score": 0.75,
+        "topics": [
+          "USD weakness"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Crude Oil Drops Over 12% in a Week Amid Collapse of War Premium - KuCoin",
+        "source": "KuCoin",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbTBYM0FpVnItNG9ycFZFbkRxR1B3b3lfRDhBR3A4U0txUEV6b2MwMGZhUm1BWHhwemNyV3BNWlg1bHFzUTczN0EtaWdJd19aWWVTNnctUWl4UUJmYlVFbU5TVTVBeDZ1WWR0d1NzRGY3STZENVF0WXBaMEg3MHNzSG9adFZYMFZTYjFKQVE5M3FXZEZST0pNWUp3?oc=5",
+        "published_at": "2026-11-07T04:30:14+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
