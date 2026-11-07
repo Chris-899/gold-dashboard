@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-07T13:25:56+00:00",
-  "last_successful_refresh_at": "2026-11-07T13:25:56+00:00",
+  "generated_at": "2026-11-07T14:14:55+00:00",
+  "last_successful_refresh_at": "2026-11-07T14:14:55+00:00",
   "fundamental_bias": {
-    "bullish_pct": 44,
-    "bearish_pct": 56,
+    "bullish_pct": 39,
+    "bearish_pct": 61,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (44% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bullish across 2 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (39% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is mixed across 3 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bullish tone across 2 scored headlines",
-        "impact_pct_points": 4.1,
-        "direction": "Bullish",
+        "trend_label": "mixed tone across 3 scored headlines",
+        "impact_pct_points": -0.4,
+        "direction": "Mixed",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,17 +64,30 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-07T13:25:54+00:00",
+    "queried_at": "2026-11-07T14:14:54+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 2,
-    "scored_count": 2,
-    "bias_score": 0.325,
-    "bias_direction": "Bullish",
-    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bullish.",
+    "matched_count": 3,
+    "scored_count": 3,
+    "bias_score": -0.033,
+    "bias_direction": "Mixed",
+    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is mixed.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "US October Jobs Jump as December Fed Rate Hike Odds Near 80% - Analytics Insight",
+        "source": "Analytics Insight",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQV19YVmRUZGs0NWNCNFFIRVgycVd1dDg4UklLNEJSYkdEcU9UemwwMkoxcnFCaGVwZjdmaG00c0RNTk5YNWFIQ3JQWE8zQjRJVUhpRExKZ1gxQmxINjJJOWJFRlVjZ0Vwc3lKV0JZZHBSaGFsa1FMV3Q3dDU0R0NGUTBqQl9ObzhTSDlGbDJ0a2Z2UTF3eEFpdjF2eTAzQdIBqwFBVV95cUxOb1NMNGdIMGh2NGdRc0NkYnl0TU9KU0gtZ2huTXd2QUd5STNwajVaMDNablNuNjZ0ODg3TjRObUc3YVYydlBwUWliRk03SFhIV2RTdW5hZVhUbzhhSDVSYTdmcTF2YnR6cVFqcU1CYk9uQlA2aUNhWldJM0ExQkVrdjRGSnY1TkxmYnZ3VFBteWY4SDRvcmkwcngySUZPdUZNSVowUHRObFllakU?oc=5",
+        "published_at": "2026-11-07T14:00:00+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
       {
         "title": "GBP/USD (GBPUSD=X) live rate, chart and news - Yahoo Finance UK",
         "source": "Yahoo Finance UK",
@@ -179,17 +192,6 @@
         "source": "Telangana Today",
         "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOc19DVlZXQ1FaMi1aWDRwLV9mOVV4UmltdkdTMllWd1I5QVdlVWFFNV9SS0tDc3NlNlpGdS0yam5yMi1Hajk1VHFYdWM4blJ3ZnFRdHplcmRERk9RSzhpdTRzVjlMNkJoSDh1aFZCYnhtMUJkVUNYU1F1NlBERWV2bVVzZ19rNnp0UFJ1OTZ1QUJfWDJzb18zNmw3MWxmaE9tSlpXWDh6bjl3elVyNUJ0Z2tsOUZVWEMz?oc=5",
         "published_at": "2026-11-07T07:36:40+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days - LiteFinance",
-        "source": "LiteFinance",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcm51RHFTMGNQcnB2aFl5bjNQQzFXUVVHckh1eW1IVktpM0lfaXlCQ2p6RF9nYWxkajlxb2R2V0lkRi1FNnljalUwMlhaU2FFT2dCUDBwem9tVG14Y1FXZGVKbWJvSm0xNlVVZ1BwdTItWnJkOTF3TnFTU2FQLWZibmhXRXlnX2RJY25leTB2ekVVUHZMZS1zbjBhWkNJLWs?oc=5",
-        "published_at": "2026-11-07T07:12:43+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
