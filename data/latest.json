@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-08T03:45:27+00:00",
-  "last_successful_refresh_at": "2026-11-08T03:45:27+00:00",
+  "generated_at": "2026-11-08T04:46:16+00:00",
+  "last_successful_refresh_at": "2026-11-08T04:46:16+00:00",
   "fundamental_bias": {
-    "bullish_pct": 32,
-    "bearish_pct": 68,
+    "bullish_pct": 30,
+    "bearish_pct": 70,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (32% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 4 keyword-scored reports. Recent news headlines is the largest current influence (-8.1 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (30% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 3 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 4 scored headlines",
-        "impact_pct_points": -8.1,
+        "trend_label": "bearish tone across 3 scored headlines",
+        "impact_pct_points": -9.4,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,28 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-08T03:45:26+00:00",
+    "queried_at": "2026-11-08T04:46:14+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 4,
-    "scored_count": 4,
-    "bias_score": -0.65,
+    "matched_count": 3,
+    "scored_count": 3,
+    "bias_score": -0.75,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 4 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Gasoline and oil prices today, November 8th: Lowest in 6 years - Laodong.vn",
+        "source": "Laodong.vn",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSHI0R01QZG9tWWJwNDN1R2ZSUFF1LUNGd0hpdE5IanpheHdpZ05tQU9Qb0xBRUh5ak1FeENKN05tRlJPR3JKX1M0N3NPdjJvLXR3NVl4MnVGYmNRSVVaS19BcHNtd2lsYW93aGlSN29xMHpuSURTUGtjbFFGazFUbndtUmJLQ0gtakZpZkt1YnNNbDJPSTFVLTN2dTdLa3M?oc=5",
+        "published_at": "2026-11-08T04:15:20+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Tech's 'Benign Neglect' Ends: AI Scrutiny Meets 4.86% Yields - InteractiveCrypto",
         "source": "InteractiveCrypto",
@@ -87,10 +98,32 @@
         "in_scoring_window": true
       },
       {
+        "title": "U.S. Stock Selloff Sends Investors Into Treasuries Ahead of Jobs Report - www.tokenpost.com",
+        "source": "www.tokenpost.com",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1qLVRsY3dON0Q4NEJOTFBrQ0ZtZHJTblY4MkxxdHgteFZvWWQ3N1RhYkFzMFpLNVZYamlsNFRkQzcxYk40X3NOaGQ4TmVteU9oSFlYSGlyX3FvZw?oc=5",
+        "published_at": "2026-11-08T01:59:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "How high will the 10Y US Treasury yield get by Nov 13, 2026? - Coinbase",
         "source": "Coinbase",
         "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBIZmpreVRJSTQycjlCZlp5emtTSUV1Skc0cjZZUFVoTlYxZEdrZS15aVQyUzBpaG1aNlhBZlZjRlNEaHpSSkVwQXBhMW9PTVJHbG1wZ1lCN0JMcXlGQnlrck5RZmJZUWgwR0xDVWhaRzdNRlk3NVdFaA?oc=5",
         "published_at": "2026-11-08T01:17:54+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Foreign Holdings of Taiwanese Assets Climb to Nearly 3 Times Taiwan's Foreign Exchange Reserves, as the Battle to Defend NT$33 Tests Taiwan's Central Bank - BigGo Finance",
+        "source": "BigGo Finance",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9aWjVaNEpGYU9ZSDlLOWM4T29QWnFKMmlwS1pfTER0QjNtNVd2ZUhFa2Y4V0w3RW1Gc25XWXc1VXRiX0NCbnk5a1V6ejNsWkNTWDZmZ2ZOV0FKNFd2ZV9jNHJ3NWppOE1YTTgzQnRSTUdUQ3I1ZWc?oc=5",
+        "published_at": "2026-11-08T01:05:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -113,6 +146,17 @@
         "source": "Vietnam.vn",
         "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObzBXUGxUNGxEV2hrN0d5ZE1JMGcxZ3ZKVFdST0lua0JfajZmOTNUcXA0aEczcWZrUDBXb2J6cVhMbnZmbGpuNlVTZUNIa29uR0RseXhsVDB0QlpGcFZ1VDdENUhFU1lReWlkbkRMcDlKZjE5Yml4TzJGVk5TRHlLaG4zNUc4NXc2SVJVRFctNG5wazZvNkk4?oc=5",
         "published_at": "2026-11-08T00:18:54+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "NFP Preview: New Government, Same Jobs Market? - FOREX.com",
+        "source": "FOREX.com",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVEMxYVBJLWhxWUVzaU84ZDZWeWZ0QkplRVk4bmFyTFFfT3Vvc2VXdUl3TlNQYzdHZEMwVlpCSHFTUk9nN1Z6NVdTVzdsLXg4cl90REhqbGxCOThXanBpbGpzdmpSVVQ2TzEySnYyWTR5dEJWNXFwQkE3UXZXUGdFQlE3UzRiSmFEY0lzRFZncXk?oc=5",
+        "published_at": "2026-11-07T23:52:40+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -186,6 +230,19 @@
         "in_scoring_window": true
       },
       {
+        "title": "Dollar-Yen May Test 160 Next Week as U.S. CPI Battles AI Stock Slump; BOJ December Rate Hike Bets Also in Focus - BigGo Finance",
+        "source": "BigGo Finance",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBtWGtqLXJUZXFVSzg3SGFDMkVndU1MOHVwUEJYVER4dGNwWkZxRUU5OFFCQTAzSUVGLTBESzU2bTJ5RWpId0tMdXUzTThVbnNtZElQSG9rT19HOE9KSlVZYkFlUTAwdEU0MHMxTVUxcjlHRl9ibnc?oc=5",
+        "published_at": "2026-11-07T22:25:00+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
         "title": "December Fed hike odds near 77% after jobs surprise, as AI selloff pressure moves into credit markets - MLQ.ai",
         "source": "MLQ.ai",
         "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTFpmZWItVkk3b2w3LTNUVUU2MHZqS0Q2NXFsRWdFS0xmdEF0QURJTXJMc2ptOHlDQzBSM1JlTEx3ekdJeWc5Mnd2WEc3Q3J6OUJsWDNjZGxEYmZ1Qk1lVVlEOUg4WEZrXzk5bGV0cWxxcGZselQtTmUybGU0WVhSYnVwNlhGRzBvQ2tBaGo5OEdzMnJQY3JUMFVRek5QNFJ3M3FMcEh3ZUVoQzBzZzJDX1dOYXViejJCOXRYdA?oc=5",
@@ -242,65 +299,6 @@
         ],
         "direction": "Bearish",
         "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold weekly outlook: XAU/USD holds above $4,000 despite strong US jobs data - FOREX.com",
-        "source": "FOREX.com",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNd3F0eEpPdmd4NmRjNFZ2MVJNaHRhVE1GM29XbjJRLV9WV1JCTkRyX0hPTkVJVXJ6dnkxWkZiTHF4YTBzMlJ6X3RoM0xqLTZFSkFudzZUV3Z1QlBSWVhTOWJzSnNZU210dVVMcHZOd2hqMXpBaG43RzV5RkwxZFNrYzZrY3djUGhRc0lmUmlZMGsxOUtMamtOb3h1U1lXQXhrMmluaXlKbWYtZk1QTXJmTzZyYVhQQWl4SkY0eg?oc=5",
-        "published_at": "2026-11-07T17:46:58+00:00",
-        "score": -0.35,
-        "topics": [
-          "Stronger US data"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Odds of a December Rate Hike Jump to 77% After a Blowout Jobs Report - 24/7 Wall St.",
-        "source": "24/7 Wall St.",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNN3JLcjlXdHpQdzVkWV9ISHdHNHBiU2FTLTRra24zcEFPejQ1SU50RTNZQmtFYmxZYWxyWnVoc2FoSjhGREh2ODNtdVg4ZnhUQldWQ2ZYR05KOGZTeXotZWhDZ2hjM0g5b2paR2ZwTThoOENzSE1Ua0pSWENMcndldk1tYm5VOWdHX1ZIeHNPbE0yRDhDWkIwTFJjN182MVY4RWMwQ1ZISmIwWjFnamgyNQ?oc=5",
-        "published_at": "2026-11-07T17:33:00+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "3 Financial Stocks Retail Investors Are Watching As Treasury Yields Stay Higher - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRVhkT3dDWDJwU1VWSGxzWkpOblE0XzFBNlIwQmIxaDhFRzEzZHRRaTJiZW1uNTRKT3J5ekhnNnNRWUM1ajlPdEhPbHJWMEkzN0hwVm5zQ2tUTUJrekJ3NVllanQza3FOU240ME5ESmNUa2w4ckRrT2pwYnVuaWY3OEdxS0JUZ2FGZm40STFuMDNVMHN1OXBEYTAxb0YzYXdrWGc?oc=5",
-        "published_at": "2026-11-07T17:12:13+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Real estate stocks gain as the Blue Wave sends Treasury yields lower (XLRE:NYSEARCA) - Seeking Alpha",
-        "source": "Seeking Alpha",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVWp6aHpUUmJmZmEtYUo2bTdsMk50ZGttVFhoS0VSWEM5R05ld3hPemxKbmE2ckZGcUVBdnRZOUhvcWpGTnN0TFczX2U4Q0FMSGFkS01KX3duZ2cya0hXOGZ4ZFo4djk4MTdid21jclE5RUxnd0VVT0NuTGo4VHhZMlNlUmw2X1MxM01XdWlQSjhOQVlnSVU2RUMtZ0ZnZ0xGWGlnZ2lBS0xJQQ?oc=5",
-        "published_at": "2026-11-07T17:00:28+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "5-year Treasury yield for first time since 2007, impacting REITs - Crypto Briefing",
-        "source": "Crypto Briefing",
-        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPckdNZkRXTFdyMHlMM3h3UHVJUHhJNGZSQVRmUE5YYk5STlI4c0hRb1RBazRJMGlFVGNka1p1RTVJckxzOXRuMnNocDBhVlAxcGxTZnRJZFZDeWNaUnRpMDdlcDFJVkdUMFFuZXpjUVJhUHB1aHhoWW1uX3E4MzB6eDk3MU9HTkVaNzEwcGVkMWtMN0NFYnc?oc=5",
-        "published_at": "2026-11-07T16:06:45+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
         "in_scoring_window": true
       }
     ]
