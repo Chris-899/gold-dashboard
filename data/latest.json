@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-08T10:36:36+00:00",
-  "last_successful_refresh_at": "2026-11-08T10:36:36+00:00",
+  "generated_at": "2026-11-08T11:30:04+00:00",
+  "last_successful_refresh_at": "2026-11-08T11:30:04+00:00",
   "fundamental_bias": {
-    "bullish_pct": 43,
-    "bearish_pct": 57,
-    "direction": "Bearish",
+    "bullish_pct": 47,
+    "bearish_pct": 53,
+    "direction": "Neutral",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (43% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bullish across 3 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop is mixed for gold (47% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bullish across 2 keyword-scored reports. Recent news headlines is the largest current influence (+7.5 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bullish tone across 3 scored headlines",
-        "impact_pct_points": 3.5,
+        "trend_label": "bullish tone across 2 scored headlines",
+        "impact_pct_points": 7.5,
         "direction": "Bullish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,61 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-08T10:36:34+00:00",
+    "queried_at": "2026-11-08T11:30:02+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": 0.283,
+    "matched_count": 2,
+    "scored_count": 2,
+    "bias_score": 0.6,
     "bias_direction": "Bullish",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is bullish.",
+    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bullish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Gold and silver prices recover amid fall in crude oil prices - News On AIR",
+        "source": "News On AIR",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPajM0TVJSeGVoSGY1d29NRDRUY3pmYlRDcEVYc2s5OWJUcjJXZzcwcEc3a0NjakNIZ3pIT0hEdnRLQVFUdVdLNktoc3gtWlVVenQzLXdpVHUtTTZJRkE3MG1YcHo0MXBDMEltUHFZcDBmbkRKNk1sTHYyZUs2cDRnMEx3Vm56VnJTNGtVYWx5UQ?oc=5",
+        "published_at": "2026-11-08T11:01:38+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Interest Rates Forecast: Fed Hike Bets Lift USD/JPY Toward 160 - FXEmpire",
+        "source": "FXEmpire",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZUI2VWtDODZxS1NsbDRNSnc3SF9SS0EzdGdGWldvYjV2VkFMRmV4My1LTWdYdE1CNm0xaWdVTmg1TFpzbGNOaGRrMUhsRmVEUmhKNzNXc1Y3VjhMd3I5LVBpZWJIYkJiTUNqLTdfMFE2U1J6Q2xqU1BQclNxRzRiOWx4VUpyX1Bac2wwOVZVdWdUeS01N29HZzNKTjFPUnVtMWlVd3lXVnJSQnJCVFlQWEVn?oc=5",
+        "published_at": "2026-11-08T10:45:10+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "WTI oil price outlook: After a 17.5% slide, can buyers reclaim $92.53? - investingLive",
+        "source": "investingLive",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRmhqWFhscVlUNzF0OVRoNTVEcG81c3A4dDl6UVVidmhKel9OTEN5VWI0SV90U3RjRnNLZ2lVNWoxQjlSRFFDTWVyVHJIYmEyNVc1WkoxZnd4TEZPRlg1elFzeTF4U2h1ZEprTVl5Q053eGY3MHZHVzZNb2ZnMXc0c2w0S01VWTJiUngwaUx6aDJZMnhreE5uSmVKRmVLak5iTVE2d2RZMA?oc=5",
+        "published_at": "2026-11-08T10:43:36+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Why the Dollar Is Gaining as Stocks and Oil Slide? - Daily Forex",
+        "source": "Daily Forex",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdGJsMkxiS1pYSUUyZkIweVhiYnN0T0M1YUlNNU9KUERpRGhsTm42M0tkalVKNExjR1lLY0VzOWZoVlk4TGtiWGNwUXZLMy00Z2VmdVFPOVdlYmxVU0RqaHdJVWFIMjVJN2NhRkE4VkVFV01Ea0MxeElsemJBVFo2RUFjRlBnbXNIT04xWnFETUJIb2F4VEJFQUg1aGdQa2VZSnp3NGE1akhfdmdTblFuZGkzbnI?oc=5",
+        "published_at": "2026-11-08T10:38:47+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Trump: Inflation Remark Puts Retirement Savings in Focus - JournalArta",
         "source": "JournalArta",
@@ -191,7 +235,7 @@
         "title": "Global oil prices record sharp weekly decline amid hopes of easing Middle East tensions - Newswire",
         "source": "Newswire",
         "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNb2VHckU5X0FRcFU3WmRycjJ6bHRQTWxILUVBV09RYkM4XzhSQ2NUdHFCQklneHQtX0FGNFZqS2xGYWR6YTRVWjNiZGl4MFpEaGxCSFU5VzU3TFMtZW1PTEk1T1Rja3NrSV9sS3Z2RGlsYVI5MjA2cWRrX2p4ZzRIQWhIV3RUSDFTR2pkUHpCdzlXazVTMTlyUXdaY2paZ1ZmbFl4OGdwbUlRZlFnb3JBTTBFLXBSZnBmLUpsUG5kc20?oc=5",
-        "published_at": "2026-11-08T07:30:21+00:00",
+        "published_at": "2026-11-08T07:31:22+00:00",
         "score": 0.45,
         "topics": [
           "Risk escalation"
@@ -249,52 +293,6 @@
         "source": "Moneycontrol.com",
         "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPd0dqM3gteWx0aGViSU5VZnFva3EwSkkwTmdoOGZDcnlJZS1ZeUJjM2FDbUZ1TlZ2aDFVSVJ3a1VkZUJRZTFLV0I1ei1HRGF3cHpyanhOd3lfOVoxUHV1elRQT0ZnN3lDamxhQTAwQXZzNUUtZFQxeXVkY1BwSDNTcHlwWW81bGRWOXA3dFlaX1dyMVlEa0UxUDRRUlVBZ1UybURrc1R3d0ZZWUczWmw1YW9POE5PeDFjSklibUFFM0t5eW1QSzBneE84MWtGUW9VN3A0NTcxMm5HV21uRjdQdHg4N09fNTlFdkZCcNIB8gFBVV95cUxPSDlKV1IxUEVod2hrdkJQQUFUN2NpVkk1VUE3cjE0SUVlS2FuZ05kbS11M0dMUVlqX1N6dl9RLXVoSHd1RUpJLUpnLUdqQUJNZURrRFZ5OHdTSm5YUFpWVkt0WVM1dTJFYlEyeWxYRWhRdllfYXpiUzRHcW5JME5zdHFkN21GOEw3c2FFZ3pLb2ZIMEIxb0ZWYmpMNmo3S0VyVDJIWm5iQWhTMVVNRS0tUU1CZ2lLSmNXV09pUWJNOW05YUplRklLNHNlQkhLeExmQmQyNUdzZHFGaXQwS0wtNUQ2Sy1Lb1VKUE01c1R0SFA5Zw?oc=5",
         "published_at": "2026-11-08T06:15:40+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "USD exchange rate today, November 8th: The US dollar remains stable in both banks and the 'black market'. Should you buy USD now? - Vietnam.vn",
-        "source": "Vietnam.vn",
-        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVEJ5YjVSQ0xXZ01MbkFRNWlHS21vSC1xUXBoT3dibUxKTzNUdWQzT2dGclpBYkFrQUR0NV9qNTNPWDBBZUZ0N3JPQngtc3h3WDZaN3ZKZ1h6V1Rsb3pZMjkxSkE1ek1wb1VhZXBhZnRmai0taDRldGZFUDY0cVNkS3RRdDZ1NkY0VnNpZXAxSXRwY0RrNnQ1bmJyUGtVcnZadHNrTXNUU0k1UUJWdFJnRE8zTmYxZThHVV9vZlhYOTlxWEk?oc=5",
-        "published_at": "2026-11-08T06:05:30+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "The Week Ahead: October CPI and PPI Due as CoreWeave, Cisco and Applied Materials Report Earnings - TradingKey",
-        "source": "TradingKey",
-        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPRzZ2c2pZOXhWd0VsakEtVmtQdHpaRURaTEtqVTRMazl6bzBzSXFkdEhiWHEyTWJOcXJnRE1yUVF1VTA4eGZrNGlyZGxNaEFpM2ZKMWVsdTFYQy1pUEV1eVBVUk9kVFFhaU4xNTVqc0s0RVpZbDZBUWFMc295S005M2hPT1FrVXRyR1FGMHRwS3ZWdnVQTzV1Y3AwOWp4NFlYVVhhWGsyUGJHM2lMdHNPS2tYVVMyTmJkWnlqRkhYWjc2TVJreE9oTHVSTTZzZjQ?oc=5",
-        "published_at": "2026-11-08T06:05:16+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "US-Iran Peace Talks Show First Glimmer as Oil Prices Plunge 17% in a Week, Worst Since Pandemic - BigGo Finance",
-        "source": "BigGo Finance",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1zTjRoNkpXN3R6Q0Y5TkVxdGpOcEpUWUEzM3ZFbl9WV0V3SjZiRTRMYUo5REY3SVZaZUk5VGhMOWhxRnlQUFZyZlctSndPOVF5ZUV1SE5yMzJqMzZaUHkwNlFoNS1wY3lqT3dFQTJXVFNucXhjU1E?oc=5",
-        "published_at": "2026-11-08T05:55:00+00:00",
-        "score": -0.35,
-        "topics": [
-          "Risk de-escalation"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Why Falling Treasury Yields Clash With Resilient US Factory Output - InteractiveCrypto",
-        "source": "InteractiveCrypto",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQVmJnZlpaaWd2QzlaZENObnAxTVgxNGk1aUs2ZW1wZWQyMEJOb0R6WEJHay1PcU1NSkt2N0hieHBNcDdEcFhjTW9RM1JlTlBkNzlvbTZXM21hNjg3WXFkN1N3OVJrajVpRFVmTUg1Sl9CcGQ2cHEtcm54Nk5xVmkwYV9kNEpFVzgzd3NoTHBMcWhTLVFTS05LZF9YZ0ZaSFZDZ3c?oc=5",
-        "published_at": "2026-11-08T05:27:50+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
