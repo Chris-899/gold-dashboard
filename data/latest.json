@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-08T12:11:36+00:00",
-  "last_successful_refresh_at": "2026-11-08T12:11:36+00:00",
+  "generated_at": "2026-11-08T13:24:57+00:00",
+  "last_successful_refresh_at": "2026-11-08T13:24:57+00:00",
   "fundamental_bias": {
-    "bullish_pct": 42,
-    "bearish_pct": 58,
+    "bullish_pct": 30,
+    "bearish_pct": 70,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (42% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bullish across 3 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (30% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 1 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bullish tone across 3 scored headlines",
-        "impact_pct_points": 1.9,
-        "direction": "Bullish",
+        "trend_label": "bearish tone across 1 scored headlines",
+        "impact_pct_points": -9.4,
+        "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,22 +64,22 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-08T12:11:34+00:00",
+    "queried_at": "2026-11-08T13:24:56+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": 0.15,
-    "bias_direction": "Bullish",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is bullish.",
+    "matched_count": 1,
+    "scored_count": 1,
+    "bias_score": -0.75,
+    "bias_direction": "Bearish",
+    "summary": "Reviewed 20 recent headlines; 1 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
       {
-        "title": "Trump offers press secretary position to UFC boss Dana White (DXY:) - Seeking Alpha",
-        "source": "Seeking Alpha",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYlZhSjNyUV9oQzV4WGtLdWNBa1owc3lKQTVweTFpOGgyZEtBNjhYVjYwNGVxbTk5M2x0Y3hadTViWmtkUUV2bzYtTFBtNE1yekRkTTB5MkpZekxZWXFZSHlhVlI1MngxelpaTC1lWU1GY2w1MS1ZVGRYM2JJd1l3QkhQZzRsMjhFRUVkODJ6Zl9WdFp5cm1CNVhCS0RQdWM?oc=5",
-        "published_at": "2026-11-08T11:49:53+00:00",
+        "title": "Crude Oil Weekly Outlook: Houthi Attacks vs. a Double Top? - FOREX.com",
+        "source": "FOREX.com",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRG44SDNEWG1QQkVHZm5QZHpsWDdYazBKYUlLM1VSZDJSR183amtlYUl4a2NHeWVKeU5Gb0FjTWZzYkt3VU9WckRTcFhPOHl6bGE4bk5nUE5ZSFpSZGlETlk5a2U5dEh6dVF2SGh4TkVzMXJxUmVwbm9OM0hPeEtOMVowRmVjcTN1a1dvT3NrWXZ2dWYzUU1VUlBlajBWVmVMcDAtdNIBsAFBVV95cUxQbDBEamw2aEt6VEtWZ3FGMXlhTDR6T3Jxb0ozUGZlXzcwaENZNEtBVHl3SFJkeXJ1RWE2NUstcElPdnQ2c1NzakN6NFlSUm8wUGw1ZmdkNGtOVF9fVHRPZ1NFWmhNTjlkOUl0WFBOQ0hjUG5YdS1HaXUtRFVmVXdQMEEyQUhpcWk2TTZiY0NWcWJabEx3QUNTWW9KOVpaTmZ4T1RrRl9UZkFJeXZ6VkZISQ?oc=5",
+        "published_at": "2026-11-08T13:19:21+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -87,10 +87,87 @@
         "in_scoring_window": true
       },
       {
-        "title": "8 Countries Where the U.S. Dollar Still Goes Surprisingly Far - Yahoo",
-        "source": "Yahoo",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZ0JBaHNiUzVtNFZsQThQSzByWHF5N2FUQmMxeTFtOFRNMGtXQW4zX0x0UzNrX1hQOU1BUndlNEx5VWJiU0QwNHpDMmZkN2ZUQzNheHpUdWZ6QnA5bVA4NHliUFdhTjNTbTVMWWFTdlBrVmJ5Snl5VjhFOGUxUVhLTFBEMG9ZZmttQldpNmVKblhKLTZkQVhqUXhn?oc=5",
-        "published_at": "2026-11-08T11:18:28+00:00",
+        "title": "Rupee appreciates by 10 paise against US dollar - News On AIR",
+        "source": "News On AIR",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTEVPSzNzd2ZWeTJ0X0lkbVJ2UEZ3c0Fzc1lEU1lhdng2QnVZa2g3YlV0NFpnS3dlenBlZjVwYVowMWo3Z2VvcmVBem5peEVnaGprMU9TSWZTTDhsS21pWlhYcDFYREpRcWZzY1ZSUTRoNlA4bmRWT1BwUERHUU9fOFBFbjdGbXQ3UWpxa18zYnpBZw?oc=5",
+        "published_at": "2026-11-08T13:19:12+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Update on gasoline and oil prices on November 8th: Sharp decrease - Laodong.vn",
+        "source": "Laodong.vn",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQajBEXzdrTHNBNXRfRlhXQTA2U1lnaE90M0l5SUYzNEdZbHQ0aTFjeGdMR2ROZ2JQUFIxMThsdmVTT1VBMmhMdXp1MFlpYlJUQUY1cGxqUjZmVlNrNE9EcE5hVUdIUFN5dFRKOTE2YUI1VGl1aHROTWM2aHl6dTJNNkd4MEpzMjdtLW0xS1Y4bWc?oc=5",
+        "published_at": "2026-11-08T12:48:39+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold, Silver Prices to See Volatility Amid Global Tensions and Inflation Data - Lokmat Times",
+        "source": "Lokmat Times",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQczk1aGl6Y3VfWkVyQy1OcU82MTZ2ZzJ4dlY2NW5WOTlMYTN5TnlzZHFJS2pHMC1tVG1LVHpuM3JIR21FWnJ2eTZUREswckFNQUJKdW43OGtnUnk5ZnlJUTY2TnBDdlV3QzkzMWhIdFhIalMtM2tPQVd0TWdVdzUxVHAzVVJsMVZha1E5eENDa00yeVA3aFhySDItY0xETXVVVm1qNXlVM3kxZ25JMVhlbTNPRWlqczN3aWprMk10MUFudDTSAcgBQVVfeXFMUFdLNHY3WE1ub1dubkdlT2VzZWFmWGticWhqTk9sSVBTdlkxUEhvYzdPdHY2eFgtRG9xaDY5Z0lwUlFHck1SYTU0cmtOVnMxWkt5aTY4bWs1UjNJYW9zVk9hZlZQYU8weW5JYkNTN3R0NkZQLTRwYzF3bzl4Um9WRzVPd096X2NfaUVvTkdOMTgtQkFRazBNN2p2WXduV084QVFsejM1TG1odnFYSk5lWEtYOUZSclNTUC1nd0VYVko4U3dybjJwbTI?oc=5",
+        "published_at": "2026-11-08T12:47:51+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold, silver outlook: Inflation data and geopolitical tensions likely to drive prices this week - Social News XYZ",
+        "source": "Social News XYZ",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQdXNlTzB0WjczcUJBVEhXdlo4Rml5YlBuR0ZQeEhlTEI5Q01OSS05YlN5enJ4Y2RybmN6NFZ1SDBfaVRrTi1NN1IxdGQ0MlV0MTRMd1o5TERTVTgyVEhGeDZlNGVvRHRUVGt0UHpBdjFMRG13aEJCRXZRRHE0UFVBUWR1cThjbDR3WHVvSl80eUk2cEJmQjF1N25Nb2d3Z1ZrOXdPa2oxdzZKRHBkdk5rM0piM1dMaVpGMHVMRlhiUWZaY0JSSnhLMVp1U3fSAcwBQVVfeXFMUHVzZU8wdFo3M3FCQVRIV3ZaOEZpeWJQbkdGUHhIZUxCOUNNTkktOWJTeXpyeGNkcm5jejRWdUgwX2lUa04tTTdSMXRkNDJVdDE0THdaOUxEU1U4MlRIRng2ZTRlb0R0VFRrdFB6QXYxTERtd2hCQkV2UURxNFBVQVFkdXE4Y2w0d1h1b0pfNHlJNnBCZkIxdTduTW9nd2dWazl3T2tqMXc2SkRwZHZOazNKYjNXTGlaRjB1TEZYYlFmWmNCUkp4SzFadVN3?oc=5",
+        "published_at": "2026-11-08T12:31:23+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "AI investment boom tests Fed's ability to balance growth and inflation - The Nation (Pakistan )",
+        "source": "The Nation (Pakistan )",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMG1qR0tCSlRsdWc2U2Y4OHJKUjAwRk9VNi14ZEtIUHFqTFM3V0NlR25JcnRRam5OX3JPQmJMb0xHZ29sUkdpR1poemxkM2d3Qy1ld2F4WTE0b2dZZFNtVXM3a3FoanJwUERuQjh6UzBReUhHbThOYU43SXhfM0ZkbFFrU0hscjJibXBqc1N6QXRiZWNVQUtNOG9JLVl2cVo2bFYw?oc=5",
+        "published_at": "2026-11-08T12:27:51+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Week Ahead: Fed's Focus On The 'Accumulation Of Information' Takes Thunder From CPI - Seeking Alpha",
+        "source": "Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOazAtN050ekM4SXJieVdrMnBha1FGTFRLZFhHTUdJV1ZJY3NsQk5PSEI5RmRNTlNNdGVNWkJzc2tMRkFfQW1CM2ZTNEVXOGUzN0RQcEdzRFpnRFVBNXBhcXcteVBKbFZpOF9tdzRmMW90cGxzck1zTk5oOGtjblUwaS04ajVoZUJhM19fMS1vNFl0bWJyQWtvS0xzaDdzb0FmdDNyaGNDRXZ3aFVLZUdYZlJldHZ5Zw?oc=5",
+        "published_at": "2026-11-08T12:05:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold's Official-Sector Bid Meets a Firmer Dollar as Forecasters Trim Their Targets - ad-hoc-news.de",
+        "source": "ad-hoc-news.de",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPU2l2M1VXM2JEMVFXSzZ6TUppTy1VTTZlVWxOMElQdjA1dmVpZ0lrOUozQ3FVbG04VXdYS0NDRWU1VEdnUmNDU2ZaOG1PUTV6d3VBU0djOFFMeHlWZUdXdmduVk5rSDctTWpyUjRUaDRQRGxQSW5zQXlDTDlpY01kWmxDMFFPZG8wMDRyaWJLbk5JMkNoN2NqdDJ4YndTMDQ3WkItZ2loRmEwcmtkSHhkV0plT2VHblo5Z0d5RW1RRVYxeW9vMFd4VlJVYkI1d3dvR1piY1pmRkEtaDdudmV2Mi1EblktX2puSnc?oc=5",
+        "published_at": "2026-11-08T11:51:18+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Trump offers press secretary position to UFC boss Dana White (DXY:) - Seeking Alpha",
+        "source": "Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYlZhSjNyUV9oQzV4WGtLdWNBa1owc3lKQTVweTFpOGgyZEtBNjhYVjYwNGVxbTk5M2x0Y3hadTViWmtkUUV2bzYtTFBtNE1yekRkTTB5MkpZekxZWXFZSHlhVlI1MngxelpaTC1lWU1GY2w1MS1ZVGRYM2JJd1l3QkhQZzRsMjhFRUVkODJ6Zl9WdFp5cm1CNVhCS0RQdWM?oc=5",
+        "published_at": "2026-11-08T11:49:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -199,6 +276,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Oil Refiner Compensation Figures Due on the 20th as Calls Grow for Phased Exit - Seoul Economic Daily",
+        "source": "Seoul Economic Daily",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNN052VUp1b3BsZ0VyazhSVUdMU2d3NG12TjZDeGtZNlJlT3NwNnJqdnd2MHFpY2NfREQtRW9nelZOdVdUYUN0UUVCaXFqVXJ0dUtrdlVMbV84NFh0U2FEbF9RRWo2SWJ5MkpicW15am1PUk1tdlRPd0JfSjl3elpZd1RLTzNyN1RTV3g2eV95Q2dkRU9fMlVWRDBHU0RJeld5?oc=5",
+        "published_at": "2026-11-08T09:38:54+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "GBP/USD (GBPUSD=X) Live Rate, Chart & News - Yahoo Finance - Yahoo! Finance Canada",
         "source": "Yahoo! Finance Canada",
         "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE55WTljd3RJbktRaDlNby1zT0dmcU1lMjJwdldoNmpNdm44cGhseWRvMFctRnlVX3N5WWtvSjZjd2x1RUpBejFKSVFRMnFzX3hMYlNnUVdXbHZPZw?oc=5",
@@ -207,98 +295,6 @@
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Price Today, November 8: Precious metals tick higher on MCX during Diwali special trading session - ET Now",
-        "source": "ET Now",
-        "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNSHdBdW1QUEd0MmgzT1EwMU5QVkxKYnc0aDIxaWhpbGNLejZaaVdjdzg3Q3FMbU5NNm94UjdETkNJek1lbnlRUFNxUXBabHpXdEVEM3YwU3ZpYzlUYTZhN2dvM2RMTUpscDc1SXA0aEhRU1BGckl4NWI3dm9GYjRtOS1DTVFrelkwenh5R3dLa1VTRy1YU0Vnc3RBaVF2N1g3NTNPRi1hT0Y1QndGV3B1NUlFbHBBeFMxR0FyTk9NZ0FsNGF1VURfbEVjak9tRG1XcGVFN1BHdUtEaVRIbHZhblEwX3JUNk3SAewBQVVfeXFMTmpBbG53M1YzWG56blA1UlVGaUFVbG5USTcxZ1dhdHJmb3ZRS1ZhOS1TanJvWlJWalBXSllEbjZjay1oaUd5VUV6OVJwNU0xU2dPUUJCNnZITk9DVWVPSzVZUDRmZm40cFpiTFVBSlZ6T2Q1alF1WnZnT25EbktXNEh1VXZ2ZHNnTXFMRnkyTGJjbDJHcU9MaHAzT3Rqc3pRT2pmd2s4ekRJcUlLSEJlNzBKZlNtNnlVcHJ0WGZyYThta29DWm5mYUVXWVVMMmxiN19OYmVXYmNXVEttMnh5MU8yVlY1VzJONDhiVXk?oc=5",
-        "published_at": "2026-11-08T09:06:57+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Records Biggest Weekly Rally Since August, Crude Oil Crashes Over 12% As Fed Rate Fears Cap Gains - Free Press Journal",
-        "source": "Free Press Journal",
-        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPOFpyVXJoWHBKYk8wOWprMXJSRnlWY1BGdU9Vc0sxLWdsRHB3SG9PY3UzQUJ2ekYtY0pWZV9fVUtMT2xfRzJfdXZjUFpXcjVCQ09QalpHQUhBNklZTnpaTF9fSmppZmdRNzhPTjVLUjBid2NaZHZoU1Q5UHFjT3AteVFIdHRPaWVza0pENTZrd1czUXJjbnhQaWpKN1RXMExlSXI1RmhUMTZZbm1BYl9ZZFhUcTZEWGpfSzk1R1NQTmlMTE42SngtbXRWZ0NJUm9zbUdIRnlUeGLSAd4BQVVfeXFMTXpEeFlYQ0dyaXQ4N2V0SlZ3MmVZZG1jenRGQ3Q1dDJkRzBDc2hFRUJXNWhsWEJzZklYRms5cWxYLVJrbHYtaUxRbjg5RGpJLThVVnp6ZnNoeWgwd0xvWG9oWVBER3hIUWNQNkpHNHh3VHpWQlp0UmhqeHNXR3hwSjMzSGFUYkowLWw2MTlGcGJBeFJDNktIOVlQU2pLSEc2TTRURDE4SlFhUG13UW9SbVRYM2Y4Tkc1b2F4dy10b1hDSmF1SWNzUDRYN2N4cjRzWDVUWlNiSlVwSzE3ME1R?oc=5",
-        "published_at": "2026-11-08T08:54:28+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "EXCLUSIVE: CD Rates Climb as Treasury Yields Fall, Squeezing Companies - Seoul Economic Daily",
-        "source": "Seoul Economic Daily",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPX1lDQ2M5cm1ab0V0NGRzenJ5SXhxMjhyaG50Z2NZLTl6MHZNS0xjcGZzQzJTaFZVSnFxbzZHaGxSbl9ZTVQ1MXJUWEtDVVRheWY4amszWWRBazdLbUZmNUtDcmhfV2dtNlFpbHhVTWJRQ0dVR0RVemZsMzdsYUR3dC16andrMW5ydTkxMWt2WkZPMHdzTmVMM1k3SEVMRGM?oc=5",
-        "published_at": "2026-11-08T08:42:20+00:00",
-        "score": 0.75,
-        "topics": [
-          "Dovish rates"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "XAU/USD Bullish Forecast: Soft US CPI Could Fuel Gold Breakout Past $4,140 Target - FXLeaders",
-        "source": "FXLeaders",
-        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNMU91NWNCWWtCNmRVWTN1cDNaWUZtQmQ2R2ZYaUsxcjZNeXFtdUphMVZlaTg0YWN6YzVEd2JEVkt6RktkZHJSa1FRNkNpaldkM29KLWJfWml3UF8zczcwSjRKbEVxZzlwZ2dXeW03Qm1DSGdmUEpISFFvdVpjRm1PLU1UUVpaclZWUVpROUVLS2lpd0lKa0xfdWx2SlBOWlgwa1hzSWRhOHAtRG1oN3AtNW9qR0N4MTlobDlHRGF3?oc=5",
-        "published_at": "2026-11-08T08:26:21+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Drops Over 1% on Higher Oil Prices; US Payrolls Data in Focus - ASHARQ AL-AWSAT English",
-        "source": "ASHARQ AL-AWSAT English",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUDM2SDVFR1NxS2VSbF9qUmVMTTRfUlNKcDd1S0g2Yl82SUkydDhGS0w0ejF6bkdfaVppZFdtdzhTWmdIVGo1TDB2Mmgyc01DSEx0bFBJalFZSTI5LUh5ZUdwWFhlRjVOeVY2aEoyZHlRZVdYZlF3bEpENXdERk1ZLS1XWU95QTM1UUQtVUZFQzh2cWZOMzJsUjFqa0wxcE85MGhnZw?oc=5",
-        "published_at": "2026-11-08T08:08:58+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "US bonds’ midterm election rally skids to halt after strong jobs data - The Business Times",
-        "source": "The Business Times",
-        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQeEV3UnJhMTFEb3czZ25jd1ZUX3V3VF9IRTBoUjZEWmE4UXVNSGRpc0pYaXFGeXJ0bHN5ZFRjMmFGZUJlTjFYZzBiOWpERmZoSHFtSVJhMTJlN3puY01oSEdwc3NIZUJ2bS15NmxmOFdxNGFjMHY5cmRHdjJURzRrajF2SFZ5QVRudi1JV1V2OWpqbTFMYXlpdXZhOXRDaXBVcVVBWkpLTE9DR1NmSTYwbjdoUkN5b0ZqdmFRTXdFa0RxYXBMN2M3QVVFZXQ3N0tsQ3dKWnQwaENPWEU?oc=5",
-        "published_at": "2026-11-08T07:49:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold, Silver Prices Face Fresh Volatility Next Week, US-Iran Conflict & Global Inflation Data To Set Market - Free Press Journal",
-        "source": "Free Press Journal",
-        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQV0ZnSm9xRWxuUGNFdld6SVNxUkdxaEpiSk5Cak1NRkxsQzc4SVZLc1pmNVJjNW84cTFWVlFXa2JMOEZVSmdHbmg5SUd2emlKeG1xY21ZdlNuQzQ2NnZRUGlxejh3YXQ4a0dRRlFqOXBMQVF0RlhrYVUwNWhIRHJvTTlNanhZY0s4Z0liWS1QeWZNOHQwdXF1WU5GQjd1LUxxUlNQZ21OVXR0VWRycHFuY3M2MEVlSVp1Qm9hQS1EeWY4RmtZSnNhQWNodG5PNHN1cmNicXNEdXpOOFpFN3RGZ2FNd2R5S2Z6bFHSAe8BQVVfeXFMTWdrbTFnRm5DZE5BaHRwRlJEaGk0aUhQQlhqQWQ3N0dZRjh1dnUyVVhWMXZ3OGlRVmkxYVZZZVcyWVlqcjlhUUtnb1hVam94OVNiZlZCS25pOU53cVpCeVh4LXYzeXRBRkd2cFdjVXdCbF9fRzNHOHo4VW54Yy10cVNXNXNWckxmSTlSd2ZGTExYclVTUEEwNm9EaGFMQmVSN0I4dWhvODY1aTVydGkyaUZRbVNnQUNsbmY3Skg1TDNWLXpsdVEwdURKR0FvbVlmRkJESEFEOEloZFU1TzBEeHZGaGtPQjZBS0Y2WWpoa28?oc=5",
-        "published_at": "2026-11-08T07:46:02+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Global oil prices record sharp weekly decline amid hopes of easing Middle East tensions - Newswire",
-        "source": "Newswire",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNb2VHckU5X0FRcFU3WmRycjJ6bHRQTWxILUVBV09RYkM4XzhSQ2NUdHFCQklneHQtX0FGNFZqS2xGYWR6YTRVWjNiZGl4MFpEaGxCSFU5VzU3TFMtZW1PTEk1T1Rja3NrSV9sS3Z2RGlsYVI5MjA2cWRrX2p4ZzRIQWhIV3RUSDFTR2pkUHpCdzlXazVTMTlyUXdaY2paZ1ZmbFl4OGdwbUlRZlFnb3JBTTBFLXBSZnBmLUpsUG5kc20?oc=5",
-        "published_at": "2026-11-08T07:31:22+00:00",
-        "score": 0.45,
-        "topics": [
-          "Risk escalation"
-        ],
-        "direction": "Bullish",
-        "score_status": "included in score",
         "in_scoring_window": true
       }
     ]
