@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-11-08T21:05:48+00:00",
-  "last_successful_refresh_at": "2026-11-08T21:05:48+00:00",
+  "generated_at": "2026-11-08T22:05:49+00:00",
+  "last_successful_refresh_at": "2026-11-08T22:05:49+00:00",
   "fundamental_bias": {
-    "bullish_pct": 36,
-    "bearish_pct": 64,
+    "bullish_pct": 30,
+    "bearish_pct": 70,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (36% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Headlines were retrieved, but none matched the directional rules; no headline tilt is included. US Dollar Index is the largest current influence (-9.0 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (30% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 1 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
         "name": "US Dollar Index",
-        "weight_pct": 53,
+        "weight_pct": 40,
         "change_pct_24h": 0.677,
         "change_pct_5d": 0.527,
         "trend_label": "up over 24 hours",
-        "impact_pct_points": -9.0,
+        "impact_pct_points": -6.8,
         "direction": "Weighs on gold",
         "explanation": "a stronger dollar can pressure gold"
       },
       {
         "key": "WTI",
         "name": "WTI crude oil",
-        "weight_pct": 47,
+        "weight_pct": 35,
         "change_pct_24h": -0.406,
         "change_pct_5d": -6.196,
         "trend_label": "down over 24 hours",
-        "impact_pct_points": -4.7,
+        "impact_pct_points": -3.5,
         "direction": "Weighs on gold",
         "explanation": "lower oil can reduce some inflation-hedge support, though energy prices are only a proxy"
       },
@@ -40,6 +40,17 @@
         "impact_pct_points": -0.0,
         "direction": "Gold price confirmation",
         "explanation": "gold price confirms a downward market move"
+      },
+      {
+        "key": "NEWS",
+        "name": "Recent news headlines",
+        "weight_pct": 25,
+        "change_pct_24h": null,
+        "change_pct_5d": null,
+        "trend_label": "bearish tone across 1 scored headlines",
+        "impact_pct_points": -9.4,
+        "direction": "Bearish",
+        "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
   },
@@ -53,17 +64,28 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-08T21:05:47+00:00",
+    "queried_at": "2026-11-08T22:05:47+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 0,
-    "scored_count": 0,
-    "bias_score": 0.0,
-    "bias_direction": "Mixed",
-    "summary": "Retrieved 20 recent headlines, but none matched the published directional keyword rules. Headline tone is unscored rather than assumed neutral.",
+    "matched_count": 1,
+    "scored_count": 1,
+    "bias_score": -0.75,
+    "bias_direction": "Bearish",
+    "summary": "Reviewed 20 recent headlines; 1 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Gold Price Forecast: XAU/USD Rebound Above $4,000 Points Higher but Faces FED and CPI Test - FXLeaders",
+        "source": "FXLeaders",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQSWo2TktZR19iZTNwLVNXTVE5NGRlVU12RjEtdTlIQWZYQ2xLdW96YTBzaVpSb0ZhR3Q0a2hSMmZ2R1RSbkV1Mm9wVU1xZ3VIYUZNM2ZnMDRFNmI1RkV4dWdLdkNKUXBnUFdFd25neTAxamFnUzZPLWNGWG8xTVZsRzhXaFcyTzRlc1dpdUlmS29paUhMMHQzRE9WSUl3YTdQRnJZVDExWXB3NW9rakR4NDRxNWFCYjduS1h3OGlTeEFBTE5zWjdsVHVn?oc=5",
+        "published_at": "2026-11-08T21:38:54+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "The market bloodbath just exposed Wall Street's true fears about U.S. debt, top economist warns - Fortune",
         "source": "Fortune",
@@ -128,6 +150,19 @@
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Hot CPI Inflation Seals Fed Rate Hike, But Stocks Rise - Investor's Business Daily",
+        "source": "Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOV01fUFdFOC1EcHVvU2VlNVVzSERudGlIcDFvZnRVbTVwOW9iZFV1TTdnVk40MmtWVDBYbDlOT2pBZVB1M3YwempNajNkQ2JBRGNjUjdaaGZqbnlIOVVnWEprazFnQ3ZjZnh5MFc5d1BDc0hzQ3hPTHBaRUN5eHJCWHU4V2VJRmRfOGVPNlRFX3BZSTNVX3ppcw?oc=5",
+        "published_at": "2026-11-08T19:13:41+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
         "in_scoring_window": true
       },
       {
@@ -256,28 +291,6 @@
         "source": "Tekedia",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTl9iR0tRTktEZlBDYVBkNEZIV19MUTlxdjl2cjNVUXZKamt1ajBtRDk3MjlyRERZOGJoWDJ0NkFyTC1UQzJEUERSTjJqVl9FMDNsZVk2eFBFWk1mSUlRdS1PcU9jWTZzQTFQMTZLSHJIMjBHM09wanhONmxQMVZmdUhmQlRRcTh0QThXaFdSMHdIMmpQNy1FbzRNQkhkdHhlTFZKWg?oc=5",
         "published_at": "2026-11-08T15:55:37+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "HSBC Says Strong Democratic Midterm Performance Could Pressure US Dollar in Near Term - Yahoo Finance",
-        "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUks5X2VVMWQ5bE9OUnQzVjBlVVk5dEpDRFlrWWEtQ2lmTHpYMjAtcm5sUTJuVHpJX0U1RkxqazdKU1BYLVN3aU5Eb0NjT19mbE1FUEtpNEh0c05TemdSSTdidmpiVVdfVmFrYVBqWHI3bkxybjZzMC1sQ2dkcEppU09HUm5MVmlzQjE4SEtZVE5nUlc2TTczLXUyY3U2U084NEhnS1dITQ?oc=5",
-        "published_at": "2026-11-08T14:59:56+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "WILL BITCOIN PUMP OR DUMP THIS WEEK? for BINANCE:BTCUSDT by forexcitypro_leemeenal - TradingView",
-        "source": "TradingView",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcXFDd2VUakZBTnUwV0NRTTZQZy1GazYwd2ZGaDhDQjBQMHpiWXNhR0tlYjcwMVV0bzdHMTJyTDJ0VVdBcTFwQ1RSdHUtNlpQamVfdVFIQW95VlBfOWhmT3NzdVk3Q0JQcDY4N0FBTFdITDY4cVVZQ0V1WWlmc2FpY3paTlJ4Q0EtaXlkRkRMRVI?oc=5",
-        "published_at": "2026-11-08T14:48:27+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
