@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-08T08:44:12+00:00",
-  "last_successful_refresh_at": "2026-11-08T08:44:12+00:00",
+  "generated_at": "2026-11-08T09:39:45+00:00",
+  "last_successful_refresh_at": "2026-11-08T09:39:45+00:00",
   "fundamental_bias": {
-    "bullish_pct": 40,
-    "bearish_pct": 60,
+    "bullish_pct": 43,
+    "bearish_pct": 57,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (40% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is mixed across 2 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (43% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bullish across 3 keyword-scored reports. US Dollar Index is the largest current influence (-6.8 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,9 +47,9 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "mixed tone across 2 scored headlines",
-        "impact_pct_points": 0.6,
-        "direction": "Mixed",
+        "trend_label": "bullish tone across 3 scored headlines",
+        "impact_pct_points": 3.5,
+        "direction": "Bullish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
@@ -64,17 +64,52 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-08T08:44:11+00:00",
+    "queried_at": "2026-11-08T09:39:44+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 2,
-    "scored_count": 2,
-    "bias_score": 0.05,
-    "bias_direction": "Mixed",
-    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is mixed.",
+    "matched_count": 3,
+    "scored_count": 3,
+    "bias_score": 0.283,
+    "bias_direction": "Bullish",
+    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is bullish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Gold Price Today, November 8: Precious metals tick higher on MCX during Diwali special trading session - ET Now",
+        "source": "ET Now",
+        "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNSHdBdW1QUEd0MmgzT1EwMU5QVkxKYnc0aDIxaWhpbGNLejZaaVdjdzg3Q3FMbU5NNm94UjdETkNJek1lbnlRUFNxUXBabHpXdEVEM3YwU3ZpYzlUYTZhN2dvM2RMTUpscDc1SXA0aEhRU1BGckl4NWI3dm9GYjRtOS1DTVFrelkwenh5R3dLa1VTRy1YU0Vnc3RBaVF2N1g3NTNPRi1hT0Y1QndGV3B1NUlFbHBBeFMxR0FyTk9NZ0FsNGF1VURfbEVjak9tRG1XcGVFN1BHdUtEaVRIbHZhblEwX3JUNk3SAewBQVVfeXFMTmpBbG53M1YzWG56blA1UlVGaUFVbG5USTcxZ1dhdHJmb3ZRS1ZhOS1TanJvWlJWalBXSllEbjZjay1oaUd5VUV6OVJwNU0xU2dPUUJCNnZITk9DVWVPSzVZUDRmZm40cFpiTFVBSlZ6T2Q1alF1WnZnT25EbktXNEh1VXZ2ZHNnTXFMRnkyTGJjbDJHcU9MaHAzT3Rqc3pRT2pmd2s4ekRJcUlLSEJlNzBKZlNtNnlVcHJ0WGZyYThta29DWm5mYUVXWVVMMmxiN19OYmVXYmNXVEttMnh5MU8yVlY1VzJONDhiVXk?oc=5",
+        "published_at": "2026-11-08T09:06:57+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold Records Biggest Weekly Rally Since August, Crude Oil Crashes Over 12% As Fed Rate Fears Cap Gains - Free Press Journal",
+        "source": "Free Press Journal",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPOFpyVXJoWHBKYk8wOWprMXJSRnlWY1BGdU9Vc0sxLWdsRHB3SG9PY3UzQUJ2ekYtY0pWZV9fVUtMT2xfRzJfdXZjUFpXcjVCQ09QalpHQUhBNklZTnpaTF9fSmppZmdRNzhPTjVLUjBid2NaZHZoU1Q5UHFjT3AteVFIdHRPaWVza0pENTZrd1czUXJjbnhQaWpKN1RXMExlSXI1RmhUMTZZbm1BYl9ZZFhUcTZEWGpfSzk1R1NQTmlMTE42SngtbXRWZ0NJUm9zbUdIRnlUeGLSAd4BQVVfeXFMTXpEeFlYQ0dyaXQ4N2V0SlZ3MmVZZG1jenRGQ3Q1dDJkRzBDc2hFRUJXNWhsWEJzZklYRms5cWxYLVJrbHYtaUxRbjg5RGpJLThVVnp6ZnNoeWgwd0xvWG9oWVBER3hIUWNQNkpHNHh3VHpWQlp0UmhqeHNXR3hwSjMzSGFUYkowLWw2MTlGcGJBeFJDNktIOVlQU2pLSEc2TTRURDE4SlFhUG13UW9SbVRYM2Y4Tkc1b2F4dy10b1hDSmF1SWNzUDRYN2N4cjRzWDVUWlNiSlVwSzE3ME1R?oc=5",
+        "published_at": "2026-11-08T08:54:28+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Exclusive: CD Rates Climb as Treasury Yields Fall, Raising Corporate Borrowing Costs - Seoul Economic Daily",
+        "source": "Seoul Economic Daily",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPX1lDQ2M5cm1ab0V0NGRzenJ5SXhxMjhyaG50Z2NZLTl6MHZNS0xjcGZzQzJTaFZVSnFxbzZHaGxSbl9ZTVQ1MXJUWEtDVVRheWY4amszWWRBazdLbUZmNUtDcmhfV2dtNlFpbHhVTWJRQ0dVR0RVemZsMzdsYUR3dC16andrMW5ydTkxMWt2WkZPMHdzTmVMM1k3SEVMRGM?oc=5",
+        "published_at": "2026-11-08T08:42:20+00:00",
+        "score": 0.75,
+        "topics": [
+          "Dovish rates"
+        ],
+        "direction": "Bullish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
       {
         "title": "XAU/USD Bullish Forecast: Soft US CPI Could Fuel Gold Breakout Past $4,140 Target - FXLeaders",
         "source": "FXLeaders",
@@ -144,8 +179,8 @@
         "in_scoring_window": true
       },
       {
-        "title": "US Inflation Set to Simmer Down Some After Recent Pickup - Bloomberg.com",
-        "source": "Bloomberg.com",
+        "title": "US Inflation Set to Simmer Down Some After Recent Pickup - Bloomberg",
+        "source": "Bloomberg",
         "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMHB3c0hUZDUwNkFjQmh3VW9PTGE3dmpzRkUwRWI2d25MZWhOcmRPOHhmaVdBNGp0YTF3WU9IaVQ0NVNtVG1nZDZTbXlYRVNWdmdpcUJ3cVdVcE5mMUltMWdwZE10Q3lmcFdHR2RINEtlcW54RW56ZkY1MnNsell5b3VLanVoTnh1Y0FKUVhZampkZ2xWUHJPOWxhSWVxa0VFRWhPbzdITTdjRzA?oc=5",
         "published_at": "2026-11-08T06:32:00+00:00",
         "score": 0.0,
@@ -159,17 +194,6 @@
         "source": "Rediff MoneyWiz",
         "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUDk4aGEyOUJ1T1N5OG4yaXpWa2lJeHJTVTA2b01tcFVIU0pKMEtNVTRuYzRFYnJQTXRzbTFJMGMxVlZidjNCQTJNYXFjTXA2V0M1Q3k2NUdCZ2xfbFhhTW5HMG15U1ZPS2hLT1Ytay0wMlJSS0RqRmctM1IyclRxQzBPTWItT1JMMFJGdTNDSGF5RGhIVzFiaWlhX0FVNElPNURwN21sUXFUSjTSAbABQVVfeXFMUHIweUhyalpEMzBUXzRBZlNQVGFOcUJIaTNaSWpyTkxxNDVQLTZ0U19OTXNpTFQ0V3VQZ3BJc0VoTkN4VnF1dmpOc3V2UXNqLUY1QmthcHA4b0xULUFoWXVhUmZiOHc0QWg5cm5jZ1dtb3NCSDJXcWZhdXd0TjNVcVlUVXVlWjNOVDdBbVZYb0txLWZIQ29YMDdRSUZHUnVGZE9fUUo2X2pnUFI5TkpBNTc?oc=5",
         "published_at": "2026-11-08T06:17:28+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Bullion may remain under pressure as markets track US-Iran war, inflation - Business Standard",
-        "source": "Business Standard",
-        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNR2xDbjRHR19fS3lpV3FKNnNVSmYtdk4tYVVSSFJvb1lTeTJPTlNJOWJqV3ZfTmowbEZGUjBNSk9aV2JHbjMxRWtmbkhidHk2dlRkQzNoNzB4TDF1Z05WbFc2WkZWcHoxUzMtY1kzbmJtZHhRWnlhd0tfZ0tRWWN2NDZPQUU1SGgzVXlTbEV5dkFfSmNIVEVFRlJwejZMaEdmT2FlanlMLVhibzk5c2hWUndHd3lpWk11RUQtN2RkMzc1Z3JyNS1aZF9LNnhrTVdlV2pFNW4wWFU0Ync5MUpz0gHkAUFVX3lxTE9uRkhMRUloQ2hjYWMzUmZuaXVqa3dXcjFGUjZEbVFJVnNaWlUwS2kya3lubGpuOFdSLWdBQmYtNDNXZ3V5Q2hEdjVvRm5RSEQ0RWVVOWFncXdEdVNlSlp1ZFd4emVCTThjdExJZEtJMGhvSDlfQjZGSWdPWHZFUzFZcE1qaVVXVEh6SFZUUXZQVHJTMS1FUDlzTjVOQ3JCX3liQlNPR0hXQ21MOWttZTRQWS1XUmtqVml5VHE2bHZJRVE0NENKV3o4T3JJLUdtNjBxTXJRb2VvajZkVnFyNlFvVGtmQQ?oc=5",
-        "published_at": "2026-11-08T06:17:09+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -256,43 +280,21 @@
         "in_scoring_window": true
       },
       {
+        "title": "Global AI and Semiconductor Stocks Plunge; S&P 500 Tumbles 4.4% in a Single Day as Markets Watch Whether Three Central Banks Will Raise Rates in December - BigGo Finance",
+        "source": "BigGo Finance",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBhdXJRSlZRRi1FZUZXTlI1UmNkd3RVcDlNUHhoVmM3Q3BraUtrZGM1T0htQnRNaXROaWFabWNyV1RKQWZkZ0lKeVdOUGxJRW1xRjVsYXktZ0syVlFPLUpBSTBZMWNQc3VJZHRXX245NWVveVNUdVE?oc=5",
+        "published_at": "2026-11-08T04:35:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Gasoline and oil prices today, November 8th: Lowest in 6 years - Laodong.vn",
         "source": "Laodong.vn",
         "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSHI0R01QZG9tWWJwNDN1R2ZSUFF1LUNGd0hpdE5IanpheHdpZ05tQU9Qb0xBRUh5ak1FeENKN05tRlJPR3JKX1M0N3NPdjJvLXR3NVl4MnVGYmNRSVVaS19BcHNtd2lsYW93aGlSN29xMHpuSURTUGtjbFFGazFUbndtUmJLQ0gtakZpZkt1YnNNbDJPSTFVLTN2dTdLa3M?oc=5",
         "published_at": "2026-11-08T04:15:20+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "S&P 500 Price Forecast: Strong Jobs Data Tests Rebound After AI Rout - FXEmpire",
-        "source": "FXEmpire",
-        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdTYyaE54bmJZTUtYV1Z3cWxFRG1sRktWUGU3TWdLcUJ6bjd3ZEgwS0x4eE1TVl9VUWlHVWRsM2JMSDh1aElmZWJyaURiOHFwY0xLN3V5RzBQUWhwVHFNRm54LWFXZWJoYnA4TnFIRjk4WGpIcGFNNmVPdE4wYU9Fek9QQV9vLW05V2ZrWGVKMm4tVGQwODNTVUk4RmxYOVhOVkVwbzhCQmJfbGN2MHdzRGFVd3A2d2lI?oc=5",
-        "published_at": "2026-11-08T03:51:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Tech's 'Benign Neglect' Ends: AI Scrutiny Meets 4.86% Yields - InteractiveCrypto",
-        "source": "InteractiveCrypto",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZ2NSRVViY0c1cGtlcVR3a3VnZmNFUXQ2UXFfMlR1em9wQVdseGR2LUlsY1lMT09GcHZHbzJGcEZjTVZsSk5VMGpRX08wU2tUSlQ4dmRRdy1aTFhydTA5SEpxWmUzTTZGY1Z6c1FGa2pmZFllTUloS2ZQQTNxeDh4aXNFMDB2c3J5N2k2Y2hrbGYzcVNH?oc=5",
-        "published_at": "2026-11-08T02:48:07+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "U.S. Stock Selloff Sends Investors Into Treasuries Ahead of Jobs Report - www.tokenpost.com",
-        "source": "www.tokenpost.com",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1qLVRsY3dON0Q4NEJOTFBrQ0ZtZHJTblY4MkxxdHgteFZvWWQ3N1RhYkFzMFpLNVZYamlsNFRkQzcxYk40X3NOaGQ4TmVteU9oSFlYSGlyX3FvZw?oc=5",
-        "published_at": "2026-11-08T01:59:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
