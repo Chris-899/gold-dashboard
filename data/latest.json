@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-14T09:39:32+00:00",
-  "last_successful_refresh_at": "2026-11-14T09:39:32+00:00",
+  "generated_at": "2026-11-14T10:35:58+00:00",
+  "last_successful_refresh_at": "2026-11-14T10:35:58+00:00",
   "fundamental_bias": {
-    "bullish_pct": 41,
-    "bearish_pct": 59,
+    "bullish_pct": 40,
+    "bearish_pct": 60,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (41% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 3 keyword-scored reports. Recent news headlines is the largest current influence (-5.2 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (40% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 4 keyword-scored reports. Recent news headlines is the largest current influence (-6.2 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,8 +47,8 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 3 scored headlines",
-        "impact_pct_points": -5.2,
+        "trend_label": "bearish tone across 4 scored headlines",
+        "impact_pct_points": -6.2,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
@@ -64,17 +64,50 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-14T09:39:31+00:00",
+    "queried_at": "2026-11-14T10:35:57+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 3,
-    "scored_count": 3,
-    "bias_score": -0.417,
+    "matched_count": 4,
+    "scored_count": 4,
+    "bias_score": -0.5,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 3 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 4 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Oil Prices Mixed Amid Surplus Fears, Geopolitical Tensions - Business Post Nigeria",
+        "source": "Business Post Nigeria",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQXNrZGtaYXJDOVAxN2kxcVBNME1NNGthT01SSGtUSmhyanl3cnplbGxyWm9xSC1JVHo0VzFYRGNSVHUyVjFYd3lBMEJBVmhkOXB1MzEzRkhKbS0zM2kyb0dGTmJPaWtMU3U2aVlka0xOak04NHctVldsWDJnQnpCOE9yTjBDUGtEUWVjRVZhNVdSNU14?oc=5",
+        "published_at": "2026-11-14T10:18:28+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold price reverses at the last minute, the 3,900 USD/ounce mark is still challenging - Laodong.vn",
+        "source": "Laodong.vn",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPOEdoRDJ4UEJCS3VlU2x1bV9qTG9WLWptSDJRWnphdF9KcGNQSzd6cllCeTRJVzNDakFua210S2hjdVc5U0ozMW00NkpFSVd1WFFuLXpLX3VmVTNld1lSelVZa0EtVEhERkhQM0lrcjluQUwtMXBFazNQQ2daUF8wV0VITkhVUUdxeHV1VVJ2cHJ0RlNSdkRPeXRmVDZhN2dSQjVHZmZZNHZBMlJ4S2F4RGRR?oc=5",
+        "published_at": "2026-11-14T10:02:46+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Crude Oil Prices Down In Week As Russian Exports Surge - MarketForces Africa",
+        "source": "MarketForces Africa",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQRVRqNUwzdzhjcml0MXlranBzVTRJSjBmRGY0OW91WFE1UzkxcVlOdFp1T1dQZVYzM2E1ZUVmYk51cmJmY3BjbmI4c2lVMXR4WExtaUJDTTZlak9BS1EyX2JkdFgwcmpYS3FLdVFKM1llajVsMnU1Rm80ZnZBRm5DalJ2N3I1WFZO?oc=5",
+        "published_at": "2026-11-14T10:02:35+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "New Inflation Data Offers Terrible News for President Donald Trump's Economy and the AI-Driven Bull Market - The Motley Fool",
         "source": "The Motley Fool",
@@ -123,7 +156,7 @@
         "title": "Gold futures rose Friday, but the rally failed. What I’m watching next week - investingLive",
         "source": "investingLive",
         "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQS3JGTTlrR2tPcTdQTGQzRGJMU2ZGOVhNZGlCLXZCbENMNUktdm5XQy1ZOVFwS1FPYVhHamVnUkNiQTJWOVgxVV9qdE1tUDl2Nmp1a0hDTWJvR0FhZDg2a2Q5ZDFqcDZITFFCUDgwRU1QYXlWRGx4S1ptYmIta0F3OEpoOW1jTTByVDQ2alBocGVCOWhjdWprdWNybWVvSnpoamxpZXl0SElQcTBnN0RYMWN3?oc=5",
-        "published_at": "2026-11-14T07:42:55+00:00",
+        "published_at": "2026-11-14T07:43:20+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -176,6 +209,19 @@
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Dollar Rallies As Markets Reprice The Fed’s Next Move - Finimize",
+        "source": "Finimize",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSmpVdlgwTGxjOGNTNVBUUWlRUC1CUi1zNjc3ZjhCMkprZTZET3FDRUVOdFhYdElsalpTdS1ma2ZLb2xwbTRoYVhUaGxXQ19LaDU1R1JzYUFhRXprYWRTLU1TSGhyNUQ5NkFRM1NZM2JDUUNmZk9ld1pEc2pnb3prR1h6SGVSOWVU?oc=5",
+        "published_at": "2026-11-14T06:12:28+00:00",
+        "score": -0.75,
+        "topics": [
+          "USD strength"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
         "in_scoring_window": true
       },
       {
@@ -255,50 +301,6 @@
         ],
         "direction": "Bullish",
         "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "3 U.S. Bank Stocks That Could Benefit If Inflation Keeps Rates Higher - Simply Wall St",
-        "source": "Simply Wall St",
-        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOVW5VX19yaVAxa3JxanlXWlpTMWx5SmJhbGQ5ZFRLdzUtbkpsWHNwaVlZNG81WXJrMlRaMmphd2d0UHJjWjhlYWRETEN1N2ZRenRkNEFteFk4MjQ5ZjEyTllyZ21tdUVabW5CVHZ0OVJMT1dYZXJOY3NMWGtWb1Roc2VsVVp3enduSDkwMEJ3aGowcDVXdjRTR19FcTRjTTd3dFRKOWhKYjJPVGpMcDBaQ2ZIY281R3dyZFFta2ZEOFBpRDRMVXhyLXg3N1FtQWdfdzdV0gHYAUFVX3lxTE8tdm1qRFpkalc1OTFabVFMdFhLUzdpUHFETEJtVkZveTliWDRLSlVRV0ZybnliNnRMTkczSGZFbHh1Sno3MGYydEZXd25MLTNoNEtPZWUxcEN2OHJjMVJxUjVIYnFsamc5S0NDa25RS2d1ZExKX284ZlRlR2p4YnVvUWgyTGRDMkl4ZjVsaWJDV0NQNllUMmVKLTY4V1BxR0lHQndEUndFWTRmak9Mbmt1dHZIcGVIV1ZOTHZ1OVlQWFh4R2dSY1BVSmhMUEhjNTNUVlFuUDJVZg?oc=5",
-        "published_at": "2026-11-14T05:19:29+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gasoline and oil prices today, November 14th: Sharp decrease of 14-17% in two weeks - Laodong.vn",
-        "source": "Laodong.vn",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOaGV1Y1JLeDZTTTB0Yjh0dWk2ZzNvUS0zMGN5TVB4aWFXMlJXbHNTbHlfb2NGOTU0bzB1SFh1NW02ajNqc2NsVXdZR2ZHNUN5LXRxQURJWllxR3VVNFVBUXg1WVJHbzgtXzNFYUdqUFl4YkR6a1BUTDBOVmFNbVd4T3hEbVVuWTVDTmNMYTRxT2hHRDRkYjBDdDBwa1pMT0NNMVBuNjZn?oc=5",
-        "published_at": "2026-11-14T04:39:03+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "MSD: U.S. Dollar-Heavy Portfolio Likely To Weigh On Returns (Downgrade) - Seeking Alpha",
-        "source": "Seeking Alpha",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNM1lvNjZCeWI4cGpBVFl2cElTMk14ZDg2cExEc2VwU0NZckNKdkNqMFZWMzlFam1SMDF4eFg5S210eHEweGhEMlRONWZVcmQ2a21fQ1pGUS1oTk9ZcDlCVTh6emJDR3ZfQmJHRmE4eGRKRTlYb1Q4VWFwU0p2b3FSckNHSzZMTk41NmVTSDI0T01BdlFjXy1IUGhMZms2dw?oc=5",
-        "published_at": "2026-11-14T03:33:37+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "2-Year Treasury Yield Jumps to 4.86%, Signaling a Prolonged Fed Hold - 24/7 Wall St.",
-        "source": "24/7 Wall St.",
-        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPYmw5M1VjM2xpa1BITTQyQUZ0UWhNS2FwTXBRdzRkOTFtRjdyazZ6ZXpEZ002T3ZJMy01ZHZwUXNrRzdiSWViQ0hvZGNFVF94MnVaX0diZ3o5enRDbTdZWVY2WkczMEp3Y1J1OVh1OWVINUllZ1J2U01EWDJkY3hYTjhXSDZjS0piZmpkU0dkNVViSGtTb1Z5djNpU1Jzb3N1U3JkU1ZSUDYtODZPX2FfWGlKTGhLSFVTbk54a3piZzVZVl9mS3lHLQ?oc=5",
-        "published_at": "2026-11-14T03:23:35+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
         "in_scoring_window": true
       }
     ]
