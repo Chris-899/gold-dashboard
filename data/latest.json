@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-13T23:11:05+00:00",
-  "last_successful_refresh_at": "2026-11-13T23:11:05+00:00",
+  "generated_at": "2026-11-14T00:04:20+00:00",
+  "last_successful_refresh_at": "2026-11-14T00:04:20+00:00",
   "fundamental_bias": {
     "bullish_pct": 41,
     "bearish_pct": 59,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (41% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 6 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (41% model score). USD direction and oil/inflation context: 1 of 2 factors support gold; 1 factor weighs against it. Recent headline tone is bearish across 5 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -24,7 +24,7 @@
         "name": "WTI crude oil",
         "weight_pct": 35,
         "change_pct_24h": 0.248,
-        "change_pct_5d": -1.865,
+        "change_pct_5d": -1.876,
         "trend_label": "up over 24 hours",
         "impact_pct_points": 2.2,
         "direction": "Supports gold",
@@ -35,7 +35,7 @@
         "name": "Gold futures",
         "weight_pct": 0,
         "change_pct_24h": 0.152,
-        "change_pct_5d": -5.922,
+        "change_pct_5d": -5.919,
         "trend_label": "up over 24 hours",
         "impact_pct_points": 0.0,
         "direction": "Gold price confirmation",
@@ -47,7 +47,7 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 6 scored headlines",
+        "trend_label": "bearish tone across 5 scored headlines",
         "impact_pct_points": -9.4,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
@@ -64,17 +64,28 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-13T23:11:03+00:00",
+    "queried_at": "2026-11-14T00:04:19+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 6,
-    "scored_count": 6,
+    "matched_count": 5,
+    "scored_count": 5,
     "bias_score": -0.75,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 6 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 5 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Gold prices today, November 14th: Gold remains low, risk of further decline. - Vietnam.vn",
+        "source": "Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQT3dyZnl0OC1taG9VSFZIZ3ZHMWQtRWdpb2JhZVBrOFY3WlItbV9NTTA3czNydFZVZmhnUjBlbVRRM3VfSUxmVE1XZ0RtLXlCZUxCZHdlcUUyUXE3Z1BlaktFUkNucnZZcXdpNllNN21DcW5sUXA2WTVCb0hyLTNOd3dxZGZoRUo3T09J?oc=5",
+        "published_at": "2026-11-13T23:43:57+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Today's USD exchange rate (November 14): The US dollar strengthens sharply, nearing its highest level in 19 months. - Vietnam.vn",
         "source": "Vietnam.vn",
@@ -190,8 +201,8 @@
         "in_scoring_window": true
       },
       {
-        "title": "Dollar Poised for Best Week in Over a Month on Fed Hike Bets - Bloomberg.com",
-        "source": "Bloomberg.com",
+        "title": "Dollar Poised for Best Week in Over a Month on Fed Hike Bets - Bloomberg",
+        "source": "Bloomberg",
         "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOHh5SEF6X2tQTUhkaEpDZk9SWTB2Wk9BTEQxVzRsQTRtOTl3YUswQ2VVaGc2TmQtT2cwRE55SmM2S1BtTFlNMlRmLWNrdklpekpnQV83SVdGOG5PQnRMdEF6NG4zUVZ4NDFNd0xWUU0xNDlwTEdCWWoydmg5aFdZNC1zVU5GOEdlMzFZRlVGckI2OFRJRTdhU3hjNG9TQ0NDWFN6MEFDQW1iOVF3cWJSQQ?oc=5",
         "published_at": "2026-11-13T21:32:24+00:00",
         "score": 0.0,
@@ -225,6 +236,17 @@
         "in_scoring_window": true
       },
       {
+        "title": "Oil Prices Set For Second Weekly Fall As Iran Blockade Persists - BW Businessworld",
+        "source": "BW Businessworld",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObmRHRmpwblM5X0xmQm9XYmVvd1M5N1p2czUwZ1dycVdwVDlrSDU2OWEwMVpsbVZQaWQxLUMzWklvbExiQlRfUlQ5MmlUMXc0WGpLd3I1T1VwcF8wSTMxSXVmVXFmVWY4dnZBWkwxMVJmRTdBQnpLMUd6X19wc1ZCekhLb0EzVFFPd3FuMjhRT3FXWFQyRG5xdzJLV0xheVJtaFdYN2ZfMFRuTFU?oc=5",
+        "published_at": "2026-11-13T21:21:02+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "Bitcoin Slips Below $70,000 as Higher Yields Weigh on Crypto - Bloomberg",
         "source": "Bloomberg",
         "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbDBSRFdONDlCQWdnQTRaTDVQNUVyLVBaak5HWUMyazNza1NndXVxaDYxdHAwdlVhWXpZSXRjSmJmd2p3MVRJSUhCeWljTV9MSVhkb29tejk1Q2QtQzFsZXZ0QzhZZkFjOXdFTGY5SWpGUmRmWlNreG1NbUJOd3l1X3RSRUF1VFRITG5ybVBiR3FYZXFMSXdzM1NHUkYwQ3FrTkFWTy1EbzlsckxsalI4?oc=5",
@@ -240,17 +262,6 @@
         "source": "WSJ",
         "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWWREYWtpWllac2NUdW9FOW1tdXZrTS1FclFzZnA4TEhkOEFJQ0liTEZZdElXbU5BUHMtTnNVME1zYUVpWHY5VXZmM0Z4YWRMY0U4YzVFdldTOEhEQUpSSnluaXNNM2VVVlQ0YnNXR0hUNHRhM1gwSWhtZXl3QlB2QXR5aUVXajZBTTlRdDhB?oc=5",
         "published_at": "2026-11-13T21:01:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "XAUUSD|Gold|Price:3878.220|Chg%:+3.670 - TradingKey",
-        "source": "TradingKey",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBXYUYtXzJ5MUQ3Q0dqanZ1VjhZcGk2emdzU2hITXhDZl84NmVweXpqeXJlcE1aNXJveVZBdks1TXctbTcyMU1iUzdSdWpmUmRpb3RSUGNQTDU1S3dXVmFKNQ?oc=5",
-        "published_at": "2026-11-13T20:54:15+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -293,19 +304,6 @@
         "direction": "Bearish",
         "score_status": "included in score",
         "in_scoring_window": true
-      },
-      {
-        "title": "Gold, Silver Head For Weekly Losses As Treasury Yields Climb - Forbes Middle East",
-        "source": "Forbes Middle East",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRVRwRk9lRFp3UEY1S0hVTkdvRXJlWExqZkM2UkxNU3A3cnFHYzNuMnUzM2NVbTN4MjdzQnd4ZW5rX2lIXy10bllCaEtmNW9GZktDdDFvVHd1V3c5YlYzMC1zdTMzLW1qRDJhTjI1MmFrVFo4VmZZWFdwT1czRlp4aW1NTmd2TVdmYXA4QnZBejBZaWRCVk9STXI4SGxWM2t2Qi14N1BiY0ktaGhQVFd1WmEtcw?oc=5",
-        "published_at": "2026-11-13T20:40:53+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
       }
     ]
   },
@@ -331,7 +329,7 @@
       "currency": "USD / barrel",
       "price": 88.92,
       "change_pct_24h": 0.248,
-      "change_pct_5d": -1.865,
+      "change_pct_5d": -1.876,
       "short_trend_label": "up over 24 hours",
       "trend_label": "down over 5 trading days",
       "bias_contribution": 0.0434,
@@ -345,7 +343,7 @@
       "currency": "USD / troy oz",
       "price": 3887.6001,
       "change_pct_24h": 0.152,
-      "change_pct_5d": -5.922,
+      "change_pct_5d": -5.919,
       "short_trend_label": "up over 24 hours",
       "trend_label": "down over 5 trading days",
       "bias_contribution": 0.0,
