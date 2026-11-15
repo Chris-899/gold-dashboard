@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-15T08:51:36+00:00",
-  "last_successful_refresh_at": "2026-11-15T08:51:36+00:00",
+  "generated_at": "2026-11-15T09:41:16+00:00",
+  "last_successful_refresh_at": "2026-11-15T09:41:16+00:00",
   "fundamental_bias": {
     "bullish_pct": 37,
     "bearish_pct": 63,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (37% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 1 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (37% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 2 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,7 +47,7 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 1 scored headlines",
+        "trend_label": "bearish tone across 2 scored headlines",
         "impact_pct_points": -9.4,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
@@ -64,22 +64,57 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-15T08:51:35+00:00",
+    "queried_at": "2026-11-15T09:41:14+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 1,
-    "scored_count": 1,
+    "matched_count": 2,
+    "scored_count": 2,
     "bias_score": -0.75,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 1 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Arthur Hayes Says Fed Rate Hikes Add Liquidity and Could Fuel Bitcoin Buying - SSBCrack",
+        "source": "SSBCrack",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcDZwUVBRaGVnWDdKY1dERzFTZW0yWEIzRkpTdVZfOWtWZGg2Z3NpLWFIWXdZLWROU0w4M0s5RVBzdzZ0S09GVVhnTzFtdFNTcjRDeTVKOHFRbFFuZHUyeU83RUp2UENVR3JzMXVHeTR0TGN0aHRPalVSdnBubkM2SXl4OUVYQTZsNXdJOHdkUXZzeWtZUVY3VXVpU2kwSUNIQkxkVWVB?oc=5",
+        "published_at": "2026-11-15T09:07:16+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "President Donald Trump Claims, \"Tariffs Don't Cause Inflation, They Cause Wealth\" -- but Economic Data Says Otherwise - The Motley Fool",
+        "source": "The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcXlUTGN2WVlmZERSZS15Uy1GTXdhQTNYbjVjUmVZeGVQOFdIREIyM01nVDhndWpJeXEwOXRuaFF3ai1LMk1iN2RLSzVPeTRWeDBxZW9jRFZ5R1cxU3pGUm1BaTQ0dWRfdkpZRFFBbEhXem9Sb0JVUVFaYjkxUGdoVDNld3RxNVZtM2hoa1VpYThZZE5QamZzeFdWUDF6Z1dBVXlLNGN6SWxYcW1PeVJYVEo5Z244S2w0UjlKX0tDRmFlU3Z6WW5iLTdwdmNDOFlnN1FCdg?oc=5",
+        "published_at": "2026-11-15T09:06:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Global Tech Jitters and Surging U.S. Yields: What Do Nvidia’s Shake-Up and Dollar Strength Mean for Thailand? - Thailand Business News",
         "source": "Thailand Business News",
         "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQb2FfaXBpOUdkOUNEOVV0SkdJMGE1eERpRVJyWFNlYnd6eElINVZZVnBtbFBadmVGbFFqNTBrZUMyQW5kMzJkQnV3YmxzRG12MUtlNmdlYkx2d1MxVDVXV0w0ek1pRFpHWEs3U0VrWVFSSXpha2xSVUFYRkNEUzhUb0ppdmUtUFM1S3RUbnFtZjVJSHRLUWoxd2o3VHJFeS16S0t6NmE5Q2pIR3YzZk1GS016NGdlQjIwN2hSQ2JZOU1DNzRPTnRPcDg4XzRxeE1WWnZJenBaX3RZX3d6Qng3QnBPNjRNZzU3RFIwWERn?oc=5",
         "published_at": "2026-11-15T08:20:02+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "EUR/USD (EURUSD=X) live rate, chart and news - Yahoo Finance UK",
+        "source": "Yahoo Finance UK",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MVm5mak5jUHN2V1ktajNpZjdHRjVKUlFWLTZsTWtROWp6M2xWU2xaM3Y2NHZOVDRKLXl6UkxaYmJJeVFsQ3dsWUE1Mmlsa2tCNkNZaEJseTF5Zw?oc=5",
+        "published_at": "2026-11-15T08:15:46+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -258,39 +293,6 @@
         "source": "Ticker News",
         "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOb0FYUUFYNzBoX19tZ2lDMVJQN0R0NHBfT1VJUmhsVlNKWFFVSWpQWks2WkNXNzlNcFVKYzU1YnNQMnFyY3BiX2NWcGo3c3NkZS10aTMxT3AxdFVBbWlMRkRnZ1gtelllTVNBUXZfWlJfbnJZLU05TjlWX1YxS2hpU3BpdDBtMDJ6dkd4d3VyM2VxbVJRaHFv?oc=5",
         "published_at": "2026-11-15T02:24:52+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gasoline and diesel prices today, November 15th: Both global and domestic prices saw a downward trend this week. - Vietnam.vn",
-        "source": "Vietnam.vn",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNM1ZfWlNXTVZURWFnMEJPV1JLOFJxTzh3cnQyQ3NPX2l0MWVkVng1bVlUd2hBSWUzaEdwRnpTT3dkQTBnTDlZcUdEanlPUk9pZmw2Zm1WVGM0WG9yczIzMGs5ZDJ2NDJiZ21xeGNaSy1QLUt2UEJ5NHlGQi1TTG5jQVkyQmoxQmFQYVZPX1RnSDdqbHRSUGRVZnJhNk1QZw?oc=5",
-        "published_at": "2026-11-15T02:16:39+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Is Bitcoin Going to Crash Toward $60K? Here’s What Investors Should Watch - TradingView",
-        "source": "TradingView",
-        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPYVdvSVdEcHlJVXBUckp3SjNPQzRtQm5hWmdpUC1kb2h1Nm1jcmF1WUZNZFdwSHJfb2w0bGN0aEN1aUx5T3M1cmQteW12LWZ2ZlRXaUZZcmIzWTNIcW8xeTFnaXU3MGtUTzVSNWFFZFBiWnU3VUc0MmZqTTFXRXZlbHNJMVhIUTV1Vnd3OU4wdlUyN1YtYTdMbHVmOFpoTkZaTkVaSGY0SUtEMF9KcHRNeVpNRVVJVW83OWZUS2x4dG9TSGJkdUxPWngzZw?oc=5",
-        "published_at": "2026-11-15T02:14:32+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Treasury Yields Snap Back on Ugly Inflation, Rough 10-Year & 30-Year Treasury Auctions. Bond Bloodbath Returns - Wolf Street",
-        "source": "Wolf Street",
-        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOYjJXazFzLW5xNFM3WXBKTHdmeGl5U1hfVjZtdFJhdmlWZ1ozQnNiWFlGdEtYRDluZWhnSTZjOGFjNi1ldmtoRV9TTWZUdlhJT2RrYndYMUtra2FmV0R5U1kzbU1Pbzc5VnU4NkJfcDE3SUZGWnBNN052c3ZIX3BGUWo1MHZjSGdnMWo2emd2NmtFRThhTldVQnI0ZzZ0Z0pRUlppLU8xZUdaMVA2MUlvN3JKY3lCSl9JN09oS19lTFlaTmQwUEota2tvaEFBM2UyTThzZ1cwdGU?oc=5",
-        "published_at": "2026-11-15T02:13:02+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
