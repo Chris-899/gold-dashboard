@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-14T23:05:28+00:00",
-  "last_successful_refresh_at": "2026-11-14T23:05:28+00:00",
+  "generated_at": "2026-11-15T00:01:53+00:00",
+  "last_successful_refresh_at": "2026-11-15T00:01:53+00:00",
   "fundamental_bias": {
     "bullish_pct": 37,
     "bearish_pct": 63,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (37% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 7 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (37% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 8 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,7 +47,7 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 7 scored headlines",
+        "trend_label": "bearish tone across 8 scored headlines",
         "impact_pct_points": -9.4,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
@@ -64,17 +64,41 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-14T23:05:26+00:00",
+    "queried_at": "2026-11-15T00:01:51+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 7,
-    "scored_count": 7,
+    "matched_count": 8,
+    "scored_count": 8,
     "bias_score": -0.75,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 7 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 8 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "Gold prices today, November 15th: Global prices plummet, SJC gold price drops by 3.5 million VND/ounce. - Vietnam.vn",
+        "source": "Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNZFd2NHJLVkt2bEJWNDRMRGtMcEJ5aGJwelFudDJ2ZzhTcWxVRi00bU9XSndRc2h6TFU4ZnZJTkF4ZEVndjdWRmNROUxDQThpZnZObEdSNXdPZEt6QjBZQXEzU0NJWWVSM0p0NnFkNnFEYmRWM1BJTkJNSTAtb0VvdnBOUXRNSkx1Qk5VRHJnSDlucEJaaXFuZXFNOGktSkltc1E?oc=5",
+        "published_at": "2026-11-14T23:57:39+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Fed's Collins says 'gradual path' of rate hikes is best for the economy - Seeking Alpha",
+        "source": "Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZUw1RUQtb0RrNGNHcDFNa0dTWGRsTEpLdDlBWnZra2NEWjE4OTNvRU5HZTVma29kTUpoOTJmdXFJcDdzUHR1N0FVOXZ2Wk91c2hPUTZhVEQ1NjR4b3ZnZmpjRmJJaGI4TDRSd2ZCS0RubHAtaXM3S1dhT3ptVVZrUjNqSlBwQnJxUVBjRkJrUFpIdWZkRGdn?oc=5",
+        "published_at": "2026-11-14T22:59:18+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
       {
         "title": "NEAR declines with US inflation surprise and Fed warning reducing crypto demand - Traders Union",
         "source": "Traders Union",
@@ -108,6 +132,17 @@
         ],
         "direction": "Bearish",
         "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold Price Today | Price of Gold Per Ounce | 24 Hour Spot Chart - Kitco",
+        "source": "Kitco",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBnU2dTNUduLWh4WmxVQy1ndS1jN01abVlCeTNTMnFMbFdmS1d6TnFCekxTZVlXNGtKdnNRN3plT00yZm5LQmh6Rg?oc=5",
+        "published_at": "2026-11-14T20:26:38+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
         "in_scoring_window": true
       },
       {
@@ -270,39 +305,6 @@
         "source": "الإذاعة الجزائرية |",
         "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBDbGMtLURQcEN0bE41Tnk4em5tSm8zYjAtQVhvZ25pcV9PSUpnVmRRTDc4Z2VNQzN6RzlnNTFiNjBPU2hDb0ljaVQ0Mk1wRE1CSTh3UA?oc=5",
         "published_at": "2026-11-14T16:11:55+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold Price Slips to Key Support as Fed Rate Risks and GLD ETF Outflows Build - Benzinga",
-        "source": "Benzinga",
-        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSGM3TWZaYlNGVlJHRnV4OXNWNG5iWU9SN3hQYzRibnprTldmMU9oVXlwYVBXWWlfSTd3MXZsMXFZZGw2Ui05Y0xxTGVqRUhLSThyUWg3RDA2LU1SUFVxRVR4OWVWN0lZQmRMbjBRWXpQdTc5UzhMVDRRTHdxVGVINGhwRzdzS1hhQS1IaWxnYTZYN1NDRGRfN3NEVWhlclRRY2VfQ0Q4SDlGVnUxa0NDWEdfbVJWQXY1dGFDN3VYaTNYOEliTFl2SFRyZ2dLYVF4YlE?oc=5",
-        "published_at": "2026-11-14T15:30:05+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "The U.S. Just Posted a Record $404 Billion October Deficit. Ray Dalio's Warning Is Looking Even More Urgent - 24/7 Wall St.",
-        "source": "24/7 Wall St.",
-        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQYlZpSzBmc3ZtRzBFeXhOWXV1RTM1U18zZG5iYS1pU3d5dkdxaUFqRzVyQXdtWUVIQmxFUW90YkY2Q21sYTVRUnpPN29WSGxEUnlpWmdWaF8zT0toRzRsTklhdTZZajI3b0lxSDN4dExHaTdqQVduSC1HQlZraWZOMDNXWTVMOVpyYU1XRDIxaWlLMjBXakx1Y3ZWcWU3dW03QXFhZHc0ZWp0ekdyeVd5NWdHbUo0X3gyNkJxNHNYd2JqVl9JMlRQWXktaDZnSnoxSGwyUTA5bndOdTZBb1BsVA?oc=5",
-        "published_at": "2026-11-14T15:30:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "US Dollar Technical Outlook: DXY Bulls Fight to Hold Critical Support Ahead of NFP - StoneX",
-        "source": "StoneX",
-        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdHc2TWtFc2Z4MlBnckNieHZmU1JpMEFqVHdxN2UwM3I0UTJVZUR4WkpFUTdJNktrR292eUtHOV8wLVJtMjhYWUJ1NDJDOTNkb2lnWlR1bUtuRS14U0JOQmNsbmhaNlBGWm8wbmtVUmo1b1V0d21GU0N4X3NxcDlxQzk1QVJZV19NTE5TTlNZTk5sT3NTNnl0TFhISWRkLUQ0RWw3ZFBNbkh6YUVRS2E3NU5yb29tWFRCNkpqV0p3QmQ3TE1kbFlldA?oc=5",
-        "published_at": "2026-11-14T14:37:10+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
