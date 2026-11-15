@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-15T10:38:25+00:00",
-  "last_successful_refresh_at": "2026-11-15T10:38:25+00:00",
+  "generated_at": "2026-11-15T11:33:45+00:00",
+  "last_successful_refresh_at": "2026-11-15T11:33:45+00:00",
   "fundamental_bias": {
     "bullish_pct": 37,
     "bearish_pct": 63,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (37% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 1 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (37% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 2 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
@@ -47,7 +47,7 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 1 scored headlines",
+        "trend_label": "bearish tone across 2 scored headlines",
         "impact_pct_points": -9.4,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
@@ -64,17 +64,74 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-15T10:38:24+00:00",
+    "queried_at": "2026-11-15T11:33:43+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 1,
-    "scored_count": 1,
+    "matched_count": 2,
+    "scored_count": 2,
     "bias_score": -0.75,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 1 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "USD/JPY Nears 160 as Intervention Risks Loom and Rising Treasury Yields Support the Dollar - SSBCrack",
+        "source": "SSBCrack",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTFhoTXoxMTJQZDQ4WllneWthMk9yc2dOLWJ6UjE1ak9PRVN4Nkd2X2VWNWJaYy1yMUVvZGRKQ3Q3ZE55YUhXV1M4YWZzUjIwWDk4a3BUMGRWdHRuc2E2d2xqbk1PTXN1NkI2R05ydWNsNW9fdmNGNjRCZVE4QjllN3Z0MmhqQ0dsZlNjV3RpRFlDTDN5OXpfc0JIbzRTb1ExcU5nbFFCcnROSlJUM0VEYTRLc2VZU2Fa?oc=5",
+        "published_at": "2026-11-15T11:19:13+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Dalal Street Week Ahead: WPI inflation, crude oil among 10 key factors to watch - Moneycontrol.com",
+        "source": "Moneycontrol.com",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdzljNDRQQmlyTUhaamFwZVFqZ3R5MUROSk1hSnJSTXNWZFpKSVZ2MnRyYUJIemxLOHZKSDEySHVyTGYza1BmZ1B5Q3dtOGFVY1VWeVBidVdKNmdGcXpjVTZab3hsYVJ0VmpoTFBYQ2NvLWF3LWR1VGFLNGZjNWJudml5a092ckNEMkZTa2dmMnpUSXMwM2ZLRm1HSE1GcXotSUh1cjh4M2tWZEk2VU5jNzZkM2Z2YmxULUY1TW5DV3J1cFA5VEdYVnlhWkFVRTRIUXRNUzZJMlA0UQ?oc=5",
+        "published_at": "2026-11-15T11:12:45+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold Prices in Egypt Fall by EGP 245 in a Week as Global Ounce Drops 4.6% - Sada Elbalad English",
+        "source": "Sada Elbalad English",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaXJXdXV1eWh4VDFhUVNtN2pWN2xWTHJacTZnWC1zSnlZUEYzeFlLUWxlUkVmU1Z1Wm5SSzQzQ29RbVB3bHBBdlJLaUsxV0wyS0lFZlhkSTBocWhuQlBmYWhDdDNTN21OcU5QbEtGYTNSSTZQOGRKVlZQUUVraG0wdktnSG9VdllsT29xanFvbTdqZw?oc=5",
+        "published_at": "2026-11-15T11:12:37+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Ethereum Tumbles As Rising Fed Rate Hike Odds Trigger Crypto Selloff - MarketForces Africa",
+        "source": "MarketForces Africa",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOM1hiLS15amtGVVYtdUpRTDZtZjFqM0dNNkFhN1otMHlBUFJFMUNfNlZZdXdCaXRBY3BiTFVCaEM0SUowdlZtYVVHNXBMdXp1X0ExV2NvWXZkdDdwdnA5cndNWlRYOGR1T2U5UHlSN0l5VVZ4Ti1zSlNpWWZlWXZJTW9EY3VXZXJWTGFITDF1a1VGalp4dHhiWkRtQQ?oc=5",
+        "published_at": "2026-11-15T10:51:07+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "US dollar outlook: Nasdaq breakdown raises stakes for EUR/USD, USD/JPY - StoneX",
+        "source": "StoneX",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZGZlUGllU0xGVW40X3RZUk10NXdvb2tZcDNLTXFtZFpXVFo5LU9nNFBSeGFaN25CSDNfMXo3SGR5SC1rMER4V09peGNZanBiMVpQX3ZtZ0Y5ZGJ0VC15ek1nUnFaRU1kQzJiS2NKRzRUN1RqNlZwVFVIODY5emxCaHpBeGRHWHY4NUNDWnhscFFscFk0UnNrMjNES21PQ0VhYndrc3R3M3RLSHFQeGktWDhCcFpCbkE?oc=5",
+        "published_at": "2026-11-15T10:27:25+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
       {
         "title": "Philippine Treasury yields seen mixed as Fed, BSP tightening outlook shapes auctions - Traders Union",
         "source": "Traders Union",
@@ -120,10 +177,32 @@
         "in_scoring_window": true
       },
       {
+        "title": "Oil Price Uncertainty as Negotiations Continue - Energy News, Top Headlines, Commentaries, Features & Events - EnergyNow.com",
+        "source": "EnergyNow.com",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUWMzSkp0RHJnYTQtRk83NFVnaTlsNnE3eGhWbmZ1WDZXNkZuZUk2UXZoTGxZMTRhVG1xYWxQQ0JQSnFPN1JhaG1nR200Z25XTk16d3AzSkxzTE1wUHhUWVJTLXFNRzhLMnhBLWNnakpOU2VDMDVILXRsLWVJck1PVnR4UGw?oc=5",
+        "published_at": "2026-11-15T09:06:47+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
         "title": "President Donald Trump Claims, \"Tariffs Don't Cause Inflation, They Cause Wealth\" -- but Economic Data Says Otherwise - The Motley Fool",
         "source": "The Motley Fool",
         "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcXlUTGN2WVlmZERSZS15Uy1GTXdhQTNYbjVjUmVZeGVQOFdIREIyM01nVDhndWpJeXEwOXRuaFF3ai1LMk1iN2RLSzVPeTRWeDBxZW9jRFZ5R1cxU3pGUm1BaTQ0dWRfdkpZRFFBbEhXem9Sb0JVUVFaYjkxUGdoVDNld3RxNVZtM2hoa1VpYThZZE5QamZzeFdWUDF6Z1dBVXlLNGN6SWxYcW1PeVJYVEo5Z244S2w0UjlKX0tDRmFlU3Z6WW5iLTdwdmNDOFlnN1FCdg?oc=5",
         "published_at": "2026-11-15T09:06:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold under the pump as dollar sensitivity surges - StoneX",
+        "source": "StoneX",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUTdpaDBlNTRHRHlNWGlQQ3M5V2x6U1AzdFV3d0RxZU1UV0RETXVwU1ItNmRvcVBsbXZhckgwdlhwbDJXcW1wekpqNTk3Q1g1cFU5VDUwRnBOdkZ2U0pBdlhYYzVYcV91bEU3SWNWQWNITFlGT28wdmtIdnl4Q0JZa01QZXdhRENLQUo5Y1FWbjZMODlIQkRLclZlZzk?oc=5",
+        "published_at": "2026-11-15T08:49:59+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -210,87 +289,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Warsh Speech Preview: Fed Chair on 16 November 2026 - Admirals",
-        "source": "Admirals",
-        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNU0VQaVhWM1RiOUU0Slg1cllRR2poSGdYTHYxUDgwTGNIaVJuUS1LZ25pVndWTEZxdTBDc2FiUDFTdzRjMlJ6czd0ZUhwYk5TVEJUSURxSUN5NUlDQUFCeXZwQ005b2I3dXQ3Q0lxNmh3aWs1dEpjc0RaZ3pxSDBYQS1ldEU5S0ZSNDhmNnJoYURHRHFtZmh5QjFIZThncjlvNmFrQ1NqYw?oc=5",
-        "published_at": "2026-11-15T05:19:44+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "\"Next Year's Exchange Rate at 1,320 Won per Dollar... Won to Strengthen\" [Weekend Money] - 아시아경제",
-        "source": "아시아경제",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9TUjg3SGNsRnJ0Q3pJYWlZUGZVLXRtVTV1SEI2MEdzZS1ybGc2b0JIZ1dySTdPbXlHRUxpZTIxRGJ0V0ZtQWx2NHJ1UkNyMzBlM01vU205d3BtYUZ0bG5sLXpTQzM?oc=5",
-        "published_at": "2026-11-15T05:12:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gasoline and oil prices today, November 15th: Fall to a low level - Laodong.vn",
-        "source": "Laodong.vn",
-        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPUnBFZ2xVV0J2djlLNzFuR2c2TmtqalZEZUNaaDlMR1VtcTVUVDF1dWNHQnljdE1hZF9QUmM0dk9JNzYzeVA5OVlFYmJnTTVJUHp5R2RldTBrOHEzSzJyN3l1MHpYUUItYXhVZ0F4WUhoQVJZTzdoWXpYa2llNGc3V0I0aDZQWkxUVHpYdnl3Mk5kVEJLV2lZ?oc=5",
-        "published_at": "2026-11-15T05:01:42+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Dollar forecast: NFP provides dollar, already supported amid tech sell-off, additional boost - FOREX.com",
-        "source": "FOREX.com",
-        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUng1WmdDSng0STRBcW5QWVJMaGdFakM2S2UyTG5fdTY4TlF6ekJaOEFKaTdUQ0c4RE1GRmQyZEs1dTZ4aUg0b05UdHdFN2xtYzBPTi16bjZOOVRUUnBLNk4teGdjMEo1bjEwYXU0emE1VnFhd3oyVWRkSzNtX3FBM3l0MXIyRkl5eUJWWjVuSHRVaEF3ZnBSTnZYdHVwLU1GUVJza1JQdnVlTUZvc1NUUll5cE93OVR5MnRSS0pxLXNnQ3A1UEpmNnVjd3hOMkpvMGc?oc=5",
-        "published_at": "2026-11-15T04:34:29+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "The week ahead in numbers: wholesale inflation, Fed minutes, Anthropic IPO - TradingView",
-        "source": "TradingView",
-        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOYnZ4UzQ0TmFkU29QUFJmV3NmcXVoN1BoaW15ME5GV0dqOUROT2M0VTdxdm1XZUtoNlI1ajdfNFJXeURIY3BHUlVXeFFwS1lfbHY5WjlOT05oNFM4MVV4b0szM3ZMTHREOThUS0xKMDRXWWdwWm56RzJHSHZmaGVaT0pwRVZKQkVWcTA4X25lTzJ5bWhkQnRwbW9zODFpck01alF3aHJwSjlfZXpBYmNEejRtcGNwMTZGd1F3b0R5Z2hscEEtNVRz?oc=5",
-        "published_at": "2026-11-15T04:34:00+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "US Dollar Technical Outlook: DXY Bulls Fight to Hold Critical Support Ahead of NFP - StoneX",
-        "source": "StoneX",
-        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdHc2TWtFc2Z4MlBnckNieHZmU1JpMEFqVHdxN2UwM3I0UTJVZUR4WkpFUTdJNktrR292eUtHOV8wLVJtMjhYWUJ1NDJDOTNkb2lnWlR1bUtuRS14U0JOQmNsbmhaNlBGWm8wbmtVUmo1b1V0d21GU0N4X3NxcDlxQzk1QVJZV19NTE5TTlNZTk5sT3NTNnl0TFhISWRkLUQ0RWw3ZFBNbkh6YUVRS2E3NU5yb29tWFRCNkpqV0p3QmQ3TE1kbFlldA?oc=5",
-        "published_at": "2026-11-15T04:14:42+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold XAUUSD Holds Near $3,900 as Fed Hike Bets Hit 91.7% - JournalArta",
-        "source": "JournalArta",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNLTdaQ2Iwem1wWkt4cGZvbEpzNjhMNkY2R0ZHRFcxbFI4ajlaMnhKclIwVHlkUHUyX18xT2dvUldTdHZtYTJoVkxQS0kyb3ExSkhZLVdtOUtJYUJ0WVljMmU0SWJZQzU4QnFYM3lYemFHLVIyS09HN2RVRkozMkJ0OExBaFpoWktjX1dWSDE2ZXA?oc=5",
-        "published_at": "2026-11-15T04:05:12+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Crude Oil Weekly Outlook: Houthi Attacks vs. a Double Top? - StoneX",
-        "source": "StoneX",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaHdPQzFENGFrQ0pEa3VJek5IYzlIaVdQcDJPUFc0UDZEM1E3RzRNUFg4UDBqUzlReHA1Yl9Vb2JqTEMxSERVVzVfRTVmeHVlVjRkWVByc2M4TDQ2NUxEZkhYeHJrdHhlV2ppWm5saTNqRjVYNWhCaEJHbjB5SUNHVG5uYURvX2dtaWc1dFZTY1ctVzZJT1RFaUJmc0NRZ3pnTi1ZMFFB?oc=5",
-        "published_at": "2026-11-15T03:54:11+00:00",
+        "title": "Jensen Huang's Resignation and Anthropic's IPO Aside, Wall Street's Gaze Is Fixed on the 5% 10-Year Treasury Yield - BigGo Finance",
+        "source": "BigGo Finance",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE42OWF6cndpZEVuNFB2UEpnakFSU0FBc29EdXlkNjZQZHFvX05TanJuNHBHemJJdzlPNHo5cnp2NDBiSDczVTM5Mm0xU1RiVWtheW5VeFdFc3I2OGNSaWkyeEFvLU4yV0UyLUNPek9MeGtGY1E0LVE?oc=5",
+        "published_at": "2026-11-15T05:25:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
