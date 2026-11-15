@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-11-15T19:17:33+00:00",
-  "last_successful_refresh_at": "2026-11-15T19:17:33+00:00",
+  "generated_at": "2026-11-15T20:06:07+00:00",
+  "last_successful_refresh_at": "2026-11-15T20:06:07+00:00",
   "fundamental_bias": {
-    "bullish_pct": 45,
-    "bearish_pct": 55,
+    "bullish_pct": 38,
+    "bearish_pct": 62,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (45% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Headlines were retrieved, but none matched the directional rules; no headline tilt is included. US Dollar Index is the largest current influence (-3.0 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (38% model score). USD direction and oil/inflation context: 0 of 2 factors support gold; 2 factors weigh against it. Recent headline tone is bearish across 2 keyword-scored reports. Recent news headlines is the largest current influence (-8.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
         "name": "US Dollar Index",
-        "weight_pct": 53,
+        "weight_pct": 40,
         "change_pct_24h": 0.228,
         "change_pct_5d": 1.761,
         "trend_label": "up over 24 hours",
-        "impact_pct_points": -3.0,
+        "impact_pct_points": -2.3,
         "direction": "Weighs on gold",
         "explanation": "a stronger dollar can pressure gold"
       },
       {
         "key": "WTI",
         "name": "WTI crude oil",
-        "weight_pct": 47,
+        "weight_pct": 35,
         "change_pct_24h": -0.158,
         "change_pct_5d": 3.253,
         "trend_label": "down over 24 hours",
-        "impact_pct_points": -1.8,
+        "impact_pct_points": -1.4,
         "direction": "Weighs on gold",
         "explanation": "lower oil can reduce some inflation-hedge support, though energy prices are only a proxy"
       },
@@ -40,6 +40,17 @@
         "impact_pct_points": 0.0,
         "direction": "Gold price confirmation",
         "explanation": "gold price confirms an upward market move"
+      },
+      {
+        "key": "NEWS",
+        "name": "Recent news headlines",
+        "weight_pct": 25,
+        "change_pct_24h": null,
+        "change_pct_5d": null,
+        "trend_label": "bearish tone across 2 scored headlines",
+        "impact_pct_points": -8.4,
+        "direction": "Bearish",
+        "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
       }
     ]
   },
@@ -53,14 +64,14 @@
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-15T19:17:32+00:00",
+    "queried_at": "2026-11-15T20:06:06+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 0,
-    "scored_count": 0,
-    "bias_score": 0.0,
-    "bias_direction": "Mixed",
-    "summary": "Retrieved 20 recent headlines, but none matched the published directional keyword rules. Headline tone is unscored rather than assumed neutral.",
+    "matched_count": 2,
+    "scored_count": 2,
+    "bias_score": -0.675,
+    "bias_direction": "Bearish",
+    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
@@ -68,11 +79,24 @@
         "title": "Gold price today, November 16: Check latest 22K and 24K rates in India - The Eastern Herald",
         "source": "The Eastern Herald",
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE91Uk5JSFhwSmxwcUtDNWJVbUdZcnBkNzRQdGV1OUZxMjFHX3BhZ3ZtUnNRT2pzWGx2ckQ4M3V2YjI3WDhuZHp4cXJTYU5HWkN0b0c1MXowaFhYa3FsNUo4RU91dzg5N3JRaTBaZktmWG9sQnNlS3c?oc=5",
-        "published_at": "2026-11-15T19:03:45+00:00",
+        "published_at": "2026-11-15T19:30:00+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "U.S., Eurozone Bond Yields Rise - WSJ",
+        "source": "WSJ",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUm1uQmRvQ0wyVFV4VDljWGRaaWZVRDVONmUwc0dlNW9DeF9zMzRtME5KQmxjOHRkemVqeFA4TVBwUnQzLXhIekJ6ODVzOWpTVUZWemlCakw0UUF1RzY2TWJ0MXF2VkpDTHFsVnpSOU1Vd2wzTWN1dS16dGYwM3FDSC1GR0JuNTlXM3hqcjVoRnpaaW1JNkotYmYzalhoRWFYSmNIMFpYLXJSam1xbmhHZTdtTGRNd0hrZnplUDQ0MmMybERQUVd2ZA?oc=5",
+        "published_at": "2026-11-15T19:22:40+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
         "in_scoring_window": true
       },
       {
@@ -91,6 +115,17 @@
         "source": "The Times of India",
         "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVzYxYW1wbXprRk5SNld0a1Q4cHRzWXhEZUxpSzFsNTI1d2cxOEhwUEgtMmZvUVlpREFrY2dzLWZQVDJiQ0Itb2JKUzBBU3ZSaGJiclRSWkttMkZCNW9jdkRXdnVjN1Y2YzJ0TmN3SXZXNGoxM0dONmktRi1ERFB5S3Z1cHpPaU1zaUxNUUdYR3NIc1Vsa1lMWEpmMlE0U2N0Z09pTHhRYzU4dDdhaXVYZXNkUnNIRlNKdXhDMlhsNnUxMHl6U0RiZndDOHVGSERJZGFSTG9mX0prVVZiN2hrcGpJTG5wTTA20gHuAUFVX3lxTE1OWmF3QXdrbktPbFhrVzFUUTA0ZlpnSXRlY004bDl2TXlyVERZeTFJSGFacTJDallZR3RGaXN6SFQwRmJiZVZTUkdnTHJUQ1dZZnNHZ21WNmw0ZVZJTUxBaWhNMW1FUlRGc2FsNGpYVGpKcTg0YVd5T2FTTTdDNXZTOFczSUNGYjZsS244eWtxTUZ2c2dpQmdMSGVVX2J5WDEtVzhTWGpyMG9rdXFJN1M3YkxXbHplRGlnVjB2bjV1VzhHZDdjYnVQdWFzN0MwQVMtTWRjVlNBOTRoR3Q1cFduejNhWlhOQmV1UE5iWmc?oc=5",
         "published_at": "2026-11-15T18:12:00+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Oil Futures Rebound as Trump Shrugs Off Need for Iran Deal - WSJ",
+        "source": "WSJ",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVG5RS0lub0RlMzltTEJDNkVKUVVmdnNHcG14bGRMQ0pFeTJ1NW9ibkk4dVI5TExfNVMzclpKYTI1d3FnQXdEVldRZmJnZWxHZXlUWDZHWmJPRUxhQ2xxNVpLSDFvTFFKOFpScEZSMVI2eW1EcFlwM2YyZXBHNzctVDAxNVFpd2ZCUVZIUnAyVDdiRm5IWDBfbDNyUWdMSzg?oc=5",
+        "published_at": "2026-11-15T18:09:44+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -175,17 +210,6 @@
         "in_scoring_window": true
       },
       {
-        "title": "The Liquidity War: How QE & QT Shape the Future of Global Market for TVC:DXY by forexcitypro_leemeenal - TradingView",
-        "source": "TradingView",
-        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMW1mcjNkdXZTR0Mzd2hKSi1sWEFHc3JUczNJbXpCaXpPNDJPWjlIbEY5N08ySFFmakp4ajVSNVFJNXdLZGpWdXhLeHA5cFRfVDRfVzNTWEMwbXZ5S3R3TzctV1BGcWE5VXpCblptMmRkaVpZSDlYSW1BZ3dOcG82X1ZiLTItYVgwVmtPZXB0ZXhkMHVCSXFfSVRndkFMNUFvQ1h6cm0wYWs1QV9aNXc?oc=5",
-        "published_at": "2026-11-15T15:27:41+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
         "title": "Crude oil may extend losses next week, Brent seen testing $90-92/barrel: Analysts - Moneycontrol.com",
         "source": "Moneycontrol.com",
         "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSlZXaWxZS2ZuQXg1VXFobGdZVWtScEFSWEtVc243dFhrZk1NNDNFS3hIc0k4R2NfV1g5blJXTmxESzZrWnBPTkRCLTcxbldsRzZxVjlHUFRzZGFPWlBPVnc2dm1SaFdjZk00dWk4NlNaaG5yMnZoVGRGOGNSQ0MxRlBWbGpBbm5yNUVCc0Z4TWViTXNaTWNUWDVVQWNoYk5qbkRwTWZiUkFhSDZlazFsNXQ4RkhVWDhHUEU3YS1wdUM0NXQwUWc5amlwOTTSAdIBQVVfeXFMTVNGbHhVaDFEMHRvLWZ4eXlSSWtzOXVfdkFyUkNsMEJXN20zQXQxMHdPejVtYU84dFhrZlBsNklwbjRpUkVjTjhFZkI3TnMwTzlWQlVPYW01TFlyN1JQZlo0TmhMLWNIbkxpOUFTcWwxWV9NLVIyV2dmd2tmUnNwRVNWSTd4bXRMUkNBRDN2QnpoX1VjWW1tWXNuc0RfNjg0RzJ2YlpvOVhuSVRfa0pxM28wN1Y5RDlBZGpBUUx1a3RaaG9wSWxYWmFlYUFzRWUzMUlR?oc=5",
@@ -230,43 +254,10 @@
         "in_scoring_window": true
       },
       {
-        "title": "Brent CRUDE Vs WTI: What OIL TRADERS See That INVESTORS DON’T... Mike Danna (rQIFLmjbMQ) - Unisba Media",
-        "source": "Unisba Media",
-        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMTdnSGZ5ZlhHbTZUV2llQlhZZmVzSG5sUkwtQmx6QUp0dUpxSnZpbmYwYnRraERmbjJLRXRXRmpDeXA3NVNqNGFMX0dGWDhoY0wyRHhFWFNscUZ5Q0o4Y3J4bTE4N0NHUGN6eUZtZVZhUmthOEpJTzdCdVFFcHJPUUpuUGdEY2s?oc=5",
-        "published_at": "2026-11-15T14:36:56+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
         "title": "1973 oil crisis echoes in current market volatility concerns - Crypto Briefing",
         "source": "Crypto Briefing",
         "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdVVmcl93REtCeFdwcjl4NGJwWmx1Mm5ZZnVxdmczOXRhNjZaTUFMQm1hTmdNV3hWUWdidGQ3dm5KcjN1bVoyam93SXpTVDdTQXVLT3NfOW9pWER0VXQ0M09uVGRQdFY2dlp4NFlQZWFianRZLUNxcnMwbjFTMnNhV1o3ejg3TUVJRGJEQ0Q5WEI2Zw?oc=5",
         "published_at": "2026-11-15T14:36:30+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Ringgit opens marginally higher against US dollar - The Sun Malaysia",
-        "source": "The Sun Malaysia",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9YaFVtMW8xakRUdjFFQ3RSb2JQN3RZaUVGdGZOeG01LWpDNFU2SEtVaW81RUlSMDE4SnZwM2IycDZ5U0RmR3EtZmNidDU0SU9Fa0NBcEE5bXRrNzNVWW9wUlppSUFkYzhnUThaQ3RUNG9QMEpDekx2ellZclpzQQ?oc=5",
-        "published_at": "2026-11-15T14:12:53+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Strait of Hormuz Mine Claims: How Oil May Open This Week - Admirals",
-        "source": "Admirals",
-        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPN0U5QWFHVWNXdWRLVnBjWXFOOTRsS0NYcjFLSHppbGFGZW4ydzJJRURPTGw3dlJxaE5sS0xKbC1ELS1wSUxpM0dvekthTDF3VVhLdlowcUxSeXJPMTFTdEpmQVVEc3Q2cGdlQlNfbHl4NnhtNmU2M3czWnJhckY1Z21DRHRDTkxRTHRVeTc1RUUxMTQ?oc=5",
-        "published_at": "2026-11-15T13:37:45+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -282,6 +273,31 @@
         "topics": [],
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Gold & Silver Volatility Ahead: Inflation, Fed, West Asia - Rediff MoneyWiz",
+        "source": "Rediff MoneyWiz",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPU1kwY0FBVGM1UHRXOVdsdl93Z0pfbmgxZ2lLczBLR1BsNGNKZGIwUHhDU1pEWHZ2eDNHYV9yZXVQLU45V2JVZTNSRERwT1A5X3VFZERVZkhfVHNDdjduTV9nUGxMVmpSVk5XVUd0WVA0U1JCTm1IbnVmRHRnRmFONFZreDlrWVp3SklaM2Fjc3JJNERVd1dCTFVZTUlFUDZ0S3M4S1NnWdIBrAFBVV95cUxNM3Z6eS03V09pTTFoOVhaQWh0WVpUYXdoSExibGNGY2poNi1DTlk3THY2enpRX294UmM1TkJCd0NjUTF1UXdtdDZnRWNwQ2U4Wk5oVURVcmNFSzhMRV91azFpdzkxbTUyYURGRE1OVHQ2andHUG9CZHd2eThqUURPTmxDVy1iUklDY0QzM09vSzhKREtfVjFWYXljQlg5RFFLYS1BT3EwM0hrNkh5?oc=5",
+        "published_at": "2026-11-15T13:29:49+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Oil Prices Fall as Market Awaits Possible US-Iran Ceasefire Deal - EnergyNow",
+        "source": "EnergyNow",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSWlSQ0JySWhtckl3S01IdjNPcndoTTVOUWVSRmRXLWw2b1U3R3hZeTdwcFM4S1pxNnRVa2dPMXV5Vk9SZWNXaEsyWVYtd2hTZkNBXy1SbjRiaFRFT2cxekVUbTZFXzY1LXJEMXA2WkNVdXhMVnBzbGdNSllPdjlmcS1DMzZTQmo1bDl3dGJIWFhDUzhtUDN1bEV3?oc=5",
+        "published_at": "2026-11-15T13:17:03+00:00",
+        "score": -0.6,
+        "topics": [
+          "Risk de-escalation",
+          "Falling oil prices"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
         "in_scoring_window": true
       }
     ]
