@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-17T19:58:23+00:00",
-  "last_successful_refresh_at": "2026-11-17T19:58:23+00:00",
+  "generated_at": "2026-11-17T20:53:15+00:00",
+  "last_successful_refresh_at": "2026-11-17T20:53:15+00:00",
   "fundamental_bias": {
     "bullish_pct": 43,
     "bearish_pct": 57,
     "direction": "Bearish",
     "method": "Rules-based 30-minute snapshot, refreshed every 30 minutes. Fundamental score uses 24-hour DXY move inverted (40%), WTI move as an inflation-pressure proxy (35%), and up to 25% from keyword-scored news headlines; market returns are capped at +/-2%. If no headline is directionally scored, its weight is omitted and market weights are rescaled. Gold price is separate confirmation. Scores are model outputs, not probabilities or predictions.",
-    "summary": "The rules-based fundamental backdrop leans bearish for gold (43% model score). USD direction and oil/inflation context: 2 of 2 factors support gold. Recent headline tone is bearish across 1 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
+    "summary": "The rules-based fundamental backdrop leans bearish for gold (43% model score). USD direction and oil/inflation context: 2 of 2 factors support gold. Recent headline tone is bearish across 2 keyword-scored reports. Recent news headlines is the largest current influence (-9.4 score points). Gold's 24-hour move is shown separately as price confirmation, not counted as a fundamental input.",
     "drivers": [
       {
         "key": "DXY",
         "name": "US Dollar Index",
         "weight_pct": 40,
-        "change_pct_24h": -0.087,
-        "change_pct_5d": 0.44,
+        "change_pct_24h": -0.106,
+        "change_pct_5d": 0.473,
         "trend_label": "down over 24 hours",
-        "impact_pct_points": 0.9,
+        "impact_pct_points": 1.1,
         "direction": "Supports gold",
         "explanation": "a weaker dollar can support gold"
       },
@@ -23,10 +23,10 @@
         "key": "WTI",
         "name": "WTI crude oil",
         "weight_pct": 35,
-        "change_pct_24h": 0.129,
+        "change_pct_24h": 0.164,
         "change_pct_5d": -0.047,
         "trend_label": "up over 24 hours",
-        "impact_pct_points": 1.1,
+        "impact_pct_points": 1.4,
         "direction": "Supports gold",
         "explanation": "higher oil can add inflation-hedge support, though energy prices are only a proxy"
       },
@@ -34,12 +34,12 @@
         "key": "GOLD",
         "name": "Gold futures",
         "weight_pct": 0,
-        "change_pct_24h": -0.409,
-        "change_pct_5d": -3.163,
-        "trend_label": "down over 24 hours",
+        "change_pct_24h": -0.039,
+        "change_pct_5d": -3.115,
+        "trend_label": "roughly flat over 24 hours",
         "impact_pct_points": -0.0,
         "direction": "Gold price confirmation",
-        "explanation": "gold price confirms a downward market move"
+        "explanation": "gold price is roughly flat over 24 hours"
       },
       {
         "key": "NEWS",
@@ -47,7 +47,7 @@
         "weight_pct": 25,
         "change_pct_24h": null,
         "change_pct_5d": null,
-        "trend_label": "bearish tone across 1 scored headlines",
+        "trend_label": "bearish tone across 2 scored headlines",
         "impact_pct_points": -9.4,
         "direction": "Bearish",
         "explanation": "Keyword-tagged recent headlines; read the linked source stories for context"
@@ -59,22 +59,46 @@
     "bearish_pct": 100,
     "source": "Local estimate",
     "timeframe": "30m",
-    "provider_observed_at": "2026-11-17T19:48:21+00:00",
+    "provider_observed_at": "2026-11-17T20:43:12+00:00",
     "observation_status": "available"
   },
   "news": {
     "provider": "Google News RSS",
-    "queried_at": "2026-11-17T19:58:22+00:00",
+    "queried_at": "2026-11-17T20:53:13+00:00",
     "status": "available",
     "headline_count": 20,
-    "matched_count": 1,
-    "scored_count": 1,
+    "matched_count": 2,
+    "scored_count": 2,
     "bias_score": -0.75,
     "bias_direction": "Bearish",
-    "summary": "Reviewed 20 recent headlines; 1 matched the published directional keyword rules. Their overall news tilt is bearish.",
+    "summary": "Reviewed 20 recent headlines; 2 matched the published directional keyword rules. Their overall news tilt is bearish.",
     "limitations": "Free RSS headline search; only headlines with a publication time in the last 24 hours and a matching keyword rule affect the score. Tags are a heuristic, not full-article or human interpretation; headlines can be duplicated, delayed, incomplete, or misleading.",
     "failed_search_count": 0,
     "headlines": [
+      {
+        "title": "US 10-Year Yield Set for Historic Run Above 5% on Fed Cycle - Livemint",
+        "source": "Livemint",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVms4bDNVY0tjZklvMXNfdjZpQ2RTM2JCYXRkek9Ba1ZNaFc4VlVmNlZEZTZGRlJuUEh4dFBidlVSajJWRDZrWmVHZElaTW5MbWZqcE9Jb2hvemUtWXNCcEIwYjdjZ1k4aDZXQ2h6QWpGVFZ1SjVBTEhNc3h4WDZVYWVUbWxXZ25HVV8tbUgwd1E5OEgybGxzZVdRZkZHUUpTOVVlejFjZEVKZXk2YVRr0gG0AUFVX3lxTE1fQWRYYXpoSzdvZ1loZV96RHJ6dldFZlpEOURDNmJuZmN1SFpuWnpnYmdTa09oZDJrMjdwTWo5Q3ZfTzZoNzZYd0phY3hld3E0QVBMYkhfUnFpLVZXZnlkY2RXWTRmVU9lWENQbmtaTlNFSF96WlZxMV9MbVR0eXVDV2FoNGpZak03Y1NuWVFBX2tMcG1EajREWmxPWFFOM2ZEZlJXWXZEdS0tenNNNVRTU3VwVQ?oc=5",
+        "published_at": "2026-11-17T20:43:51+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Fed’s Williams says more rate hikes likely needed amid inflation By Investing.com - Investing.com Nigeria",
+        "source": "Investing.com Nigeria",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeHByWWFtTzNBeF8wUUg0dWxmMGd5Vm92bUZBWkNRVXpURG9XcFVVOWp6TW9JbHFqajM0eGRIUjdfbmw2RmxwRXlUOFIwbG5WUWRidjFDU2NVWlN6T291NVVIUFU1ZW1wbi1Ya3cwU1U5SmVBUVN2S29VT1FoOWJGY0xvMURfaDJKMi1Sc2psdkI5QU9tX2JMUldsZm54M0d2YWhUQ2pESGpZNXp6ak1MWkpGcng?oc=5",
+        "published_at": "2026-11-17T20:01:25+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
       {
         "title": "How Bitcoin still competes with a 2.92% Treasury yield after inflation - Cryptonews.net",
         "source": "Cryptonews.net",
@@ -102,6 +126,30 @@
         "source": "Traders Union",
         "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNLXBoT21sUjluQ1hPR1EtSjFOdzJMazlmUHAtNEExRjF3UUxKc3ZxczhyMkgwbFhyS3Flc2FlaVVSZTNPblVnYWM0UjdCNEg3N0owaFpTd0t2WDdSN0ZwYUZMY3hTT3U1TDZHSFFvcDYzSkZWdVlfZGdJSFE1dUNDNERKSm9hdkdHeVp5YzNUOA?oc=5",
         "published_at": "2026-11-17T19:34:27+00:00",
+        "score": 0.0,
+        "topics": [],
+        "direction": "Mixed / unscored",
+        "score_status": "unscored by keyword rules",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Bitcoin unlikely to reach $90,000 in 2026 amid Fed rate hikes, says Galaxy Digital CEO Novogratz - Pluang",
+        "source": "Pluang",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQaTRZRG5sRHMzZTVKcWZrNVFZc0p1VHpFcXg3YTd1X2FraWsxVGRrNDlYWnNzVTY0R0I4MmZtZEV0WEFLQUZFQ1ExaUdDVURhT0xIQXFLbHVFaXVFNlk4d2kwSE5HaFBiWkc0RGVfbV9ieVlValV6Ymd2OWFudk9admd3UlM2Y2pqR0MzVzE0LWtPT1E?oc=5",
+        "published_at": "2026-11-17T19:25:11+00:00",
+        "score": -0.75,
+        "topics": [
+          "Hawkish rates"
+        ],
+        "direction": "Bearish",
+        "score_status": "included in score",
+        "in_scoring_window": true
+      },
+      {
+        "title": "Dollar lower after mixed US data, stays near April 2025 high - Yahoo Finance",
+        "source": "Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNS3M2TGFXYzBtZ3daalBpMGVWM2tpOXhnTzBPcnFYNGkwaXRLLUpmd2JOb0p6SFZGRFZ4LThMa2owaE1lZ3d2ejh3MTVPUkdaalBJSkVpa05takNBTHRqMVR3TnE2U2F2V0pRTi1acUVqWFlNTFhyMTdDUUxGdGd6LXh6Rllzcy1iZFJlT3RCRHlzTnFULVk4?oc=5",
+        "published_at": "2026-11-17T19:22:02+00:00",
         "score": 0.0,
         "topics": [],
         "direction": "Mixed / unscored",
@@ -250,52 +298,6 @@
         "direction": "Mixed / unscored",
         "score_status": "unscored by keyword rules",
         "in_scoring_window": true
-      },
-      {
-        "title": "US 10-Year Treasury Yield Surpasses 5% Amid Fed Rate Hike Speculation - GuruFocus",
-        "source": "GuruFocus",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVFFvbklmQU4wTS1aUTZGUVlVMGFLeVVvalBpMGlKVWhWTHhGa2ZFc0lEV2JWc3AtZzdjN0QySTIxZXRGeVFRc3JkQ1pvRHotUXI1d1BRR3JvWmg2UkNTLTc5cG5OX0k5R3JuMWoyd3pScS12UmVpMng1OTR0UThmTFNLdXA0Nm1FZG9vcEQwU3p2TzZqMUpHOFpkNWpLdVo3S3JOZEFVZXhJdw?oc=5",
-        "published_at": "2026-11-17T17:10:31+00:00",
-        "score": -0.75,
-        "topics": [
-          "Hawkish rates"
-        ],
-        "direction": "Bearish",
-        "score_status": "included in score",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Gold rises as U.S. Treasury yields and dollar strength challenge international demand - Traders Union",
-        "source": "Traders Union",
-        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOd1VxbTZOMUhMRjBBZ1N0ZU5kaE1EcFRLS1pFSV9mQ0N5ckE2QXA4RGhxNkoydTFZaWtaZ3ZzNEF6d1BwZkRpWXg2Y1VkOTRoSU1IM2pra3pGVnZZVkZhcFBzQklQMkVDclJSMDFZM2Y5dFNPOXNGQ2Q2bmYxSmVQU1ZkZmFxTVk?oc=5",
-        "published_at": "2026-11-17T17:07:27+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "Global Gold Prices Fall to One-Year Low, Here Are the Causes and Future Outlook - Aktualita.co",
-        "source": "Aktualita.co",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRE5sRG8zNk4waktmSGtxUTdCcGdPRHBRVEh1U0NtMWZ3aU9udzJRdTl5bW00V2FYaXFERFRXMUhHQ3l4VXJvTVdWX1ZNcm83eTZnSFdUT3N1QWZtSW9NSnhxaU9ZUmNXWGtmTXZ1RWw3V3NXOVljcXNXZWIxbVVTaVJXTndDcHJtNnpCQXp2RHlFZFVuNkRldVZ0Z0NXU2NHSkJlMV9VOHRmNlJxMlhNMVgzWU45YnM?oc=5",
-        "published_at": "2026-11-17T17:05:54+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
-      },
-      {
-        "title": "U.S. 10-Year Treasury Yield Is on Pace for 27 Closes Above 5% - www.tokenpost.com",
-        "source": "www.tokenpost.com",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80Yk8tTWRyQ1ZpNE80OS1nekRIMERUMzBFdmU5NDZBWEFzNWpad3VCQS1GMXdjNTE5YmJkdU9aUHpRb05KQWgwQmd2eVR5dVFvSEtuajJURlhfQQ?oc=5",
-        "published_at": "2026-11-17T17:05:34+00:00",
-        "score": 0.0,
-        "topics": [],
-        "direction": "Mixed / unscored",
-        "score_status": "unscored by keyword rules",
-        "in_scoring_window": true
       }
     ]
   },
@@ -305,14 +307,14 @@
       "symbol": "DX-Y.NYB",
       "provider": "Yahoo Finance",
       "currency": "index points",
-      "price": 103.459,
-      "change_pct_24h": -0.087,
-      "change_pct_5d": 0.44,
+      "price": 103.493,
+      "change_pct_24h": -0.106,
+      "change_pct_5d": 0.473,
       "short_trend_label": "down over 24 hours",
       "trend_label": "up over 5 trading days",
-      "bias_contribution": 0.0174,
-      "last_price_at": "2026-11-17T19:48:18+00:00",
-      "provider_observed_at": "2026-11-17T19:48:18+00:00"
+      "bias_contribution": 0.0212,
+      "last_price_at": "2026-11-17T20:43:12+00:00",
+      "provider_observed_at": "2026-11-17T20:43:12+00:00"
     },
     "WTI": {
       "name": "WTI crude oil",
@@ -320,27 +322,27 @@
       "provider": "Yahoo Finance",
       "currency": "USD / barrel",
       "price": 85.67,
-      "change_pct_24h": 0.129,
+      "change_pct_24h": 0.164,
       "change_pct_5d": -0.047,
       "short_trend_label": "up over 24 hours",
       "trend_label": "roughly flat over 5 trading days",
-      "bias_contribution": 0.0225,
-      "last_price_at": "2026-11-17T19:48:18+00:00",
-      "provider_observed_at": "2026-11-17T19:48:18+00:00"
+      "bias_contribution": 0.0286,
+      "last_price_at": "2026-11-17T20:43:09+00:00",
+      "provider_observed_at": "2026-11-17T20:43:09+00:00"
     },
     "GOLD": {
       "name": "Gold futures",
       "symbol": "GC=F",
       "provider": "Yahoo Finance",
       "currency": "USD / troy oz",
-      "price": 3851.1001,
-      "change_pct_24h": -0.409,
-      "change_pct_5d": -3.163,
-      "short_trend_label": "down over 24 hours",
+      "price": 3853.1001,
+      "change_pct_24h": -0.039,
+      "change_pct_5d": -3.115,
+      "short_trend_label": "roughly flat over 24 hours",
       "trend_label": "down over 5 trading days",
       "bias_contribution": -0.0,
-      "last_price_at": "2026-11-17T19:48:21+00:00",
-      "provider_observed_at": "2026-11-17T19:48:21+00:00"
+      "last_price_at": "2026-11-17T20:43:02+00:00",
+      "provider_observed_at": "2026-11-17T20:43:02+00:00"
     }
   },
   "disclaimer": "Informational only, not investment advice. Data can be delayed or unavailable."
